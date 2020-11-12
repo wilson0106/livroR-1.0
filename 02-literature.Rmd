@@ -1,0 +1,795 @@
+# Importação, organização e sumarização dos dados
+
+
+## Primeiro passo: Importando a planilha de dados para o R
+
+
+Ao se trabalhar com R a primeira pergunta que nos vem a cabeça é: Como inserir meus dados neste ambiente de trabalho? A resposta é simples e também complexa. Pois depende do formato do arquivo de dados que está usando ( \*.csv, \*.xls, \*.xlsx, \*.txt entre outros) e para o mesmo formato existem inúmeras vias possíveis para se fazer isso. Não vou especificar todas as vias, mas as mais comuns utilizando os comandos básicos do R e por meio da interface gráfica do RStudio.
+
+
+Porém para importar a planilha é necessário definir o ambiente de trabalho no seu computador. Este ambiente é onde sua planilha e seus demais dados a serem trabalhados estão. Podemos realizar isso por via de comandos ou também pela própria interface dos RStudio. Se realizado por via de comandos há diferença entre o sistema operacional (Windows, Linux ou macOS) que estiver utilizando.
+
+
+setwd(choose.dir("path")) # path é o caminho do diretório escolhido para Windows
+setwd("path") # path é o caminho do diretório escolhido para Linux
+
+
+**[INSERIR PRINTS E EXPLICAÇÃO DA VIA GRÁFICA DE DEFINIÇÃO DO AMBIENTE DE TRABALHO]**
+
+
+*setwd()* é a função responsável por escolher e definir o diretório a ser trabalhado. Após isso podemos importar a planilha com os dados que utilizaremos.
+
+
+Imagine a seguinte planilha no formato \*.xlsx, previamente criada em um editor de planilhas, como excel, libreoffice calc e outros.
+
+
+**[Inserir imagem da planilha]**
+
+
+### Importando a planilha por meio de comandos:
+
+
+```{r}
+dados <- read.csv(file = "planilha.csv", header = TRUE, sep = ",")
+```
+
+
+O comando *read.csv()* importou a planilha que está no formato *.csv utilizando os argumentos: file - o qual indica o nome do arquivo a ser importado; header - o qual indica se as colunas da planilha tem nome e sep - o qual indica qual o caracter separador das colunas
+
+
+O comando acima importou a planilha e o guardou e um objeto chamado dados que será o que nós utilizaremos de agora em diante sempre que quisermos acessar a a planilha no R.
+
+
+Para importação de arquivos que estão no formato \*.xls ou \*.xlsx é necessário a instalação de algum pacote que permita a realização desse processo. Um pacote que instalaremos aqui é o readxl. Não se preocupe com o processo de instalação de pacotes, neste momento, falaremos sobre ele ao longo do livro, sempre que necessário.
+
+
+```{r, message = FALSE, eval = -1}
+install.packages("readxl")
+library(readxl)
+```
+
+
+```{r, message = FALSE}
+dados <- read_excel(path = "planilha.xlsx", col_names = TRUE)
+```
+
+
+O comando *read_excel()* é similar ao *read.csv()* embora seus argumentos sejam diferentes. O argumento path é similar ao file, o argumento col_names é similar ao header. Repare que não temos o argumento sep, pois em um arquivo excel as variáveis são salvas em colunas diferentes.
+
+
+**[Inserir imagem do processo de importação via interface gráfica]**
+**[Inserir imagem do resultado de importação - o arquivo presente no environment]**
+
+
+## Segundo passo: Ajustando os dados
+
+
+Uma falha comum de muitos usuários iniciantes é passar para as análises antes de verificar se a planilha está organizada corretamente. Uma forma de previnir isso é conhecendo os seus dados e sabendo o que eles significam. Os dados, geralmente, podem ser: categóricos/qualitativos ou mensuráveis/quantitativos. Quando qualitativos temos de informar que eles consistem em fatores. Para isso vamos executar alguns comandos onde poderemos avaliar se no processo de importação as variáveis presentes na planilha de dados são reconhecidas como esperamos que seja.
+
+
+Ao executarmos a função *str()* do arquivo dados podemos ver no console o seguinte resultado
+
+
+```{r}
+str(dados)
+```
+
+
+Seu resultado nos informa sobre o tipo de objeto que o arquivo é. Neste caso um objeto do tipo tibble ou data frame.
+
+
+Também nos e mostrado as variáveis presentes (ano, local, comprimento e peso) e ao lado de cada variável nos é indicado o tipo de variável que ele considerou.
+
+
+num = numerico, chr = caracter e há outras que não estão indicadas aqui, lógica, inteiro, fator entre outros.
+
+
+Repare que a variável ano foi indicada como númerico. Variáveis consideradas númericas são aquelas as quais foram mensuradas. Ano não é uma variável possível de ser medida, porém devido ao seu registro ter sido em valores númericos foi assim que ela foi entendida. Portanto temos que transforma-la.
+
+
+Pensando no que definimos acima com variáveis categóricas e mensuráveis. Ano e local podem ser classificados como variáveis categóricas. A todas as variáveis de nossas planilha consideradas categóricas temos que transformar para fator. Este processo pode ser feito da seguinte forma:
+
+
+```{r, message = FALSE}
+dados$ano <- as.factor(dados$ano)
+dados$local <- as.factor(dados$local)
+```
+
+
+Repare que neste processo inserimos o operador **\$** (cifrão). Este é um operador importante em toda linguagem de programação e será bastante utilizado. Ele permite acessar alguma variável dentro de um dado objeto. Pensando no objeto "dados" (nossa planilha), ao colocarmos seu nome e em seguida o operador **\$** podemos acessar as variáveis dentro dele.
+
+
+Inserimos também a função *as.factor()* que é a responsável por criar uma variável a qual será considerada categórica.
+
+
+O comando portanto é lido da seguinte forma: 
+1. "dados\$ano <-" indica que uma variável ano será criada dentro do objeto "dados". 
+2. "as.factor(dados\$ano)" indica que o objeto criado consistirá na variável ano que está no objeto dados porém considerando-a como factor.
+
+
+Uma dúvida pode aparece aqui: É o que aconteceu com a variável ano que já existia dentro da planilha dados? Temos duas variáveis ano, agora?
+
+
+A resposta é que quando criamos um objeto ou variável com o mesmo nome o anterior é substituído. Imagine o seguinte exemplo.
+
+
+```{r, message = FALSE}
+idade <- 30
+```
+
+
+Repare o objeto idade criado no environment.
+
+
+Agora crie um segundo objeto com o mesmo nome e repare no enviroment.
+
+
+```{r, message = FALSE}
+idade <- 40
+```
+
+
+Reparou que ao criar um segundo objeto de mesmo nome que antes o primeiro foi apagado e substituído pelo segundo? Este é o mesmo processo que ocorreu quando realizamos a função que definiu ano e local como fatores.
+
+
+Vamos observar novamente a função str() para verificar se ano e locais são fatores
+
+
+```{r}
+str(dados)
+```
+
+
+Como pode verificar agora temos 2 variáveis como fatores e 2 númericas. Mais que isso, essa função nos indica ao lado dos fatores um "w/2 levels" que está nos dizendo que essa variável tem 2 niveis. De maneira similar as variáveis númericas indicam um colchetes com os seguintes valores [1:40] que significa que temos 40 valores/observações/linhas.
+
+
+Observe a planilha dados no environment. Repare que ao lado do nome dados há escrito 40obs. of 4 variables. Isto indica que temos 40 observações e 4 variáveis.
+
+
+Que tal agora observarmos nossa planilha?
+
+
+```{r}
+head(dados)
+```
+
+
+A função *head()* reproduz, no painel do console as primeiras linhas de nossa planilha
+
+
+```{r}
+View(dados)
+```
+
+
+A função *View()* abre uma aba, ao lado de seu script mostrando todos dados.
+
+
+Experimente agora só escrever dados e rodar, o que aparece? experimente clicar no nome dados, presente no environment. O que você observou?
+
+
+Se no primeiro caso você observou a planilha aparecendo no console parabéns você está indo no caminho certo. Se no segundo momento você observou que ao clicar sobre o nome dados ele executou a mesma coisa que a função *View()* você está indo maravilhosamente bem. Continue assim!
+
+
+Isto não é tudo, mas sim o necessário começarmos a sumarizar os dados de maneira eficiente. 
+
+
+Não se esqueça que antes de trabalharmos nossos dados temos que entender o que eles são e a que eles se referem. A análise de dados sem prévio conhecimento sobre o que eles significam pode levar a interpretações errôneas, caso as análises realizadas indiquem algum resultado, ou então a muita dor de cabeça se algum comando para uma dada análise não funcionar como esperado.
+
+
+Portanto siga os passos precisamente, não pule etapas para que não haja lacunas em seu conhecimento e busque diversificar a fonte do seu conhecimento. Pois o R é uma linguagem de programação e que como demonstramos até o momento há muitas vias possíveis de escrita para um mesmo resultado e diferentes autores podem escrever de formas diferentes.
+
+
+## Terceiro passo: Sumarizando os dados graficamente
+
+
+Já importamos nossa planilha e já a ajustamos. Que tal começarmos a ver a "mágica" acontecer e graficarmos nossso dados.
+
+
+Muitos gráficos podem ser realizados, mas lembre-se que há toda uma ciência sobre isso.
+
+
+Pensando nos gráficos mais comuns e úteis para nosso dia-a-dia e que nos permitem sumarizar nossos dados temos os histogramas, gráficos de barras, linhas e boxplots. Vamos então começar com esses e com o objetivo inicial de sumarizar nossos dados.
+
+
+### HISTOGRAMAS
+
+
+Para isso vamos aplicar a função *hist()* para visualizar os valores da variável comprimento.
+
+
+```{r}
+hist(dados$comprimento)
+```
+
+
+Repare que um gráfico foi gerado na sua janela lateral, na guia plots.
+
+
+Perceba também que voltamos a usar o operador *\$* (cifrão).
+
+
+Nosso gráfico não está aparentemente muito agradável e um pouco sem cor. Vamos inserir alguns argumentos estéticos que melhoram sua visualização e entender como ele sumariza nossos dados.
+
+
+```{r}
+hist(dados$comprimento, 
+     ylim = c(0, 10), 
+     xlim = c(9, 20), 
+     col = "blue",
+     main = "Meu Histograma",
+     xlab = "Comprimento",
+     ylab = "Frequência absoluta")
+```
+
+
+Temos aqui nosso histograma com alguns argumentos que permitem melhorar sua visualização. Ele nos permite visualizar os dados da variável comprimento e sua frequência de ocorrência.
+
+
+Podemos observar nele que o valor mínimo observado é 10 e que o máximo é 19 e que as frequências das diferentes classes de comprimento formadas, variam entre 0 e aproximadamente 9. Será que isto que observamos está correto. Vamos ver no tópico a seguir.
+
+
+Ainda em relação ao histograma podemos ver na função *hist()* que utilizamos diversos argumentos como: xlim, ylim, col, main, xlab e ylab, além de uma função chamada *c()*. Verifique a tabela abaixo para detalhes de cada um desses argumentos e da função *c()*. OBS: Essa função *c()* é muito importante e será utilizada constantemente ao longo de seu trajeto no R.
+
+
+**[INSERIR TABELA EXPLICANDO OS ARGUMENTOS E A FUNÇÃO CONCATENAR]**
+
+
+### GRÁFICO DE BARRAS
+
+
+Se já chegamos até esse ponto vamos exercitar um pouco antes de plotar o gráfico de barras.
+
+
+Acesse a seguinte planilha: abundância. Vamos inseri-la no R com o nome abundancia. repare que retirei o acento. Sempre que trabalharmos com linguagem de programação evite acentuações, espaços, cedilhas (ç) e atente a maiúsculas e minúsculas, pois isso pode interferir no seu código
+
+
+Se estiver iniciando o R agora lembre-se de definir o ambiente de trabalho.
+
+
+```{r}
+abundancia <- read_excel("abundancia.xlsx", col_names = TRUE)
+```
+
+
+Repare que ela está no formato \*.xlsx e apresenta as seguintes variáveis: mes e N. Onde N significa o número de indivíduos observado.
+
+
+Vamos apenas conferir se está tudo certo com os dados usando a função str().
+
+```{r}
+str(abundancia)
+```
+
+
+Vamos converter a variável mês em factor.
+
+```{r}
+abundancia$mes <- as.factor(abundancia$mes)
+```
+
+
+Repare que agora que sabemos os passos a realizar desde a importação dos arquivos tudo ficou muito mais fácil e fluído, e apenas realizamos três etapas, sendo uma delas apenas conferência.
+
+
+Seguindo para o gráfico de barras a fim de mostrar o número de indivíduos ao longo dos meses temos que:
+
+
+```{r}
+barplot(abundancia$N)
+```
+
+
+Assim como o histograma o simples uso da função sem argumentos gera um gráfico de dificil análise e esteticamente não muito agradavel.
+
+
+Vamos portanto adicionar alguns argumentos já conhecidos e outros novos que permitirão a melhor análise do gráfico.
+
+
+```{r}
+barplot(abundancia$N,
+        ylim = c(0, 200),
+        xlab = "Mês",
+        ylab = "Abundância",
+        names.arg = abundancia$mes,
+        col = "green")
+```
+
+
+Podemos extrair desse gráfico que a abundância dos indivíduos variam ao longo dos meses com valores mínimos em torno de 50 indivíduos nos meses 4, 5 e 6 e valores máximos em torno de 200 indivíduos no mês 11.
+
+
+Podemos ver que os argumentos utilizados permitiram referenciar as barras, ajustar o eixo y, adicionar cores e adicionar os nomes dos eixos. Para detalhes sobre os argumentos e funções utilizadas no *barplot()* ver tabela abaixo.
+
+
+```{r, message = FALSE, echo = FALSE}
+options(kableExtra.latex.load_packages = TRUE)
+require(kableExtra)
+
+text_tbl <- data.frame(Argumentos = c("ylim", "c()", "xlab", "ylab", "names.arg", "col"),
+                       Características = c("Refere-se aos limites do eixo y",
+                                    "É usada quando se deseja unir 2 ou mais objetos em um vetor, no exemplo acima ela foi usada para concatenar os valores 0 e 200, que indicam os limites mínimo e máximo do eixo y",
+                                    "É usado para dar nome ao eixo x",
+                                    "É usado para dar nome ao eixo y",
+                                    "É usado para definir o nome das categorias/barras representadas no eixo x, neste caso as categorias usadas estão vinculadas a coluna mes do objeto abundancia",
+                                    "É usado para definir a cor das barras"))
+
+kbl(text_tbl, booktabs = T) %>%
+        kable_styling(full_width = F, latex_options = "striped") %>%
+        column_spec(1, bold = T) %>%
+        column_spec(2, width = "30em")
+```
+
+**[INSERIR TABELA EXPLICANDO OS ARGUMENTOS E A FUNÇÃO CONCATENAR]**
+
+
+### GRÁFICO DE LINHAS
+
+
+Assim como o gráfico de barras podemos desejar fazer um gráfico de linhas para isso podemos utilizar a função *plot()* e continuar trabalhando com os dados de abundância por mês
+
+
+Contudo para fazer um gráfico de linhas pelo comando básico do R (utilizando a função *plot()*) precisamos indicar que ambos os eixos apresentam variáveis númericas. Portanto teremos que modificar a variável mês de fator para numerica.
+
+
+Porém não precisamos fazer isso em um comando separado podemos aplicar a função que converte uma variável em númerica dentro da função que plota o gráfico. Vamos visualizar como isso ocorre na prática.
+
+
+```{r}
+plot(x = as.numeric(abundancia$mes), y = abundancia$N)
+```
+
+
+Pronto, na função acima aplicamos a função *plot()* indicando os argumentos x e y que definem quem estará no eixo x e quem estará no eixo y, e para a variável que estará no eixo x (variável mês) adicionamos a função *as.numeric()* a qual a converte em númerico apenas para a execução do plot.
+
+
+Porém a função *plot()* não realizou um gráfico de linhas como esperado, pois para isso precisamos indica-lo por meio de argumentos. Como demonstraremos a seguir
+
+
+```{r}
+plot(x = as.numeric(abundancia$mes), 
+     y = abundancia$N, 
+     xlab = "Mês",
+     ylab = "Abundância",
+     main = "Meu gráfico de linha",
+     ylim = c(0, 200),
+     type = "l",
+     col = "green",
+     lwd = 2)
+```
+
+
+Repare que um gráfico de linha foi plotado e o resultado deste indica o memso que o gráfico de barras que realizamos acima.
+
+
+Alguns argumentos novos foram inseridos, os detalhes deles podem ser visualizados na tabela abaixo:
+
+
+**[INSERIR TABELA EXPLICANDO OS ARGUMENTOS E A FUNÇÃO CONCATENAR]**
+
+
+### BOXPLOT
+
+
+Vamos voltar a nossa primeira planilha (dados) e executar um gráfico do tipo boxplot e ver o que ele nos informa.
+
+
+```{r}
+boxplot(formula = dados$comprimento ~ dados$ano)
+```
+
+
+Repare que a escrita para esse gráfico é ligeiramente diferente. Ele usa a função *boxplot()*, um argumento chamado formula onde nele inserimos a variável independente (variável do eixo X) e a variável dependente (variável do eixo Y). Entre ambas as variáveis é possível ver o caracter "~" (til). A forma de ler essa escrita é a seguinte: Realize um boxplot da variável comprimento da planilha dados em função da variável ano da planilha dados. A variável til é lida como ("em função de")
+
+
+Vamos adicionar alguns argumentos que permitem deixar o gráfico mais apresentável.
+
+
+```{r}
+boxplot(formula = dados$comprimento ~ dados$ano,
+        col = c("blue", "green"),
+        xlab = "Ano",
+        ylab = "Comprimento",
+        main = "Meu Boxplot")
+```
+
+
+Repare que não adicionamos nenhum argumento ou função diferente do que já fizemos anteriormente. Ou seja, uma vez conhecendo a função, os argumentos por vezes se repetem.
+
+
+O boxplot porém nos fornece algumas informações extras em relação ao resumo dos dados. Podemos extrair dele dados como média, mediana (segundo quartil), primeiro e terceiro quartil, assim como máximos e mínimos da variável dependente.
+
+
+As linhas de cada box (caixa) que se referem a cada um dos anos representam, em suas extremidades os valores máximos e mínimos de comprimento de cada ano. A topo e a base de cada "box" indicam o primeiro e terceiro quartil, respectivamente, do comprimento. A linha no interior da caixa indica a mediana (segundo quartil) e a metade do box (não indicada graficamente) indica a média.
+
+
+Podemos por meio desse gráfico então ter uma ideia do que os dados indicam quanto as medidas de tendência central e algumas medidas de dispersão em relação as categorias definidas.
+
+
+## Quarto passo: Sumarizando os dados numericamente
+
+
+Temos visto, até este ponto de maneira geral, como resumir os dados graficamente.
+
+
+Porém muitas vezes precisamos demonstrar numericamente quais são os valores que resumem dos dados. Estes valores consistem nas medidas de tendência central e nas suas medidas de dispersão.
+
+O R permite, de maneira simples, sumarizar os dados por meio da seguinte função.
+
+
+```{r}
+summary(dados)
+summary(abundancia)
+```
+
+
+Repare que summary(dados) ou summary(abundancia) o R nos informou as variáveis presentes nestas planilhas e quando fator indicou quais são e quantos de cada existem e quando númerico nos retornou valores como média, mediana, mínimo, máximo, primeiro e terceiro quartis.
+
+
+As medidas de tendência central mais conhecidas e aplicadas são média, mediana e moda.
+
+
+Para obtenção da média precisamos somar todos os valores e dividir pela quantidade de valores ou no R podemos fazer isso de maneira mais simples por meio da função *mean()*:
+
+
+```{r}
+mean(dados$comprimento)
+```
+
+
+Como podemos verificar a média do comprimento na planilha dados é de 13.975.
+
+
+De maneira similar podemos calcular a mediana, que consiste no valor central da distribuição de valores de uma dada variável. Podemos visualiza-la por meio da função *median()*.
+
+
+```{r}
+median(dados$comprimento)
+```
+
+
+Como podemos verificar o valor que se encontra no meio da distribuição de valores da variável comprimento é 14.
+
+
+As medidas de dispersão são utilizadas para demonstrar a variabilidade dos dados...[explicar mais]
+
+
+Os limites inferior e superior de uma dada variável quantitativa são denominados mínimo e máximo e podem ser obtidos por meio das funções que calculam o mínimo e máximo. Apesar de seu resultado aparecer na função *summary()*, que aplicamos anteriormente, podemos obte-la separadamente para uma variável especifica. Vamos conferi-la com o conjunto de dados que utilizamos anteriormente.
+
+
+```{r}
+min(dados$comprimento)
+max(dados$comprimento)
+```
+
+
+Uma outra forma de obter os valores máximo e mínimo é usando a função *range()*.
+
+
+```{r}
+range(dados$comprimento)
+```
+
+
+Como puderam verificar utilizando a função *min()* e *max()* ou *range()* obtemos os valores mínimo e máximo da variável comprimento. Repare que usamos o operador cifrão (**\$**) após o nome do conjunto de dados. Como você aprendeu anteriormente ele permite acessar as variáveis que estão dentro do objeto dados.
+
+
+Com os valores mínimo e máximo podemos obter nossa primeira medida de dispersão dos dados. A amplitude que consiste na diferença entre os valores máximo e mínimo de nossa amostra. Está é a forma mais simples de verificar a dispersão de seus dados. Ela apresenta suas falhas, porém tem a vantagem de fornecer a distância na qual seus dados variam na mesma unidade em que eles estão.
+
+
+A amplitude é utilizada para dados quantitativos, descrever a variabilidade de uma amostra, porém não para inferência estatística.
+
+
+```{r}
+max(dados$comprimento) - min(dados$comprimento)
+```
+
+
+Como podemos ver, ao calcular a diferença entre o máximo e mínimo da mesma variável obtemos a diferença entre elas e esse valor consiste na amplitude desta variável.
+
+
+Uma outra forma de realizar esta mesma operação é utilizando a função *diff()* que calcula a diferença. Quando inserimos a função *range()* dentro da função *diff()* o R nos retorna o resultado da diferença dos valores obtidos pela função *range()*.
+
+
+```{r}
+diff(range(dados$comprimento))
+```
+
+
+O desvio padrão. Esta é uma das medidas de variação mais importantes que iremos realizar. Ele mede a distância dos valores observados em relação a sua média.
+
+
+Durante a coleta de dados em estudos ambientais, o que normalmente é extraído de informação é uma fração de um todo, ou seja, uma amostra de uma população. Portanto quando se deseja avaliar o desvio padrão, assim como outras medidas de variabilidade, devemos considerar se estamos avaliando uma amostra ou toda a população. Se uma amostra é considerada o nos referimos a ela como desvio padrão amostral e a representamos por (s) se toda a população é considerada nos referimos a ela como desvio padrão populacional e a representamos por (sigma).
+
+
+Neste livro vamos abordar e considerar o desvio padrão como o desvio padrão amostral.
+
+
+Para calcular o desvio padrão amostral utilizamos a seguinte formula abaixo:
+
+
+**[INSERIR FORMULA]**
+
+
+Podemos calcular o desvio padrão a partir de suas partes, considerando sua formula ou a partir de uma função pré-existente no R. Vamos conferir as duas formas.
+
+
+Para facilitar o entendimento do código vamos começar criando  os seguintes objetos:
+
+
+```{r}
+comp <- dados$comprimento
+comp.media <- mean(dados$comprimento)
+N <- length(dados$comprimento)
+
+comp
+comp.media
+N
+```
+
+
+* "comp" contêm os dados da variável comprimento presente na planilha dados
+* "comp.media" contêm um dado que consiste na média da variável comprimento
+* "N" representa a quantidade de observações presentes na variável comprimento. Repare que aqui utilizamos uma nova função chamada length() a qual contabiliza o número de observações de objeto.
+
+
+```{r}
+sqrt((sum((comp - comp.media)^2)) / (N - 1))
+sd(dados$comprimento)
+sd(comp)
+```
+
+
+Destas três formas cabe explicarmos a primeira. Nela vamos entender como lemos uma função. O ideal é ler de dentro para fora. Como uma equação matemática. Mas não se assuste é mais fácil do que parece. Começamos a leitura da seguinte forma:
+
+1. (comp - comp.media): Realize a diferença dos valores presentes em comp de sua média.
+2. ((comp - comp.media)^2): Eleve esses valores, obtidos da diferença, ao quadrado.
+3. (sum((comp - comp.media)^2)): Soma todos os valores, obtidos pela diferença elevados ao quadrado.
+4. (sum((comp - comp.media)^2)) / (N - 1): Divida a soma dos valores da diferença elevado ao quadrado pelo número de observações menos 1.
+5. sqrt((sum((comp - comp.media)^2)) / (N - 1)): Extraia a raíz quadrada da divisão da soma dos valores da diferença elevado ao quadrado pelo número de observações menos 1.
+
+
+Repare que a leitura segue a ordem dos passos do cálculo que seria feito a mão usando a equação apresentada acima.
+
+
+Mas caso não queira escrever a formula o R fornece a função *sd()* que pode ser aplicada a uma variável dentro de uma planilha de dados ou a um vetor que contenha um conjunto de observações do seu interesse.
+
+
+Pronto, agora enetendemos como ler um código que apresenta funções dentro de funções e entendemos como realizar o desvio padrão de três formas distintas (existem diversas outras formas) no R. Agora você já pode escolher a que mais lhe agrada. Qual você prefere? Bem, essa é uma escolha sua.
+
+
+Assim como o desvio padrão temos também a variância. A mais importante medida de variabilidade dos dados. Há todo um conjunto espécial de análise de dados voltado para ela. Mas como poderão ver, ela não difere muito do desvio padrão, apenas pelo fato de que consiste no seu valor elevado ao quadrado, no entanto a variância amostral é representada por s² enquanto que o desvio padrão é representado por s.
+
+
+Partindo dessa ideia a variância é nada mais que estimar o desvio padrão e eleva-lo ao quadrado. Vamos observar o seu resultado utilizando sua formula e a função predefinida pelo R.
+
+
+```{r}
+(sum((comp - comp.media)^2)) / (N - 1)
+sd(dados$comprimento)^2
+var(dados$comprimento)
+```
+
+
+Pronto aqui estão 3 maneiras de encontrar a variância de seus dados. A primeira é similar ao que realizamos anteriormente para o desvio padrão porém sem a raíz quadrada. A segunda consiste em elevar ao quadrado o resultado do desvio padrão e a terceira é aplicando a função *var()* a variável comprimento presente na planilha dados.
+
+
+Difícil? Espero que não.
+
+
+Mas vamos entender o significado do desvio padrão e variância. Pois ambos estão intimamente relacionados.
+
+
+Como conversamos anteriormente as medidas de tendência central nos informam sobre a distância das observações de uma dada variável em relação a sua medida de tendência central (normalmente a média). Se somarmos a diferença das observações de uma dada variável de sua média obteremos o valor de 0 (tabela abaixo). Contudo se elevarmos cada diferença ao quadrado e dividirmos pela quantidade de observações menos 1 (subtrai-se 1 das observações porque estamos trabalhando com amostras) teremos a média das distâncias das observações ao quadrado (variância). Porém algumas vezes esse valor pode não ser fácil de interpretar e não reflete diretamente a unidade da variável mensurada. Com isso uma forma mais intuitiva utilizada para interpretar a dispersão dos dados em relação a sua média consiste no desvio padrão, pois como vimos este consiste na raiz quadrada da variância, ao fazermos isso nos obtemos a distância média das observações em relação a sua média na mesma unidade de medida em que se encontram.
+
+
+O coeficiente de variação é outra medida importante e de fácil interpretação sobre a variabilidade dos dados. Este consiste em representar o desvio padrão em termos percentuais. Este é simples de calcular e intuitivo de interpretar.
+
+Não há, até o momento, uma função no pacote básico do R que o calcule. Vamos calcular e ver o que ele quer dizer.
+
+
+```{r}
+sd(dados$comprimento)/mean(dados$comprimento)*100
+```
+
+
+Pronto, calculamos o coeficiente de variação da variável comprimento. O desvio padrão de uma dada observação apresenta a mesma unidade de suas observações, correto? Então podemos dividi-lo pela média das próprias observações e multiplicar por 100 com isso temos que a variável comprimento tem uma variação em torno da média de ±15,07%.
+
+
+Com isso verificamos as principais medidas de tendência central e dispersão. Mas fica uma questão, como incorpora-las aos gráficos para que assim possamos resumir os dados graficamente de maneira mais completa.
+
+
+Vamos em frente! Vamos utilizar nossa planilha dados e verificar a média do comprimento e do peso por ano e por ambiente e incorporar em cada um dos gráficos seus respectivos desvios padrões.
+
+
+Neste caso vamos primeiro precisar organizar os dados que queremos plotar. Como desejamos plotar a média do comprimento por ano e ambiente, vamos primeiro construir passo a passo uma tabela que apresente 4 colunas a primeira com o ano, a segunda com ambiente, a terceira com a média do comprimento e a última com o desvio padrão.
+
+```{r, message = FALSE}
+dados.2 <- split(x = dados, f = dados$ano)
+
+ano.2020 <- dados.2$`2020`
+ano.2021 <- dados.2$`2021`
+
+ano.2020.local <- split(x = ano.2020, f = ano.2020$local)
+ano.2021.local <- split(x = ano.2021, f = ano.2021$local)
+
+ano.2020.local.1 <- ano.2020.local$`Ambiente 1`
+ano.2020.local.2 <- ano.2020.local$`Ambiente 2`
+
+ano.2021.local.1 <- ano.2021.local$`Ambiente 1`
+ano.2021.local.2 <- ano.2021.local$`Ambiente 2`
+```
+
+
+Pronto! Dividimos os nosso dados de acordo com os fatores que desejamos. Agora vamos obter as métricas média e desvio padrão.
+
+
+```{r, message = FALSE}
+ano.2020.local.1.comp.media <- mean(ano.2020.local.1$comprimento)
+ano.2020.local.1.comp.dp <- sd(ano.2020.local.1$comprimento)
+
+ano.2020.local.2.comp.media <- mean(ano.2020.local.2$comprimento)
+ano.2020.local.2.comp.dp <- sd(ano.2020.local.2$comprimento)
+
+ano.2021.local.1.comp.media <- mean(ano.2021.local.1$comprimento)
+ano.2021.local.1.comp.dp <- sd(ano.2021.local.1$comprimento)
+
+ano.2021.local.2.comp.media <- mean(ano.2021.local.2$comprimento)
+ano.2021.local.2.comp.dp <- sd(ano.2021.local.2$comprimento)
+```
+
+
+
+Pronto! Média e desvio padrão do comprimento calculado para cada ano e local. Agora vamos unir esses resultados em uma data frame
+
+
+```{r, message = FALSE}
+dados.media <- c(ano.2020.local.1.comp.media,
+                 ano.2020.local.2.comp.media,
+                 ano.2021.local.1.comp.media,
+                 ano.2021.local.2.comp.media)
+
+dados.dp <- c(ano.2020.local.1.comp.dp,
+              ano.2020.local.2.comp.dp,
+              ano.2021.local.1.comp.dp,
+              ano.2021.local.2.comp.dp)
+```
+
+
+Vamos criar as variáveis categoricas e ano e local para adicionar a esse dados
+
+
+```{r, message = FALSE}
+ano <- c("2020", "2020", "2021", "2021")
+local <- c("Ambiente 1", "Ambiente 2", "Ambiente 1", "Ambiente 2")
+
+dados.3 <- as.data.frame(cbind(ano, local, dados.media, dados.dp))
+str(dados.3)
+
+dados.3$ano <- as.factor(dados.3$ano)
+dados.3$local <- as.factor(dados.3$local)
+dados.3$dados.media <- as.numeric(dados.3$dados.media)
+dados.3$dados.dp <- as.numeric(dados.3$dados.dp)
+```
+
+
+```{r}
+dados.3
+```
+
+
+Repare que durante todo este processo utilizamos três funções que não haviamos utilizado antes. As funções *split()* que divide a planilha de acordo com as categorias presentes na variável que definimos, *as.data.frame()* que faz com que um conjunto de objetos sejam convertidos em data frame e *cbind()* o qual une objetos como colunas. Essas funções também serão comumente utilizadas durante seus passos iniciais no R.
+
+
+Pronto! depois de alguns passos conseguimos construir nossa nova tabela com os dados resumidos.
+
+
+É um processo longo porém necessário para se acostumar com o ambiente de trabalho e a linguagem que o R usa. Há caminhos mais rápidos e tão eficientes quanto. Que se tornam uteis quando lidamos com muitas categorias dentro de uma variável. Contudo para isso é necessário a instalação de algum pacote (Há vários pacotes que apresentam funções que realizam este processo). Vamos utilizar um exemplo começando pela instalação do pacote chamado Rmisc.
+
+
+O comando abaixo realiza a instalação desse pacote. Conforme já fizemos com o pacote readxl
+
+
+```{r, message = FALSE, eval = -1}
+install.packages("Rmisc")
+```
+
+
+Após instalado vamos carrega-lo pelo comando a seguir. Conforme já fizemos com o pacote readxl
+
+
+```{r, message = FALSE}
+library(Rmisc)
+```
+
+
+Agora vamos conhecer a função *summarySE()* deste pacote o qual realiza os passos que fizemos acima e ainda apresenta outros resultados. Mas iremos focar na média e desvio padrão.
+
+
+```{r}
+resultado <- summarySE(data = dados, 
+                       measurevar = "comprimento", 
+                       groupvars = c("ano", "local"))
+
+resultado
+```
+
+
+Repare que a função *summarySE()* apresenta, basicamente, 3 argumentos, "data" que pede que se insira a planilha a ser utilizada, "measurevar" o qual pede a variável quantitativa que será sumarizada e "groupvars" o qual pede as variáveis categoricas segundo as quais a variável mensurável será agrupada. Observe também que para esta função as variáveis devem ser colocadas entre aspas.
+
+
+Pronto com a função acima realizamos os mesmos passos que antes e guardamos o resultado dentro de um objeto chamado resultado. Repare que essa função nos resumiu os dados de comprimento de acordo com as duas variáveis categóricas que indicamos: ano e local. Em seu resumo ele nos forneceu, na seguinte ordem, a coluna ano, local, N (número de observações), comprimento (média do comprimento), sd (desvio padrão), se (erro padrão), ci (intervalo de confiança de 95%).
+
+
+Agora vamos usar o objeto resultado para desenvolver o gráfico de barras com o erro padrão. Mas lembre-se o objeto dados.3 também pode ser utilizado.
+
+
+```{r}
+grafico <- barplot(formula = comprimento ~ ano + local,
+                   data = resultado,
+                   beside = TRUE,
+                   col = c("red", "blue"),
+                   ylim = c(0, 30),
+                   ylab = "Comprimento médio (cm)",
+                   legend.text = TRUE)
+
+arrows(x0 = grafico,
+       y0 = resultado$comprimento + resultado$sd,
+       y1 = resultado$comprimento - resultado$sd,
+       code = 3,
+       angle = 90,
+       length = 0.05)
+```
+
+
+Note que nesta função *barplot()* utilizamos algumas mudanças em relação ao que fizemos anteriormente, como os argumentos "formula" o qual indica a variável resposta em função das variáveis categóricas o qual será plotado (Caso altere a ordem ano + local para local + ano a ordem do gráfico também será alterado. Teste você mesmo, veja o acontece). Neste caso como temos mais de uma variável categórica adicionamos um argumento novo chamado "legend.text" o qual adiciona uma legenda ao gráfico.
+
+
+Para adicionar os desvios no gráfico de barras precisamos criar um objeto que armazena o gráfico, por isso adicionamos a função barplot() a um objeto denominado grafico.
+
+
+Agora que construimos o gráfico, a função *arrows()* é responsável por adicionar as barras de desvios no gráfico. Ela apresenta alguns argumentos diferentes do que já vimos em outros gráficos. "x0" indica o objeto onde o gráfico foi armazenado; "y0" e "y1" são escritos como uma operação matemática onde devemos incluir o valor da média + e - a coluna onde está a variável referente  ao desvio; "code" determina o tipo de seta que será plotada; "angle" é o ângulo da haste da barra até a ponta; "length" é o comprimento das bordas da barra.
+
+
+Terminamos de construir e entender os componentes do nosso primeiro gráfico com suas barras de erro.
+
+
+O entendimento principal para construção desse gráfico consiste em entender como organizar os dados a serem graficados. Ao se usar a função *barplot()* para construção do gráfico de barras com os desvios, devemos ter uma ou mais colunas com as categorias, outra com os valores que desejamos e outra com os valores dos desvios.
+
+
+Vamos realizar um segundo tipo de gráfico onde temos apenas uma variável categórica e seus respectivos desvios. Para isso utilizaremos nosso conjunto de dados abundancia (lembre-se que mês é uma variável categórica e deve ser identificada como fator).
+
+
+Neste conjunto de dados não precisamos reorganizar os dados pois eles já se encontram organizados e já temos os valores dos desvios.
+
+
+```{r}
+grafico <- barplot(abundancia$N,
+                   ylim = c(0, 200),
+                   xlab = "Mês",
+                   ylab = "Abundância",
+                   names.arg = abundancia$mes,
+                   col = "green")
+
+arrows(x0 = grafico,
+       y0 = abundancia$N + abundancia$desvio,
+       y1 = abundancia$N - abundancia$desvio,
+       code = 3,
+       angle = 90,
+       length = 0.05)
+```
+
+
+Repare que é quase a mesma coisa que fizemos antes. A única diferença é que guardamos o gráfico gerado em um objeto chamado grafico.
+
+
+Pronto, gráfico realizado.
+
+
+Durante nosso percurso neste livro realizaremos muito mais gráficos aliados as análises estatísticas básicas mais comumente utilizadas. Não se assuste com a quantidade de etapas e funções e argumentos e nomes, eles irão se repetir tantas e tantas vezes daqui em diante que você não esquecerá. O aprendizado do R é exponencial e ele lhe permitirá entender como nunca o mundo da análise de dados.
+
+
+**Resumo das etapas até o presente momento:**
+**importar planinha >> conferir as variáveis >> sumarizar numericamente os dados >> sumarizar graficamente os dados**
+
+**[TEMOS QUE FAZER UM ESQUEMA DESSAS ETAPAS]**

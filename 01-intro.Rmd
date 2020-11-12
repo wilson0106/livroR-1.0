@@ -1,0 +1,37 @@
+# O que é o R?
+
+
+## Porque usá-lo para análise de dados?
+
+
+
+# O RStudio
+
+
+
+## O ambiente RStudio
+
+
+### Script
+
+
+### Environment
+
+
+### History
+
+
+### Console
+
+
+### Files
+
+
+### Packages
+
+
+### Plot
+
+
+### Help
+

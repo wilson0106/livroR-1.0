@@ -1,0 +1,28 @@
+--- 
+title: "Introdução a análise de dados ambientais em R"
+author: "Wilson Souza & Thiago Couto"
+date: "`r Sys.Date()`"
+site: "bookdown::bookdown_site"
+always_allow_html: true
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "Este é o primeiro livro da série de livros análise de dados ambientais em R"
+---
+
+# Prefácio {-}
+
+In this book, we will introduce an interesting
+
+
+# Sobre os autores {-}
+
+
+**Wilson Souza**
+
+Possui graduação em Licenciatura em Ciências Biológicas pela Universidade Federal do Rio de Janeiro com dupla diplomação com a Universidade de Coimbra - Portugal, Bacharelado em Biologia Marinha pela Universidade Federal do Rio de Janeiro e Mestrado em Oceanografia Biológica pela Universidade Federal do Rio Grande. Desde 2012 trabalha em projetos de monitoramento de populações de camarões com foco em aspectos ecológicos e pesqueiros e em projetos de ecologia de benthos marinho. Aprendeu a linguagem R durante o mestrado e desde então tem se dedicado a ampliar seus conhecimentos em bioestatística voltado para análises ambientais e ecológicas de organismos bentônicos marinhos.
+
+
+
+**Thiago Couto**
