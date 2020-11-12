@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Importação, organização e sumarização dos dados
 
 
@@ -40,7 +45,7 @@ O comando *read.csv()* importou a planilha que está no formato *.csv utilizando
 O comando acima importou a planilha e o guardou e um objeto chamado dados que será o que nós utilizaremos de agora em diante sempre que quisermos acessar a a planilha no R.
 
 
-Para importação de arquivos que estão no formato \*.xls ou \*.xlsx é necessário a instalação de algum pacote que permita a realização desse processo. Um pacote que instalaremos aqui é o readxl. Não se preocupe com o processo de instalação de pacotes, neste momento, falaremos sobre ele ao longo do livro, sempre que necessário.
+Para importar arquivos que estão no formato \*.xls ou \*.xlsx é necessário a instalação de algum pacote que permita a realização desse processo. Um pacote que instalaremos aqui é o readxl. Não se preocupe com o processo de instalação de pacotes, neste momento, falaremos sobre ele ao longo do livro, sempre que necessário.
 
 
 ```{r, message = FALSE, eval = -1}
@@ -195,10 +200,10 @@ Pensando nos gráficos mais comuns e úteis para nosso dia-a-dia e que nos permi
 ### HISTOGRAMAS
 
 
-Para isso vamos aplicar a função *hist()* para visualizar os valores da variável comprimento.
+A função *hist()* permite visualizar os valores da variável comprimento (Figura \@ref(fig:comp-hist)).
 
 
-```{r}
+```{r comp-hist, fig.cap = "Comprimento dos organismos da planilha dados"}
 hist(dados$comprimento)
 ```
 
@@ -209,10 +214,10 @@ Repare que um gráfico foi gerado na sua janela lateral, na guia plots.
 Perceba também que voltamos a usar o operador *\$* (cifrão).
 
 
-Nosso gráfico não está aparentemente muito agradável e um pouco sem cor. Vamos inserir alguns argumentos estéticos que melhoram sua visualização e entender como ele sumariza nossos dados.
+Nosso gráfico não está aparentemente muito agradável e um pouco sem cor. Vamos inserir alguns argumentos estéticos que melhoram sua visualização e entender como ele sumariza nossos dados (Figura \@ref(fig:comp-hist-col)).
 
 
-```{r}
+```{r comp-hist-col, fig.cap = "Comprimento dos organismos da planilha dados com barras coloridas"}
 hist(dados$comprimento, 
      ylim = c(0, 10), 
      xlim = c(9, 20), 
@@ -272,10 +277,10 @@ abundancia$mes <- as.factor(abundancia$mes)
 Repare que agora que sabemos os passos a realizar desde a importação dos arquivos tudo ficou muito mais fácil e fluído, e apenas realizamos três etapas, sendo uma delas apenas conferência.
 
 
-Seguindo para o gráfico de barras a fim de mostrar o número de indivíduos ao longo dos meses temos que:
+Seguindo para o gráfico de barras (Figura \@ref(fig:bar-abu)) a fim de mostrar o número de indivíduos ao longo dos meses temos que:
 
 
-```{r}
+```{r bar-abu, fig.cap = "Gráfico de barras com número de indivíduos da planilha abundância por mês"}
 barplot(abundancia$N)
 ```
 
@@ -283,10 +288,10 @@ barplot(abundancia$N)
 Assim como o histograma o simples uso da função sem argumentos gera um gráfico de dificil análise e esteticamente não muito agradavel.
 
 
-Vamos portanto adicionar alguns argumentos já conhecidos e outros novos que permitirão a melhor análise do gráfico.
+Vamos portanto adicionar alguns argumentos já conhecidos e outros novos que permitirão a melhor análise do gráfico (Figura \@ref(fig:bar-abu-col)).
 
 
-```{r}
+```{r bar-abu-col, fig.cap = "Gráfico de barras com número de indivíduos da planilha abundância por mês, com barras coloridas"}
 barplot(abundancia$N,
         ylim = c(0, 200),
         xlab = "Mês",
@@ -299,22 +304,21 @@ barplot(abundancia$N,
 Podemos extrair desse gráfico que a abundância dos indivíduos variam ao longo dos meses com valores mínimos em torno de 50 indivíduos nos meses 4, 5 e 6 e valores máximos em torno de 200 indivíduos no mês 11.
 
 
-Podemos ver que os argumentos utilizados permitiram referenciar as barras, ajustar o eixo y, adicionar cores e adicionar os nomes dos eixos. Para detalhes sobre os argumentos e funções utilizadas no *barplot()* ver tabela abaixo.
+Podemos ver que os argumentos utilizados permitiram referenciar as barras, ajustar o eixo y, adicionar cores e adicionar os nomes dos eixos. Para detalhes sobre os argumentos e funções utilizadas no *barplot()* (Tabela \@ref(tab:tab-arg)).
 
 
-```{r, message = FALSE, echo = FALSE}
+```{r tab-arg, message = FALSE, echo = FALSE}
 options(kableExtra.latex.load_packages = TRUE)
 require(kableExtra)
 
-text_tbl <- data.frame(Argumentos = c("ylim", "c()", "xlab", "ylab", "names.arg", "col"),
+text_tbl <- data.frame(Argumentos = c("ylim", "xlab", "ylab", "names.arg", "col"),
                        Características = c("Refere-se aos limites do eixo y",
-                                    "É usada quando se deseja unir 2 ou mais objetos em um vetor, no exemplo acima ela foi usada para concatenar os valores 0 e 200, que indicam os limites mínimo e máximo do eixo y",
                                     "É usado para dar nome ao eixo x",
                                     "É usado para dar nome ao eixo y",
                                     "É usado para definir o nome das categorias/barras representadas no eixo x, neste caso as categorias usadas estão vinculadas a coluna mes do objeto abundancia",
                                     "É usado para definir a cor das barras"))
 
-kbl(text_tbl, booktabs = T) %>%
+kbl(text_tbl, booktabs = T, caption = "Descrição dos argumentos utilizados para o gráfico de barras") %>%
         kable_styling(full_width = F, latex_options = "striped") %>%
         column_spec(1, bold = T) %>%
         column_spec(2, width = "30em")
@@ -332,10 +336,10 @@ Assim como o gráfico de barras podemos desejar fazer um gráfico de linhas para
 Contudo para fazer um gráfico de linhas pelo comando básico do R (utilizando a função *plot()*) precisamos indicar que ambos os eixos apresentam variáveis númericas. Portanto teremos que modificar a variável mês de fator para numerica.
 
 
-Porém não precisamos fazer isso em um comando separado podemos aplicar a função que converte uma variável em númerica dentro da função que plota o gráfico. Vamos visualizar como isso ocorre na prática.
+Porém não precisamos fazer isso em um comando separado podemos aplicar a função que converte uma variável em númerica dentro da função que plota o gráfico. Vamos visualizar como isso ocorre na prática (Figura \@ref(fig:pon-graf)).
 
 
-```{r}
+```{r pon-graf, fig.cap = "Representação gráfica do número de indivíduos por mês em pontos"}
 plot(x = as.numeric(abundancia$mes), y = abundancia$N)
 ```
 
@@ -343,10 +347,10 @@ plot(x = as.numeric(abundancia$mes), y = abundancia$N)
 Pronto, na função acima aplicamos a função *plot()* indicando os argumentos x e y que definem quem estará no eixo x e quem estará no eixo y, e para a variável que estará no eixo x (variável mês) adicionamos a função *as.numeric()* a qual a converte em númerico apenas para a execução do plot.
 
 
-Porém a função *plot()* não realizou um gráfico de linhas como esperado, pois para isso precisamos indica-lo por meio de argumentos. Como demonstraremos a seguir
+Porém a função *plot()* não realizou um gráfico de linhas como esperado, pois para isso precisamos indica-lo por meio de argumentos. Como demonstraremos a seguir (Figura \@ref(fig:lin-graf-col)).
 
 
-```{r}
+```{r lin-graf-col, fig.cap = "Representação gráfica do número de indivíduos por mês em um gráfico de linhas"}
 plot(x = as.numeric(abundancia$mes), 
      y = abundancia$N, 
      xlab = "Mês",
@@ -359,7 +363,7 @@ plot(x = as.numeric(abundancia$mes),
 ```
 
 
-Repare que um gráfico de linha foi plotado e o resultado deste indica o memso que o gráfico de barras que realizamos acima.
+Repare que um gráfico de linha foi plotado e o resultado deste indica o mesmo que o gráfico de barras que realizamos acima.
 
 
 Alguns argumentos novos foram inseridos, os detalhes deles podem ser visualizados na tabela abaixo:
@@ -371,10 +375,10 @@ Alguns argumentos novos foram inseridos, os detalhes deles podem ser visualizado
 ### BOXPLOT
 
 
-Vamos voltar a nossa primeira planilha (dados) e executar um gráfico do tipo boxplot e ver o que ele nos informa.
+Vamos voltar a nossa primeira planilha (dados) e executar um gráfico do tipo boxplot (Figura \@ref(fig:box-graf)) e ver o que ele nos informa.
 
 
-```{r}
+```{r box-graf, fig.cap = "Gráfico tipo boxplot do comprimento por ano, da planilha dados"}
 boxplot(formula = dados$comprimento ~ dados$ano)
 ```
 
@@ -382,10 +386,10 @@ boxplot(formula = dados$comprimento ~ dados$ano)
 Repare que a escrita para esse gráfico é ligeiramente diferente. Ele usa a função *boxplot()*, um argumento chamado formula onde nele inserimos a variável independente (variável do eixo X) e a variável dependente (variável do eixo Y). Entre ambas as variáveis é possível ver o caracter "~" (til). A forma de ler essa escrita é a seguinte: Realize um boxplot da variável comprimento da planilha dados em função da variável ano da planilha dados. A variável til é lida como ("em função de")
 
 
-Vamos adicionar alguns argumentos que permitem deixar o gráfico mais apresentável.
+Vamos adicionar alguns argumentos que permitem deixar o gráfico mais apresentável (Figura \@ref(fig:box-graf-col)).
 
 
-```{r}
+```{r box-graf-col, fig.cap = "Gráfico tipo boxplot do comprimento por ano com cores por ano, da planilha dados"}
 boxplot(formula = dados$comprimento ~ dados$ano,
         col = c("blue", "green"),
         xlab = "Ano",
@@ -721,10 +725,10 @@ Repare que a função *summarySE()* apresenta, basicamente, 3 argumentos, "data"
 Pronto com a função acima realizamos os mesmos passos que antes e guardamos o resultado dentro de um objeto chamado resultado. Repare que essa função nos resumiu os dados de comprimento de acordo com as duas variáveis categóricas que indicamos: ano e local. Em seu resumo ele nos forneceu, na seguinte ordem, a coluna ano, local, N (número de observações), comprimento (média do comprimento), sd (desvio padrão), se (erro padrão), ci (intervalo de confiança de 95%).
 
 
-Agora vamos usar o objeto resultado para desenvolver o gráfico de barras com o erro padrão. Mas lembre-se o objeto dados.3 também pode ser utilizado.
+Agora vamos usar o objeto resultado para desenvolver o gráfico de barras com o erro padrão (Figura \@ref(fig:bar-ep)). Mas lembre-se o objeto dados.3 também pode ser utilizado.
 
 
-```{r}
+```{r bar-ep, fig.cap = "Gráfico de barras com erro padrão do comprimento por ano e local, da planilha resultado (derivada da planilha dados)"}
 grafico <- barplot(formula = comprimento ~ ano + local,
                    data = resultado,
                    beside = TRUE,
@@ -757,13 +761,13 @@ Terminamos de construir e entender os componentes do nosso primeiro gráfico com
 O entendimento principal para construção desse gráfico consiste em entender como organizar os dados a serem graficados. Ao se usar a função *barplot()* para construção do gráfico de barras com os desvios, devemos ter uma ou mais colunas com as categorias, outra com os valores que desejamos e outra com os valores dos desvios.
 
 
-Vamos realizar um segundo tipo de gráfico onde temos apenas uma variável categórica e seus respectivos desvios. Para isso utilizaremos nosso conjunto de dados abundancia (lembre-se que mês é uma variável categórica e deve ser identificada como fator).
+Vamos realizar um segundo tipo de gráfico onde temos apenas uma variável categórica e seus respectivos desvios. Para isso utilizaremos nosso conjunto de dados abundancia (lembre-se que mês é uma variável categórica e deve ser identificada como fator) (Figura \@ref(fig(bar-ep-abu))).
 
 
 Neste conjunto de dados não precisamos reorganizar os dados pois eles já se encontram organizados e já temos os valores dos desvios.
 
 
-```{r}
+```{r bar-ep-abu, fig.cap = "Gráfico de barras com erro padrão da abundância por mês da planilha abundância"}
 grafico <- barplot(abundancia$N,
                    ylim = c(0, 200),
                    xlab = "Mês",

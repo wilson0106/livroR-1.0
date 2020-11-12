@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Qui-quadrado (χ²) | Introdução a análise de dados ambientais em R</title>
+  <title>Capítulo 4 Qui-quadrado (χ²) | Introdução a análise de dados ambientais em R</title>
   <meta name="description" content="Este é o primeiro livro da série de livros análise de dados ambientais em R" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Qui-quadrado (χ²) | Introdução a análise de dados ambientais em R" />
+  <meta property="og:title" content="Capítulo 4 Qui-quadrado (χ²) | Introdução a análise de dados ambientais em R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Qui-quadrado (χ²) | Introdução a análise de dados ambientais em R" />
+  <meta name="twitter:title" content="Capítulo 4 Qui-quadrado (χ²) | Introdução a análise de dados ambientais em R" />
   
   <meta name="twitter:description" content="Este é o primeiro livro da série de livros análise de dados ambientais em R" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Wilson Souza &amp; Thiago Couto" />
 
 
-<meta name="date" content="2020-11-11" />
+<meta name="date" content="2020-11-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -197,7 +197,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="qui-quadrado-χ" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> Qui-quadrado (χ²)</h1>
+<h1><span class="header-section-number">Capítulo 4</span> Qui-quadrado (χ²)</h1>
 <p>Em alguns momentos podemos estar trabalhando com variáveis categóricas e lidarmos com perguntas sobre estas variáveis e portanto pode ser necessário avaliarmos se a frequência das observações de uma dada variável categórica se ajusta ao que se é esperado (χ² para ajuste de frequências) ou se as proporções das observações de duas ou mais variáveis categóricas são independentes uma da outra (χ² para independência).</p>
 <p>Portanto, como podemos perceber, para este teste iremos precisar apenas de uma variável (se estivermos avaliando o ajuste de frequências) ou duas variáveis (se avaliarmos a independência) e estas devem ser categóricas. Como aprendemos anteriormente as variáveis categóricas devem ser classificadas como factor (pela função <em>as.factor()</em>) no R.</p>
 <p>Vamos conferir em detalhes e com exemplos como realizar estas duas análises no R. Mas antes vamos sumarizar suas principais características.</p>
@@ -297,7 +297,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##  on 2000 replicates)
 ## 
 ## data:  N.especies
-## X-squared = 4, df = NA, p-value = 0.07246</code></pre>
+## X-squared = 4, df = NA, p-value = 0.06597</code></pre>
 <p>Pronto. Basta usarmos o argumento simulate.p.value e indicar “FALSE” quando não queremos a simulação de Monte Carlo, ou apenas omitirmos este argumento, ou usar este argumento e indicar “TRUE” o qual realiza a simulação de Monte Carlo. Verifique que com a aplicação desta simulação o p-value aumenta indicando que torna mais dificil rejeitarmos a hipótese nula. Após aplicarmos a correção na nossa análise podemos afirmar que não há diferença na quantidade de cracas observadas em relação as proporções esperadas, para ambas as espécies de cracas.</p>
 <p>Relembrando. Sempre tome cuidado com afirmações! Principalmente quando o número de observações é baixo. Mesmo que o teste estatístico indique diferenças uma baixa quantidade de observações devem ser analisadas cuidadosamente, no entanto devemos aplicar correções matemáticas nestes casos.</p>
 </div>
@@ -370,7 +370,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 * H0: A proporção de camarões entre os anos é a mesma para ambos os sexos;</p>
 <p>Como o teste resultou em um p-value maior que 0,05 podemos dizer, por essa via, que corroboramos nossa hipótese nula.</p>
 <p>Neste ponto é bom relembramos da importância do número de observações de cada grupo. Se este número for pequeno incertezas podem ser geradas e ajustes devem ser feitos. Para saber mais sugerimos a leitura da literatura especializada. Contudo, para definir o que é um número baixo de observações sigamos o cálculo sugerido por Zar (2014) o qual define como: <span class="math inline">\(n = 6rc\)</span>.</p>
-<p>Onde, n é o número de observações mínimo de cada grupo, r é o número de linhas (rows) e c é o número de colunas (column). Dessa forma, em uma tabela de contigência do tipo 2x2 o número de observações mínimo para cada grupo deve ser de: <span class="math inline">\(n = 6*(2)*(2) = 24\)</span>. Ou seja, 24 observações.</p>
+<p>Onde, n é o número de observações mínimo de cada grupo, r é o número de linhas (rows) e c é o número de colunas (column). Dessa forma, em uma tabela de contigência do tipo 2x2 o número de observações mínimo para cada grupo deve ser de: <span class="math inline">\(n = 6 \times (2) \times (2) = 24\)</span>. Ou seja, 24 observações.</p>
 <p>Esta análise pode ser conduzida, também, quando lidamos com mais de um grupo em uma categoria e neste caso teriamos uma tabela de contigência 2X3, 2X4, 3X3 e assim por diante. Vamos ver um exemplo.</p>
 <p>Três pesquisadores analisaram fotografias de espécies bentônicas em um costão objetivando avaliar a abundância de duas espécies uma introduzida e uma nativa. Considere todo o processo amostral similar e que os pesquisadores avaliaram as mesmas fotografias. Neste caso nossa hipótese nula é que a proporção entre as espécies é independente dos pesquisadores.</p>
 <p>Vamos construir nossa matriz de uma terceira forma.</p>
@@ -446,16 +446,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## Espécie nativa           45.45455       45.4023      32.20339
 ## Espécie introduzida      54.54545       54.5977      67.79661</code></pre>
 <p>Como podem visualizar, se usarmos margin = 1 ele nos retorna os valores em função das linhas (espécies), se utilizarmos margin = 2 ele nos retorna os valores em função das colunas (pesquisadores).</p>
-<p>Vamos utilizar margin = 2 para construir nossa tabela e plotarmos nosso gráfico.</p>
+<p>Vamos utilizar margin = 2 para construir nossa tabela e plotarmos nosso gráfico (Figura <a href="qui-quadrado-χ.html#fig:bar-tab">4.1</a>).</p>
 <div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb126-1" data-line-number="1">tabela &lt;-<span class="st"> </span><span class="kw">prop.table</span>(<span class="dt">x =</span> dados, <span class="dt">margin =</span> <span class="dv">2</span>)<span class="op">*</span><span class="dv">100</span></a>
 <a class="sourceLine" id="cb126-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb126-3" data-line-number="3"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">13</span>))</a>
 <a class="sourceLine" id="cb126-4" data-line-number="4"></a>
 <a class="sourceLine" id="cb126-5" data-line-number="5"><span class="kw">barplot</span>(tabela, </a>
-<a class="sourceLine" id="cb126-6" data-line-number="6">        <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;darkblue&quot;</span>), </a>
-<a class="sourceLine" id="cb126-7" data-line-number="7">        <span class="dt">legend.text =</span> <span class="ot">TRUE</span>, </a>
-<a class="sourceLine" id="cb126-8" data-line-number="8">        <span class="dt">args.legend =</span> <span class="kw">list</span>(<span class="dt">x =</span> <span class="st">&quot;right&quot;</span>, <span class="dt">bty =</span> <span class="st">&quot;n&quot;</span>, <span class="dt">inset =</span> <span class="fl">-0.6</span>))</a></code></pre></div>
-<p><img src="livroR-1.0_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
+<a class="sourceLine" id="cb126-6" data-line-number="6">        <span class="dt">xlab =</span> <span class="st">&quot;Percentual de espécies&quot;</span>,</a>
+<a class="sourceLine" id="cb126-7" data-line-number="7">        <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;darkblue&quot;</span>), </a>
+<a class="sourceLine" id="cb126-8" data-line-number="8">        <span class="dt">legend.text =</span> <span class="ot">TRUE</span>, </a>
+<a class="sourceLine" id="cb126-9" data-line-number="9">        <span class="dt">args.legend =</span> <span class="kw">list</span>(<span class="dt">x =</span> <span class="st">&quot;right&quot;</span>, <span class="dt">bty =</span> <span class="st">&quot;n&quot;</span>, <span class="dt">inset =</span> <span class="fl">-0.5</span>))</a></code></pre></div>
+<div class="figure"><span id="fig:bar-tab"></span>
+<img src="livroR-1.0_files/figure-html/bar-tab-1.png" alt="Gráfico de barras sobrepostas indicando o percentual relativo da observação de espécies nativas (cor vermelha) e introduzidas (cor azul), por pesquisador." width="768" />
+<p class="caption">
+Figura 4.1: Gráfico de barras sobrepostas indicando o percentual relativo da observação de espécies nativas (cor vermelha) e introduzidas (cor azul), por pesquisador.
+</p>
+</div>
 <p>Como podem ver o nosso gráfico foi realizado. Mas adicionamos uma série de comandos novos. Vamos explica-lo passo a passo.</p>
 <p>Primeiro contruímos a tabela com os dados em percentuais relativos ao pesquisador e o armazenamos em um objeto chamado tabela.</p>
 <p>Posteriormente utilizamos uma função chamada <em>par()</em> com o argumento mar no qual concatenamos 4 valores. Esta função juntamente com esse argumento permite que redimensionemos a janela gráfica. Os quatro valores concatenados referem-se as margens inferior, esquerda, superior e direita, respectivamente.</p>

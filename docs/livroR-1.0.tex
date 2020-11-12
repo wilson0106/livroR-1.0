@@ -125,7 +125,7 @@
 
 \title{Introdução a análise de dados ambientais em R}
 \author{Wilson Souza \& Thiago Couto}
-\date{2020-11-11}
+\date{2020-11-18}
 
 \begin{document}
 \maketitle
@@ -220,7 +220,7 @@ O comando \emph{read.csv()} importou a planilha que está no formato *.csv utili
 
 O comando acima importou a planilha e o guardou e um objeto chamado dados que será o que nós utilizaremos de agora em diante sempre que quisermos acessar a a planilha no R.
 
-Para importação de arquivos que estão no formato *.xls ou *.xlsx é necessário a instalação de algum pacote que permita a realização desse processo. Um pacote que instalaremos aqui é o readxl. Não se preocupe com o processo de instalação de pacotes, neste momento, falaremos sobre ele ao longo do livro, sempre que necessário.
+Para importar arquivos que estão no formato *.xls ou *.xlsx é necessário a instalação de algum pacote que permita a realização desse processo. Um pacote que instalaremos aqui é o readxl. Não se preocupe com o processo de instalação de pacotes, neste momento, falaremos sobre ele ao longo do livro, sempre que necessário.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -380,7 +380,7 @@ Pensando nos gráficos mais comuns e úteis para nosso dia-a-dia e que nos permi
 \hypertarget{histogramas}{%
 \subsection{HISTOGRAMAS}\label{histogramas}}
 
-Para isso vamos aplicar a função \emph{hist()} para visualizar os valores da variável comprimento.
+A função \emph{hist()} permite visualizar os valores da variável comprimento (Figura \ref{fig:comp-hist}).
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -388,13 +388,17 @@ Para isso vamos aplicar a função \emph{hist()} para visualizar os valores da v
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-11-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/comp-hist-1.pdf}
+\caption{\label{fig:comp-hist}Comprimento dos organismos da planilha dados}
+\end{figure}
 
 Repare que um gráfico foi gerado na sua janela lateral, na guia plots.
 
 Perceba também que voltamos a usar o operador \emph{\$} (cifrão).
 
-Nosso gráfico não está aparentemente muito agradável e um pouco sem cor. Vamos inserir alguns argumentos estéticos que melhoram sua visualização e entender como ele sumariza nossos dados.
+Nosso gráfico não está aparentemente muito agradável e um pouco sem cor. Vamos inserir alguns argumentos estéticos que melhoram sua visualização e entender como ele sumariza nossos dados (Figura \ref{fig:comp-hist-col}).
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -408,7 +412,11 @@ Nosso gráfico não está aparentemente muito agradável e um pouco sem cor. Vam
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-12-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/comp-hist-col-1.pdf}
+\caption{\label{fig:comp-hist-col}Comprimento dos organismos da planilha dados com barras coloridas}
+\end{figure}
 
 Temos aqui nosso histograma com alguns argumentos que permitem melhorar sua visualização. Ele nos permite visualizar os dados da variável comprimento e sua frequência de ocorrência.
 
@@ -460,7 +468,7 @@ Vamos converter a variável mês em factor.
 
 Repare que agora que sabemos os passos a realizar desde a importação dos arquivos tudo ficou muito mais fácil e fluído, e apenas realizamos três etapas, sendo uma delas apenas conferência.
 
-Seguindo para o gráfico de barras a fim de mostrar o número de indivíduos ao longo dos meses temos que:
+Seguindo para o gráfico de barras (Figura \ref{fig:bar-abu}) a fim de mostrar o número de indivíduos ao longo dos meses temos que:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -468,11 +476,15 @@ Seguindo para o gráfico de barras a fim de mostrar o número de indivíduos ao 
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-16-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/bar-abu-1.pdf}
+\caption{\label{fig:bar-abu}Gráfico de barras com número de indivíduos da planilha abundância por mês}
+\end{figure}
 
 Assim como o histograma o simples uso da função sem argumentos gera um gráfico de dificil análise e esteticamente não muito agradavel.
 
-Vamos portanto adicionar alguns argumentos já conhecidos e outros novos que permitirão a melhor análise do gráfico.
+Vamos portanto adicionar alguns argumentos já conhecidos e outros novos que permitirão a melhor análise do gráfico (Figura \ref{fig:bar-abu-col}).
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -485,25 +497,29 @@ Vamos portanto adicionar alguns argumentos já conhecidos e outros novos que per
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-17-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/bar-abu-col-1.pdf}
+\caption{\label{fig:bar-abu-col}Gráfico de barras com número de indivíduos da planilha abundância por mês, com barras coloridas}
+\end{figure}
 
 Podemos extrair desse gráfico que a abundância dos indivíduos variam ao longo dos meses com valores mínimos em torno de 50 indivíduos nos meses 4, 5 e 6 e valores máximos em torno de 200 indivíduos no mês 11.
 
-Podemos ver que os argumentos utilizados permitiram referenciar as barras, ajustar o eixo y, adicionar cores e adicionar os nomes dos eixos. Para detalhes sobre os argumentos e funções utilizadas no \emph{barplot()} ver tabela abaixo.
+Podemos ver que os argumentos utilizados permitiram referenciar as barras, ajustar o eixo y, adicionar cores e adicionar os nomes dos eixos. Para detalhes sobre os argumentos e funções utilizadas no \emph{barplot()} (Tabela \ref{tab:tab-arg}).
 
-\begin{table}[H]
+\begin{table}
+
+\caption{\label{tab:tab-arg}Descrição dos argumentos utilizados para o gráfico de barras}
 \centering
 \begin{tabular}[t]{>{}l>{\raggedright\arraybackslash}p{30em}}
 \toprule
 Argumentos & Características\\
 \midrule
 \textbf{\cellcolor{gray!6}{ylim}} & \cellcolor{gray!6}{Refere-se aos limites do eixo y}\\
-\textbf{c()} & É usada quando se deseja unir 2 ou mais objetos em um vetor, no exemplo acima ela foi usada para concatenar os valores 0 e 200, que indicam os limites mínimo e máximo do eixo y\\
-\textbf{\cellcolor{gray!6}{xlab}} & \cellcolor{gray!6}{É usado para dar nome ao eixo x}\\
-\textbf{ylab} & É usado para dar nome ao eixo y\\
-\textbf{\cellcolor{gray!6}{names.arg}} & \cellcolor{gray!6}{É usado para definir o nome das categorias/barras representadas no eixo x, neste caso as categorias usadas estão vinculadas a coluna mes do objeto abundancia}\\
-\addlinespace
-\textbf{col} & É usado para definir a cor das barras\\
+\textbf{xlab} & É usado para dar nome ao eixo x\\
+\textbf{\cellcolor{gray!6}{ylab}} & \cellcolor{gray!6}{É usado para dar nome ao eixo y}\\
+\textbf{names.arg} & É usado para definir o nome das categorias/barras representadas no eixo x, neste caso as categorias usadas estão vinculadas a coluna mes do objeto abundancia\\
+\textbf{\cellcolor{gray!6}{col}} & \cellcolor{gray!6}{É usado para definir a cor das barras}\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -517,7 +533,7 @@ Assim como o gráfico de barras podemos desejar fazer um gráfico de linhas para
 
 Contudo para fazer um gráfico de linhas pelo comando básico do R (utilizando a função \emph{plot()}) precisamos indicar que ambos os eixos apresentam variáveis númericas. Portanto teremos que modificar a variável mês de fator para numerica.
 
-Porém não precisamos fazer isso em um comando separado podemos aplicar a função que converte uma variável em númerica dentro da função que plota o gráfico. Vamos visualizar como isso ocorre na prática.
+Porém não precisamos fazer isso em um comando separado podemos aplicar a função que converte uma variável em númerica dentro da função que plota o gráfico. Vamos visualizar como isso ocorre na prática (Figura \ref{fig:pon-graf}).
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -525,11 +541,15 @@ Porém não precisamos fazer isso em um comando separado podemos aplicar a funç
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-19-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/pon-graf-1.pdf}
+\caption{\label{fig:pon-graf}Representação gráfica do número de indivíduos por mês em pontos}
+\end{figure}
 
 Pronto, na função acima aplicamos a função \emph{plot()} indicando os argumentos x e y que definem quem estará no eixo x e quem estará no eixo y, e para a variável que estará no eixo x (variável mês) adicionamos a função \emph{as.numeric()} a qual a converte em númerico apenas para a execução do plot.
 
-Porém a função \emph{plot()} não realizou um gráfico de linhas como esperado, pois para isso precisamos indica-lo por meio de argumentos. Como demonstraremos a seguir
+Porém a função \emph{plot()} não realizou um gráfico de linhas como esperado, pois para isso precisamos indica-lo por meio de argumentos. Como demonstraremos a seguir (Figura \ref{fig:lin-graf-col}).
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -545,9 +565,13 @@ Porém a função \emph{plot()} não realizou um gráfico de linhas como esperad
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-20-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/lin-graf-col-1.pdf}
+\caption{\label{fig:lin-graf-col}Representação gráfica do número de indivíduos por mês em um gráfico de linhas}
+\end{figure}
 
-Repare que um gráfico de linha foi plotado e o resultado deste indica o memso que o gráfico de barras que realizamos acima.
+Repare que um gráfico de linha foi plotado e o resultado deste indica o mesmo que o gráfico de barras que realizamos acima.
 
 Alguns argumentos novos foram inseridos, os detalhes deles podem ser visualizados na tabela abaixo:
 
@@ -556,7 +580,7 @@ Alguns argumentos novos foram inseridos, os detalhes deles podem ser visualizado
 \hypertarget{boxplot}{%
 \subsection{BOXPLOT}\label{boxplot}}
 
-Vamos voltar a nossa primeira planilha (dados) e executar um gráfico do tipo boxplot e ver o que ele nos informa.
+Vamos voltar a nossa primeira planilha (dados) e executar um gráfico do tipo boxplot (Figura \ref{fig:box-graf}) e ver o que ele nos informa.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -564,11 +588,15 @@ Vamos voltar a nossa primeira planilha (dados) e executar um gráfico do tipo bo
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-21-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/box-graf-1.pdf}
+\caption{\label{fig:box-graf}Gráfico tipo boxplot do comprimento por ano, da planilha dados}
+\end{figure}
 
 Repare que a escrita para esse gráfico é ligeiramente diferente. Ele usa a função \emph{boxplot()}, um argumento chamado formula onde nele inserimos a variável independente (variável do eixo X) e a variável dependente (variável do eixo Y). Entre ambas as variáveis é possível ver o caracter ``\textasciitilde{}'' (til). A forma de ler essa escrita é a seguinte: Realize um boxplot da variável comprimento da planilha dados em função da variável ano da planilha dados. A variável til é lida como (``em função de'')
 
-Vamos adicionar alguns argumentos que permitem deixar o gráfico mais apresentável.
+Vamos adicionar alguns argumentos que permitem deixar o gráfico mais apresentável (Figura \ref{fig:box-graf-col}).
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -580,7 +608,11 @@ Vamos adicionar alguns argumentos que permitem deixar o gráfico mais apresentá
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-22-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/box-graf-col-1.pdf}
+\caption{\label{fig:box-graf-col}Gráfico tipo boxplot do comprimento por ano com cores por ano, da planilha dados}
+\end{figure}
 
 Repare que não adicionamos nenhum argumento ou função diferente do que já fizemos anteriormente. Ou seja, uma vez conhecendo a função, os argumentos por vezes se repetem.
 
@@ -1047,7 +1079,7 @@ Repare que a função \emph{summarySE()} apresenta, basicamente, 3 argumentos, `
 
 Pronto com a função acima realizamos os mesmos passos que antes e guardamos o resultado dentro de um objeto chamado resultado. Repare que essa função nos resumiu os dados de comprimento de acordo com as duas variáveis categóricas que indicamos: ano e local. Em seu resumo ele nos forneceu, na seguinte ordem, a coluna ano, local, N (número de observações), comprimento (média do comprimento), sd (desvio padrão), se (erro padrão), ci (intervalo de confiança de 95\%).
 
-Agora vamos usar o objeto resultado para desenvolver o gráfico de barras com o erro padrão. Mas lembre-se o objeto dados.3 também pode ser utilizado.
+Agora vamos usar o objeto resultado para desenvolver o gráfico de barras com o erro padrão (Figura \ref{fig:bar-ep}). Mas lembre-se o objeto dados.3 também pode ser utilizado.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1068,7 +1100,11 @@ Agora vamos usar o objeto resultado para desenvolver o gráfico de barras com o 
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-42-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/bar-ep-1.pdf}
+\caption{\label{fig:bar-ep}Gráfico de barras com erro padrão do comprimento por ano e local, da planilha resultado (derivada da planilha dados)}
+\end{figure}
 
 Note que nesta função \emph{barplot()} utilizamos algumas mudanças em relação ao que fizemos anteriormente, como os argumentos ``formula'' o qual indica a variável resposta em função das variáveis categóricas o qual será plotado (Caso altere a ordem ano + local para local + ano a ordem do gráfico também será alterado. Teste você mesmo, veja o acontece). Neste caso como temos mais de uma variável categórica adicionamos um argumento novo chamado ``legend.text'' o qual adiciona uma legenda ao gráfico.
 
@@ -1080,7 +1116,7 @@ Terminamos de construir e entender os componentes do nosso primeiro gráfico com
 
 O entendimento principal para construção desse gráfico consiste em entender como organizar os dados a serem graficados. Ao se usar a função \emph{barplot()} para construção do gráfico de barras com os desvios, devemos ter uma ou mais colunas com as categorias, outra com os valores que desejamos e outra com os valores dos desvios.
 
-Vamos realizar um segundo tipo de gráfico onde temos apenas uma variável categórica e seus respectivos desvios. Para isso utilizaremos nosso conjunto de dados abundancia (lembre-se que mês é uma variável categórica e deve ser identificada como fator).
+Vamos realizar um segundo tipo de gráfico onde temos apenas uma variável categórica e seus respectivos desvios. Para isso utilizaremos nosso conjunto de dados abundancia (lembre-se que mês é uma variável categórica e deve ser identificada como fator) (Figura @ref(fig(bar-ep-abu))).
 
 Neste conjunto de dados não precisamos reorganizar os dados pois eles já se encontram organizados e já temos os valores dos desvios.
 
@@ -1102,7 +1138,11 @@ Neste conjunto de dados não precisamos reorganizar os dados pois eles já se en
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-43-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/bar-ep-abu-1.pdf}
+\caption{\label{fig:bar-ep-abu}Gráfico de barras com erro padrão da abundância por mês da planilha abundância}
+\end{figure}
 
 Repare que é quase a mesma coisa que fizemos antes. A única diferença é que guardamos o gráfico gerado em um objeto chamado grafico.
 
@@ -1326,7 +1366,7 @@ Imagine que você foi em campo e contabilizou as espécies de cracas que identif
 ##  on 2000 replicates)
 ## 
 ## data:  N.especies
-## X-squared = 4, df = NA, p-value = 0.06697
+## X-squared = 4, df = NA, p-value = 0.06297
 \end{verbatim}
 
 Pronto. Basta usarmos o argumento simulate.p.value e indicar ``FALSE'' quando não queremos a simulação de Monte Carlo, ou apenas omitirmos este argumento, ou usar este argumento e indicar ``TRUE'' o qual realiza a simulação de Monte Carlo. Verifique que com a aplicação desta simulação o p-value aumenta indicando que torna mais dificil rejeitarmos a hipótese nula. Após aplicarmos a correção na nossa análise podemos afirmar que não há diferença na quantidade de cracas observadas em relação as proporções esperadas, para ambas as espécies de cracas.
@@ -1464,7 +1504,7 @@ Como o teste resultou em um p-value maior que 0,05 podemos dizer, por essa via, 
 
 Neste ponto é bom relembramos da importância do número de observações de cada grupo. Se este número for pequeno incertezas podem ser geradas e ajustes devem ser feitos. Para saber mais sugerimos a leitura da literatura especializada. Contudo, para definir o que é um número baixo de observações sigamos o cálculo sugerido por Zar (2014) o qual define como: \(n = 6rc\).
 
-Onde, n é o número de observações mínimo de cada grupo, r é o número de linhas (rows) e c é o número de colunas (column). Dessa forma, em uma tabela de contigência do tipo 2x2 o número de observações mínimo para cada grupo deve ser de: \(n = 6*(2)*(2) = 24\). Ou seja, 24 observações.
+Onde, n é o número de observações mínimo de cada grupo, r é o número de linhas (rows) e c é o número de colunas (column). Dessa forma, em uma tabela de contigência do tipo 2x2 o número de observações mínimo para cada grupo deve ser de: \(n = 6 \times (2) \times (2) = 24\). Ou seja, 24 observações.
 
 Esta análise pode ser conduzida, também, quando lidamos com mais de um grupo em uma categoria e neste caso teriamos uma tabela de contigência 2X3, 2X4, 3X3 e assim por diante. Vamos ver um exemplo.
 
@@ -1635,7 +1675,7 @@ Mas vamos pensar um pouco na nossa análise e no que ela avalia. O χ² está av
 
 Como podem visualizar, se usarmos margin = 1 ele nos retorna os valores em função das linhas (espécies), se utilizarmos margin = 2 ele nos retorna os valores em função das colunas (pesquisadores).
 
-Vamos utilizar margin = 2 para construir nossa tabela e plotarmos nosso gráfico.
+Vamos utilizar margin = 2 para construir nossa tabela e plotarmos nosso gráfico (Figura \ref{fig:bar-tab}).
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1644,13 +1684,18 @@ Vamos utilizar margin = 2 para construir nossa tabela e plotarmos nosso gráfico
 \KeywordTok{par}\NormalTok{(}\DataTypeTok{mar =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{13}\NormalTok{))}
 
 \KeywordTok{barplot}\NormalTok{(tabela, }
+        \DataTypeTok{xlab =} \StringTok{"Percentual de espécies"}\NormalTok{,}
         \DataTypeTok{col =} \KeywordTok{c}\NormalTok{(}\StringTok{"red"}\NormalTok{, }\StringTok{"darkblue"}\NormalTok{), }
         \DataTypeTok{legend.text =} \OtherTok{TRUE}\NormalTok{, }
-        \DataTypeTok{args.legend =} \KeywordTok{list}\NormalTok{(}\DataTypeTok{x =} \StringTok{"right"}\NormalTok{, }\DataTypeTok{bty =} \StringTok{"n"}\NormalTok{, }\DataTypeTok{inset =} \FloatTok{-0.6}\NormalTok{))}
+        \DataTypeTok{args.legend =} \KeywordTok{list}\NormalTok{(}\DataTypeTok{x =} \StringTok{"right"}\NormalTok{, }\DataTypeTok{bty =} \StringTok{"n"}\NormalTok{, }\DataTypeTok{inset =} \FloatTok{-0.5}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-63-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/bar-tab-1.pdf}
+\caption{\label{fig:bar-tab}Gráfico de barras sobrepostas indicando o percentual relativo da observação de espécies nativas (cor vermelha) e introduzidas (cor azul), por pesquisador.}
+\end{figure}
 
 Como podem ver o nosso gráfico foi realizado. Mas adicionamos uma série de comandos novos. Vamos explica-lo passo a passo.
 
@@ -1670,7 +1715,7 @@ Ao iniciarmos nossos estudos geralmente estamos interessados em saber se alguma 
 \hypertarget{teste-t-para-uma-amostra}{%
 \section{Teste-t para uma amostra}\label{teste-t-para-uma-amostra}}
 
-Conduzimos esse teste quando objetivamos comparar se a média de uma dada variável é similar a um valor esperado. Ao falarmos de média percebemos que a variável com a qual estamos lidando é do tipo númerica ou inteiro (a diferença entre ambas consiste na presença de casas decimais), ou seja, quantitativo. Ao compararmos a média de nossa variável a um valor previamente estipulado 2 hipóteses são construídas, a hipótese nula (H0) e a hipótese alternativa (HA). H0 diz que a média de nossa variável é similar ao valor previamente estipulado, enquanto que HA diz que a média de nossa variável é diferente do valor previamente estipulado.
+Conduzimos esse teste quando objetivamos verificar se a média de uma dada variável é similar a um valor esperado. Ao falarmos de média percebemos que a variável com a qual estamos lidando é do tipo númerica ou inteiro (a diferença entre ambas consiste na presença de casas decimais), ou seja, quantitativo. Ao compararmos a média de nossa variável a um valor previamente estipulado 2 hipóteses são construídas, a hipótese nula (H0) e a hipótese alternativa (HA). H0 diz que a média de nossa variável é similar ao valor previamente estipulado, enquanto que HA diz que a média de nossa variável é diferente do valor previamente estipulado.
 
 Matematicamente podemos obter o resultado do teste-t pela seguinte fórmula: \(t_s=(x-mi)/(s/sqrt(n))\). Onde, x: média da amostra, mi: média teórica esperada, s: desvio padrão da amostra, n: tamanho da amostra.
 
@@ -1769,9 +1814,13 @@ Vamos observar as métricas e gráficos, conforme já fizemos nos capítulos ant
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-66-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/hist-tam-cam-1.pdf}
+\caption{\label{fig:hist-tam-cam}Histograma dos valores do objeto relativo ao tamanho dos camarões}
+\end{figure}
 
-Como podemos ver os valores mínimo e máximo são similares ao que definimos e o número de elementos é o mesmo. Graficamente podemos ver que a distribuição é normal, pois como vimos utilizamos uma função que cria uma distribuição normal com limites definidos pela função \emph{runif()}. Além disso vemos que há uma maior frequência dos valores em torno de 25.
+Como podemos ver os valores mínimo e máximo são similares ao que definimos e o número de elementos é o mesmo. Graficamente podemos ver que a distribuição é normal, pois como vimos utilizamos uma função que cria uma distribuição normal com limites definidos pela função \emph{runif()}. Além disso vemos que há uma maior frequência dos valores em torno de 25 (Figura \ref{fig:hist-tam-cam}).
 
 Vamos verificar, agora se esse valor que geramos (obtivemos de tamanho do camarão) são similares ao observado em outra localidade, por meio do teste-t para uma amostra.
 
@@ -1821,15 +1870,15 @@ HA: μ \textgreater{} 0,90
 \begin{Shaded}
 \begin{Highlighting}[]
 \KeywordTok{set.seed}\NormalTok{(}\DecValTok{1234}\NormalTok{)}
-\NormalTok{dados <-}\StringTok{ }\KeywordTok{rnorm}\NormalTok{(}\DataTypeTok{n =} \DecValTok{100}\NormalTok{, }\DataTypeTok{sd =} \FloatTok{0.02}\NormalTok{) }\OperatorTok{+}\StringTok{ }\KeywordTok{runif}\NormalTok{(}\DataTypeTok{n =} \DecValTok{100}\NormalTok{, }\DataTypeTok{min =} \FloatTok{0.4}\NormalTok{, }\DataTypeTok{max =} \FloatTok{1.3}\NormalTok{)}
+\NormalTok{estrelas <-}\StringTok{ }\KeywordTok{rnorm}\NormalTok{(}\DataTypeTok{n =} \DecValTok{100}\NormalTok{, }\DataTypeTok{sd =} \FloatTok{0.02}\NormalTok{) }\OperatorTok{+}\StringTok{ }\KeywordTok{runif}\NormalTok{(}\DataTypeTok{n =} \DecValTok{100}\NormalTok{, }\DataTypeTok{min =} \FloatTok{0.4}\NormalTok{, }\DataTypeTok{max =} \FloatTok{1.3}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
-Observe que geramos os dados de maneira similar ao que fizemos no exemplo anterior, a diferença é que inserimos um argumento na função \emph{rnorm()} que corresponde ao desvio padrão (de 0,02) dos dados normais que estamos gerando.
+Observe que geramos os dados de maneira similar ao que fizemos no exemplo anterior (inserindo os valores das alturas das estrelas em um objeto chamado estrelas), a diferença é que inserimos um argumento na função \emph{rnorm()} que corresponde ao desvio padrão (de 0,02) dos dados normais que estamos gerando.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{mean}\NormalTok{(dados)}
+\KeywordTok{mean}\NormalTok{(estrelas)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1839,7 +1888,7 @@ Observe que geramos os dados de maneira similar ao que fizemos no exemplo anteri
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{min}\NormalTok{(dados)}
+\KeywordTok{min}\NormalTok{(estrelas)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1849,7 +1898,7 @@ Observe que geramos os dados de maneira similar ao que fizemos no exemplo anteri
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{max}\NormalTok{(dados)}
+\KeywordTok{max}\NormalTok{(estrelas)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1859,7 +1908,7 @@ Observe que geramos os dados de maneira similar ao que fizemos no exemplo anteri
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{length}\NormalTok{(dados)}
+\KeywordTok{length}\NormalTok{(estrelas)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1869,18 +1918,22 @@ Observe que geramos os dados de maneira similar ao que fizemos no exemplo anteri
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{hist}\NormalTok{(dados)}
+\KeywordTok{hist}\NormalTok{(estrelas)}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-69-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/estrelas-hist-1.pdf}
+\caption{\label{fig:estrelas-hist}Histograma dos valores relativos a altura das estrelas do mar no costão rochoso}
+\end{figure}
 
-Conforme também fizemos anteriormente calculamos algumas métricas para entender os dados e um histograma básico para visualizar a forma dos dados que representam a altura que as estrelas se encontram no ambiente.
+Conforme também fizemos anteriormente calculamos algumas métricas para entender os dados e um histograma básico (Figura \ref{fig:estrelas-hist}) para visualizar a forma dos dados que representam a altura que as estrelas se encontram no ambiente.
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{dia}\FloatTok{.0}\NormalTok{ =}\StringTok{ }\FloatTok{0.90}
-\KeywordTok{t.test}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ dados, }\DataTypeTok{mu =}\NormalTok{ dia}\FloatTok{.0}\NormalTok{, }\DataTypeTok{alternative =} \StringTok{"greater"}\NormalTok{)}
+\KeywordTok{t.test}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ estrelas, }\DataTypeTok{mu =}\NormalTok{ dia}\FloatTok{.0}\NormalTok{, }\DataTypeTok{alternative =} \StringTok{"greater"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1888,7 +1941,7 @@ Conforme também fizemos anteriormente calculamos algumas métricas para entende
 ## 
 ##  One Sample t-test
 ## 
-## data:  dados
+## data:  estrelas
 ## t = -2.2073, df = 99, p-value = 0.9852
 ## alternative hypothesis: true mean is greater than 0.9
 ## 95 percent confidence interval:
@@ -1904,9 +1957,9 @@ Com isso podemos avaliar o resultado que é similar ao que vimos anteriormente c
 
 Como podemos notar pelo p-value do nosso resultado este demonstra que não temos informação o suficiente para rejeitar nossa hipótese nula (H0). Portanto a média dos nossos dados é menor ou igual a 0,90.
 
-Outro conceito importante de qualquer teste inferencial (ex. teste-t) é o nível de confiança. Até o presente momento consideramos o nível de confiança de 95\%. Se quisermos altera-lo no teste-t devemos adicionar o argumento ``conf.level'' em proporção (0-1). A sua alteração implica na zona de rejeição da hipótese nula, se aumentarmos o seu valor fica mais dificil rejeitarmos a hipótese nula e se diminuirmos o seu valor fica mais fácil rejeitar a hipótese nula. Vejamos um outro exemplo.
+Outro conceito importante de qualquer teste inferencial (ex. teste-t) é o nível de confiança. Até o presente momento consideramos o nível de confiança de 95\%. Se quisermos altera-lo no teste-t devemos adicionar o argumento ``conf.level'' em proporção (0-1). A sua alteração implica na alteração da zona de rejeição da hipótese nula. Se aumentarmos o seu valor fica mais dificil rejeitarmos a hipótese nula e se diminuirmos o seu valor fica mais fácil rejeitar a hipótese nula. Vejamos outro exemplo.
 
-Imagine o seguinte exemplo: Um pesquisador avaliou o tamanho das cracas incrustadas no casco de uma embarcação. Objetivando saber se o tamanho médio de bivalves difere do teórico esperado (20 mm) um teste-t bicaudal foi aplicado a um nível de confiança de 95\% e 99\%.
+Imagine o seguinte exemplo: Um pesquisador avaliou o tamanho de cracas incrustados no casco de uma embarcação. Objetivando saber se o tamanho médio de cracas difere do teórico esperado (20 mm) um teste-t bicaudal foi aplicado a um nível de confiança de 95\% e 99\%.
 
 Vamos descrever as hipóteses e realizar a análise para ambos os níveis de confiança.
 
@@ -1916,14 +1969,14 @@ H0: O tamanho médio observado é similar ao teórico
 
 HA: O tamanho médio observado difere do teórico
 
-Conforme já realizado anteriormente vamos gerar os dados e explora-los com a algumas métricas estatśticas e grafica de maneira similar ao que fizemos no exemplo anterior.
+Conforme já realizado anteriormente vamos gerar os dados e explora-los com algumas métricas estatśticas e gráficas de maneira similar ao que fizemos no exemplo anterior.
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \KeywordTok{set.seed}\NormalTok{(}\DecValTok{1234}\NormalTok{)}
-\NormalTok{dados <-}\StringTok{ }\KeywordTok{rnorm}\NormalTok{(}\DataTypeTok{n =} \DecValTok{100}\NormalTok{, }\DataTypeTok{sd =} \FloatTok{1.9}\NormalTok{) }\OperatorTok{+}\StringTok{ }\KeywordTok{runif}\NormalTok{(}\DataTypeTok{n =} \DecValTok{100}\NormalTok{, }\DataTypeTok{min =} \DecValTok{5}\NormalTok{, }\DataTypeTok{max =} \DecValTok{25}\NormalTok{)}
+\NormalTok{cracas <-}\StringTok{ }\KeywordTok{rnorm}\NormalTok{(}\DataTypeTok{n =} \DecValTok{100}\NormalTok{, }\DataTypeTok{sd =} \FloatTok{1.9}\NormalTok{) }\OperatorTok{+}\StringTok{ }\KeywordTok{runif}\NormalTok{(}\DataTypeTok{n =} \DecValTok{100}\NormalTok{, }\DataTypeTok{min =} \DecValTok{5}\NormalTok{, }\DataTypeTok{max =} \DecValTok{25}\NormalTok{)}
 
-\KeywordTok{mean}\NormalTok{(dados)}
+\KeywordTok{mean}\NormalTok{(cracas)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1933,7 +1986,7 @@ Conforme já realizado anteriormente vamos gerar os dados e explora-los com a al
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{min}\NormalTok{(dados)}
+\KeywordTok{min}\NormalTok{(cracas)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1943,7 +1996,7 @@ Conforme já realizado anteriormente vamos gerar os dados e explora-los com a al
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{max}\NormalTok{(dados)}
+\KeywordTok{max}\NormalTok{(cracas)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1953,7 +2006,7 @@ Conforme já realizado anteriormente vamos gerar os dados e explora-los com a al
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{length}\NormalTok{(dados)}
+\KeywordTok{length}\NormalTok{(cracas)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1963,18 +2016,22 @@ Conforme já realizado anteriormente vamos gerar os dados e explora-los com a al
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{hist}\NormalTok{(dados)}
+\KeywordTok{hist}\NormalTok{(cracas)}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-71-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/craca-hist-1.pdf}
+\caption{\label{fig:craca-hist}Histograma dos valores relativos ao tambanho das cracas incrustantes}
+\end{figure}
 
-Agora sigamos com a condução da análise.
+Agora que visualizamos as métricas e graficamos os dados (Figura \ref{fig:craca-hist}), sigamos com a condução da análise.
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{teorico <-}\StringTok{ }\FloatTok{13.5}
-\KeywordTok{t.test}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ dados, }\DataTypeTok{mu =}\NormalTok{ teorico, }\DataTypeTok{conf.level =} \FloatTok{0.95}\NormalTok{)}
+\KeywordTok{t.test}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ cracas, }\DataTypeTok{mu =}\NormalTok{ teorico, }\DataTypeTok{conf.level =} \FloatTok{0.95}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1982,7 +2039,7 @@ Agora sigamos com a condução da análise.
 ## 
 ##  One Sample t-test
 ## 
-## data:  dados
+## data:  cracas
 ## t = 2.3113, df = 99, p-value = 0.02289
 ## alternative hypothesis: true mean is not equal to 13.5
 ## 95 percent confidence interval:
@@ -1994,7 +2051,7 @@ Agora sigamos com a condução da análise.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{t.test}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ dados, }\DataTypeTok{mu =}\NormalTok{ teorico, }\DataTypeTok{conf.level =} \FloatTok{0.99}\NormalTok{)}
+\KeywordTok{t.test}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ cracas, }\DataTypeTok{mu =}\NormalTok{ teorico, }\DataTypeTok{conf.level =} \FloatTok{0.99}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -2002,7 +2059,7 @@ Agora sigamos com a condução da análise.
 ## 
 ##  One Sample t-test
 ## 
-## data:  dados
+## data:  cracas
 ## t = 2.3113, df = 99, p-value = 0.02289
 ## alternative hypothesis: true mean is not equal to 13.5
 ## 99 percent confidence interval:
@@ -2022,11 +2079,11 @@ No primeiro caso (``conf.level = 0.95'') temos p-value = 0.02289, como este valo
 
 No segundo caso (``conf.level = 0.99'') temos o mesmo ``p-value'', contudo este valor é maior que nosso nível de significância (0,01), isso quer dizer que nossa média teórica está dentro do intervalo de confiança, portanto aceitamos a hipótese nula de que a média observada é similar a média teórica.
 
-O nível de significância a aplicar nos seus dados depende das informações que possui sobre o organismo e o ambiente que está estudando. Apesar da regra-de-bolso dizer 0,05 e por ``default'' o R definir esse nível de significância é necessário discutir o que ele representa para seus dados e qual a implicação para sua hipótese e as medidas que serão tomadas. Uma dica importante é: reporte sempre o intervalo de confiança, indique o nível de significância (consiste em: 1 menos o nível de confiança) que foi aplicado e no seu texto deixe claro a escolha do nível de significância, principalmente se for diferente do que é definido como padrão.
+O nível de significância a aplicar nos seus dados depende das informações que possui sobre o organismo e o ambiente que está estudando. Apesar da regra-de-bolso dizer 0,05 e por padrão o R definir esse nível de significância é necessário discutir o que ele representa para seus dados e qual a implicação para sua hipótese e as medidas que serão tomadas. Uma dica importante é: reporte sempre o intervalo de confiança, indique o nível de significância (consiste em: 1 menos o nível de confiança) que foi aplicado e no seu texto deixe claro a escolha do nível de significância, principalmente se for diferente do que é definido como padrão.
 
-BÔNUS:
+\textbf{BÔNUS:}
 
-Embora não seja comum, podemos plotar um gráfico que represente o nosso resultado estatístico como uma curva de densidade no qual é representado o valor do teste-t, o grau de liberdade e o valor de proabilidade associado. Para isso vamos usar um pacote o qual precisa ser instalado chamado ``webr'' e precisamos carrega-lo usando a função library(). Após isso é só inserir a função que desenvolve o teste-t dentro da função plot(). Veja o resultado para ambos os níveis de confiança estabelecidos previamente. OBS: Uma vez instalado o pacote não precisa instala-lo novamente.
+Embora não seja comum, podemos plotar um gráfico que represente o nosso resultado estatístico como uma curva de densidade no qual é representado o valor do teste-t, o grau de liberdade e o valor de probabilidade associado. Para isso vamos usar um pacote o qual precisa ser instalado chamado ``webr'' e precisamos carrega-lo usando a função library(). Após isso é só inserir a função que desenvolve o teste-t dentro da função plot(). Veja o resultado para ambos os níveis de confiança estabelecidos previamente. OBS: Uma vez instalado o pacote não precisa instala-lo novamente.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2037,46 +2094,54 @@ Embora não seja comum, podemos plotar um gráfico que represente o nosso result
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{plot}\NormalTok{(}\KeywordTok{t.test}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ dados, }\DataTypeTok{mu =}\NormalTok{ teorico, }\DataTypeTok{conf.level =} \FloatTok{0.95}\NormalTok{))}
+\KeywordTok{plot}\NormalTok{(}\KeywordTok{t.test}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ cracas, }\DataTypeTok{mu =}\NormalTok{ teorico, }\DataTypeTok{conf.level =} \FloatTok{0.95}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-74-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/cracas-dens-95-1.pdf}
+\caption{\label{fig:cracas-dens-95}Curva de densidade representando o valor do teste-t bicaudal para o tamanho das cracas em relação a média teórica a um intervalo de confiança de 95\%. O ponto azul indica o valor do teste.}
+\end{figure}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{plot}\NormalTok{(}\KeywordTok{t.test}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ dados, }\DataTypeTok{mu =}\NormalTok{ teorico, }\DataTypeTok{conf.level =} \FloatTok{0.99}\NormalTok{))}
+\KeywordTok{plot}\NormalTok{(}\KeywordTok{t.test}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ cracas, }\DataTypeTok{mu =}\NormalTok{ teorico, }\DataTypeTok{conf.level =} \FloatTok{0.99}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-74-2.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/cracas-dens-99-1.pdf}
+\caption{\label{fig:cracas-dens-99}Curva de densidade representando o valor do teste-t bicaudal para o tamanho das cracas em relação a média teórica a um intervalo de confiança de 99\%. O ponto azul indica o valor do teste.}
+\end{figure}
 
-Verifique que esses plots nos fornecem as curvas do teste-t aos níveis de confiança de 95\% e 99\%, demarca os limites inferior e superior de vermelho e marca como ponto azul na curva de densidade o valor do teste-t associado. Como esse valor está dentro da região demarcada no nível de confiança de 95\%, neste caso rejeitamos a hipótese nula e como no nível de confança de 99\% o ponto azul está fora da região demarcada aceitamos a hipótese nula.
+Verifique que esses plots nos fornecem as curvas do teste-t aos intervaloe de confiança de 95\% (Figura \ref{fig:cracas-dens-95}) e 99\% (Figura \ref{fig:cracas-dens-99}), demarca os limites inferior e superior de vermelho e marca como ponto azul na curva de densidade o valor do teste-t associado. Como esse valor está dentro da região demarcada no intervalo de confiança de 95\%, neste caso rejeitamos a hipótese nula e como no intervalo de confiança de 99\% o ponto azul está fora da região demarcada aceitamos a hipótese nula.
 
 \hypertarget{teste-t-para-duas-amostras}{%
 \section{Teste-t para duas amostras}\label{teste-t-para-duas-amostras}}
 
 Conduzimos esse teste quando objetivamos comparar se a média de dois grupos (= amostras, populações etc) são similares. Portanto para sua realização é necessário uma variável mensurável e uma variável categórica com 2 grupos.
 
-Ou seja, partindo desse objetivo as hipótese nula e alternativa desse teste são as seguintes:
+Ou seja, partindo desse objetivo as hipóteses nula e alternativa desse teste são as seguintes:
 
 H0: A diferença na média da variável quantitativa dos grupos é igual a 0;
 
 HA: A diferença na média da variável quantitativa dos grupos é diferente de 0;
 
-Outra forma de interpretamos a hipótese relativa a esste teste é:
+Outra forma de apresentarmos a hipótese relativa a esste teste é:
 
 H0: A média da variável quantitativa é igual entre grupos;
 
 HA: A média da variável quantitativa é diferente entre grupos;
 
-Outra forma de escrevermos a hipótese deve-se ao fato da caudalidade do teste e, se unicaudal, pode ser escrita da seguinte forma:
+Outra forma de escrevermos a hipótese é em relação a caudalidade do teste e, se unicaudal, pode ser escrita da seguinte forma:
 
 H0: A média da variável quantitativa é maior ou igual (ou menor ou igual) entre grupos;
 
 HA: A média da variável quantitativa é menor (ou maior) entre grupos;
 
-A partir desse teste alguns pressupostos estatísticos precisam ser avaliados e portanto algumas análises precisam ser realizadas antes da interpretação do resultado do teste-t. Pressupostos como normalidade (ambos os grupos devem provir de uma população com distribuição normal) e homocedasticidade (A variância entre os dois grupos devem ser iguais). Demonstraremos a frente como realizar alguns desses testes. Mas, primeiro vamos gerar os dados a serem trabalhados para esta etapa. Execute o código abaixo e você irá visualizar no ``environment'' do seu RStudio um objeto chamado gastropode que corresponde a um data frame com o conjunto de dados que iremos trabalhar.
+A partir desse teste alguns pressupostos estatísticos precisam ser avaliados e portanto algumas análises precisam ser realizadas antes da interpretação do resultado do teste-t. Pressupostos como normalidade (ambos os grupos devem provir de uma população com distribuição normal) e homocedasticidade (A variância entre os dois grupos devem ser iguais). Demonstraremos a frente como realizar alguns desses testes. Mas, primeiro vamos gerar os dados a serem trabalhados para esta etapa. Execute o código abaixo e você irá visualizar no ``environment'' do seu RStudio um objeto chamado ``gastropode'' que corresponde a um data frame com o conjunto de dados que iremos trabalhar.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2091,6 +2156,8 @@ A partir desse teste alguns pressupostos estatísticos precisam ser avaliados e 
 \KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \StringTok{"grupos"}\NormalTok{, }\StringTok{"alimento.A"}\NormalTok{, }\StringTok{"alimento.B"}\NormalTok{, }\StringTok{"Alimento"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
+
+\textcolor{red}{Neste momento não entraremos em detalhes sobre os comandos aplicados para construção desses dados. Caso seja do seu interesse consulte o apêndice, no final do livro.}
 
 Vamos, agora, verificar os dados por meio da função \emph{head()} e a estrutura dos dados por meio da função \emph{str()} e alterar a estrutura dos dados se necessário.
 
@@ -2144,8 +2211,6 @@ Antes de conduzirmos o teste-t vamos praticar fazendo a avaliação gráfica e n
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{## par(mfrow = c(2, 1))}
-
 \KeywordTok{hist}\NormalTok{(gastropode}\OperatorTok{$}\NormalTok{Peso [gastropode}\OperatorTok{$}\NormalTok{Alimento }\OperatorTok{==}\StringTok{ "Alimento A"}\NormalTok{], }
      \DataTypeTok{xlab =} \StringTok{"Alteração do peso"}\NormalTok{, }
      \DataTypeTok{ylab =} \StringTok{"Frequência", }
@@ -2155,7 +2220,11 @@ Antes de conduzirmos o teste-t vamos praticar fazendo a avaliação gráfica e n
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-77-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/hist-ali-A-1.pdf}
+\caption{\label{fig:hist-ali-A}Histograma com valores da mudança do peso dos gastrópodes após a dieta com o Alimento A}
+\end{figure}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2168,22 +2237,27 @@ Antes de conduzirmos o teste-t vamos praticar fazendo a avaliação gráfica e n
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-77-2.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/hist-ali-B-1.pdf}
+\caption{\label{fig:hist-ali-B}Histograma com valores da mudança do peso dos gastrópodes após a dieta com o Alimento B}
+\end{figure}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{## par(mfrow = c(1, 1))}
 \KeywordTok{boxplot}\NormalTok{(Peso }\OperatorTok{~}\StringTok{ }\NormalTok{Alimento, }\DataTypeTok{data =}\NormalTok{ gastropode)}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-78-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/box-ali-1.pdf}
+\caption{\label{fig:box-ali}Boxplot com os valores da alteração do peso dos gastrópodes por tipo de alimento}
+\end{figure}
 
-Os 5 comandos acima realizam: a divisão da janela gráfica em 2 linhas e 1 coluna, o histograma dos dados para Alimento A, o histograma dos dados para Alimento B, a divisão da janela gráfica em 1 linha e 1 coluna e o boxplot para ambos os dados, respectivamente.
+Os comandos acima realizam: o histograma dos dados para Alimento A (Figura \ref{fig:hist-ali-A}), o histograma dos dados para Alimento B (Figura \ref{fig:hist-ali-B}) e o boxplot para ambos os dados (Figura \ref{fig:box-ali}), respectivamente.
 
-A função \emph{par()} com o argumento ``mfrow'' e a função c(2, 1) com os valores 2 e 1 divide a janela gráfica em 2 linhas e 1 coluna. Caso queira retornar ao padrão normal basta limpar a janela gráfica clicando no ícone que parece uma vassoura acima dos gráficos (mas isso limpará todos os gráficos anteriores) ou então utilizar a função \emph{par()} e ``re''dividir a janela gráfica em 1 linha e 1 coluna ``par(mfrow = c(1, 1))''.
-
-Os 2 gráficos, após a divisão da janela em 2 linhas e 1 coluna, consistem em histogramas em relação aos dados de peso por Alimento. Na primeira linha indicamos a variável peso dentro da planilha gastropode por meio do operador matemático \$ (cifrão) e selecionamos os dados correspondentes ao Alimento utilizando colchetes {[}{]} dentro do qual selecionamos a variável Alimento dentro da planilha gastropode e por meio do sinal de igual duplicado (==) indicamos entre aspas ("``) o grupo (ou categoria) que desejamos. Os demais argumentos são já bem conhecidos e iguais para ambos os histogramas, diferindo apenas o título do gráfico que é definido pelo argumento''main".
+Os 2 primeiros gráficos consistem em histogramas em relação aos dados de peso por Alimento. Na primeira linha indicamos a variável peso dentro da planilha gastropode por meio do operador matemático \$ (cifrão) e selecionamos os dados correspondentes ao Alimento utilizando colchetes {[}{]} dentro do qual selecionamos a variável Alimento dentro da planilha gastropode e por meio do sinal de igual duplicado (==) indicamos entre aspas ("``) o grupo (ou categoria) que desejamos. Os demais argumentos já são bem conhecidos e iguais para ambos os histogramas, diferindo apenas o título do gráfico que é definido pelo argumento''main".
 
 O Boxplot resume os dados por Alimento e nos indica outras métricas (quartis), como vimos anteriormente no tópico sobre gráficos.
 
@@ -2323,7 +2397,7 @@ Como podemos observar, ambos os grupos apresentam dados normais e homocedástico
 
 Repare que a forma da escrita se alterou um pouco. Mas como podem ver, nada complicado. Agora escrevemos a variável quantitativa (peso) em função da (\textasciitilde{}) variável categórica (Alimento). Guarde bem essa forma de escrita pois ela será utilizada para praticamente todos os testes a partir daqui e para inúmeras outras funções. Adcionamos o argumento ``data'' que indica a planilha de onde estamos utilizando as variáveis, o argumento ``var.equal'' o qual indica que a variância entre os grupos é igual e o argumento ``conf.level'' o qual define o nível de confiança com qual estamos trabalhando.
 
-De acordo com nosso resultado podemos ver que o o valor do teste-t é 14,065, o grau de liberdade de 98 (o qual consiste no total de observações subtraído de um por grupo), o valor de probabilidade associado ao teste (\(2.2\times10^{-6}\)), o intervalo de confiança de 95\% (0,415 e 0,551) que refere-se a diferença da média entre os grupos (a diferença da média dos grupos é: 0,70690 - 0,22348 = 0,48342), ou seja, o intervalo de confiança é em função dessa diferença e as últimas linhas do resultado representam as médias de alteração do peso para cada Alimento (Alimento A = 0,70690 e Alimento B = 0,22348). De acordo com esse resultado refutamos a hipótese nula de que as médias são similares. Portanto podemos dizer que dependendo da Alimento (A ou B) utilizada na dieta podemos ter diferentes alterações no peso dos gastropodes.
+De acordo com nosso resultado podemos ver que o o valor do teste-t é 14,065, o grau de liberdade de 98 (o qual consiste no total de observações subtraído de um por grupo), o valor de probabilidade associado ao teste (\(2,2\times10^{-16}\)), o intervalo de confiança de 95\% (0,415 e 0,551) que refere-se a diferença da média entre os grupos (a diferença da média dos grupos é: 0,70690 - 0,22348 = 0,48342), ou seja, o intervalo de confiança é em função dessa diferença e as últimas linhas do resultado representam as médias de alteração do peso para cada Alimento (Alimento A = 0,70690 e Alimento B = 0,22348). De acordo com esse resultado refutamos a hipótese nula de que as médias são similares. Portanto podemos dizer que dependendo da Alimento (A ou B) utilizada na dieta podemos ter diferentes alterações no peso dos gastropodes.
 
 Da mesma forma que avaliamos para o teste-t de uma amostra, podemos plotar o resultado como um gráfico da função de densidade do teste-t. Só devemos lembrar de carregar o pacote ``webr''.
 
@@ -2337,9 +2411,13 @@ Da mesma forma que avaliamos para o teste-t de uma amostra, podemos plotar o res
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-83-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/testet-duas-dens-1.pdf}
+\caption{\label{fig:testet-duas-dens}Curva de densidade representando o valor do teste-t bicaudal para a alteração do peso de gastrópodes em relação ao alimento a um intervalo de confiança de 95\%. O ponto azul indica o valor do teste.}
+\end{figure}
 
-Neste gráfico podemos ver que o resultado do teste-t, indicado pelo ponto azul, está muito além do nível da zona de rejeição, indicando que os dois grupos apresentam médias bem diferentes em outras palavras a diferença entre as duas médias é altamente significativa e diferente de 0.
+Neste gráfico podemos ver que o resultado do teste-t (Figura \ref{fig:testet-duas-dens}), indicado pelo ponto azul, está muito além do nível da zona de rejeição, indicando que os dois grupos apresentam médias bem diferentes, ou seja, a diferença entre as duas médias é altamente significativa e diferente de 0.
 
 Vamos exercitar nosso conhecimento em R e teste-t com um outro exemplo (Gere a planilha abaixo).
 
@@ -2365,7 +2443,7 @@ H0: A média da temperatura é igual entre os anos;
 
 HA: A média da temperatura é diferente entre os anos;
 
-Com a hipótese construída vamos verificar a estrutura dos dados (modificar se necessário) e sumarizar nossos dados grafica e matematicamente.
+Com a hipótese construída vamos verificar a estrutura dos dados (modificar se necessário) e sumarizar nossos dados gráfica e matematicamente.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2411,8 +2489,6 @@ Com a hipótese construída vamos verificar a estrutura dos dados (modificar se 
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{## par(mfrow = c(2, 1))}
-
 \KeywordTok{hist}\NormalTok{(lagoa}\OperatorTok{$}\NormalTok{Temperatura [lagoa}\OperatorTok{$}\NormalTok{Ano }\OperatorTok{==}\StringTok{ "Ano 0"}\NormalTok{], }
      \DataTypeTok{xlab =} \StringTok{"Temperatura (°C)"}\NormalTok{, }
      \DataTypeTok{ylab =} \StringTok{"Frequência", }
@@ -2422,7 +2498,11 @@ Com a hipótese construída vamos verificar a estrutura dos dados (modificar se 
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-86-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/hist-temp-0-1.pdf}
+\caption{\label{fig:hist-temp-0}Histograma com valores de temperatura da lagoa no Ano 0.}
+\end{figure}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2435,7 +2515,11 @@ Com a hipótese construída vamos verificar a estrutura dos dados (modificar se 
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-86-2.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/hist-temp-20-1.pdf}
+\caption{\label{fig:hist-temp-20}Histograma com valores de temperatura da lagoa no Ano 20.}
+\end{figure}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2443,9 +2527,13 @@ Com a hipótese construída vamos verificar a estrutura dos dados (modificar se 
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-87-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/box-temp-1.pdf}
+\caption{\label{fig:box-temp}Boxplot com os valores de temperatura da lagoa por ano.}
+\end{figure}
 
-Como podem verificar a análise gráfica não diferiu do que fizemos no exemplo anterior. Quanto ao seu resultado podemos notar uma maior temperatura média anual da lagoa 20 anos depois da primeira amostragem.
+Como podem verificar os comandos para a análise gráfica não diferiu do que fizemos no exemplo anterior. Os comandos acima realizam: o histograma dos valores de temperatura no ano 0 (Figura \ref{fig:hist-temp-0}), o histograma dos valores de temperatura no ano 0 (Figura \ref{fig:hist-temp-20}) e o boxplot para ambos os dados (Figura \ref{fig:box-temp}), respectivamente. Quanto ao seu resultado podemos notar uma maior temperatura média anual da lagoa 20 anos depois da primeira amostragem.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2574,7 +2662,7 @@ Como podem notar a forma de escrever o teste é similar ao exemplo anterior as a
 
 Olhando para os dois resultados ambos os testes demonstraram diferenças significativas entre os anos, pois o p-value foi menor que 0,01 (lembrar que como o nível de confiança foi alterado para 0,99 a significância só ocorrerá se o p-value for menor que 0,01, como é o caso). Porém podemos ver que não há muita diferença em relação aos valores de ambos os teste-t, pois como comunicamos a aplicação do teste-t de Welch apresenta maior importância quando as variâncias são desiguais e o número amostral de um dos grupos é muito pequeno.
 
-Assim como fizemos anteriormente vamos olhar o resultado em relação a distribuição da função de densidade do teste-t para um nível de confiança de 99\%. Só devemos lembrar de carregar o pacote ``webr'' se ainda não foi carregado.
+Assim como fizemos anteriormente vamos olhar o resultado em relação a distribuição da função de densidade do teste-t para um nível de confiança de 99\% (Figura \ref{fig:testet-duas-temp-dens}). Só devemos lembrar de carregar o pacote ``webr'' se ainda não foi carregado.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2586,7 +2674,11 @@ Assim como fizemos anteriormente vamos olhar o resultado em relação a distribu
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-91-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/testet-duas-temp-dens-1.pdf}
+\caption{\label{fig:testet-duas-temp-dens}Curva de densidade representando o valor do teste-t bicaudal para comparação da temperatura em um lago entre dois anos a um intervalo de confiança de 99\%. O ponto azul indica o valor do teste.}
+\end{figure}
 
 De acordo com esse exemplo podemos afirmar que os anos diferem entre si e que em 20 anos a lagoa amostrada apresentou um aumento da temperatura.
 
@@ -2625,6 +2717,8 @@ Começaremos gerando os dados e a modificando se necessário.
 \KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \StringTok{"observadores"}\NormalTok{, }\StringTok{"aves.1"}\NormalTok{, }\StringTok{"aves.2"}\NormalTok{, }\StringTok{"dia"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
+
+\textcolor{red}{Neste momento não entraremos em detalhes sobre os comandos aplicados para construção desses dados. Caso seja do seu interesse consulte o apêndice, no final do livro.}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2677,12 +2771,10 @@ H0: Não há diferença entre os pares de observações dos pesquisadores;
 
 HA: Há diferença entre os pares de observações dos pesquisadores;
 
-Vamos sumarizar os dados grafica e estatitiscamente
+Vamos sumarizar os dados gráfica e estatisticamente
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{## par(mfrow = c(2, 1))}
-
 \KeywordTok{hist}\NormalTok{(aves}\OperatorTok{$}\StringTok{`}\DataTypeTok{Observador 1}\StringTok{`}\NormalTok{, }
      \DataTypeTok{xlab =} \StringTok{"Observações"}\NormalTok{, }
      \DataTypeTok{ylab =} \StringTok{"Frequência", }
@@ -2692,7 +2784,11 @@ Vamos sumarizar os dados grafica e estatitiscamente
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-94-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/hist-par-obs1-1.pdf}
+\caption{\label{fig:hist-par-obs1}Histograma com a frequência de observações de aves, por 20 dias, pelo observador 1}
+\end{figure}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2705,7 +2801,11 @@ Vamos sumarizar os dados grafica e estatitiscamente
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-94-2.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/hist-par-obs2-1.pdf}
+\caption{\label{fig:hist-par-obs2}Histograma com a frequência de observações de aves, por 20 dias, pelo observador 2}
+\end{figure}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2716,9 +2816,15 @@ Vamos sumarizar os dados grafica e estatitiscamente
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-95-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/box-par-ave-1.pdf}
+\caption{\label{fig:box-par-ave}Boxplot com as frequências de observações de aves por 20 dias de 2 observadores.}
+\end{figure}
 
-Repare que devido a mudança na forma da planilha tivemos que escrever o boxplot de maneira diferente, onde não mais utilizamos o til (\textasciitilde{}), mas inserimos o nome da planilha mais o operador matemático \$ (cifrão) mais o nome da variável quantitativa que queremos representar, inserimos também outros 2 argumentos que são ``names'' com dois nomes concatenados pela função c() que representam as variáveis quantitativas na ordem em que foram inseridas e o argumento ``ylab'' que dá nome ao eixo y.
+Como podem verificar os comandos para a análise gráfica não diferiu do que fizemos nos exemplos anteriores para os histogramas (Figura \ref{fig:hist-par-obs1} e \ref{fig:hist-par-obs2}) e pouco diferiu para o boxplot ((Figura \ref{fig:box-par-ave}).
+
+A estrutura da planilha é diferente das anteriores o que por sua vez alterou a mudança na escrita do comando para construção para o boxplot. Desta não mais utilizamos o til (\textasciitilde{}), mas inserimos o nome da planilha seguido pelo operador matemático \$ (cifrão) mais o nome da variável quantitativa que queremos representar. Inserimos também outros 2 argumentos que são ``names'' com dois nomes concatenados pela função c() que representam as variáveis quantitativas na ordem em que foram inseridas e o argumento ``ylab'' que dá nome ao eixo y.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2796,7 +2902,7 @@ Para a execução do teste-t pareado 2 diferenças podem ser notadas na escrita 
 
 Quanto ao resultado podemos notar que nos é informado que o teste consiste num teste-t pareado e que a diferença entre os observadores é ligeiramente diferente a um nível de confiança de 95\%, visto que o ``p-value'' é próximo à 0,05 e na última linha nos é indicado que a média da diferença das observações é de -1,2. Em outras palavras o teste nos diz que a média das diferenças é diferente de 0, portanto rejeitamos a hipótese nula.
 
-Assim como fizemos anteriormente vamos olhar o resultado em relação a distribuição função de densidade do teste-t. Só devemos lembrar de carregar o pacote ``webr'' se ainda não foi carregado.
+Assim como fizemos anteriormente vamos olhar o resultado em relação a distribuição função de densidade do teste-t (Figura \ref{fig:testet-par-ave}). Só devemos lembrar de carregar o pacote ``webr'' se ainda não foi carregado.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2808,7 +2914,11 @@ Assim como fizemos anteriormente vamos olhar o resultado em relação a distribu
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-100-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/testet-par-ave-1.pdf}
+\caption{\label{fig:testet-par-ave}Curva de densidade representando o valor do teste-t bicaudal para comparação do número de observações de aves por 2 observadores distintos a um intervalo de confiança de 95\%. O ponto azul indica o valor do teste.}
+\end{figure}
 
 Neste teste em particular como trabalhamos com a diferença entre as observações vamos usar o gráfico de barras para graficar essa diferença.
 
@@ -2825,11 +2935,15 @@ Neste teste em particular como trabalhamos com a diferença entre as observaçõ
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-101-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/bar-dif-ave-1.pdf}
+\caption{\label{fig:bar-dif-ave}Diferença entre o número de observações de aves, por dia, para cada observador}
+\end{figure}
 
-No comando gráficos acima estamos indicando que faremos um gráfico de barras, onde o que será plotado é a diferença no número de observação de aves entre observadores, o argumento ``xlab'' indica o nome do eixo x, ``ylab'' o nome do eixo y, ``main'' indica o título do gráfico, ``names.arg'' indica a coluna referente aos nomes das barras (que são os dias), ``las'' indica se os nomes das barras serão plotados na horizontal ou vertical (o valor 2 indica vertical), ``ylim'' indica os limites do eixo y e ``cex.names'' indica o tamanho da letra dos nomes das barras.
+Para o gráfico acima indicamos em seu comando que faremos um gráfico de barras onde o que será plotado é a diferença no número de observação de aves entre observadores (Figura \ref{fig:bar-dif-ave}). O argumento ``xlab'' indica o nome do eixo x, ``ylab'' o nome do eixo y, ``main'' indica o título do gráfico, ``names.arg'' indica a coluna referente aos nomes das barras (que são os dias), ``las'' indica se os nomes das barras serão plotados na horizontal ou vertical (o valor 2 indica vertical), ``ylim'' indica os limites do eixo y e ``cex.names'' indica o tamanho da letra dos nomes das barras.
 
-As barras para o lado positivo do eixo y indica uma maior observação de aves pelo observador 1 e as barras para baixo indicam um maior número de observações de aves pelo observador 2. Vamos indicar isso no gráfico por meio da função mtext().
+As barras para o lado positivo do eixo y indica uma maior observação de aves pelo observador 1 e as barras para baixo indicam um maior número de observações de aves pelo observador 2. Vamos indicar isso no gráfico por meio da função \emph{mtext()} (Figura \ref{fig:bar-dif-ave2}).
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2853,9 +2967,13 @@ As barras para o lado positivo do eixo y indica uma maior observação de aves p
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-102-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{livroR-1.0_files/figure-latex/bar-dif-ave2-1.pdf}
+\caption{\label{fig:bar-dif-ave2}Diferença entre o número de observações de aves, por dia, para cada observador.}
+\end{figure}
 
-Como podem ver a função \emph{mtext()} indicou os nomes Observador 1 e Observador 2 no lado do gráfico que os representa. O argumento ``at'' indica a posição em relação ao eixo x, ``line'' indica a posição em relação ao eixo y, text indica o que será plotado e side indica o lado da janela gráfica onde o texto será plotado (3 é na parte superior e 1 na inferior).
+Como podem ver a função \emph{mtext()} indicou os nomes Observador 1 e Observador 2 no lado do gráfico que os representa. O argumento ``at'' indica a posição em relação ao eixo x, ``line'' indica a posição em relação ao eixo y, ``text'' indica o que será plotado e side indica o lado da janela gráfica onde o texto será plotado (3 é na parte superior e 1 na inferior).
 
 \hypertarget{final-words}{%
 \chapter{Final Words}\label{final-words}}

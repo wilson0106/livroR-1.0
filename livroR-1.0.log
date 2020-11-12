@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.11.3)  11 NOV 2020 23:44
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.11.3)  18 NOV 2020 21:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1048,20 +1048,10 @@ Package xcolor Warning: Incompatible color definition on input line 389.
 
 Package xcolor Warning: Incompatible color definition on input line 389.
 
-File: livroR-1.0_files/figure-latex/unnamed-chunk-11-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-11-1.pdf>
+File: livroR-1.0_files/figure-latex/comp-hist-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/comp-hist-1.pdf>
 
-Package xcolor Warning: Incompatible color definition on input line 399.
-
-
-Package xcolor Warning: Incompatible color definition on input line 409.
-
-
-Package xcolor Warning: Incompatible color definition on input line 409.
-
-
-Package xcolor Warning: Incompatible color definition on input line 409.
+Package xcolor Warning: Incompatible color definition on input line 403.
 
 
 Overfull \hbox (32.06563pt too wide) has occurred while \output is active
@@ -1071,59 +1061,61 @@ AÇÃO DOS DADOS
 
 [18]
 
-Package xcolor Warning: Incompatible color definition on input line 409.
+Package xcolor Warning: Incompatible color definition on input line 413.
 
 
-Package xcolor Warning: Incompatible color definition on input line 409.
+Package xcolor Warning: Incompatible color definition on input line 413.
 
-File: livroR-1.0_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-12-1.pdf>
+File: livroR-1.0_files/figure-latex/comp-hist-col-1.pdf Graphic file (type pdf)
 
-Underfull \hbox (badness 1342) in paragraph at lines 419--420
+<use livroR-1.0_files/figure-latex/comp-hist-col-1.pdf>
+
+Underfull \hbox (badness 1342) in paragraph at lines 427--428
 []\TU/lmr/bx/n/10 [INSERIR TABELA EXPLICANDO OS ARGUMENTOS E A
  []
 
 [19]
 
-Package xcolor Warning: Incompatible color definition on input line 430.
+Package xcolor Warning: Incompatible color definition on input line 438.
 
 
-Package xcolor Warning: Incompatible color definition on input line 434.
+Package xcolor Warning: Incompatible color definition on input line 442.
 
 
-Package xcolor Warning: Incompatible color definition on input line 434.
+Package xcolor Warning: Incompatible color definition on input line 442.
 
 
-Package xcolor Warning: Incompatible color definition on input line 440.
+Package xcolor Warning: Incompatible color definition on input line 448.
 
 
-Package xcolor Warning: Incompatible color definition on input line 444.
+Package xcolor Warning: Incompatible color definition on input line 452.
 
 
-Package xcolor Warning: Incompatible color definition on input line 444.
+Package xcolor Warning: Incompatible color definition on input line 452.
 
 
-Package xcolor Warning: Incompatible color definition on input line 455.
+Package xcolor Warning: Incompatible color definition on input line 463.
 
 
-Package xcolor Warning: Incompatible color definition on input line 459.
+Package xcolor Warning: Incompatible color definition on input line 467.
 
 
-Package xcolor Warning: Incompatible color definition on input line 459.
+Package xcolor Warning: Incompatible color definition on input line 467.
 
 
-Package xcolor Warning: Incompatible color definition on input line 465.
+Package xcolor Warning: Incompatible color definition on input line 473.
 
 
-Package xcolor Warning: Incompatible color definition on input line 469.
+Package xcolor Warning: Incompatible color definition on input line 477.
 
 
-Package xcolor Warning: Incompatible color definition on input line 469.
+Package xcolor Warning: Incompatible color definition on input line 477.
 
-File: livroR-1.0_files/figure-latex/unnamed-chunk-16-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-16-1.pdf>
+File: livroR-1.0_files/figure-latex/bar-abu-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/bar-abu-1.pdf>
+
+Package xcolor Warning: Incompatible color definition on input line 489.
+
 
 Overfull \hbox (32.06563pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 20 \TU/lmr/m/sl/10 CHAPTER 3.  IMPORTAÇÃO, ORGANIZAÇÃO E SUMARIZ
@@ -1132,46 +1124,24 @@ AÇÃO DOS DADOS
 
 [20]
 
-Package xcolor Warning: Incompatible color definition on input line 477.
+Package xcolor Warning: Incompatible color definition on input line 498.
 
 
-Package xcolor Warning: Incompatible color definition on input line 486.
+Package xcolor Warning: Incompatible color definition on input line 498.
 
+File: livroR-1.0_files/figure-latex/bar-abu-col-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/bar-abu-col-1.pdf>
 
-Package xcolor Warning: Incompatible color definition on input line 486.
-
-File: livroR-1.0_files/figure-latex/unnamed-chunk-17-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-17-1.pdf>
-
-Overfull \hbox (31.86pt too wide) in paragraph at lines 496--509
+Overfull \hbox (31.86pt too wide) in paragraph at lines 514--525
  [][] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[21]
-Underfull \hbox (badness 1342) in paragraph at lines 511--512
+Underfull \hbox (badness 1342) in paragraph at lines 527--528
 []\TU/lmr/bx/n/10 [INSERIR TABELA EXPLICANDO OS ARGUMENTOS E A
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 522.
-
-
-Package xcolor Warning: Incompatible color definition on input line 526.
-
-
-Package xcolor Warning: Incompatible color definition on input line 526.
-
-File: livroR-1.0_files/figure-latex/unnamed-chunk-19-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-19-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+[21]
 Overfull \hbox (32.06563pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 22 \TU/lmr/m/sl/10 CHAPTER 3.  IMPORTAÇÃO, ORGANIZAÇÃO E SUMARIZ
 AÇÃO DOS DADOS
@@ -1179,40 +1149,53 @@ AÇÃO DOS DADOS
 
 [22]
 
-Package xcolor Warning: Incompatible color definition on input line 534.
+Package xcolor Warning: Incompatible color definition on input line 538.
 
 
-Package xcolor Warning: Incompatible color definition on input line 546.
+Package xcolor Warning: Incompatible color definition on input line 542.
 
 
-Package xcolor Warning: Incompatible color definition on input line 546.
+Package xcolor Warning: Incompatible color definition on input line 542.
 
-File: livroR-1.0_files/figure-latex/unnamed-chunk-20-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-20-1.pdf>
+File: livroR-1.0_files/figure-latex/pon-graf-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/pon-graf-1.pdf>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package xcolor Warning: Incompatible color definition on input line 554.
+
+
+Package xcolor Warning: Incompatible color definition on input line 566.
+
+
+Package xcolor Warning: Incompatible color definition on input line 566.
+
+
+Package xcolor Warning: Incompatible color definition on input line 566.
 
 [23]
-Underfull \hbox (badness 1342) in paragraph at lines 554--555
+
+Package xcolor Warning: Incompatible color definition on input line 566.
+
+
+Package xcolor Warning: Incompatible color definition on input line 566.
+
+File: livroR-1.0_files/figure-latex/lin-graf-col-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/lin-graf-col-1.pdf>
+
+Underfull \hbox (badness 1342) in paragraph at lines 578--579
 []\TU/lmr/bx/n/10 [INSERIR TABELA EXPLICANDO OS ARGUMENTOS E A
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 561.
+Package xcolor Warning: Incompatible color definition on input line 585.
 
 
-Package xcolor Warning: Incompatible color definition on input line 565.
+Package xcolor Warning: Incompatible color definition on input line 589.
 
 
-Package xcolor Warning: Incompatible color definition on input line 565.
+Package xcolor Warning: Incompatible color definition on input line 589.
 
-File: livroR-1.0_files/figure-latex/unnamed-chunk-21-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-21-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+File: livroR-1.0_files/figure-latex/box-graf-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/box-graf-1.pdf>
 
 Overfull \hbox (32.06563pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 24 \TU/lmr/m/sl/10 CHAPTER 3.  IMPORTAÇÃO, ORGANIZAÇÃO E SUMARIZ
@@ -1221,21 +1204,21 @@ AÇÃO DOS DADOS
 
 [24]
 
-Package xcolor Warning: Incompatible color definition on input line 573.
+Package xcolor Warning: Incompatible color definition on input line 601.
 
 
-Package xcolor Warning: Incompatible color definition on input line 581.
+Package xcolor Warning: Incompatible color definition on input line 609.
 
 
-Package xcolor Warning: Incompatible color definition on input line 581.
+Package xcolor Warning: Incompatible color definition on input line 609.
 
-File: livroR-1.0_files/figure-latex/unnamed-chunk-22-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-22-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+File: livroR-1.0_files/figure-latex/box-graf-col-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/box-graf-col-1.pdf>
 [25]
+
+Package xcolor Warning: Incompatible color definition on input line 634.
+
+
 Overfull \hbox (32.06563pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 26 \TU/lmr/m/sl/10 CHAPTER 3.  IMPORTAÇÃO, ORGANIZAÇÃO E SUMARIZ
 AÇÃO DOS DADOS
@@ -1243,71 +1226,68 @@ AÇÃO DOS DADOS
 
 [26]
 
-Package xcolor Warning: Incompatible color definition on input line 602.
+Package xcolor Warning: Incompatible color definition on input line 638.
 
 
-Package xcolor Warning: Incompatible color definition on input line 606.
+Package xcolor Warning: Incompatible color definition on input line 638.
 
 
-Package xcolor Warning: Incompatible color definition on input line 606.
+Package xcolor Warning: Incompatible color definition on input line 650.
 
 
-Package xcolor Warning: Incompatible color definition on input line 618.
+Package xcolor Warning: Incompatible color definition on input line 654.
 
 
-Package xcolor Warning: Incompatible color definition on input line 622.
+Package xcolor Warning: Incompatible color definition on input line 654.
 
 
-Package xcolor Warning: Incompatible color definition on input line 622.
+Package xcolor Warning: Incompatible color definition on input line 673.
 
 
-Package xcolor Warning: Incompatible color definition on input line 641.
+Package xcolor Warning: Incompatible color definition on input line 677.
 
 
-Package xcolor Warning: Incompatible color definition on input line 645.
+Package xcolor Warning: Incompatible color definition on input line 677.
 
 
-Package xcolor Warning: Incompatible color definition on input line 645.
-
-
-Package xcolor Warning: Incompatible color definition on input line 655.
+Package xcolor Warning: Incompatible color definition on input line 687.
 
 [27]
 
-Package xcolor Warning: Incompatible color definition on input line 659.
+Package xcolor Warning: Incompatible color definition on input line 691.
 
 
-Package xcolor Warning: Incompatible color definition on input line 659.
+Package xcolor Warning: Incompatible color definition on input line 691.
 
 
-Package xcolor Warning: Incompatible color definition on input line 671.
+Package xcolor Warning: Incompatible color definition on input line 703.
 
 
-Package xcolor Warning: Incompatible color definition on input line 675.
+Package xcolor Warning: Incompatible color definition on input line 707.
 
 
-Package xcolor Warning: Incompatible color definition on input line 675.
+Package xcolor Warning: Incompatible color definition on input line 707.
 
 
-Package xcolor Warning: Incompatible color definition on input line 681.
+Package xcolor Warning: Incompatible color definition on input line 713.
 
 
-Package xcolor Warning: Incompatible color definition on input line 685.
+Package xcolor Warning: Incompatible color definition on input line 717.
 
 
-Package xcolor Warning: Incompatible color definition on input line 685.
+Package xcolor Warning: Incompatible color definition on input line 717.
 
 
-Package xcolor Warning: Incompatible color definition on input line 693.
+Package xcolor Warning: Incompatible color definition on input line 725.
 
 
-Package xcolor Warning: Incompatible color definition on input line 697.
+Package xcolor Warning: Incompatible color definition on input line 729.
 
 
-Package xcolor Warning: Incompatible color definition on input line 697.
+Package xcolor Warning: Incompatible color definition on input line 729.
 
 
-Package xcolor Warning: Incompatible color definition on input line 709.
+Package xcolor Warning: Incompatible color definition on input line 741.
 
 
 Overfull \hbox (32.06563pt too wide) has occurred while \output is active
@@ -1317,80 +1297,80 @@ AÇÃO DOS DADOS
 
 [28]
 
-Package xcolor Warning: Incompatible color definition on input line 713.
+Package xcolor Warning: Incompatible color definition on input line 745.
 
 
-Package xcolor Warning: Incompatible color definition on input line 713.
-
-
-Package xcolor Warning: Incompatible color definition on input line 723.
-
-
-Package xcolor Warning: Incompatible color definition on input line 727.
-
-
-Package xcolor Warning: Incompatible color definition on input line 727.
-
-
-Package xcolor Warning: Incompatible color definition on input line 747.
-
-[29]
-
-Package xcolor Warning: Incompatible color definition on input line 755.
+Package xcolor Warning: Incompatible color definition on input line 745.
 
 
 Package xcolor Warning: Incompatible color definition on input line 755.
 
 
-Overfull \hbox (85.5pt too wide) in paragraph at lines 760--760
+Package xcolor Warning: Incompatible color definition on input line 759.
+
+
+Package xcolor Warning: Incompatible color definition on input line 759.
+
+
+Package xcolor Warning: Incompatible color definition on input line 779.
+
+
+Package xcolor Warning: Incompatible color definition on input line 787.
+
+
+Package xcolor Warning: Incompatible color definition on input line 787.
+
+
+Overfull \hbox (85.5pt too wide) in paragraph at lines 792--792
 []\TU/lmtt/m/n/10 ##  [1] 10 11 15 12 17 14 19 16 15 12 14 15 12 12 14 13 12 11
  14 14 13 12 11 15 12[] 
  []
 
+[29]
 
-Package xcolor Warning: Incompatible color definition on input line 762.
-
-
-Package xcolor Warning: Incompatible color definition on input line 766.
+Package xcolor Warning: Incompatible color definition on input line 794.
 
 
-Package xcolor Warning: Incompatible color definition on input line 766.
+Package xcolor Warning: Incompatible color definition on input line 798.
 
 
-Package xcolor Warning: Incompatible color definition on input line 772.
+Package xcolor Warning: Incompatible color definition on input line 798.
 
 
-Package xcolor Warning: Incompatible color definition on input line 776.
+Package xcolor Warning: Incompatible color definition on input line 804.
 
 
-Package xcolor Warning: Incompatible color definition on input line 776.
+Package xcolor Warning: Incompatible color definition on input line 808.
 
 
-Package xcolor Warning: Incompatible color definition on input line 792.
+Package xcolor Warning: Incompatible color definition on input line 808.
 
 
-Package xcolor Warning: Incompatible color definition on input line 796.
+Package xcolor Warning: Incompatible color definition on input line 824.
 
 
-Package xcolor Warning: Incompatible color definition on input line 796.
+Package xcolor Warning: Incompatible color definition on input line 828.
 
 
-Package xcolor Warning: Incompatible color definition on input line 802.
+Package xcolor Warning: Incompatible color definition on input line 828.
 
 
-Package xcolor Warning: Incompatible color definition on input line 806.
+Package xcolor Warning: Incompatible color definition on input line 834.
 
 
-Package xcolor Warning: Incompatible color definition on input line 806.
+Package xcolor Warning: Incompatible color definition on input line 838.
 
 
-Package xcolor Warning: Incompatible color definition on input line 812.
+Package xcolor Warning: Incompatible color definition on input line 838.
 
 
-Package xcolor Warning: Incompatible color definition on input line 816.
+Package xcolor Warning: Incompatible color definition on input line 844.
 
 
-Package xcolor Warning: Incompatible color definition on input line 816.
+Package xcolor Warning: Incompatible color definition on input line 848.
+
+
+Package xcolor Warning: Incompatible color definition on input line 848.
 
 
 Overfull \hbox (32.06563pt too wide) has occurred while \output is active
@@ -1400,33 +1380,14 @@ AÇÃO DOS DADOS
 
 [30]
 
-Package xcolor Warning: Incompatible color definition on input line 849.
+Package xcolor Warning: Incompatible color definition on input line 881.
 
 
-Package xcolor Warning: Incompatible color definition on input line 853.
+Package xcolor Warning: Incompatible color definition on input line 885.
 
 
-Package xcolor Warning: Incompatible color definition on input line 853.
+Package xcolor Warning: Incompatible color definition on input line 885.
 
-
-Package xcolor Warning: Incompatible color definition on input line 859.
-
-
-Package xcolor Warning: Incompatible color definition on input line 863.
-
-
-Package xcolor Warning: Incompatible color definition on input line 863.
-
-
-Package xcolor Warning: Incompatible color definition on input line 869.
-
-
-Package xcolor Warning: Incompatible color definition on input line 873.
-
-
-Package xcolor Warning: Incompatible color definition on input line 873.
-
-[31]
 
 Package xcolor Warning: Incompatible color definition on input line 891.
 
@@ -1437,6 +1398,25 @@ Package xcolor Warning: Incompatible color definition on input line 895.
 Package xcolor Warning: Incompatible color definition on input line 895.
 
 
+Package xcolor Warning: Incompatible color definition on input line 901.
+
+
+Package xcolor Warning: Incompatible color definition on input line 905.
+
+
+Package xcolor Warning: Incompatible color definition on input line 905.
+
+[31]
+
+Package xcolor Warning: Incompatible color definition on input line 923.
+
+
+Package xcolor Warning: Incompatible color definition on input line 927.
+
+
+Package xcolor Warning: Incompatible color definition on input line 927.
+
+
 Overfull \hbox (32.06563pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 32 \TU/lmr/m/sl/10 CHAPTER 3.  IMPORTAÇÃO, ORGANIZAÇÃO E SUMARIZ
 AÇÃO DOS DADOS
@@ -1444,80 +1424,80 @@ AÇÃO DOS DADOS
 
 [32]
 
-Package xcolor Warning: Incompatible color definition on input line 909.
+Package xcolor Warning: Incompatible color definition on input line 941.
 
 
-Package xcolor Warning: Incompatible color definition on input line 925.
+Package xcolor Warning: Incompatible color definition on input line 957.
 
 
-Package xcolor Warning: Incompatible color definition on input line 925.
+Package xcolor Warning: Incompatible color definition on input line 957.
 
 
-Package xcolor Warning: Incompatible color definition on input line 929.
+Package xcolor Warning: Incompatible color definition on input line 961.
 
 
-Package xcolor Warning: Incompatible color definition on input line 943.
+Package xcolor Warning: Incompatible color definition on input line 975.
 
 
-Package xcolor Warning: Incompatible color definition on input line 943.
+Package xcolor Warning: Incompatible color definition on input line 975.
 
 
-Package xcolor Warning: Incompatible color definition on input line 947.
+Package xcolor Warning: Incompatible color definition on input line 979.
 
 
-Package xcolor Warning: Incompatible color definition on input line 959.
+Package xcolor Warning: Incompatible color definition on input line 991.
 
 
-Package xcolor Warning: Incompatible color definition on input line 959.
+Package xcolor Warning: Incompatible color definition on input line 991.
 
 
-Package xcolor Warning: Incompatible color definition on input line 959.
+Package xcolor Warning: Incompatible color definition on input line 991.
 
 [33]
 
-Package xcolor Warning: Incompatible color definition on input line 959.
+Package xcolor Warning: Incompatible color definition on input line 991.
 
 
-Package xcolor Warning: Incompatible color definition on input line 959.
+Package xcolor Warning: Incompatible color definition on input line 991.
 
 
-Package xcolor Warning: Incompatible color definition on input line 963.
+Package xcolor Warning: Incompatible color definition on input line 995.
 
 
-Package xcolor Warning: Incompatible color definition on input line 971.
+Package xcolor Warning: Incompatible color definition on input line 1003.
 
 
-Package xcolor Warning: Incompatible color definition on input line 971.
+Package xcolor Warning: Incompatible color definition on input line 1003.
 
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 979--979
+Overfull \hbox (48.75pt too wide) in paragraph at lines 1011--1011
 []\TU/lmtt/m/n/10 ##  $ local      : chr  "Ambiente 1" "Ambiente 2" "Ambiente 1
 " "Ambiente 2"[] 
  []
 
 
-Overfull \hbox (174.75pt too wide) in paragraph at lines 979--979
+Overfull \hbox (174.75pt too wide) in paragraph at lines 1011--1011
 []\TU/lmtt/m/n/10 ##  $ dados.dp   : chr  "2.84604989415154" "1.28668393770792"
  "1.58113883008419" "1.93464651625488"[] 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 981.
+Package xcolor Warning: Incompatible color definition on input line 1013.
 
 
-Package xcolor Warning: Incompatible color definition on input line 988.
+Package xcolor Warning: Incompatible color definition on input line 1020.
 
 
-Package xcolor Warning: Incompatible color definition on input line 988.
+Package xcolor Warning: Incompatible color definition on input line 1020.
 
 
-Package xcolor Warning: Incompatible color definition on input line 990.
+Package xcolor Warning: Incompatible color definition on input line 1022.
 
 
-Package xcolor Warning: Incompatible color definition on input line 994.
+Package xcolor Warning: Incompatible color definition on input line 1026.
 
 
-Package xcolor Warning: Incompatible color definition on input line 994.
+Package xcolor Warning: Incompatible color definition on input line 1026.
 
 
 Overfull \hbox (32.06563pt too wide) has occurred while \output is active
@@ -1527,45 +1507,44 @@ AÇÃO DOS DADOS
 
 [34]
 
-Package xcolor Warning: Incompatible color definition on input line 1012.
+Package xcolor Warning: Incompatible color definition on input line 1044.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1016.
+Package xcolor Warning: Incompatible color definition on input line 1048.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1016.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1020.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1024.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1024.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1028.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1036.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1036.
+Package xcolor Warning: Incompatible color definition on input line 1048.
 
 
 Package xcolor Warning: Incompatible color definition on input line 1052.
 
+
+Package xcolor Warning: Incompatible color definition on input line 1056.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1056.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1060.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1068.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1068.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1084.
+
 [35]
 
-Package xcolor Warning: Incompatible color definition on input line 1069.
+Package xcolor Warning: Incompatible color definition on input line 1101.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1069.
+Package xcolor Warning: Incompatible color definition on input line 1101.
 
-File: livroR-1.0_files/figure-latex/unnamed-chunk-42-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-42-1.pdf>
+File: livroR-1.0_files/figure-latex/bar-ep-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/bar-ep-1.pdf>
 
 Overfull \hbox (32.06563pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 36 \TU/lmr/m/sl/10 CHAPTER 3.  IMPORTAÇÃO, ORGANIZAÇÃO E SUMARIZ
@@ -1574,20 +1553,16 @@ AÇÃO DOS DADOS
 
 [36]
 
-Package xcolor Warning: Incompatible color definition on input line 1087.
+Package xcolor Warning: Incompatible color definition on input line 1123.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1103.
+Package xcolor Warning: Incompatible color definition on input line 1139.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1103.
+Package xcolor Warning: Incompatible color definition on input line 1139.
 
-File: livroR-1.0_files/figure-latex/unnamed-chunk-43-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-43-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+File: livroR-1.0_files/figure-latex/bar-ep-abu-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/bar-ep-abu-1.pdf>
 [37]
 Overfull \hbox (32.06563pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 38 \TU/lmr/m/sl/10 CHAPTER 3.  IMPORTAÇÃO, ORGANIZAÇÃO E SUMARIZ
@@ -1601,7 +1576,7 @@ Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no χ in font [lmroman10-bold]:mapping=tex-text;!
 
-Underfull \hbox (badness 1107) in paragraph at lines 1127--1134
+Underfull \hbox (badness 1107) in paragraph at lines 1167--1174
 []\TU/lmr/bx/n/10 [FAZER UMA TABELA COM AS CARACTERÍSTICAS DOS
  []
 
@@ -1611,32 +1586,32 @@ Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
 
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 1144.
+Package xcolor Warning: Incompatible color definition on input line 1184.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1151.
+Package xcolor Warning: Incompatible color definition on input line 1191.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1151.
+Package xcolor Warning: Incompatible color definition on input line 1191.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1157.
+Package xcolor Warning: Incompatible color definition on input line 1197.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1161.
+Package xcolor Warning: Incompatible color definition on input line 1201.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1161.
+Package xcolor Warning: Incompatible color definition on input line 1201.
 
 Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
 
-Package xcolor Warning: Incompatible color definition on input line 1171.
+Package xcolor Warning: Incompatible color definition on input line 1211.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1175.
+Package xcolor Warning: Incompatible color definition on input line 1215.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1175.
+Package xcolor Warning: Incompatible color definition on input line 1215.
 
 Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
 [40]
@@ -1648,54 +1623,54 @@ Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
 
-Package xcolor Warning: Incompatible color definition on input line 1203.
+Package xcolor Warning: Incompatible color definition on input line 1243.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1208.
+Package xcolor Warning: Incompatible color definition on input line 1248.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1208.
+Package xcolor Warning: Incompatible color definition on input line 1248.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1214.
+Package xcolor Warning: Incompatible color definition on input line 1254.
 
 [41]
 
-Package xcolor Warning: Incompatible color definition on input line 1218.
+Package xcolor Warning: Incompatible color definition on input line 1258.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1218.
+Package xcolor Warning: Incompatible color definition on input line 1258.
 
 Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
 
-Package xcolor Warning: Incompatible color definition on input line 1232.
+Package xcolor Warning: Incompatible color definition on input line 1272.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1239.
+Package xcolor Warning: Incompatible color definition on input line 1279.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1239.
+Package xcolor Warning: Incompatible color definition on input line 1279.
 
 Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
 [42]
 
-Package xcolor Warning: Incompatible color definition on input line 1255.
+Package xcolor Warning: Incompatible color definition on input line 1295.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1262.
+Package xcolor Warning: Incompatible color definition on input line 1302.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1262.
+Package xcolor Warning: Incompatible color definition on input line 1302.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1278.
+Package xcolor Warning: Incompatible color definition on input line 1318.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1284.
+Package xcolor Warning: Incompatible color definition on input line 1324.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1284.
+Package xcolor Warning: Incompatible color definition on input line 1324.
 
 Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
@@ -1704,25 +1679,25 @@ Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
 [43]
 
-Package xcolor Warning: Incompatible color definition on input line 1300.
+Package xcolor Warning: Incompatible color definition on input line 1340.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1307.
+Package xcolor Warning: Incompatible color definition on input line 1347.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1307.
+Package xcolor Warning: Incompatible color definition on input line 1347.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1317.
+Package xcolor Warning: Incompatible color definition on input line 1357.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1321.
+Package xcolor Warning: Incompatible color definition on input line 1361.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1321.
+Package xcolor Warning: Incompatible color definition on input line 1361.
 
 
-Overfull \hbox (43.5pt too wide) in paragraph at lines 1330--1330
+Overfull \hbox (43.5pt too wide) in paragraph at lines 1370--1370
 []\TU/lmtt/m/n/10 ##  Chi-squared test for given probabilities with simulated p
 -value (based[] 
  []
@@ -1732,485 +1707,460 @@ Missing character: There is no χ in font [lmroman12-bold]:mapping=tex-text;!
 Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no χ in font [lmroman10-bold]:mapping=tex-text;!
 
-Underfull \hbox (badness 1107) in paragraph at lines 1347--1354
+Underfull \hbox (badness 1107) in paragraph at lines 1387--1394
 []\TU/lmr/bx/n/10 [FAZER UMA TABELA COM AS CARACTERÍSTICAS DOS
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 1359.
+Package xcolor Warning: Incompatible color definition on input line 1399.
 
-
-Package xcolor Warning: Incompatible color definition on input line 1366.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1366.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1366.
-
-[45]
-
-Package xcolor Warning: Incompatible color definition on input line 1366.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1366.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1376.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1380.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1380.
-
-Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
-[46]
 
 Package xcolor Warning: Incompatible color definition on input line 1406.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1414.
+Package xcolor Warning: Incompatible color definition on input line 1406.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1414.
+Package xcolor Warning: Incompatible color definition on input line 1406.
+
+[45]
+
+Package xcolor Warning: Incompatible color definition on input line 1406.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1426.
+Package xcolor Warning: Incompatible color definition on input line 1406.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1431.
+Package xcolor Warning: Incompatible color definition on input line 1416.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1431.
+Package xcolor Warning: Incompatible color definition on input line 1420.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1442.
+Package xcolor Warning: Incompatible color definition on input line 1420.
 
+Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
+[46]
 
 Package xcolor Warning: Incompatible color definition on input line 1446.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1446.
+Package xcolor Warning: Incompatible color definition on input line 1454.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1454.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1466.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1471.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1471.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1482.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1486.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1486.
 
 [47]
 
-Package xcolor Warning: Incompatible color definition on input line 1475.
+Package xcolor Warning: Incompatible color definition on input line 1515.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1488.
+Package xcolor Warning: Incompatible color definition on input line 1528.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1488.
+Package xcolor Warning: Incompatible color definition on input line 1528.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1488.
+Package xcolor Warning: Incompatible color definition on input line 1528.
 
 [48]
 
-Package xcolor Warning: Incompatible color definition on input line 1488.
+Package xcolor Warning: Incompatible color definition on input line 1528.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1488.
+Package xcolor Warning: Incompatible color definition on input line 1528.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1498.
+Package xcolor Warning: Incompatible color definition on input line 1538.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1502.
+Package xcolor Warning: Incompatible color definition on input line 1542.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1502.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1518.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1524.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1524.
-
-[49]
-
-Package xcolor Warning: Incompatible color definition on input line 1530.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1534.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1534.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1544.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1548.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1548.
+Package xcolor Warning: Incompatible color definition on input line 1542.
 
 
 Package xcolor Warning: Incompatible color definition on input line 1558.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1562.
+Package xcolor Warning: Incompatible color definition on input line 1564.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1562.
+Package xcolor Warning: Incompatible color definition on input line 1564.
+
+[49]
+
+Package xcolor Warning: Incompatible color definition on input line 1570.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1580.
+Package xcolor Warning: Incompatible color definition on input line 1574.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1574.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1584.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1588.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1588.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1598.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1602.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1602.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1620.
 
 [50]
 
-Package xcolor Warning: Incompatible color definition on input line 1585.
+Package xcolor Warning: Incompatible color definition on input line 1625.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1585.
+Package xcolor Warning: Incompatible color definition on input line 1625.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1595.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1600.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1600.
-
-Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
-
-Package xcolor Warning: Incompatible color definition on input line 1612.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1616.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1616.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1624.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1628.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1628.
+Package xcolor Warning: Incompatible color definition on input line 1635.
 
 
 Package xcolor Warning: Incompatible color definition on input line 1640.
 
+
+Package xcolor Warning: Incompatible color definition on input line 1640.
+
+Missing character: There is no χ in font [lmroman10-regular]:mapping=tex-text;!
+
+Package xcolor Warning: Incompatible color definition on input line 1652.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1656.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1656.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1664.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1668.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1668.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1680.
+
 [51]
 
-Package xcolor Warning: Incompatible color definition on input line 1651.
+Package xcolor Warning: Incompatible color definition on input line 1692.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1651.
+Package xcolor Warning: Incompatible color definition on input line 1692.
 
-File: livroR-1.0_files/figure-latex/unnamed-chunk-63-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-63-1.pdf>
+File: livroR-1.0_files/figure-latex/bar-tab-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/bar-tab-1.pdf>
 [52] [53] [54
 
 ]
 Chapter 5.
 [55]
 
-Package xcolor Warning: Incompatible color definition on input line 1689.
+Package xcolor Warning: Incompatible color definition on input line 1734.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1694.
+Package xcolor Warning: Incompatible color definition on input line 1739.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1694.
+Package xcolor Warning: Incompatible color definition on input line 1739.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1702.
+Package xcolor Warning: Incompatible color definition on input line 1747.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1706.
+Package xcolor Warning: Incompatible color definition on input line 1751.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1706.
+Package xcolor Warning: Incompatible color definition on input line 1751.
 
 
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1722--1722
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1767--1767
 []\TU/lmtt/m/n/10 ##   [1] 26.36501 25.73118 23.16434 26.93999 25.85006 29.2228
 9 21.34791 22.92014[] 
  []
 
 
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1722--1722
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1767--1767
 []\TU/lmtt/m/n/10 ##   [9] 19.70599 31.88009 25.58378 20.48762 19.18464 29.1934
 4 27.02799 31.80449[] 
  []
 
 
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1722--1722
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1767--1767
 []\TU/lmtt/m/n/10 ##  [17] 26.70808 27.30077 23.83039 33.02083 23.89138 17.0115
 9 20.68980 22.81711[] 
  []
 
 
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1722--1722
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1767--1767
 []\TU/lmtt/m/n/10 ##  [25] 18.44307 23.54454 30.40893 21.37080 25.12759 23.9750
 7 30.85514 25.59575[] 
  []
 
 
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1722--1722
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1767--1767
 []\TU/lmtt/m/n/10 ##  [33] 17.99771 29.42112 24.44470 19.22824 26.81323 20.5745
 0 24.53800 32.36946[] 
  []
 
 
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1722--1722
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1767--1767
 []\TU/lmtt/m/n/10 ##  [41] 25.23524 19.84181 19.61879 27.74526 31.68906 23.6640
 1 28.26906 24.93702[] 
  []
 
 
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1722--1722
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1767--1767
 []\TU/lmtt/m/n/10 ##  [49] 31.93121 29.25393 23.70445 25.96390 20.11329 20.4577
 2 17.87934 26.57236[] 
  []
 
 
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1722--1722
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1767--1767
 []\TU/lmtt/m/n/10 ##  [57] 22.84551 16.27916 28.03817 24.16301 31.17074 20.0219
 0 26.56155 20.62508[] 
  []
 
 
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1722--1722
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1767--1767
 []\TU/lmtt/m/n/10 ##  [65] 18.92214 20.38837 27.83197 18.62320 19.12094 29.2984
 5 22.72270 28.68786[] 
  []
 
 
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1722--1722
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1767--1767
 []\TU/lmtt/m/n/10 ##  [73] 22.64878 30.43969 19.48136 24.94834 28.74896 24.9925
 2 21.52521 22.19714[] 
  []
 
 
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1722--1722
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1767--1767
 []\TU/lmtt/m/n/10 ##  [81] 22.72903 23.69804 30.32393 29.37573 29.65554 22.1899
 7 24.85922 21.19787[] 
  []
 
 
-Overfull \hbox (75.0pt too wide) in paragraph at lines 1722--1722
+Overfull \hbox (75.0pt too wide) in paragraph at lines 1767--1767
 []\TU/lmtt/m/n/10 ##  [89] 27.94906 28.93757 27.42930 23.87127 33.93523 21.8912
 6 26.24338 29.48277[] 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 1726.
+Package xcolor Warning: Incompatible color definition on input line 1771.
 
 [56]
 
-Package xcolor Warning: Incompatible color definition on input line 1730.
+Package xcolor Warning: Incompatible color definition on input line 1775.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1730.
+Package xcolor Warning: Incompatible color definition on input line 1775.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1736.
+Package xcolor Warning: Incompatible color definition on input line 1781.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1740.
+Package xcolor Warning: Incompatible color definition on input line 1785.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1740.
+Package xcolor Warning: Incompatible color definition on input line 1785.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1746.
+Package xcolor Warning: Incompatible color definition on input line 1791.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1750.
+Package xcolor Warning: Incompatible color definition on input line 1795.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1750.
+Package xcolor Warning: Incompatible color definition on input line 1795.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1756.
+Package xcolor Warning: Incompatible color definition on input line 1801.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1760.
+Package xcolor Warning: Incompatible color definition on input line 1805.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1760.
+Package xcolor Warning: Incompatible color definition on input line 1805.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1766.
+Package xcolor Warning: Incompatible color definition on input line 1811.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1770.
+Package xcolor Warning: Incompatible color definition on input line 1815.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1770.
+Package xcolor Warning: Incompatible color definition on input line 1815.
 
-File: livroR-1.0_files/figure-latex/unnamed-chunk-66-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-66-1.pdf>
-
-Package xcolor Warning: Incompatible color definition on input line 1778.
-
+File: livroR-1.0_files/figure-latex/hist-tam-cam-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/hist-tam-cam-1.pdf>
 [57]
 
-Package xcolor Warning: Incompatible color definition on input line 1783.
+Package xcolor Warning: Incompatible color definition on input line 1827.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1783.
+Package xcolor Warning: Incompatible color definition on input line 1832.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1832.
 
 [58]
 Missing character: There is no μ in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ≤ in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no μ in font [lmroman10-regular]:mapping=tex-text;!
 
-Package xcolor Warning: Incompatible color definition on input line 1821.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1826.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1826.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1830.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1834.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1834.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1840.
-
-[59]
-
-Package xcolor Warning: Incompatible color definition on input line 1844.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1844.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1850.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1854.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1854.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1860.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1864.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1864.
-
-
 Package xcolor Warning: Incompatible color definition on input line 1870.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1874.
+Package xcolor Warning: Incompatible color definition on input line 1875.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1874.
-
-File: livroR-1.0_files/figure-latex/unnamed-chunk-69-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-69-1.pdf>
-
-Package xcolor Warning: Incompatible color definition on input line 1880.
+Package xcolor Warning: Incompatible color definition on input line 1875.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1885.
+Package xcolor Warning: Incompatible color definition on input line 1879.
+
+[59]
+
+Package xcolor Warning: Incompatible color definition on input line 1883.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1885.
-
-[60] [61]
-
-Package xcolor Warning: Incompatible color definition on input line 1921.
+Package xcolor Warning: Incompatible color definition on input line 1883.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1928.
+Package xcolor Warning: Incompatible color definition on input line 1889.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1928.
+Package xcolor Warning: Incompatible color definition on input line 1893.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1934.
+Package xcolor Warning: Incompatible color definition on input line 1893.
 
+
+Package xcolor Warning: Incompatible color definition on input line 1899.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1903.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1903.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1909.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1913.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1913.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1919.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1923.
+
+
+Package xcolor Warning: Incompatible color definition on input line 1923.
+
+File: livroR-1.0_files/figure-latex/estrelas-hist-1.pdf Graphic file (type pdf)
+
+<use livroR-1.0_files/figure-latex/estrelas-hist-1.pdf>
+
+Package xcolor Warning: Incompatible color definition on input line 1933.
+
+[60]
 
 Package xcolor Warning: Incompatible color definition on input line 1938.
 
 
 Package xcolor Warning: Incompatible color definition on input line 1938.
 
-
-Package xcolor Warning: Incompatible color definition on input line 1944.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1948.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1948.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1954.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1958.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1958.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1964.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1968.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1968.
-
-File: livroR-1.0_files/figure-latex/unnamed-chunk-71-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-71-1.pdf>
-
-Underfull \vbox (badness 7116) has occurred while \output is active []
-
-[62]
+[61]
 
 Package xcolor Warning: Incompatible color definition on input line 1974.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1979.
+Package xcolor Warning: Incompatible color definition on input line 1981.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1979.
+Package xcolor Warning: Incompatible color definition on input line 1981.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1995.
+Package xcolor Warning: Incompatible color definition on input line 1987.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1999.
+Package xcolor Warning: Incompatible color definition on input line 1991.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1999.
+Package xcolor Warning: Incompatible color definition on input line 1991.
 
-[63]
+
+Package xcolor Warning: Incompatible color definition on input line 1997.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2001.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2001.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2007.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2011.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2011.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2017.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2021.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2021.
+
+File: livroR-1.0_files/figure-latex/craca-hist-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/craca-hist-1.pdf>
 
 Package xcolor Warning: Incompatible color definition on input line 2031.
 
-[64]
+[62]
 
 Package xcolor Warning: Incompatible color definition on input line 2036.
 
@@ -2218,495 +2168,413 @@ Package xcolor Warning: Incompatible color definition on input line 2036.
 Package xcolor Warning: Incompatible color definition on input line 2036.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2038.
+Package xcolor Warning: Incompatible color definition on input line 2052.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2042.
+Package xcolor Warning: Incompatible color definition on input line 2056.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2042.
+Package xcolor Warning: Incompatible color definition on input line 2056.
 
-File: livroR-1.0_files/figure-latex/unnamed-chunk-74-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-74-1.pdf>
+[63] [64]
 
-Package xcolor Warning: Incompatible color definition on input line 2046.
+Package xcolor Warning: Incompatible color definition on input line 2088.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2050.
+Package xcolor Warning: Incompatible color definition on input line 2093.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2050.
+Package xcolor Warning: Incompatible color definition on input line 2093.
 
-File: livroR-1.0_files/figure-latex/unnamed-chunk-74-2.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-74-2.pdf>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package xcolor Warning: Incompatible color definition on input line 2095.
 
+
+Package xcolor Warning: Incompatible color definition on input line 2099.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2099.
+
+File: livroR-1.0_files/figure-latex/cracas-dens-95-1.pdf Graphic file (type pdf
+)
+<use livroR-1.0_files/figure-latex/cracas-dens-95-1.pdf>
+
+Package xcolor Warning: Incompatible color definition on input line 2107.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2111.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2111.
+
+File: livroR-1.0_files/figure-latex/cracas-dens-99-1.pdf Graphic file (type pdf
+)
+<use livroR-1.0_files/figure-latex/cracas-dens-99-1.pdf>
 [65] [66]
 
-Package xcolor Warning: Incompatible color definition on input line 2081.
+Package xcolor Warning: Incompatible color definition on input line 2146.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2093.
+Package xcolor Warning: Incompatible color definition on input line 2158.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2093.
+Package xcolor Warning: Incompatible color definition on input line 2158.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2097.
+Package xcolor Warning: Incompatible color definition on input line 2164.
+
+[67]
+
+Package xcolor Warning: Incompatible color definition on input line 2168.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2101.
+Package xcolor Warning: Incompatible color definition on input line 2168.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2101.
+Package xcolor Warning: Incompatible color definition on input line 2180.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2113.
+Package xcolor Warning: Incompatible color definition on input line 2184.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2117.
+Package xcolor Warning: Incompatible color definition on input line 2184.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2117.
-
-
-Overfull \hbox (54.0pt too wide) in paragraph at lines 2123--2123
+Overfull \hbox (54.0pt too wide) in paragraph at lines 2190--2190
 []\TU/lmtt/m/n/10 ##  $ Alimento: chr  "Alimento A" "Alimento A" "Alimento A" "
 Alimento A" ...[] 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 2125.
-
-[67]
-
-Package xcolor Warning: Incompatible color definition on input line 2131.
+Package xcolor Warning: Incompatible color definition on input line 2192.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2131.
+Package xcolor Warning: Incompatible color definition on input line 2198.
 
 
-Overfull \hbox (101.25pt too wide) in paragraph at lines 2137--2137
+Package xcolor Warning: Incompatible color definition on input line 2198.
+
+
+Overfull \hbox (101.25pt too wide) in paragraph at lines 2204--2204
 []\TU/lmtt/m/n/10 ##  $ Alimento: Factor w/ 2 levels "Alimento A","Alimento B":
  1 1 1 1 1 1 1 1 1 1 ...[] 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 2145.
+Package xcolor Warning: Incompatible color definition on input line 2212.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2156.
+Package xcolor Warning: Incompatible color definition on input line 2221.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2156.
+Package xcolor Warning: Incompatible color definition on input line 2221.
 
-File: livroR-1.0_files/figure-latex/unnamed-chunk-77-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-77-1.pdf>
+File: livroR-1.0_files/figure-latex/hist-ali-A-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/hist-ali-A-1.pdf>
 
-Package xcolor Warning: Incompatible color definition on input line 2160.
+Package xcolor Warning: Incompatible color definition on input line 2229.
 
+[68] [69]
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[68]
-
-Package xcolor Warning: Incompatible color definition on input line 2169.
+Package xcolor Warning: Incompatible color definition on input line 2238.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2169.
+Package xcolor Warning: Incompatible color definition on input line 2238.
 
-File: livroR-1.0_files/figure-latex/unnamed-chunk-77-2.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-77-2.pdf>
+File: livroR-1.0_files/figure-latex/hist-ali-B-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/hist-ali-B-1.pdf>
 
-Package xcolor Warning: Incompatible color definition on input line 2173.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[69]
-
-Package xcolor Warning: Incompatible color definition on input line 2178.
+Package xcolor Warning: Incompatible color definition on input line 2246.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2178.
+Package xcolor Warning: Incompatible color definition on input line 2250.
 
-File: livroR-1.0_files/figure-latex/unnamed-chunk-78-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-78-1.pdf>
+
+Package xcolor Warning: Incompatible color definition on input line 2250.
+
+File: livroR-1.0_files/figure-latex/box-ali-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/box-ali-1.pdf>
 [70]
 
-Package xcolor Warning: Incompatible color definition on input line 2192.
+Package xcolor Warning: Incompatible color definition on input line 2266.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2196.
+Package xcolor Warning: Incompatible color definition on input line 2270.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2196.
+Package xcolor Warning: Incompatible color definition on input line 2270.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2208.
+Package xcolor Warning: Incompatible color definition on input line 2282.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2212.
+Package xcolor Warning: Incompatible color definition on input line 2286.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2212.
+Package xcolor Warning: Incompatible color definition on input line 2286.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2218.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2222.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2222.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2228.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2232.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2232.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2240.
+Package xcolor Warning: Incompatible color definition on input line 2292.
 
 [71]
 
-Package xcolor Warning: Incompatible color definition on input line 2245.
+Package xcolor Warning: Incompatible color definition on input line 2296.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2245.
+Package xcolor Warning: Incompatible color definition on input line 2296.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2257.
+Package xcolor Warning: Incompatible color definition on input line 2302.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2261.
+Package xcolor Warning: Incompatible color definition on input line 2306.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2261.
+Package xcolor Warning: Incompatible color definition on input line 2306.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2271.
+Package xcolor Warning: Incompatible color definition on input line 2314.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2275.
+Package xcolor Warning: Incompatible color definition on input line 2319.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2275.
+Package xcolor Warning: Incompatible color definition on input line 2319.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2285.
+Package xcolor Warning: Incompatible color definition on input line 2331.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2289.
+Package xcolor Warning: Incompatible color definition on input line 2335.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2289.
+Package xcolor Warning: Incompatible color definition on input line 2335.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2301.
+Package xcolor Warning: Incompatible color definition on input line 2345.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2349.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2349.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2359.
 
 [72]
 
-Package xcolor Warning: Incompatible color definition on input line 2308.
+Package xcolor Warning: Incompatible color definition on input line 2363.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2308.
+Package xcolor Warning: Incompatible color definition on input line 2363.
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 2322--2322
+Package xcolor Warning: Incompatible color definition on input line 2375.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2382.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2382.
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 2396--2396
 []\TU/lmtt/m/n/10 ## alternative hypothesis: true difference in means is not eq
 ual to 0[] 
  []
 
-
-Package xcolor Warning: Incompatible color definition on input line 2330.
-
 [73]
 
-Package xcolor Warning: Incompatible color definition on input line 2338.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2338.
-
-File: livroR-1.0_files/figure-latex/unnamed-chunk-83-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-83-1.pdf>
-
-Package xcolor Warning: Incompatible color definition on input line 2346.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2358.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2358.
-
-[74]
-
-Package xcolor Warning: Incompatible color definition on input line 2370.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2374.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2374.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2386.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2390.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2390.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2398.
-
-
 Package xcolor Warning: Incompatible color definition on input line 2404.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2404.
-
-
-Overfull \hbox (69.75pt too wide) in paragraph at lines 2410--2410
-[]\TU/lmtt/m/n/10 ##  $ Ano        : Factor w/ 2 levels "Ano 0","Ano 20": 1 1 1
- 1 1 1 1 1 1 1 ...[] 
- []
 
 
 Package xcolor Warning: Incompatible color definition on input line 2412.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2423.
+Package xcolor Warning: Incompatible color definition on input line 2412.
 
-
-Package xcolor Warning: Incompatible color definition on input line 2423.
-
-File: livroR-1.0_files/figure-latex/unnamed-chunk-86-1.pdf Graphic file (type p
+File: livroR-1.0_files/figure-latex/testet-duas-dens-1.pdf Graphic file (type p
 df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-86-1.pdf>
+<use livroR-1.0_files/figure-latex/testet-duas-dens-1.pdf>
+[74]
 
-Package xcolor Warning: Incompatible color definition on input line 2427.
+Package xcolor Warning: Incompatible color definition on input line 2424.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2436.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2436.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2448.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2452.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2452.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2464.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2468.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2468.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2476.
 
 [75]
 
-Package xcolor Warning: Incompatible color definition on input line 2436.
+Package xcolor Warning: Incompatible color definition on input line 2482.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2436.
-
-File: livroR-1.0_files/figure-latex/unnamed-chunk-86-2.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-86-2.pdf>
-
-Package xcolor Warning: Incompatible color definition on input line 2440.
+Package xcolor Warning: Incompatible color definition on input line 2482.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (69.75pt too wide) in paragraph at lines 2488--2488
+[]\TU/lmtt/m/n/10 ##  $ Ano        : Factor w/ 2 levels "Ano 0","Ano 20": 1 1 1
+ 1 1 1 1 1 1 1 ...[] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 2490.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2499.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2499.
+
+File: livroR-1.0_files/figure-latex/hist-temp-0-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/hist-temp-0-1.pdf>
+
+Package xcolor Warning: Incompatible color definition on input line 2507.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2516.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2516.
+
+File: livroR-1.0_files/figure-latex/hist-temp-20-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/hist-temp-20-1.pdf>
+
+Package xcolor Warning: Incompatible color definition on input line 2524.
 
 [76]
 
-Package xcolor Warning: Incompatible color definition on input line 2444.
+Package xcolor Warning: Incompatible color definition on input line 2528.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2444.
+Package xcolor Warning: Incompatible color definition on input line 2528.
 
-File: livroR-1.0_files/figure-latex/unnamed-chunk-87-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-87-1.pdf>
+File: livroR-1.0_files/figure-latex/box-temp-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/box-temp-1.pdf>
 
-Package xcolor Warning: Incompatible color definition on input line 2450.
+Package xcolor Warning: Incompatible color definition on input line 2538.
 
 
-Underfull \vbox (badness 1102) has occurred while \output is active []
+Package xcolor Warning: Incompatible color definition on input line 2542.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2542.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2554.
 
 [77]
 
-Package xcolor Warning: Incompatible color definition on input line 2454.
+Package xcolor Warning: Incompatible color definition on input line 2559.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2454.
+Package xcolor Warning: Incompatible color definition on input line 2559.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2466.
+Package xcolor Warning: Incompatible color definition on input line 2571.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2471.
+Package xcolor Warning: Incompatible color definition on input line 2575.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2471.
+Package xcolor Warning: Incompatible color definition on input line 2575.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2483.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2487.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2487.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2497.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2501.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2501.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2511.
+Package xcolor Warning: Incompatible color definition on input line 2585.
 
 [78]
 
-Package xcolor Warning: Incompatible color definition on input line 2515.
+Package xcolor Warning: Incompatible color definition on input line 2589.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2515.
+Package xcolor Warning: Incompatible color definition on input line 2589.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2527.
+Package xcolor Warning: Incompatible color definition on input line 2599.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2534.
+Package xcolor Warning: Incompatible color definition on input line 2603.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2534.
+Package xcolor Warning: Incompatible color definition on input line 2603.
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 2548--2548
+Package xcolor Warning: Incompatible color definition on input line 2615.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2622.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2622.
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 2636--2636
 []\TU/lmtt/m/n/10 ## alternative hypothesis: true difference in means is not eq
 ual to 0[] 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 2550.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2557.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2557.
-
-
-Overfull \hbox (17.25pt too wide) in paragraph at lines 2571--2571
-[]\TU/lmtt/m/n/10 ## alternative hypothesis: true difference in means is not eq
-ual to 0[] 
- []
+Package xcolor Warning: Incompatible color definition on input line 2638.
 
 [79]
 
-Package xcolor Warning: Incompatible color definition on input line 2579.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2587.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2587.
-
-File: livroR-1.0_files/figure-latex/unnamed-chunk-91-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-91-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[80]
-
-Package xcolor Warning: Incompatible color definition on input line 2614.
-
-[81]
-
-Package xcolor Warning: Incompatible color definition on input line 2627.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2627.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2629.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2633.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2633.
+Package xcolor Warning: Incompatible color definition on input line 2645.
 
 
 Package xcolor Warning: Incompatible color definition on input line 2645.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2649.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2649.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2658.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2665.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2665.
-
-
-Overfull \hbox (138.0pt too wide) in paragraph at lines 2672--2672
-[]\TU/lmtt/m/n/10 ##  $ Dia         : Factor w/ 20 levels "Dia 1","Dia 10",..: 
-1 12 14 15 16 17 18 19 20 2 ...[] 
+Overfull \hbox (17.25pt too wide) in paragraph at lines 2659--2659
+[]\TU/lmtt/m/n/10 ## alternative hypothesis: true difference in means is not eq
+ual to 0[] 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 2682.
-
-[82]
-
-Package xcolor Warning: Incompatible color definition on input line 2693.
+Package xcolor Warning: Incompatible color definition on input line 2667.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2693.
+Package xcolor Warning: Incompatible color definition on input line 2675.
 
-File: livroR-1.0_files/figure-latex/unnamed-chunk-94-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-94-1.pdf>
 
-Package xcolor Warning: Incompatible color definition on input line 2697.
+Package xcolor Warning: Incompatible color definition on input line 2675.
 
+File: livroR-1.0_files/figure-latex/testet-duas-temp-dens-1.pdf Graphic file (t
+ype pdf)
+<use livroR-1.0_files/figure-latex/testet-duas-temp-dens-1.pdf>
+[80] [81]
 
 Package xcolor Warning: Incompatible color definition on input line 2706.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2706.
-
-File: livroR-1.0_files/figure-latex/unnamed-chunk-94-2.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-94-2.pdf>
-
-Package xcolor Warning: Incompatible color definition on input line 2710.
+Package xcolor Warning: Incompatible color definition on input line 2719.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package xcolor Warning: Incompatible color definition on input line 2719.
 
-[83]
-
-Package xcolor Warning: Incompatible color definition on input line 2717.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2717.
-
-File: livroR-1.0_files/figure-latex/unnamed-chunk-95-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-95-1.pdf>
-[84]
 
 Package xcolor Warning: Incompatible color definition on input line 2723.
 
@@ -2717,99 +2585,151 @@ Package xcolor Warning: Incompatible color definition on input line 2727.
 Package xcolor Warning: Incompatible color definition on input line 2727.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2748.
+Package xcolor Warning: Incompatible color definition on input line 2739.
+
+[82]
+
+Package xcolor Warning: Incompatible color definition on input line 2743.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2743.
 
 
 Package xcolor Warning: Incompatible color definition on input line 2752.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2752.
+Package xcolor Warning: Incompatible color definition on input line 2759.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2756.
+Package xcolor Warning: Incompatible color definition on input line 2759.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2760.
+Overfull \hbox (138.0pt too wide) in paragraph at lines 2766--2766
+[]\TU/lmtt/m/n/10 ##  $ Dia         : Factor w/ 20 levels "Dia 1","Dia 10",..: 
+1 12 14 15 16 17 18 19 20 2 ...[] 
+ []
 
 
-Package xcolor Warning: Incompatible color definition on input line 2760.
+Package xcolor Warning: Incompatible color definition on input line 2776.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2772.
-
-[85]
-
-Package xcolor Warning: Incompatible color definition on input line 2779.
+Package xcolor Warning: Incompatible color definition on input line 2785.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2779.
+Package xcolor Warning: Incompatible color definition on input line 2785.
+
+File: livroR-1.0_files/figure-latex/hist-par-obs1-1.pdf Graphic file (type pdf)
+
+<use livroR-1.0_files/figure-latex/hist-par-obs1-1.pdf>
+
+Package xcolor Warning: Incompatible color definition on input line 2793.
 
 
-Overfull \hbox (17.25pt too wide) in paragraph at lines 2793--2793
+Package xcolor Warning: Incompatible color definition on input line 2802.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2802.
+
+File: livroR-1.0_files/figure-latex/hist-par-obs2-1.pdf Graphic file (type pdf)
+
+<use livroR-1.0_files/figure-latex/hist-par-obs2-1.pdf>
+
+Package xcolor Warning: Incompatible color definition on input line 2810.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2817.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2817.
+
+File: livroR-1.0_files/figure-latex/box-par-ave-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/box-par-ave-1.pdf>
+[83] [84] [85]
+
+Package xcolor Warning: Incompatible color definition on input line 2829.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2833.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2833.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2854.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2858.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2858.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2862.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2866.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2866.
+
+[86]
+
+Package xcolor Warning: Incompatible color definition on input line 2878.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2885.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2885.
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 2899--2899
 []\TU/lmtt/m/n/10 ## alternative hypothesis: true difference in means is not eq
 ual to 0[] 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 2801.
+Package xcolor Warning: Incompatible color definition on input line 2907.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2809.
+Package xcolor Warning: Incompatible color definition on input line 2915.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2809.
+Package xcolor Warning: Incompatible color definition on input line 2915.
 
-File: livroR-1.0_files/figure-latex/unnamed-chunk-100-1.pdf Graphic file (type 
-pdf)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-100-1.pdf>
+File: livroR-1.0_files/figure-latex/testet-par-ave-1.pdf Graphic file (type pdf
+)
+<use livroR-1.0_files/figure-latex/testet-par-ave-1.pdf>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package xcolor Warning: Incompatible color definition on input line 2925.
 
-[86]
+[87] [88]
 
-Package xcolor Warning: Incompatible color definition on input line 2815.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2826.
+Package xcolor Warning: Incompatible color definition on input line 2936.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2826.
+Package xcolor Warning: Incompatible color definition on input line 2936.
 
-File: livroR-1.0_files/figure-latex/unnamed-chunk-101-1.pdf Graphic file (type 
-pdf)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-101-1.pdf>
+File: livroR-1.0_files/figure-latex/bar-dif-ave-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/bar-dif-ave-1.pdf>
+[89]
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[87]
-
-Package xcolor Warning: Incompatible color definition on input line 2834.
+Package xcolor Warning: Incompatible color definition on input line 2948.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2854.
+Package xcolor Warning: Incompatible color definition on input line 2968.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2854.
+Package xcolor Warning: Incompatible color definition on input line 2968.
 
-
-Package xcolor Warning: Incompatible color definition on input line 2854.
-
-[88]
-
-Package xcolor Warning: Incompatible color definition on input line 2854.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2854.
-
-File: livroR-1.0_files/figure-latex/unnamed-chunk-102-1.pdf Graphic file (type 
-pdf)
-<use livroR-1.0_files/figure-latex/unnamed-chunk-102-1.pdf>
-[89] [90
+File: livroR-1.0_files/figure-latex/bar-dif-ave2-1.pdf Graphic file (type pdf)
+<use livroR-1.0_files/figure-latex/bar-dif-ave2-1.pdf>
+[90] [91] [92
 
 ]
 Chapter 6.
 No file livroR-1.0.bbl.
-[91] (./livroR-1.0.aux)
+[93] (./livroR-1.0.aux)
 Package rerunfilecheck Info: File `livroR-1.0.out' has not changed.
 (rerunfilecheck)             Checksum: 7FEA763B42A72F2BC80FCDA9D64C8EC1;3591.
 
@@ -2817,12 +2737,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 18274 strings out of 479401
- 321361 string characters out of 5879750
- 775324 words of memory out of 5000000
- 37329 multiletter control sequences out of 15000+600000
+ 18307 strings out of 479401
+ 321032 string characters out of 5879750
+ 776148 words of memory out of 5000000
+ 37362 multiletter control sequences out of 15000+600000
  541669 words of font info for 86 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 94i,11n,118p,1131b,466s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 94i,11n,118p,1131b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on livroR-1.0.pdf (91 pages).
+Output written on livroR-1.0.pdf (93 pages).

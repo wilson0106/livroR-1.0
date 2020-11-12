@@ -276,7 +276,7 @@ Como o teste resultou em um p-value maior que 0,05 podemos dizer, por essa via, 
 
 Neste ponto é bom relembramos da importância do número de observações de cada grupo. Se este número for pequeno incertezas podem ser geradas e ajustes devem ser feitos. Para saber mais sugerimos a leitura da literatura especializada. Contudo, para definir o que é um número baixo de observações sigamos o cálculo sugerido por Zar (2014) o qual define como: $n = 6rc$. 
 
-Onde, n é o número de observações mínimo de cada grupo, r é o número de linhas (rows) e c é o número de colunas (column). Dessa forma, em uma tabela de contigência do tipo 2x2 o número de observações mínimo para cada grupo deve ser de: $n = 6*(2)*(2) = 24$. Ou seja, 24 observações.
+Onde, n é o número de observações mínimo de cada grupo, r é o número de linhas (rows) e c é o número de colunas (column). Dessa forma, em uma tabela de contigência do tipo 2x2 o número de observações mínimo para cada grupo deve ser de: $n = 6 \times (2) \times (2) = 24$. Ou seja, 24 observações.
 
 
 Esta análise pode ser conduzida, também, quando lidamos com mais de um grupo em uma categoria e neste caso teriamos uma tabela de contigência 2X3, 2X4, 3X3 e assim por diante. Vamos ver um exemplo.
@@ -381,18 +381,19 @@ prop.table(x = dados, margin = 2)*100
 Como podem visualizar, se usarmos margin = 1 ele nos retorna os valores em função das linhas (espécies), se utilizarmos margin = 2 ele nos retorna os valores em função das colunas (pesquisadores).
 
 
-Vamos utilizar margin = 2 para construir nossa tabela e plotarmos nosso gráfico.
+Vamos utilizar margin = 2 para construir nossa tabela e plotarmos nosso gráfico (Figura \@ref(fig:bar-tab)).
 
 
-```{r}
+```{r bar-tab, fig.cap = "Gráfico de barras sobrepostas indicando o percentual relativo da observação de espécies nativas (cor vermelha) e introduzidas (cor azul), por pesquisador.", fig.dim = c(8, 6)}
 tabela <- prop.table(x = dados, margin = 2)*100
 
 par(mar = c(4, 4, 4, 13))
 
 barplot(tabela, 
+        xlab = "Percentual de espécies",
         col = c("red", "darkblue"), 
         legend.text = TRUE, 
-        args.legend = list(x = "right", bty = "n", inset = -0.6))
+        args.legend = list(x = "right", bty = "n", inset = -0.5))
 ```
 
 

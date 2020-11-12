@@ -10,6 +10,16 @@ biblio-style: apalike
 link-citations: yes
 description: "Este é o primeiro livro da série de livros análise de dados ambientais em R"
 ---
+```{r, echo = FALSE, include = FALSE}
+colorize <- function(x, color) {
+  if (knitr::is_latex_output()) {
+    sprintf("\\textcolor{%s}{%s}", color, x)
+  } else if (knitr::is_html_output()) {
+    sprintf("<span style='color: %s;'>%s</span>", color, 
+      x)
+  } else x
+}
+```
 
 # Prefácio {-}
 
@@ -26,3 +36,7 @@ Possui graduação em Licenciatura em Ciências Biológicas pela Universidade Fe
 
 
 **Thiago Couto**
+
+
+
+

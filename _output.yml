@@ -9,15 +9,9 @@ bookdown::gitbook:
     download: ["pdf", "docx"]
 bookdown::pdf_book:
   includes:
-    in_header: "preamble.tex"
-  fontsize: 12pt
-  linestretch: 1.5
-  toc: yes
-  toc-depth: 3
-  lof: yes
-  lot: yes
+    in_header: preamble.tex
+  fig_caption: yes
   latex_engine: xelatex
   citation_package: natbib
   keep_tex: yes
-  geometry: "left=2cm, right=2cm, top=2cm, bottom=2cm"
 bookdown::word_document2: default
