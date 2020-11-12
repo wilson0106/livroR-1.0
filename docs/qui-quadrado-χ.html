@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Qui-quadrado (χ²) | Introdução a análise de dados ambientais em R</title>
+  <meta name="description" content="Este é o primeiro livro da série de livros análise de dados ambientais em R" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Qui-quadrado (χ²) | Introdução a análise de dados ambientais em R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Este é o primeiro livro da série de livros análise de dados ambientais em R" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Qui-quadrado (χ²) | Introdução a análise de dados ambientais em R" />
+  
+  <meta name="twitter:description" content="Este é o primeiro livro da série de livros análise de dados ambientais em R" />
+  
+
+<meta name="author" content="Wilson Souza &amp; Thiago Couto" />
+
+
+<meta name="date" content="2020-11-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="importação-organização-e-sumarização-dos-dados.html"/>
+<link rel="next" href="teste-t-.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introdução a análise de dados ambientais em R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="" data-path="sobre-os-autores.html"><a href="sobre-os-autores.html"><i class="fa fa-check"></i>Sobre os autores</a></li>
+<li class="chapter" data-level="1" data-path="o-que-é-o-r.html"><a href="o-que-é-o-r.html"><i class="fa fa-check"></i><b>1</b> O que é o R?</a><ul>
+<li class="chapter" data-level="1.1" data-path="o-que-é-o-r.html"><a href="o-que-é-o-r.html#porque-usá-lo-para-análise-de-dados"><i class="fa fa-check"></i><b>1.1</b> Porque usá-lo para análise de dados?</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="o-rstudio.html"><a href="o-rstudio.html"><i class="fa fa-check"></i><b>2</b> O RStudio</a><ul>
+<li class="chapter" data-level="2.1" data-path="o-rstudio.html"><a href="o-rstudio.html#o-ambiente-rstudio"><i class="fa fa-check"></i><b>2.1</b> O ambiente RStudio</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="o-rstudio.html"><a href="o-rstudio.html#script"><i class="fa fa-check"></i><b>2.1.1</b> Script</a></li>
+<li class="chapter" data-level="2.1.2" data-path="o-rstudio.html"><a href="o-rstudio.html#environment"><i class="fa fa-check"></i><b>2.1.2</b> Environment</a></li>
+<li class="chapter" data-level="2.1.3" data-path="o-rstudio.html"><a href="o-rstudio.html#history"><i class="fa fa-check"></i><b>2.1.3</b> History</a></li>
+<li class="chapter" data-level="2.1.4" data-path="o-rstudio.html"><a href="o-rstudio.html#console"><i class="fa fa-check"></i><b>2.1.4</b> Console</a></li>
+<li class="chapter" data-level="2.1.5" data-path="o-rstudio.html"><a href="o-rstudio.html#files"><i class="fa fa-check"></i><b>2.1.5</b> Files</a></li>
+<li class="chapter" data-level="2.1.6" data-path="o-rstudio.html"><a href="o-rstudio.html#packages"><i class="fa fa-check"></i><b>2.1.6</b> Packages</a></li>
+<li class="chapter" data-level="2.1.7" data-path="o-rstudio.html"><a href="o-rstudio.html#plot"><i class="fa fa-check"></i><b>2.1.7</b> Plot</a></li>
+<li class="chapter" data-level="2.1.8" data-path="o-rstudio.html"><a href="o-rstudio.html#help"><i class="fa fa-check"></i><b>2.1.8</b> Help</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="importação-organização-e-sumarização-dos-dados.html"><a href="importação-organização-e-sumarização-dos-dados.html"><i class="fa fa-check"></i><b>3</b> Importação, organização e sumarização dos dados</a><ul>
+<li class="chapter" data-level="3.1" data-path="importação-organização-e-sumarização-dos-dados.html"><a href="importação-organização-e-sumarização-dos-dados.html#primeiro-passo-importando-a-planilha-de-dados-para-o-r"><i class="fa fa-check"></i><b>3.1</b> Primeiro passo: Importando a planilha de dados para o R</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="importação-organização-e-sumarização-dos-dados.html"><a href="importação-organização-e-sumarização-dos-dados.html#importando-a-planilha-por-meio-de-comandos"><i class="fa fa-check"></i><b>3.1.1</b> Importando a planilha por meio de comandos:</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="importação-organização-e-sumarização-dos-dados.html"><a href="importação-organização-e-sumarização-dos-dados.html#segundo-passo-ajustando-os-dados"><i class="fa fa-check"></i><b>3.2</b> Segundo passo: Ajustando os dados</a></li>
+<li class="chapter" data-level="3.3" data-path="importação-organização-e-sumarização-dos-dados.html"><a href="importação-organização-e-sumarização-dos-dados.html#terceiro-passo-sumarizando-os-dados-graficamente"><i class="fa fa-check"></i><b>3.3</b> Terceiro passo: Sumarizando os dados graficamente</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="importação-organização-e-sumarização-dos-dados.html"><a href="importação-organização-e-sumarização-dos-dados.html#histogramas"><i class="fa fa-check"></i><b>3.3.1</b> HISTOGRAMAS</a></li>
+<li class="chapter" data-level="3.3.2" data-path="importação-organização-e-sumarização-dos-dados.html"><a href="importação-organização-e-sumarização-dos-dados.html#gráfico-de-barras"><i class="fa fa-check"></i><b>3.3.2</b> GRÁFICO DE BARRAS</a></li>
+<li class="chapter" data-level="3.3.3" data-path="importação-organização-e-sumarização-dos-dados.html"><a href="importação-organização-e-sumarização-dos-dados.html#gráfico-de-linhas"><i class="fa fa-check"></i><b>3.3.3</b> GRÁFICO DE LINHAS</a></li>
+<li class="chapter" data-level="3.3.4" data-path="importação-organização-e-sumarização-dos-dados.html"><a href="importação-organização-e-sumarização-dos-dados.html#boxplot"><i class="fa fa-check"></i><b>3.3.4</b> BOXPLOT</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="importação-organização-e-sumarização-dos-dados.html"><a href="importação-organização-e-sumarização-dos-dados.html#quarto-passo-sumarizando-os-dados-numericamente"><i class="fa fa-check"></i><b>3.4</b> Quarto passo: Sumarizando os dados numericamente</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="qui-quadrado-χ.html"><a href="qui-quadrado-χ.html"><i class="fa fa-check"></i><b>4</b> Qui-quadrado (χ²)</a><ul>
+<li class="chapter" data-level="4.1" data-path="qui-quadrado-χ.html"><a href="qui-quadrado-χ.html#χ-para-ajuste-de-frequências"><i class="fa fa-check"></i><b>4.1</b> χ² para ajuste de frequências</a></li>
+<li class="chapter" data-level="4.2" data-path="qui-quadrado-χ.html"><a href="qui-quadrado-χ.html#χ-para-independência"><i class="fa fa-check"></i><b>4.2</b> χ² para independência</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="teste-t-.html"><a href="teste-t-.html"><i class="fa fa-check"></i><b>5</b> Teste-t.</a><ul>
+<li class="chapter" data-level="5.1" data-path="teste-t-.html"><a href="teste-t-.html#teste-t-para-uma-amostra"><i class="fa fa-check"></i><b>5.1</b> Teste-t para uma amostra</a></li>
+<li class="chapter" data-level="5.2" data-path="teste-t-.html"><a href="teste-t-.html#teste-t-para-duas-amostras"><i class="fa fa-check"></i><b>5.2</b> Teste-t para duas amostras</a></li>
+<li class="chapter" data-level="5.3" data-path="teste-t-.html"><a href="teste-t-.html#teste-t-pareado"><i class="fa fa-check"></i><b>5.3</b> Teste-t pareado</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introdução a análise de dados ambientais em R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="qui-quadrado-χ" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Qui-quadrado (χ²)</h1>
+<p>Em alguns momentos podemos estar trabalhando com variáveis categóricas e lidarmos com perguntas sobre estas variáveis e portanto pode ser necessário avaliarmos se a frequência das observações de uma dada variável categórica se ajusta ao que se é esperado (χ² para ajuste de frequências) ou se as proporções das observações de duas ou mais variáveis categóricas são independentes uma da outra (χ² para independência).</p>
+<p>Portanto, como podemos perceber, para este teste iremos precisar apenas de uma variável (se estivermos avaliando o ajuste de frequências) ou duas variáveis (se avaliarmos a independência) e estas devem ser categóricas. Como aprendemos anteriormente as variáveis categóricas devem ser classificadas como factor (pela função <em>as.factor()</em>) no R.</p>
+<p>Vamos conferir em detalhes e com exemplos como realizar estas duas análises no R. Mas antes vamos sumarizar suas principais características.</p>
+<p><strong>[FAZER UMA TABELA COM AS CARACTERÍSTICAS DOS TESTES ABAIXO]</strong>
+<strong>χ² para ajuste de frequências</strong>
+<strong>Tipo e quantidade de variáveis: Utiliza apenas uma variável categórica;</strong>
+<strong>H0: O número de observações em cada grupo da variável categórica é igual ao predito pela teoria;</strong>
+<strong>Fórmula: X²=somatório(Ob-Es)²/Es;</strong>
+<strong>OBS: Se há apenas 2 categorias, dentro da variável, não há a necessidade de post-hoc e expressa-la graficamente;</strong>
+<strong>[FAZER UMA TABELA COM AS CARACTERÍSTICAS DOS TESTES ACIMA]</strong></p>
+<div id="χ-para-ajuste-de-frequências" class="section level2">
+<h2><span class="header-section-number">4.1</span> χ² para ajuste de frequências</h2>
+<p>Imagine o seguinte exemplo: Você foi a praia e verificou uma enorme quantidade de produtos plásticos, esquecidos pelas pessoas. Após um tempo de observação você percebeu que haviam tanto sacolas quanto linhas de pesca e levantou a seguinte pergunta: Será que se coletarmos estes plásticos na praia e o categorizarmos eles apresentarão quantidades similares? A partir desta pergunta a seguinte hipótese nula (H0) é naturalmente construída: Não há diferenças entre estes dois tipos de plásticos (linha de pesca e sacolas). O χ² objetiva responder a essa pergunta e fornecer subsídio estatístico para corroborar ou refutar essa hipótese.</p>
+<p>Após a observação, coleta (há muitas formas de coleta, não vamos detalhar elas neste momento), classificação e contagem dos fragmentos plásticos os seguintes valores foram observados: 520 sacolas plásticas e 470 fragmentos de linhas de pesca. Considerando que deveriamos encontrar quantidades similares de ambos os tipos de plásticos. Ou seja, do total de fragmentos coletados (520 para sacolas e 470 para linhas pesca) cada um deles contribuem com 50% (percentuais iguais) do total coletado?</p>
+<p>Vamos começar criando 2 vetores onde o primeiro corresponde aos valores observados e o segundo as proporções esperadas para cada valor.</p>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb78-1" data-line-number="1">observados &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">520</span>, <span class="dv">470</span>)</a>
+<a class="sourceLine" id="cb78-2" data-line-number="2">esperados &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>)</a>
+<a class="sourceLine" id="cb78-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb78-4" data-line-number="4">observados</a></code></pre></div>
+<pre><code>## [1] 520 470</code></pre>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb80-1" data-line-number="1">esperados</a></code></pre></div>
+<pre><code>## [1] 0.5 0.5</code></pre>
+<p>Note que criamos o vetor “observados” e o vetor “esperados”. O primeiro corresponde ao que coletamos e o segundo as proporções que esperamos de ambos.</p>
+<p>Para realizar o teste do χ² para ajuste de frequências, vamos utilizar a função <em>chisq.test()</em>.</p>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb82-1" data-line-number="1"><span class="kw">chisq.test</span>(<span class="dt">x =</span> observados, <span class="dt">p =</span> esperados)</a></code></pre></div>
+<pre><code>## 
+##  Chi-squared test for given probabilities
+## 
+## data:  observados
+## X-squared = 2.5253, df = 1, p-value = 0.112</code></pre>
+<p>Para este teste temos que esta função utiliza 2 argumentos. x: no qual inserimos o vetor númerico que contém os valores referentes a quantidade da variável nominal que contabilizamos e p: no qual inserimos o vetor númerico que contem as proporções esperadas associado a cada grupo da categoria avaliada.</p>
+<p>Note que o resultado indica o teste realizado, o nome do vetor que contém os dados e na terceira linha ele apresenta o resultado como valor do teste do χ²,o grau de liberdade (df do inglês degrees of freedom) e o valor de probabilidade associado (do inglês p-value).</p>
+<p>Uma característica do χ² é que quanto mais similares forem os valores observados menor será o valor do χ² mas nunca menor que 0 e com o p-value máximo igual a 1 e quanto mais dissimilares forem os valores observados maior será o χ² (tendendo a infinito) e menor será o p-value (tendendo a 0)</p>
+<p>Com isso podemos observar que o χ² varia entre (0 e + infinito) enquanto que o p-value varia entre (0 e 1) com uma relação inversa entre eles. Quanto maior o χ² menor o p-value e quanto menor o χ² maior o p-value. Experimente você altere os valores de maneira que eles sejam exatamente os mesmos e de que eles difiram bastante, repare nos valores de χ² e p-value.</p>
+<p>Por convenção indicamos que um teste estatístico que apresenta p-value &lt; 0,05 indica diferenças significativas entre os valores observados. Dessa forma, assumindo essa convenção, podemos concluir que a quantidade de sacolas não difere da quantidade de linhas de pesca. Portanto aceitamos a hipótese nula.</p>
+<p>Não é comum representar o resultado deste teste graficamente apenas como valor mas se mesmo assim quiser representa-lo utilize um gráfico de barras.</p>
+<p>Vamos verificar outros exemplos e avaliar suas hipóteses nulas.</p>
+<p>Imagine um segundo exemplo. 300 flores foram fotografadas e classificadas pela cor e ao final foi obtido um total de 170 flores vermelhas e 130 flores verdes. Ao ler alguns trabalhos e analisar os resultados observados para outra região foi levantada a hipótese de que 70% das flores seriam vermelhas e 30% seriam verdes. Com base nesses dados podemos perguntar: As flores fotografadas confirmam os resultados esperados?</p>
+<p>Vamos avaliar este caso, conforme fizemos acima.</p>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb84-1" data-line-number="1">flores.observadas &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">170</span>, <span class="dv">130</span>)</a>
+<a class="sourceLine" id="cb84-2" data-line-number="2">flores.esperadas &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">0.7</span>, <span class="fl">0.3</span>)</a></code></pre></div>
+<p>Observe que igual nosso exemplo anterior criamos um vetor que engloba os valores observados e outro com os valores esperados. Note que a diferença está nos valores esperados, onde alteramos a proporção, que não é mais de 50% para cada, mas sim de 70% para um e 30% para outro, porém expressos em proporção. Perceba, também, que os valores seguem a ordem em que foram inseridos, portanto o primeiro valor observado inserido corresponde ao primeiro valor esperado inserido e assim por diante.</p>
+<p>Conduzindo a análise temos o seguinte resultado</p>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb85-1" data-line-number="1"><span class="kw">chisq.test</span>(<span class="dt">x =</span> flores.observadas, <span class="dt">p =</span> flores.esperadas)</a></code></pre></div>
+<pre><code>## 
+##  Chi-squared test for given probabilities
+## 
+## data:  flores.observadas
+## X-squared = 25.397, df = 1, p-value = 4.667e-07</code></pre>
+<p>Perceba que o valor do χ² aumentou em relação ao exemplo anterior e o p-value diminuiu para um valor bem próximo a 0. Este resultado indica que os valores observados de flores vermelhas e verdes não apresentam as proporções que se esperam de 70% e 30%. Portanto refutamos a hipótese nula de que elas se encontram nas proporções esperadas. Diversas questões podem explicar a ausência dessa relação hipotetizada, como: a amostragem não foi realizada corretamente; há diferença quanto a espécie de flor, há diferença nas proporções em relação ao ambiente, a estação do ano ou a alguma outra característica ambiental entre outras hipóteses.</p>
+<p>Vamos seguir em frente e olhar para um outro exemplo. Suponha que foram coletados 60 indivíduos de siri em um estuário. Eles foram classificados em relação ao sexo e foram obtidos 41 fêmeas e 19 machos. Espera-se que a razão sexual desta espécie seja de 1:1 (50% para cada sexo). Os indivíduos amostrados confirmam o que é esperado?</p>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb87-1" data-line-number="1">siris.observados &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1380</span>, <span class="dv">1280</span>)</a>
+<a class="sourceLine" id="cb87-2" data-line-number="2">siris.esperados &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>)</a>
+<a class="sourceLine" id="cb87-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb87-4" data-line-number="4"><span class="kw">chisq.test</span>(<span class="dt">x =</span> siris.observados, <span class="dt">p =</span> siris.esperados)</a></code></pre></div>
+<pre><code>## 
+##  Chi-squared test for given probabilities
+## 
+## data:  siris.observados
+## X-squared = 3.7594, df = 1, p-value = 0.05251</code></pre>
+<p>Com este caso podemos observar que o valor do χ² indicou um p-value próximo a 0,05, indicando que temos de ter cuidado com as afirmações relativas a hipótese testada. Contudo, como o valor é &gt;0,5 podemos corroborar a hipotese nula e dizer que os valores observados para fêmeas e machos encontram-se dentro da proporção esperada de 1:1.</p>
+<p>E se ao invês de 2 grupos tivessemos 3 ou mais. Como realizariamos o χ²? Vamos ver com um exemplo.</p>
+<p>Imagine que você foi a uma floresta e classificou as árvores em altas, médias e baixas e contabilizou 55, 31 e 27 respectivamente. De acordo com a literatura é esperado que as proporções de árvores altas, médias e baixas seja de 1:1:1. Vamos analisar e verificar se podemos afirmar que o observado corrobora o esperado.</p>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb89-1" data-line-number="1">arvores.observadas &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">55</span>, <span class="dv">31</span>, <span class="dv">27</span>)</a>
+<a class="sourceLine" id="cb89-2" data-line-number="2">arvores.esperadas &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">3</span>, <span class="dv">1</span><span class="op">/</span><span class="dv">3</span>, <span class="dv">1</span><span class="op">/</span><span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb89-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb89-4" data-line-number="4"><span class="kw">chisq.test</span>(<span class="dt">x =</span> arvores.observadas, <span class="dt">p =</span> arvores.esperadas)</a></code></pre></div>
+<pre><code>## 
+##  Chi-squared test for given probabilities
+## 
+## data:  arvores.observadas
+## X-squared = 12.177, df = 2, p-value = 0.002269</code></pre>
+<p>Neste exemplo podemos perceber que a análise é igual a todos os casos anteriores, a diferença é que adicionamos um grupo a mais e consequentemente um valor a mais. Devido a essa mudança tivemos que dividir as probabilidades (objeto arvores.esperadas) em 3 valores e de igual probabilidade, já que o hipotetizado consistia em proporções iguais para os três grupos definidos. De acordo com o resultado obtido podemos perceber que o que foi observado não corrobora o esperado.</p>
+<p>Vamos observar quais seriam as quantidades de árvores esperadas de acordo com as quantidades que observamos e as proporções que esperamos.</p>
+<p>Para isso precisamos primeiramente inserir o resultado em um objeto e a seguir acessar os componentes desse objeto pelo operador matemático <strong>$</strong> (cifrão), seguido pelo objeto “expected” criado pela função <em>chisq.test()</em>.</p>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb91-1" data-line-number="1">resultado &lt;-<span class="st"> </span><span class="kw">chisq.test</span>(<span class="dt">x =</span> arvores.observadas, <span class="dt">p =</span> arvores.esperadas)</a>
+<a class="sourceLine" id="cb91-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb91-3" data-line-number="3">resultado<span class="op">$</span>expected</a></code></pre></div>
+<pre><code>## [1] 37.66667 37.66667 37.66667</code></pre>
+<p>Pronto.</p>
+<p>Os exemplos acima tratam de avaliar o χ² em variáveis que apresentam dois ou mais grupos. Em caso onde o grau de liberdade é 1 (dois grupos) e o número de observações é considerado baixo é sugerido a aplicação da correção de Yates. Quando o número de observações é elevado ela não distorce o resultado. O risco de se usar o χ² sem a correção de Yates consiste em inflar o valor de χ² e portanto diminuir o p-value o que nos levaria ao risco de rejeitarmos a hipótese nula quando ela é verdadeira (erro tipo I).</p>
+<p>A função do χ² no pacote base do R não realiza essa correção para este teste, apenas para o próximo caso que iremos tratar (χ² para independência). Contudo ele oferece outro método para avaliação deste teste que consiste na simulação de Monte Carlo. Não entraremos em detalhes de como funciona este teste, mas o que alertamos é que se o número de observações utilizado é considerado baixo correções devem ser aplicada. Embora os cálculos envolvidos para realização da correção de Yates não seja complicada sugerimos a leitura da literatura especializada na análise.</p>
+<p>Vamos verificar um exemplo onde a correção de Monte Carlo, a qual é possível de ser realizada de maneira rápida e prática no R, é aplicada.</p>
+<p>Imagine que você foi em campo e contabilizou as espécies de cracas que identificou. Foram contabilizados 12 cracas da espécie A e 24 da espécie B. Trabalhos anteriores demonstraram que ambas as espécies encontram-se na proporção de 1:1. Aplicando a simulação de Monte Carlo o número de indivíduos observados de ambas as espécies corroboram o esperado?</p>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb93-1" data-line-number="1">N.especies &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">12</span>, <span class="dv">24</span>)</a>
+<a class="sourceLine" id="cb93-2" data-line-number="2">prop.especies &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>)</a>
+<a class="sourceLine" id="cb93-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb93-4" data-line-number="4"><span class="kw">chisq.test</span>(<span class="dt">x =</span> N.especies, <span class="dt">p =</span> prop.especies, <span class="dt">simulate.p.value =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
+<pre><code>## 
+##  Chi-squared test for given probabilities
+## 
+## data:  N.especies
+## X-squared = 4, df = 1, p-value = 0.0455</code></pre>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb95-1" data-line-number="1"><span class="kw">chisq.test</span>(<span class="dt">x =</span> N.especies, <span class="dt">p =</span> prop.especies, <span class="dt">simulate.p.value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<pre><code>## 
+##  Chi-squared test for given probabilities with simulated p-value (based
+##  on 2000 replicates)
+## 
+## data:  N.especies
+## X-squared = 4, df = NA, p-value = 0.07246</code></pre>
+<p>Pronto. Basta usarmos o argumento simulate.p.value e indicar “FALSE” quando não queremos a simulação de Monte Carlo, ou apenas omitirmos este argumento, ou usar este argumento e indicar “TRUE” o qual realiza a simulação de Monte Carlo. Verifique que com a aplicação desta simulação o p-value aumenta indicando que torna mais dificil rejeitarmos a hipótese nula. Após aplicarmos a correção na nossa análise podemos afirmar que não há diferença na quantidade de cracas observadas em relação as proporções esperadas, para ambas as espécies de cracas.</p>
+<p>Relembrando. Sempre tome cuidado com afirmações! Principalmente quando o número de observações é baixo. Mesmo que o teste estatístico indique diferenças uma baixa quantidade de observações devem ser analisadas cuidadosamente, no entanto devemos aplicar correções matemáticas nestes casos.</p>
+</div>
+<div id="χ-para-independência" class="section level2">
+<h2><span class="header-section-number">4.2</span> χ² para independência</h2>
+<p>Realizamos este teste quando objetivamos saber se a frequência dos grupos de uma variável é independente de outra variável.</p>
+<p>Diferente do primeiro caso de χ² que abordamos, este lida com duas variáveis categóricas ao invés de uma. Portanto é necessário o desenvolvimento de uma tabela de contigência.</p>
+<p>A tabela de contigência consiste em uma tabela com o número de observações referentes as duas variáveis selecionadas. Veremos alguns exemplos abaixo.</p>
+<p>Para o momento. Veja o sumário abaixo no qual detalhamos as principais características desta análise.</p>
+<p><strong>[FAZER UMA TABELA COM AS CARACTERÍSTICAS DOS TESTES ABAIXO]</strong>
+<strong>χ² para independência</strong>
+<strong>Tipo e quantidade de variáveis: Utiliza duas (ou mais) variáveis categóricas;</strong>
+<strong>H0: As proporções relativas de uma variável são independentes de uma segunda variável;</strong>
+<strong>OBS: Diferentemente do primeiro teste do qui-quadrado neste caso utiliza-se 2 variáveis categóricas;</strong>
+<strong>Como caracteristica intrinseca a este teste é necessário primeiramente a construção da tabela de contigência;</strong>
+<strong>[FAZER UMA TABELA COM AS CARACTERÍSTICAS DOS TESTES ACIMA]</strong></p>
+<p>Imagine a seguinte situação: Insetos foram coletados, ao acaso, em uma região costeira. Todos os insetos foram avaliados quanto a espécie e a presença de parasitas. Os seguintes valores foram obtidos: 55 indivíduos da espécie A com parasita, 75 indivíduos da espécie A sem parasita, 90 indivíduos da espécie B com parasita e 110 indivíduos da espécie B sem parasita. Foi levantada a hipótese nula de que a população infectada pelo parasita é a mesma para ambas as espécies.</p>
+<p>Vamos começar criando uma matriz com esses valores, onde as linhas corresponderão as espécies e as colunas a presença/ausência do parasita.</p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb97-1" data-line-number="1">dados &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dt">data =</span> <span class="kw">c</span>(<span class="dv">55</span>, <span class="dv">75</span>, <span class="dv">90</span>, <span class="dv">110</span>), <span class="dt">ncol =</span> <span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb97-2" data-line-number="2"><span class="kw">rownames</span>(dados) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Espécie A&quot;</span>, <span class="st">&quot;Espécie B&quot;</span>)</a>
+<a class="sourceLine" id="cb97-3" data-line-number="3"><span class="kw">colnames</span>(dados) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Com parasita&quot;</span>, <span class="st">&quot;Sem parasita&quot;</span>)</a>
+<a class="sourceLine" id="cb97-4" data-line-number="4">dados</a></code></pre></div>
+<pre><code>##           Com parasita Sem parasita
+## Espécie A           55           75
+## Espécie B           90          110</code></pre>
+<p>Pronto nossa tabela de contigência está criada. Vamos seguir para a análise</p>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb99-1" data-line-number="1"><span class="kw">chisq.test</span>(<span class="dt">x =</span> dados)</a></code></pre></div>
+<pre><code>## 
+##  Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+## 
+## data:  dados
+## X-squared = 0.13543, df = 1, p-value = 0.7129</code></pre>
+<p>Análise realizada. Díficil, penso que não. Vamos detalhar o que fizemos para construção da tabela de contigência e verificar o que a análise nos diz.</p>
+<p>Para construção da tabela de contigência nós criamos um conjunto de dados por meio da função concatenar “<em>c()</em>” com os valores na ordem que definimos na questão, usamos o argumento “ncol” para indicar que os dados criados vão estar dispostos em 2 colunas e o argumento “byrow = TRUE” para indicar que os dados serão inseridos em ordem por linha, neste caso a função começará preenchendo a primeira linha da primeira coluna, segunda linha da primeira coluna, primeira linha da segunda coluna e segunda linha da segunda coluna. Perceba que os valores na matriz correspondem ao que foi indicado na questão. Espécie A com parasita apresenta 55 indivíduos, espécie B com parasita 75 indivíduos e assim por diante. As funções <em>rownames()</em> e <em>colnames()</em> são responsáveis por indicar os nomes das linhas e colunas respectivamente. Nós indicamos o nome do conjunto de dados os quais vamos dar os nomes (seja da linha ou da coluna) dentro do parênteses e assinalamos os nomes com o uso da função concatenar <em>c()</em>. Executar ao fim o nome dados nos retorna a matriz criada no console.</p>
+<p>Ao executarmos a função <em>chisq.test()</em> utilizando apenas a matriz como objeto do argumento “x” ele nos retorna o χ² com a correção de Yates. O que é sugerido para quando estamos lidando com matrizes 2X2. No geral o resultado é similar ao que executamos no tópico anterior.</p>
+<p>Uma atenção deve ser dada ao grau de liberdade o qual indica o valor de 1. O cálculo do grau de liberdade consiste no número de linhas menos um multiplicado pelo número de colunas menos um. Como temos 2 linhas e 2 colunas o grau de liberdade será: <span class="math inline">\((2-1)*(2-1) = 1*1 = 1\)</span>.</p>
+<p>De acordo com o resultado obtido pelo teste não podemos refutar nossa hipótese nula. Portanto dizemos que a proporção da população infectada pelo parasita é a mesma nas duas espécies.</p>
+<p>Vejamos um segundo exemplo.</p>
+<p>Durante 2 anos camarões foram coletados, em um estuário, e todos eles foram sexados em machos e fêmeas. Objetivou-se com esses dados saber se há algum desvio da razão sexual entre os anos.</p>
+<p>Vamos começar desenvolvendo um conjunto de dados na forma de planilha. Como comumente seus dados devem estar planilhados e vamos ensina-lo a construir uma tabela de contingência a partir desses dados.</p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb101-1" data-line-number="1">ano &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">rep</span>(<span class="st">&quot;Ano 1&quot;</span>, <span class="dv">150</span>), <span class="kw">rep</span>(<span class="st">&quot;Ano 2&quot;</span>, <span class="dv">225</span>))</a>
+<a class="sourceLine" id="cb101-2" data-line-number="2">sexo &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">rep</span>(<span class="st">&quot;macho&quot;</span>, <span class="dv">55</span>), <span class="kw">rep</span>(<span class="st">&quot;fêmea&quot;, 95), rep(&quot;</span>macho<span class="st">&quot;, 105), rep(&quot;</span>fêmea&quot;, <span class="dv">120</span>))</a>
+<a class="sourceLine" id="cb101-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb101-4" data-line-number="4">dados &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">cbind</span>(ano, sexo))</a>
+<a class="sourceLine" id="cb101-5" data-line-number="5"><span class="kw">head</span>(dados)</a></code></pre></div>
+<pre><code>##     ano  sexo
+## 1 Ano 1 macho
+## 2 Ano 1 macho
+## 3 Ano 1 macho
+## 4 Ano 1 macho
+## 5 Ano 1 macho
+## 6 Ano 1 macho</code></pre>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb103-1" data-line-number="1">tab.cont &lt;-<span class="st"> </span><span class="kw">table</span>(dados)</a>
+<a class="sourceLine" id="cb103-2" data-line-number="2">tab.cont</a></code></pre></div>
+<pre><code>##        sexo
+## ano     fêmea macho
+##   Ano 1    95    55
+##   Ano 2   120   105</code></pre>
+<p>Pronto. Utilizando as funções acima (<em>c()</em>, <em>rep()</em>, <em>data.frame()</em> e <em>cbind()</em>) criamos um data frame com 2 colunas onde na primeira inserimos os anos e na segunda os sexos e usamos a função <em>head()</em> para visualizar no console as primeiras linhas deste data frame. Utilizamos, também, a função <em>table()</em> para criar nossa tabela de contingência. Vamos agora analisar os dados.</p>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb105-1" data-line-number="1"><span class="kw">chisq.test</span>(tab.cont)</a></code></pre></div>
+<pre><code>## 
+##  Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+## 
+## data:  tab.cont
+## X-squared = 3.2817, df = 1, p-value = 0.07006</code></pre>
+<p>Pronto. Como podem ver a representação do resultado é similar ao exemplo acima. Contudo nossos dados são diferentes e portanto nossa hipótese nula é diferente.</p>
+<p>Nossa hipótese nula pode ser escrita de três formas. Vejamos os 3 exemplos abaixo:
+* H0: Na população amostrada a proporção de machos e fêmeas é independente do ano;
+* H0: Na população amostrada a razão sexual dos camarões é a mesma entre os anos;
+* H0: A proporção de camarões entre os anos é a mesma para ambos os sexos;</p>
+<p>Como o teste resultou em um p-value maior que 0,05 podemos dizer, por essa via, que corroboramos nossa hipótese nula.</p>
+<p>Neste ponto é bom relembramos da importância do número de observações de cada grupo. Se este número for pequeno incertezas podem ser geradas e ajustes devem ser feitos. Para saber mais sugerimos a leitura da literatura especializada. Contudo, para definir o que é um número baixo de observações sigamos o cálculo sugerido por Zar (2014) o qual define como: <span class="math inline">\(n = 6rc\)</span>.</p>
+<p>Onde, n é o número de observações mínimo de cada grupo, r é o número de linhas (rows) e c é o número de colunas (column). Dessa forma, em uma tabela de contigência do tipo 2x2 o número de observações mínimo para cada grupo deve ser de: <span class="math inline">\(n = 6*(2)*(2) = 24\)</span>. Ou seja, 24 observações.</p>
+<p>Esta análise pode ser conduzida, também, quando lidamos com mais de um grupo em uma categoria e neste caso teriamos uma tabela de contigência 2X3, 2X4, 3X3 e assim por diante. Vamos ver um exemplo.</p>
+<p>Três pesquisadores analisaram fotografias de espécies bentônicas em um costão objetivando avaliar a abundância de duas espécies uma introduzida e uma nativa. Considere todo o processo amostral similar e que os pesquisadores avaliaram as mesmas fotografias. Neste caso nossa hipótese nula é que a proporção entre as espécies é independente dos pesquisadores.</p>
+<p>Vamos construir nossa matriz de uma terceira forma.</p>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb107-1" data-line-number="1">pesquisadores &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;pesquisador 1&quot;</span>, <span class="st">&quot;pesquisador 2&quot;</span>, <span class="st">&quot;pesquisador 3&quot;</span>)</a>
+<a class="sourceLine" id="cb107-2" data-line-number="2">sp.nativa &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">70</span>, <span class="dv">79</span>, <span class="dv">38</span>)</a>
+<a class="sourceLine" id="cb107-3" data-line-number="3">sp.introduzida &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">84</span>, <span class="dv">95</span>, <span class="dv">80</span>)</a>
+<a class="sourceLine" id="cb107-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb107-5" data-line-number="5">dados &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(sp.nativa, sp.introduzida), <span class="dt">nrow =</span> <span class="dv">2</span>, <span class="dt">byrow =</span> T)</a>
+<a class="sourceLine" id="cb107-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb107-7" data-line-number="7"><span class="kw">colnames</span>(dados) &lt;-<span class="st"> </span>pesquisadores</a>
+<a class="sourceLine" id="cb107-8" data-line-number="8"><span class="kw">rownames</span>(dados) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Espécie nativa&quot;</span>, <span class="st">&quot;Espécie introduzida&quot;</span>)</a>
+<a class="sourceLine" id="cb107-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb107-10" data-line-number="10">dados</a></code></pre></div>
+<pre><code>##                     pesquisador 1 pesquisador 2 pesquisador 3
+## Espécie nativa                 70            79            38
+## Espécie introduzida            84            95            80</code></pre>
+<p>Pronto. Os dados foram construídos passo a passo. Vamos analisar e verificar o resultado.</p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb109-1" data-line-number="1"><span class="kw">chisq.test</span>(dados)</a></code></pre></div>
+<pre><code>## 
+##  Pearson&#39;s Chi-squared test
+## 
+## data:  dados
+## X-squared = 6.2322, df = 2, p-value = 0.04433</code></pre>
+<p>Repare que há algo diferente, como realizamos a análise em uma tabela 2X3 por padrão a função <em>chisq.test()</em> não realiza a correção de Yates. Pois não é necessário.</p>
+<p>Analisando o resultado podemos inferir que as proporções observadas de espécies nativas e introduzidas são diferentes em função do pesquisador. Ou seja, rejeitamos nossa hipótese nula de que as proporções são similares. Contudo o p-value foi bem próximo ao limiar de 0,05. Como pesquisador podemos nos aprofundar na questão e nos perguntar onde está essa diferença? Entre o pesquisador 1 e o pesquisador 2 ou entre outra dupla de pesquisadores? Como observamos isso?</p>
+<p>Para responder essa pergunta em específico, vamos subdividir nossa tabela de contigência para todos os pares de observações e armazena-los em outros objetos.</p>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb111-1" data-line-number="1">p1.p2 &lt;-<span class="st"> </span>dados [, <span class="dv">-3</span>]</a>
+<a class="sourceLine" id="cb111-2" data-line-number="2">p1.p3 &lt;-<span class="st"> </span>dados [, <span class="dv">-2</span>]</a>
+<a class="sourceLine" id="cb111-3" data-line-number="3">p2.p3 &lt;-<span class="st"> </span>dados [, <span class="dv">-1</span>]</a></code></pre></div>
+<p>Pronto, criamos as nossas tabelas 2X2 para cada par de comparações. Repare que usamos a nossa tabela dados originalmente criada seguida por colchetes e dentro do colchetes inserimos virgula e menos o número referente a coluna. O colchetes após o nome dos dados nos permite acessar as linhas e colunas de um conjunto de dados quaisquer com isso podemos remove-las ou seleciona-las. Qualquer número antes da virgula indica a linha e qualquer número após a linha indica a coluna. O sinal de menos indica que vamos remover e se não colocarmos sinal indica que iremos selecionar. No primeiro caso onde inserimos “-3” após a virgula estamos indicando que vamos remover a terceira coluna do objeto dados e armazenar este resultado em um novo objeto chamado p1.p2. O mesmo raciocínio segue nos demais casos.</p>
+<p>Sabendo isso vamos realizar a função <em>chisq.test()</em> para cada par de observações e analisar seu resultado.</p>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb112-1" data-line-number="1"><span class="kw">chisq.test</span>(p1.p2)</a></code></pre></div>
+<pre><code>## 
+##  Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+## 
+## data:  p1.p2
+## X-squared = 0, df = 1, p-value = 1</code></pre>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb114-1" data-line-number="1"><span class="kw">chisq.test</span>(p1.p3)</a></code></pre></div>
+<pre><code>## 
+##  Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+## 
+## data:  p1.p3
+## X-squared = 4.3623, df = 1, p-value = 0.03674</code></pre>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb116-1" data-line-number="1"><span class="kw">chisq.test</span>(p2.p3)</a></code></pre></div>
+<pre><code>## 
+##  Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
+## 
+## data:  p2.p3
+## X-squared = 4.5663, df = 1, p-value = 0.03261</code></pre>
+<p>Feito. Repare que não há diferenças entre o pesquisador 1 e o pesquisador 2. Mas entre o pesquisador 3 e os demais há diferença. Isto indica que é o pesquisador 3 que apresenta diferenças na proporção de espécies nativas e introduzidas, em relação aos demais pesquisadores.</p>
+<p>Quando analisamos todo o conjunto de dados não observamos esta característica, mas ao separarmos os dados a diferença fica evidenciada.</p>
+<p>Uma prática comum nesta análise é demonstrar o resultado por meio gráfico. Portanto, vamos observar como representar graficamente este último exemplo.</p>
+<p>Primeiro vamos transformar nossa tabela de contigência em uma tabela no qual os valores irão corresponder a proporções relativas. Para isso vamos usar a função <em>prop.table()</em> e armazenar este resultado em um objeto chamado tabela.</p>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb118-1" data-line-number="1">tabela &lt;-<span class="st"> </span><span class="kw">prop.table</span>(<span class="dt">x =</span> dados)</a>
+<a class="sourceLine" id="cb118-2" data-line-number="2">tabela</a></code></pre></div>
+<pre><code>##                     pesquisador 1 pesquisador 2 pesquisador 3
+## Espécie nativa          0.1569507     0.1771300    0.08520179
+## Espécie introduzida     0.1883408     0.2130045    0.17937220</code></pre>
+<p>Como podem ver o resultado deste nosso passo nos retornou uma tabela de proporções em relação ao total. Podemos transformar-la em percentual. Vamos ver o processo</p>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb120-1" data-line-number="1">tabela &lt;-<span class="st"> </span><span class="kw">prop.table</span>(<span class="dt">x =</span> dados)<span class="op">*</span><span class="dv">100</span></a>
+<a class="sourceLine" id="cb120-2" data-line-number="2">tabela</a></code></pre></div>
+<pre><code>##                     pesquisador 1 pesquisador 2 pesquisador 3
+## Espécie nativa           15.69507      17.71300      8.520179
+## Espécie introduzida      18.83408      21.30045     17.937220</code></pre>
+<p>Como podem ver, basta multiplicar a tabela por 100.</p>
+<p>Mas vamos pensar um pouco na nossa análise e no que ela avalia. O χ² está avaliando as proporções relativas entre os grupos de uma dada variável, neste último caso a proporção das espécie em relação aos pesquisadores. Então a tabela de proporções ou percentual que nos interessa é a relação entre a espécie nativa e introduzida por pesquisador. A função <em>prop.table()</em> nos permite definir isso por meio do argumento “margin”, vamos verificar o resultado olhando para o resultado em percentual.</p>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb122-1" data-line-number="1"><span class="kw">prop.table</span>(<span class="dt">x =</span> dados, <span class="dt">margin =</span> <span class="dv">1</span>)<span class="op">*</span><span class="dv">100</span></a></code></pre></div>
+<pre><code>##                     pesquisador 1 pesquisador 2 pesquisador 3
+## Espécie nativa           37.43316      42.24599      20.32086
+## Espécie introduzida      32.43243      36.67954      30.88803</code></pre>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb124-1" data-line-number="1"><span class="kw">prop.table</span>(<span class="dt">x =</span> dados, <span class="dt">margin =</span> <span class="dv">2</span>)<span class="op">*</span><span class="dv">100</span></a></code></pre></div>
+<pre><code>##                     pesquisador 1 pesquisador 2 pesquisador 3
+## Espécie nativa           45.45455       45.4023      32.20339
+## Espécie introduzida      54.54545       54.5977      67.79661</code></pre>
+<p>Como podem visualizar, se usarmos margin = 1 ele nos retorna os valores em função das linhas (espécies), se utilizarmos margin = 2 ele nos retorna os valores em função das colunas (pesquisadores).</p>
+<p>Vamos utilizar margin = 2 para construir nossa tabela e plotarmos nosso gráfico.</p>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb126-1" data-line-number="1">tabela &lt;-<span class="st"> </span><span class="kw">prop.table</span>(<span class="dt">x =</span> dados, <span class="dt">margin =</span> <span class="dv">2</span>)<span class="op">*</span><span class="dv">100</span></a>
+<a class="sourceLine" id="cb126-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb126-3" data-line-number="3"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">13</span>))</a>
+<a class="sourceLine" id="cb126-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb126-5" data-line-number="5"><span class="kw">barplot</span>(tabela, </a>
+<a class="sourceLine" id="cb126-6" data-line-number="6">        <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;darkblue&quot;</span>), </a>
+<a class="sourceLine" id="cb126-7" data-line-number="7">        <span class="dt">legend.text =</span> <span class="ot">TRUE</span>, </a>
+<a class="sourceLine" id="cb126-8" data-line-number="8">        <span class="dt">args.legend =</span> <span class="kw">list</span>(<span class="dt">x =</span> <span class="st">&quot;right&quot;</span>, <span class="dt">bty =</span> <span class="st">&quot;n&quot;</span>, <span class="dt">inset =</span> <span class="fl">-0.6</span>))</a></code></pre></div>
+<p><img src="livroR-1.0_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
+<p>Como podem ver o nosso gráfico foi realizado. Mas adicionamos uma série de comandos novos. Vamos explica-lo passo a passo.</p>
+<p>Primeiro contruímos a tabela com os dados em percentuais relativos ao pesquisador e o armazenamos em um objeto chamado tabela.</p>
+<p>Posteriormente utilizamos uma função chamada <em>par()</em> com o argumento mar no qual concatenamos 4 valores. Esta função juntamente com esse argumento permite que redimensionemos a janela gráfica. Os quatro valores concatenados referem-se as margens inferior, esquerda, superior e direita, respectivamente.</p>
+<p>Nosso último passo é a nossa já conhecida função <em>barplot()</em>, onde inserimos como primeiro valor o objeto que contem os dados que queremos graficar “tabela”, seguido pelo argumento “col” que define as cores de acordo com as linhas da tabela, por sua vez definimos se a legenda será plotada com o argumento “legend.text” e por último indicamos a posição e o formato da legenda por meio do argumento “args.lengend”. Neste último argumento precisamos inserir uma função list no qual indicamos a posição da legenda pelo argumento “x”, o argumento “bty” o qual define que a legenda não tera uma caixa desenhada em seu entorno e o argumento “inset” que define a posição da legenda em relação ao eixo x.</p>
+<p>Para plotar um gráfico via <em>barplot()</em> a escrita pode ser feita de muitas maneiras, principalmente no que se refere a inserção da legenda. Experimente desenvolver um gráfico do mesmo estilo usando o conhecimento aprendido no capítulo anterior sobre gráficos.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="importação-organização-e-sumarização-dos-dados.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="teste-t-.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["livroR-1.0.pdf", "livroR-1.0.docx"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
