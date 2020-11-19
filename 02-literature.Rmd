@@ -1,60 +1,69 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
-# Importação, organização e sumarização dos dados
+# Importar, organizar e sumarizar os dados
 
 
-## Primeiro passo: Importando a planilha de dados para o R
+## 1° passo: Definir o ambiente de trabalho e importar a planilha de dados para o R
 
 
-Ao se trabalhar com R a primeira pergunta que nos vem a cabeça é: Como inserir meus dados neste ambiente de trabalho? A resposta é simples e também complexa. Pois depende do formato do arquivo de dados que está usando ( \*.csv, \*.xls, \*.xlsx, \*.txt entre outros) e para o mesmo formato existem inúmeras vias possíveis para se fazer isso. Não iremos especificar todas as vias, mas as mais comuns, utilizando os comandos básicos do R e também por meio da interface gráfica do RStudio.
+Ao se trabalhar com R a primeira pergunta que nos vem a cabeça é: Como inserir meus dados neste ambiente de trabalho? A resposta é simples e também complexa. Pois depende do formato do arquivo de dados que está usando ( \*.csv, \*.xls, \*.xlsx, \*.txt entre outros) e para o mesmo formato existem inúmeras vias possíveis para se fazer isso. Não iremos especificar todas as vias, mas as mais comuns (\*.csv e \*.xlsx), utilizando os comandos básicos do R e também por meio da interface gráfica do RStudio.
 
 
 Para importar a planilha é necessário definir o ambiente de trabalho no seu computador. Este ambiente é onde sua planilha e seus demais dados a serem trabalhados estão. Podemos realizar isso via linhas de comando ou pela própria interface do RStudio. Se realizado por linhas de comandos há diferença entre o sistema operacional (Windows, Linux ou macOS) que estiver utilizando.
 
 
-Para o sistema operacional Windows utilizamos o seguinte comando: `r colorize("setwd(choose.dir(*path*))", "blue")` e para Linux utilizamos `r colorize("setwd(*path*)", "blue")`, onde *path* é o caminho do diretório escolhido.
+### Definir ambiente de trabalho via linha de comando
+
+Para o sistema operacional Windows utilizamos o seguinte comando: `r colorize("setwd(choose.dir(*path*))", "blue")` e para Linux utilizamos `r colorize("setwd(*path*)", "blue")`, onde `r colorize("*path*", "blue")` é o caminho do diretório escolhido.
 
 
-Se no Windows utilizarmos apenas a linha de comando `r colorize("setwd(choose.dir())", "blue")` sem especificar o caminho a seguinte janela irá aparecer (Figura \@ref(fig:setwd)), a partir da qual iremos selecionar a pasta onde estão os arquivos que iremos trabalhar e salvar nosso script.
+Se no Windows utilizarmos apenas a linha de comando `r colorize("setwd(choose.dir())", "blue")` sem especificar o caminho a seguinte janela irá aparecer (Figura \@ref(fig:setwd)), a partir da qual iremos selecionar a pasta onde estão os arquivos que iremos trabalhar e salvar nosso *script*.
 
 
-```{r setwd, echo = FALSE, fig.cap = "Janela que será aberta ao executar o comando: **setwd(choose.dir()**, no sistema operacional Windows.", fig.align = "center"}
+```{r setwd, message = FALSE, echo = FALSE, fig.cap = "Janela que será aberta ao executar o comando: setwd(choose.dir()), no sistema operacional Windows.", fig.align = "center", out.width = '60%'}
 
 knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/setwd.JPG')
 
 ```
 
 
+A função `r colorize("*setwd()*", "blue")` é responsável por selecionar o diretório a ser trabalhado. Após isso podemos importar a planilha com os dados que utilizaremos.
+
+
+Como resultado desta etapa podemos verificar a guia *Files* (Figura \@ref(fig:guia-files)), nela agora situa-se as pastas e arquivos da pasta que selecionamos e onde estará salvo nosso script quando o salvarmos.
+
 **[INSERIR PRINT DA GUIA FILES APÓS A PASTA TER SIDO SELECIONADA]**
 
 
-*setwd()* é a função responsável por escolher e definir o diretório a ser trabalhado. Após isso podemos importar a planilha com os dados que utilizaremos.
+### Definir ambiente de trabalho via interface gráfica
+
+Inumeras formas podem ser utilizadas para definir o ambiente de trabalho, apresentaremos 3. A primeira consiste em usar o atalho do teclado $(CTRL + SHIFT + H)$ onde irá aparecer a janela abaixo (Figura \@ref(fig:ctrl-shift-h)) e nela selecionaremos o ambiente de trabalho; a segunda via consiste em acessar a guia *Session* ir até a opção *Set Working Directory* e selecionar a opção *Choose Directory* (Figura \@ref(fig:mode-2)) da mesma forma que a opção anterior a mesma janela irá aparecer (Figura \@ref(fig:ctrl-shift-h)); por último podemos usar a guia *Files* onde podemos clicar nos 3 pontos "..." que aparecem no canto superior direito da guia e buscar o ambiente/pasta que iremos utilizar e a seguir na engrenagem (*More*) e selecionar a opção *Set as Working Directory* (Figura \@ref(fig:files-guia)).
+
+**[Inserir PRINT da janela ctrl shift h]**
+
+**[Inserir PRINT da janela session]**
+
+**[Inserir PRINT da janela files-guia]**
 
 
-Construa a planilha a seguir (Figura \@ref(fig:planilha)) no formato \*.csv (usando vírgula como separador de colunas e ponto como separador decimal) e \*.xlsx em um editor de planilhas, como excel, libreoffice calc ou outros e a salve com o nome de planilha.csv e planilha.xlsx. A seguir faremos a importação desta planilha.
+### Importar planilha via linha de comando:
 
+Primeiramente construa a planilha a seguir (Figura \@ref(fig:planilha)) no formato \*.csv (usando vírgula como separador de colunas e ponto como separador decimal) e \*.xlsx em um editor de planilhas, como excel, libreoffice calc ou outros e a salve com o nome de planilha.csv e planilha.xlsx no diretório que definiu previamente. A seguir faremos a importação desta planilha.
 
-**[Inserir imagem da planilha]**
+**[Inserir imagem da planilha csv]**
 
-
-### Importando a planilha por linhas de comandos:
-
+**[Inserir imagem da planilha xlsx]**
 
 ```{r}
 dados <- read.csv(file = "planilha.csv", header = TRUE, sep = ",")
 ```
 
 
-O comando *read.csv()* importou a planilha que está no formato *.csv utilizando os argumentos: file - o qual indica o nome do arquivo a ser importado; header - o qual indica se as colunas da planilha tem nome e sep - o qual indica qual o caracter separador das colunas
+O comando `r colorize("*read.csv()*", "blue")` importou a planilha que está no formato *.csv utilizando os argumentos: file - o qual indica o nome do arquivo a ser importado; header - o qual indica se as colunas da planilha tem nome e sep - o qual indica qual o caracter separador das colunas
 
 
-O comando acima importou a planilha e o guardou e um objeto chamado dados que será o que nós utilizaremos de agora em diante sempre que quisermos acessar a a planilha no R.
+O comando acima importou a planilha e o guardou em um objeto chamado dados que será o que nós utilizaremos de agora em diante sempre que quisermos acessar essa planilha no R.
 
 
-Para importar arquivos que estão no formato \*.xls ou \*.xlsx é necessário a instalação de algum pacote que permita a realização desse processo. Um pacote que instalaremos aqui é o readxl. Não se preocupe com o processo de instalação de pacotes, neste momento, falaremos sobre ele ao longo do livro, sempre que necessário.
+Para importar arquivos que estão no formato \*.xls ou \*.xlsx é necessário a instalação de algum pacote^[Tudo que é realizado no R é por meio de comandos, esses comandos são compostos de funções, podemos reconhece-las pois, obrigatoriamente, logo após um nome que representa uma função há um parênteses e cada função apresenta argumentos, o qual depois dele há o sinal de igual (=). As funções estão dentro de pacotes/bibliotecas. Ou seja, cada biblioteca apresenta diversas funções e cada função diversos argumentos. O R, quando instalado, traz consigo alguns pacotes, mas estes pacotes não apresentam uma função que permite carregar arquivos \*.xls ou \*.xlsx. Portanto para que isso seja possível devemos instalar, neste caso o pacote readxl. Para instalação de pacotes podemos usar a função conhecida por install.packages("nome do pacote").] que permita a realização desse processo. Um pacote que instalaremos aqui é o `r colorize("*readxl*", "green")`.
 
 
 ```{r, message = FALSE, eval = -1}
@@ -68,24 +77,27 @@ dados <- read_excel(path = "planilha.xlsx", col_names = TRUE)
 ```
 
 
-O comando *read_excel()* é similar ao *read.csv()* embora seus argumentos sejam diferentes. O argumento path é similar ao file, o argumento col_names é similar ao header. Repare que não temos o argumento sep, pois em um arquivo excel as variáveis são salvas em colunas diferentes.
+O comando `r colorize("*read_excel()*", "blue")` é similar ao `r colorize("*read.csv()*", "blue")` embora seus argumentos sejam diferentes. O argumento path é similar ao file, o argumento col_names é similar ao header. Repare que não temos o argumento sep, pois em um arquivo excel as variáveis são salvas em colunas diferentes.
 
-
-**[Inserir imagem do processo de importação via interface gráfica]**
 **[Inserir imagem do resultado de importação - o arquivo presente no environment]**
 
 
-### Importando a planilha pela via gráfica:
+### Importar planilha pela via interface gráfica:
 
+Para importar a planilha com os dados via interface do RStudio devemos acessar a guia *Environment* e nesta acessar a opção *Import Dataset* a seguir temos várias opções a qual devemos escolher referente a extensão do arquivo que vamos importar, no nosso caso será a opção *From Excel* (Figura \@ref(fig:import-graf)).
 
+Neste momento uma janela irá abrir (Figura \@ref(fig:import-graf-2)) e no canto superior direito haverá o nome *Browse* onde deveremos clicar e escolher o arquivo com o qual iremos trabalhar. Em *Import options* no canto inferior esquerdo havera algumas opções, a opção *name* deveremos renomear para dados, para coincidir com as vias que fizemos acima. As demais opções podemos deixar em branco. Repare que no canto inferior direito aparecerá o comando relativo ao processo de importação similar ao que fizemos no tópico anterior e, aparecerá também, um comando chamado `r colorize("*View()*", "blue")` que veremos mais adiante, para desabilita-lo basta desmarcar a caixa ao lado de mesmonome. Conclua o processo clicando em *import* no canto inferior direito.
 
-## Segundo passo: Ajustando os dados
+**[Inserir imagem do processo de importação via interface gráfica]**
+**[Inserir imagem do processo de importação via interface gráfica janela com o arquivo]**
+
+## 2° passo: Ajustar os dados
 
 
 Uma falha comum de muitos usuários iniciantes é passar para as análises antes de verificar se a planilha está organizada corretamente. Uma forma de previnir isso é conhecendo os seus dados e sabendo o que eles significam. Os dados, geralmente, podem ser: categóricos/qualitativos ou mensuráveis/quantitativos. Quando qualitativos temos de informar que eles consistem em fatores. Para isso vamos executar alguns comandos onde poderemos avaliar se no processo de importação as variáveis presentes na planilha de dados são reconhecidas como esperamos que seja.
 
 
-Ao executarmos a função *str()* do arquivo dados podemos ver no console o seguinte resultado
+Ao executarmos a função `r colorize("*str()*", "blue")` do arquivo dados podemos ver no console o seguinte resultado
 
 
 ```{r}
@@ -99,7 +111,7 @@ Seu resultado nos informa sobre o tipo de objeto que o arquivo é. Neste caso um
 Também nos e mostrado as variáveis presentes (ano, local, comprimento e peso) e ao lado de cada variável nos é indicado o tipo de variável que ele considerou.
 
 
-num = numerico, chr = caracter e há outras que não estão indicadas aqui, lógica, inteiro, fator entre outros.
+num = numerico, chr = character e há outras que não estão indicadas aqui, lógica, inteiro, fator entre outros.
 
 
 Repare que a variável ano foi indicada como númerico. Variáveis consideradas númericas são aquelas as quais foram mensuradas. Ano não é uma variável possível de ser medida, porém devido ao seu registro ter sido em valores númericos foi assim que ela foi entendida. Portanto temos que transforma-la.
@@ -117,7 +129,7 @@ dados$local <- as.factor(dados$local)
 Repare que neste processo inserimos o operador **\$** (cifrão). Este é um operador importante em toda linguagem de programação e será bastante utilizado. Ele permite acessar alguma variável dentro de um dado objeto. Pensando no objeto "dados" (nossa planilha), ao colocarmos seu nome e em seguida o operador **\$** podemos acessar as variáveis dentro dele.
 
 
-Inserimos também a função *as.factor()* que é a responsável por criar uma variável a qual será considerada categórica.
+Inserimos também a função `r colorize("*as.factor()*", "blue")` que é a responsável por criar uma variável a qual será considerada categórica.
 
 
 O comando portanto é lido da seguinte forma: 
@@ -150,7 +162,7 @@ idade <- 40
 Reparou que ao criar um segundo objeto de mesmo nome que antes o primeiro foi apagado e substituído pelo segundo? Este é o mesmo processo que ocorreu quando realizamos a função que definiu ano e local como fatores.
 
 
-Vamos observar novamente a função str() para verificar se ano e locais são fatores
+Vamos observar novamente a função `r colorize("*str()*", "blue")` para verificar se ano e locais são fatores
 
 
 ```{r}
@@ -172,7 +184,7 @@ head(dados)
 ```
 
 
-A função *head()* reproduz, no painel do console as primeiras linhas de nossa planilha
+A função `r colorize("*head()*", "blue")` reproduz, no painel do console as primeiras linhas de nossa planilha
 
 
 ```{r}
@@ -180,13 +192,13 @@ View(dados)
 ```
 
 
-A função *View()* abre uma aba, ao lado de seu script mostrando todos dados.
+A função `r colorize("*View()*", "blue")` abre uma aba, ao lado de seu script mostrando todos dados.
 
 
 Experimente agora só escrever dados e rodar, o que aparece? experimente clicar no nome dados, presente no environment. O que você observou?
 
 
-Se no primeiro caso você observou a planilha aparecendo no console parabéns você está indo no caminho certo. Se no segundo momento você observou que ao clicar sobre o nome dados ele executou a mesma coisa que a função *View()* você está indo maravilhosamente bem. Continue assim!
+Se no primeiro caso você observou a planilha aparecendo no console parabéns você está indo no caminho certo. Se no segundo momento você observou que ao clicar sobre o nome dados ele executou a mesma coisa que a função `r colorize("*View()*", "blue")` você está indo maravilhosamente bem. Continue assim!
 
 
 Isto não é tudo, mas sim o necessário começarmos a sumarizar os dados de maneira eficiente. 
@@ -198,7 +210,7 @@ Não se esqueça que antes de trabalharmos nossos dados temos que entender o que
 Portanto siga os passos precisamente, não pule etapas para que não haja lacunas em seu conhecimento e busque diversificar a fonte do seu conhecimento. Pois o R é uma linguagem de programação e que como demonstramos até o momento há muitas vias possíveis de escrita para um mesmo resultado e diferentes autores podem escrever de formas diferentes.
 
 
-## Terceiro passo: Sumarizando os dados graficamente
+## 3° passo: Sumarizar os dados graficamente
 
 
 Já importamos nossa planilha e já a ajustamos. Que tal começarmos a ver a "mágica" acontecer e graficarmos nossso dados.
@@ -213,7 +225,7 @@ Pensando nos gráficos mais comuns e úteis para nosso dia-a-dia e que nos permi
 ### HISTOGRAMAS
 
 
-A função *hist()* permite visualizar os valores da variável comprimento (Figura \@ref(fig:comp-hist)).
+A função `r colorize("*hist()*", "blue")` permite visualizar os valores da variável comprimento (Figura \@ref(fig:comp-hist)).
 
 
 ```{r comp-hist, fig.cap = "Comprimento dos organismos da planilha dados"}
@@ -247,7 +259,7 @@ Temos aqui nosso histograma com alguns argumentos que permitem melhorar sua visu
 Podemos observar nele que o valor mínimo observado é 10 e que o máximo é 19 e que as frequências das diferentes classes de comprimento formadas, variam entre 0 e aproximadamente 9. Será que isto que observamos está correto. Vamos ver no tópico a seguir.
 
 
-Ainda em relação ao histograma podemos ver na função *hist()* que utilizamos diversos argumentos como: xlim, ylim, col, main, xlab e ylab, além de uma função chamada *c()*. Verifique a tabela abaixo para detalhes de cada um desses argumentos e da função *c()*. OBS: Essa função *c()* é muito importante e será utilizada constantemente ao longo de seu trajeto no R.
+Ainda em relação ao histograma podemos ver na função `r colorize("*hist()*", "blue")` que utilizamos diversos argumentos como: xlim, ylim, col, main, xlab e ylab, além de uma função chamada `r colorize("*c()*", "blue")`. Verifique a tabela abaixo para detalhes de cada um desses argumentos e da função `r colorize("*c()*", "blue")`. OBS: Essa função `r colorize("*c()*", "blue")` é muito importante e será utilizada constantemente ao longo de seu trajeto no R.
 
 
 **[INSERIR TABELA EXPLICANDO OS ARGUMENTOS E A FUNÇÃO CONCATENAR]**
@@ -273,7 +285,7 @@ abundancia <- read_excel("abundancia.xlsx", col_names = TRUE)
 Repare que ela está no formato \*.xlsx e apresenta as seguintes variáveis: mes e N. Onde N significa o número de indivíduos observado.
 
 
-Vamos apenas conferir se está tudo certo com os dados usando a função str().
+Vamos apenas conferir se está tudo certo com os dados usando a função `r colorize("*str()*", "blue")`.
 
 ```{r}
 str(abundancia)
@@ -317,7 +329,7 @@ barplot(abundancia$N,
 Podemos extrair desse gráfico que a abundância dos indivíduos variam ao longo dos meses com valores mínimos em torno de 50 indivíduos nos meses 4, 5 e 6 e valores máximos em torno de 200 indivíduos no mês 11.
 
 
-Podemos ver que os argumentos utilizados permitiram referenciar as barras, ajustar o eixo y, adicionar cores e adicionar os nomes dos eixos. Para detalhes sobre os argumentos e funções utilizadas no *barplot()* (Tabela \@ref(tab:tab-arg)).
+Podemos ver que os argumentos utilizados permitiram referenciar as barras, ajustar o eixo y, adicionar cores e adicionar os nomes dos eixos. Para detalhes sobre os argumentos e funções utilizadas no `r colorize("*barplot()*", "blue")` (Tabela \@ref(tab:tab-arg)).
 
 
 ```{r tab-arg, message = FALSE, echo = FALSE}
@@ -343,10 +355,10 @@ kbl(text_tbl, booktabs = T, caption = "Descrição dos argumentos utilizados par
 ### GRÁFICO DE LINHAS
 
 
-Assim como o gráfico de barras podemos desejar fazer um gráfico de linhas para isso podemos utilizar a função *plot()* e continuar trabalhando com os dados de abundância por mês
+Assim como o gráfico de barras podemos desejar fazer um gráfico de linhas para isso podemos utilizar a função `r colorize("*plot()*", "blue")` e continuar trabalhando com os dados de abundância por mês
 
 
-Contudo para fazer um gráfico de linhas pelo comando básico do R (utilizando a função *plot()*) precisamos indicar que ambos os eixos apresentam variáveis númericas. Portanto teremos que modificar a variável mês de fator para numerica.
+Contudo para fazer um gráfico de linhas pelo comando básico do R (utilizando a função `r colorize("*plot()*", "blue")`) precisamos indicar que ambos os eixos apresentam variáveis númericas. Portanto teremos que modificar a variável mês de fator para numerica.
 
 
 Porém não precisamos fazer isso em um comando separado podemos aplicar a função que converte uma variável em númerica dentro da função que plota o gráfico. Vamos visualizar como isso ocorre na prática (Figura \@ref(fig:pon-graf)).
@@ -357,10 +369,10 @@ plot(x = as.numeric(abundancia$mes), y = abundancia$N)
 ```
 
 
-Pronto, na função acima aplicamos a função *plot()* indicando os argumentos x e y que definem quem estará no eixo x e quem estará no eixo y, e para a variável que estará no eixo x (variável mês) adicionamos a função *as.numeric()* a qual a converte em númerico apenas para a execução do plot.
+Pronto, na função acima aplicamos a função `r colorize("*plot()*", "blue")` indicando os argumentos x e y que definem quem estará no eixo x e quem estará no eixo y, e para a variável que estará no eixo x (variável mês) adicionamos a função `r colorize("*as.numeric()*", "blue")` a qual a converte em númerico apenas para a execução do plot.
 
 
-Porém a função *plot()* não realizou um gráfico de linhas como esperado, pois para isso precisamos indica-lo por meio de argumentos. Como demonstraremos a seguir (Figura \@ref(fig:lin-graf-col)).
+Porém a função `r colorize("*plot()*", "blue")` não realizou um gráfico de linhas como esperado, pois para isso precisamos indica-lo por meio de argumentos. Como demonstraremos a seguir (Figura \@ref(fig:lin-graf-col)).
 
 
 ```{r lin-graf-col, fig.cap = "Representação gráfica do número de indivíduos por mês em um gráfico de linhas"}
@@ -396,7 +408,7 @@ boxplot(formula = dados$comprimento ~ dados$ano)
 ```
 
 
-Repare que a escrita para esse gráfico é ligeiramente diferente. Ele usa a função *boxplot()*, um argumento chamado formula onde nele inserimos a variável independente (variável do eixo X) e a variável dependente (variável do eixo Y). Entre ambas as variáveis é possível ver o caracter "~" (til). A forma de ler essa escrita é a seguinte: Realize um boxplot da variável comprimento da planilha dados em função da variável ano da planilha dados. A variável til é lida como ("em função de")
+Repare que a escrita para esse gráfico é ligeiramente diferente. Ele usa a função `r colorize("*boxplot()*", "blue")`, um argumento chamado formula onde nele inserimos a variável independente (variável do eixo X) e a variável dependente (variável do eixo Y). Entre ambas as variáveis é possível ver o caracter "~" (til). A forma de ler essa escrita é a seguinte: Realize um boxplot da variável comprimento da planilha dados em função da variável ano da planilha dados. A variável til é lida como ("em função de")
 
 
 Vamos adicionar alguns argumentos que permitem deixar o gráfico mais apresentável (Figura \@ref(fig:box-graf-col)).
@@ -423,7 +435,7 @@ As linhas de cada box (caixa) que se referem a cada um dos anos representam, em 
 Podemos por meio desse gráfico então ter uma ideia do que os dados indicam quanto as medidas de tendência central e algumas medidas de dispersão em relação as categorias definidas.
 
 
-## Quarto passo: Sumarizando os dados numericamente
+## 4° passo: Sumarizar os dados numericamente
 
 
 Temos visto, até este ponto de maneira geral, como resumir os dados graficamente.
@@ -440,13 +452,13 @@ summary(abundancia)
 ```
 
 
-Repare que summary(dados) ou summary(abundancia) o R nos informou as variáveis presentes nestas planilhas e quando fator indicou quais são e quantos de cada existem e quando númerico nos retornou valores como média, mediana, mínimo, máximo, primeiro e terceiro quartis.
+Repare que `r colorize("*summary()*", "blue")` o R nos informou as variáveis presentes nestas planilhas e quando fator indicou quais são e quantos de cada existem e quando númerico nos retornou valores como média, mediana, mínimo, máximo, primeiro e terceiro quartis.
 
 
 As medidas de tendência central mais conhecidas e aplicadas são média, mediana e moda.
 
 
-Para obtenção da média precisamos somar todos os valores e dividir pela quantidade de valores ou no R podemos fazer isso de maneira mais simples por meio da função *mean()*:
+Para obtenção da média precisamos somar todos os valores e dividir pela quantidade de valores ou no R podemos fazer isso de maneira mais simples por meio da função `r colorize("*mean()*", "blue")`:
 
 
 ```{r}
@@ -457,7 +469,7 @@ mean(dados$comprimento)
 Como podemos verificar a média do comprimento na planilha dados é de 13.975.
 
 
-De maneira similar podemos calcular a mediana, que consiste no valor central da distribuição de valores de uma dada variável. Podemos visualiza-la por meio da função *median()*.
+De maneira similar podemos calcular a mediana, que consiste no valor central da distribuição de valores de uma dada variável. Podemos visualiza-la por meio da função `r colorize("*median()*", "blue")`.
 
 
 ```{r}
@@ -471,7 +483,7 @@ Como podemos verificar o valor que se encontra no meio da distribuição de valo
 As medidas de dispersão são utilizadas para demonstrar a variabilidade dos dados...[explicar mais]
 
 
-Os limites inferior e superior de uma dada variável quantitativa são denominados mínimo e máximo e podem ser obtidos por meio das funções que calculam o mínimo e máximo. Apesar de seu resultado aparecer na função *summary()*, que aplicamos anteriormente, podemos obte-la separadamente para uma variável especifica. Vamos conferi-la com o conjunto de dados que utilizamos anteriormente.
+Os limites inferior e superior de uma dada variável quantitativa são denominados mínimo e máximo e podem ser obtidos por meio das funções que calculam o mínimo e máximo. Apesar de seu resultado aparecer na função `r colorize("*summary()*", "blue")`, que aplicamos anteriormente, podemos obte-la separadamente para uma variável especifica. Vamos conferi-la com o conjunto de dados que utilizamos anteriormente.
 
 
 ```{r}
@@ -480,7 +492,7 @@ max(dados$comprimento)
 ```
 
 
-Uma outra forma de obter os valores máximo e mínimo é usando a função *range()*.
+Uma outra forma de obter os valores máximo e mínimo é usando a função `r colorize("*range()*", "blue")`.
 
 
 ```{r}
@@ -488,7 +500,7 @@ range(dados$comprimento)
 ```
 
 
-Como puderam verificar utilizando a função *min()* e *max()* ou *range()* obtemos os valores mínimo e máximo da variável comprimento. Repare que usamos o operador cifrão (**\$**) após o nome do conjunto de dados. Como você aprendeu anteriormente ele permite acessar as variáveis que estão dentro do objeto dados.
+Como puderam verificar utilizando a função `r colorize("*min()*", "blue")` e `r colorize("*max()*", "blue")` ou `r colorize("*range()*", "blue")` obtemos os valores mínimo e máximo da variável comprimento. Repare que usamos o operador cifrão (**\$**) após o nome do conjunto de dados. Como você aprendeu anteriormente ele permite acessar as variáveis que estão dentro do objeto dados.
 
 
 Com os valores mínimo e máximo podemos obter nossa primeira medida de dispersão dos dados. A amplitude que consiste na diferença entre os valores máximo e mínimo de nossa amostra. Está é a forma mais simples de verificar a dispersão de seus dados. Ela apresenta suas falhas, porém tem a vantagem de fornecer a distância na qual seus dados variam na mesma unidade em que eles estão.
@@ -505,7 +517,7 @@ max(dados$comprimento) - min(dados$comprimento)
 Como podemos ver, ao calcular a diferença entre o máximo e mínimo da mesma variável obtemos a diferença entre elas e esse valor consiste na amplitude desta variável.
 
 
-Uma outra forma de realizar esta mesma operação é utilizando a função *diff()* que calcula a diferença. Quando inserimos a função *range()* dentro da função *diff()* o R nos retorna o resultado da diferença dos valores obtidos pela função *range()*.
+Uma outra forma de realizar esta mesma operação é utilizando a função `r colorize("*diff()*", "blue")` que calcula a diferença. Quando inserimos a função `r colorize("*range()*", "blue")` dentro da função `r colorize("*diff()*", "blue")` o R nos retorna o resultado da diferença dos valores obtidos pela função `r colorize("*range()*", "blue")`.
 
 
 ```{r}
@@ -547,7 +559,7 @@ N
 
 * "comp" contêm os dados da variável comprimento presente na planilha dados
 * "comp.media" contêm um dado que consiste na média da variável comprimento
-* "N" representa a quantidade de observações presentes na variável comprimento. Repare que aqui utilizamos uma nova função chamada length() a qual contabiliza o número de observações de objeto.
+* "N" representa a quantidade de observações presentes na variável comprimento. Repare que aqui utilizamos uma nova função chamada `r colorize("*length()*", "blue")` a qual contabiliza o número de observações de objeto.
 
 
 ```{r}
@@ -569,7 +581,7 @@ Destas três formas cabe explicarmos a primeira. Nela vamos entender como lemos 
 Repare que a leitura segue a ordem dos passos do cálculo que seria feito a mão usando a equação apresentada acima.
 
 
-Mas caso não queira escrever a formula o R fornece a função *sd()* que pode ser aplicada a uma variável dentro de uma planilha de dados ou a um vetor que contenha um conjunto de observações do seu interesse.
+Mas caso não queira escrever a formula o R fornece a função `r colorize("*sd()*", "blue")` que pode ser aplicada a uma variável dentro de uma planilha de dados ou a um vetor que contenha um conjunto de observações do seu interesse.
 
 
 Pronto, agora enetendemos como ler um código que apresenta funções dentro de funções e entendemos como realizar o desvio padrão de três formas distintas (existem diversas outras formas) no R. Agora você já pode escolher a que mais lhe agrada. Qual você prefere? Bem, essa é uma escolha sua.
@@ -588,7 +600,7 @@ var(dados$comprimento)
 ```
 
 
-Pronto aqui estão 3 maneiras de encontrar a variância de seus dados. A primeira é similar ao que realizamos anteriormente para o desvio padrão porém sem a raíz quadrada. A segunda consiste em elevar ao quadrado o resultado do desvio padrão e a terceira é aplicando a função *var()* a variável comprimento presente na planilha dados.
+Pronto aqui estão 3 maneiras de encontrar a variância de seus dados. A primeira é similar ao que realizamos anteriormente para o desvio padrão porém sem a raíz quadrada. A segunda consiste em elevar ao quadrado o resultado do desvio padrão e a terceira é aplicando a função `r colorize("*var()*", "blue")` a variável comprimento presente na planilha dados.
 
 
 Difícil? Espero que não.
@@ -695,13 +707,13 @@ dados.3
 ```
 
 
-Repare que durante todo este processo utilizamos três funções que não haviamos utilizado antes. As funções *split()* que divide a planilha de acordo com as categorias presentes na variável que definimos, *as.data.frame()* que faz com que um conjunto de objetos sejam convertidos em data frame e *cbind()* o qual une objetos como colunas. Essas funções também serão comumente utilizadas durante seus passos iniciais no R.
+Repare que durante todo este processo utilizamos três funções que não haviamos utilizado antes. As funções `r colorize("*split()*", "blue")` que divide a planilha de acordo com as categorias presentes na variável que definimos, `r colorize("*as.data.frame()*", "blue")` que faz com que um conjunto de objetos sejam convertidos em data frame e `r colorize("*cbind()*", "blue")` o qual une objetos como colunas. Essas funções também serão comumente utilizadas durante seus passos iniciais no R.
 
 
 Pronto! depois de alguns passos conseguimos construir nossa nova tabela com os dados resumidos.
 
 
-É um processo longo porém necessário para se acostumar com o ambiente de trabalho e a linguagem que o R usa. Há caminhos mais rápidos e tão eficientes quanto. Que se tornam uteis quando lidamos com muitas categorias dentro de uma variável. Contudo para isso é necessário a instalação de algum pacote (Há vários pacotes que apresentam funções que realizam este processo). Vamos utilizar um exemplo começando pela instalação do pacote chamado Rmisc.
+É um processo longo porém necessário para se acostumar com o ambiente de trabalho e a linguagem que o R usa. Há caminhos mais rápidos e tão eficientes quanto. Que se tornam uteis quando lidamos com muitas categorias dentro de uma variável. Contudo para isso é necessário a instalação de algum pacote (Há vários pacotes que apresentam funções que realizam este processo). Vamos utilizar um exemplo começando pela instalação do pacote chamado `r colorize("*Rmisc*", "green")`.
 
 
 O comando abaixo realiza a instalação desse pacote. Conforme já fizemos com o pacote readxl
@@ -720,7 +732,7 @@ library(Rmisc)
 ```
 
 
-Agora vamos conhecer a função *summarySE()* deste pacote o qual realiza os passos que fizemos acima e ainda apresenta outros resultados. Mas iremos focar na média e desvio padrão.
+Agora vamos conhecer a função `r colorize("*summarySE()*", "blue")` deste pacote o qual realiza os passos que fizemos acima e ainda apresenta outros resultados. Mas iremos focar na média e desvio padrão.
 
 
 ```{r}
@@ -732,7 +744,7 @@ resultado
 ```
 
 
-Repare que a função *summarySE()* apresenta, basicamente, 3 argumentos, "data" que pede que se insira a planilha a ser utilizada, "measurevar" o qual pede a variável quantitativa que será sumarizada e "groupvars" o qual pede as variáveis categoricas segundo as quais a variável mensurável será agrupada. Observe também que para esta função as variáveis devem ser colocadas entre aspas.
+Repare que a função `r colorize("*summarySE()*", "blue")` apresenta, basicamente, 3 argumentos, "data" que pede que se insira a planilha a ser utilizada, "measurevar" o qual pede a variável quantitativa que será sumarizada e "groupvars" o qual pede as variáveis categoricas segundo as quais a variável mensurável será agrupada. Observe também que para esta função as variáveis devem ser colocadas entre aspas.
 
 
 Pronto com a função acima realizamos os mesmos passos que antes e guardamos o resultado dentro de um objeto chamado resultado. Repare que essa função nos resumiu os dados de comprimento de acordo com as duas variáveis categóricas que indicamos: ano e local. Em seu resumo ele nos forneceu, na seguinte ordem, a coluna ano, local, N (número de observações), comprimento (média do comprimento), sd (desvio padrão), se (erro padrão), ci (intervalo de confiança de 95%).
@@ -759,19 +771,19 @@ arrows(x0 = grafico,
 ```
 
 
-Note que nesta função *barplot()* utilizamos algumas mudanças em relação ao que fizemos anteriormente, como os argumentos "formula" o qual indica a variável resposta em função das variáveis categóricas o qual será plotado (Caso altere a ordem ano + local para local + ano a ordem do gráfico também será alterado. Teste você mesmo, veja o acontece). Neste caso como temos mais de uma variável categórica adicionamos um argumento novo chamado "legend.text" o qual adiciona uma legenda ao gráfico.
+Note que nesta função `r colorize("*barplot()*", "blue")` utilizamos algumas mudanças em relação ao que fizemos anteriormente, como os argumentos "formula" o qual indica a variável resposta em função das variáveis categóricas o qual será plotado (Caso altere a ordem ano + local para local + ano a ordem do gráfico também será alterado. Teste você mesmo, veja o acontece). Neste caso como temos mais de uma variável categórica adicionamos um argumento novo chamado "legend.text" o qual adiciona uma legenda ao gráfico.
 
 
-Para adicionar os desvios no gráfico de barras precisamos criar um objeto que armazena o gráfico, por isso adicionamos a função barplot() a um objeto denominado grafico.
+Para adicionar os desvios no gráfico de barras precisamos criar um objeto que armazena o gráfico, por isso adicionamos a função `r colorize("*barplot()*", "blue")` a um objeto denominado grafico.
 
 
-Agora que construimos o gráfico, a função *arrows()* é responsável por adicionar as barras de desvios no gráfico. Ela apresenta alguns argumentos diferentes do que já vimos em outros gráficos. "x0" indica o objeto onde o gráfico foi armazenado; "y0" e "y1" são escritos como uma operação matemática onde devemos incluir o valor da média + e - a coluna onde está a variável referente  ao desvio; "code" determina o tipo de seta que será plotada; "angle" é o ângulo da haste da barra até a ponta; "length" é o comprimento das bordas da barra.
+Agora que construimos o gráfico, a função `r colorize("*arrows()*", "blue")` é responsável por adicionar as barras de desvios no gráfico. Ela apresenta alguns argumentos diferentes do que já vimos em outros gráficos. "x0" indica o objeto onde o gráfico foi armazenado; "y0" e "y1" são escritos como uma operação matemática onde devemos incluir o valor da média + e - a coluna onde está a variável referente  ao desvio; "code" determina o tipo de seta que será plotada; "angle" é o ângulo da haste da barra até a ponta; "length" é o comprimento das bordas da barra.
 
 
 Terminamos de construir e entender os componentes do nosso primeiro gráfico com suas barras de erro.
 
 
-O entendimento principal para construção desse gráfico consiste em entender como organizar os dados a serem graficados. Ao se usar a função *barplot()* para construção do gráfico de barras com os desvios, devemos ter uma ou mais colunas com as categorias, outra com os valores que desejamos e outra com os valores dos desvios.
+O entendimento principal para construção desse gráfico consiste em entender como organizar os dados a serem graficados. Ao se usar a função `r colorize("*barplot()*", "blue")` para construção do gráfico de barras com os desvios, devemos ter uma ou mais colunas com as categorias, outra com os valores que desejamos e outra com os valores dos desvios.
 
 
 Vamos realizar um segundo tipo de gráfico onde temos apenas uma variável categórica e seus respectivos desvios. Para isso utilizaremos nosso conjunto de dados abundancia (lembre-se que mês é uma variável categórica e deve ser identificada como fator) (Figura \@ref(fig:bar-ep-abu)).
@@ -797,16 +809,14 @@ arrows(x0 = grafico,
 ```
 
 
-Repare que é quase a mesma coisa que fizemos antes. A única diferença é que guardamos o gráfico gerado em um objeto chamado grafico.
+Repare que é quase a mesma coisa que fizemos antes. A única diferença é que guardamos o gráfico gerado em um objeto chamado "grafico".
 
 
 Pronto, gráfico realizado.
 
 
-Durante nosso percurso neste livro realizaremos muito mais gráficos aliados as análises estatísticas básicas mais comumente utilizadas. Não se assuste com a quantidade de etapas e funções e argumentos e nomes, eles irão se repetir tantas e tantas vezes daqui em diante que você não esquecerá. O aprendizado do R é exponencial e ele lhe permitirá entender como nunca o mundo da análise de dados.
+Durante nosso percurso neste livro realizaremos muito mais gráficos aliados as análises estatísticas básicas mais comumente utilizadas. Não se assuste com a quantidade de etapas e funções e argumentos e nomes, eles irão se repetir tantas e tantas vezes daqui em diante que você não esquecerá. O aprendizado do R é exponencial e ele lhe permitirá entender como nunca o universo da análise de dados adequando-o para seu campo de atuação.
 
 
 **Resumo das etapas até o presente momento:**
 **importar planinha >> conferir as variáveis >> sumarizar numericamente os dados >> sumarizar graficamente os dados**
-
-**[TEMOS QUE FAZER UM ESQUEMA DESSAS ETAPAS]**

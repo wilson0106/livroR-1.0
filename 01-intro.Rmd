@@ -1,49 +1,62 @@
-# O que é o R?
+# R
+
+
+## O que é?
+
+É uma linguagem de programação derivada da linguagem S e desenvolvida pela Bell Laboratories (Atualmente Lucen Technologies).
+
+Para mais informações acesse: https://www.r-project.org/about.html
 
 
 ## Porque usá-lo para análise de dados?
 
 A estatística é essencial para que possamos entender melhor os ecossistemas que estudamos. Com ela podemos compreender melhor os dados que coletamos, sejam eles no âmbito de organismos microscópicos ou macroscópicos, além de dados ambientais. 
 
-
-Já existem uma grande variedade de programas estatísticos que podem satisfazer nossas necessidades na análise dos nossos dados. Então, porque devemos usar o programa R?
-
+Existe uma grande variedade de programas estatísticos que podem satisfazer nossas necessidades na análise dos nossos dados. Então, porque devemos usar o programa R?
 
 Primeiramente, o R é gratuito. A maioria dos outros programas disponíveis no mercado não são baratos. Em segundo lugar, é possível fazer no R todas as análises que os outros programas fazem. Portanto, não é preciso ter mais de um programa para se realizar diversas análises. 
 
-
-Vocês podem estar se perguntando se terão que aprender programação para trabalhar com R. A resposta é sim e não. As análises que são feitas no R são realizadas através de scripts, que são uma linguagem de programação. Todavia, nosso intuito com esta obra não é fazer com que você tenha que criar algum script do zero, mas sim que utilize os scripts que mostraremos em seus trabalhos. Por outro lado, é preciso saber como os scripts funcionam e como a plataforma do R funciona, pois apenas um pequeno erro na escrita pode fazer com que a análise não funcione. Mas não se preocupem, não é nenhum bicho de sete cabeças.
-
+Vocês podem estar se perguntando se terão que aprender programação para trabalhar com R. A resposta é sim e não. As análises que são feitas no R são realizadas através de linhas de comando de uma linguagem de programação modificada, de mais fácil compreensão e intuítiva. Todavia, nosso objetivo com esta obra não é fazer com que você tenha que criar algum *script* do zero, mas sim que utilize os comandos e a ideia presente que mostraremos aqui no seu aprendizado do R e estatística em seus trabalhos. Por outro lado, é preciso saber como a plataforma do R funciona, pois um pequeno erro na escrita pode fazer com que a análise não funcione. Mas não se preocupem, não é nenhum bicho de sete cabeças.
 
 Portanto, neste livro mostraremos desde como se importar uma tabela até fazer algumas análises estatísticas e gráficos que são vastamente utilizados na área ambiental.
 
 
-# O RStudio
+## O RStudio
 
+O RStudio foi construído especificamente para a linguagem R e é um ambiente de desenvolvimento integrado (no inglês IDE) (Figura \@ref(fig:RStudio)). Ele fornece uma interface gráfica mais amigável para os usuários em geral, principalmente para quem está iniciando no R. Além disso ele fornece características e recursos importantes para o universo da programação como *syntax highlighthing* que consiste em uma marcação diferenciada que nos sinaliza por meio de cores e outros atributos estéticos (ex.: texto em itálico) o que está sendo escrito indicando se é um objeto, função ou argumento, por exemplo; *code completion* quando digitarmos três caracteres de um objeto, função etc ele sinaliza os demais elementos presentes em sua memória que contém esses três caracteres; *smart indentation* o qual faz com que o texto que estamos digitando pule de linha automaticamente ao chegarmos no final do espaço porém ele mantém relação com a linha anterior; *Execute R code directly from the source editor* neste caso ele tem uma guia destinada ao seu *script*^[Local onde você irá escrever o código para execução de uma determinada tarefa] o qual permite executa-lo diretamente dele e o resultado irá aparecer em outra guia denominada *console*; *Quickly jump to function definitions* executada, em Windows e Linux, pelo atalho $ALT + SHIFT + G$ e que permite acessar mais rapidamente uma determinada linha do script; *Integrated R help and documentation* o qual traz consigo, em sua IDE, uma guia destinada a ajuda. Além destas ele traz diversas outras funcionalidades que tornam seu uso diário mais acessível e facilitado. Mais detalhes sobre acesse https://rstudio.com. 
 
-## O ambiente RStudio
+**[INSERIR PRINT DO RSTUDIO]**
 
+As guias mais importantes do RStudio para nosso uso.
 
-### Script
+1. Script: Área destinada a escrevermos o nosso código e comentários;
 
+**[INSERIR PRINT DA GUIA RELACIONADA AO SCRIPT]**
 
-### Environment
+2. Environment: Área destinada a indicar os objetos e funções criadas;
 
+**[INSERIR PRINT DA GUIA ENVIRONMENT]**
 
-### History
+3. History: Área destinada a indicar o histórico dos comandos executados;
 
+**[INSERIR PRINT DA GUIA HISTORY]**
 
-### Console
+4. Console: Área destinada ao resultado da execução do comando;
 
+**[INSERIR PRINT DA GUIA CONSOLE]**
 
-### Files
+5. Files: Área destinada a visualização e acesso dos arquivos do computador;
 
+**[INSERIR PRINT DA GUIA FILES]**
 
-### Packages
+6. Packages: Área destinada a visualização, instalação e carregamento dos pacotes/bibliotecas do R;
 
+**[INSERIR PRINT DA GUIA PACKAGES]**
 
-### Plot
+7. Plot: Área destinada a visualização dos gráficos executados;
 
+**[INSERIR PRINT DA GUIA PLOT]**
 
-### Help
+8. Help: Área destinada a fornecer informações sobre as funções e pacotes do R;
 
+**[INSERIR PRINT DA GUIA HELP]**

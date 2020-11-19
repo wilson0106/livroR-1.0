@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Sobre os autores | Introdução a análise de dados ambientais em R</title>
+  <title>Capítulo 1 R | Introdução a análise de dados ambientais em R</title>
   <meta name="description" content="Este é o primeiro livro da série de livros análise de dados ambientais em R" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Sobre os autores | Introdução a análise de dados ambientais em R" />
+  <meta property="og:title" content="Capítulo 1 R | Introdução a análise de dados ambientais em R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Sobre os autores | Introdução a análise de dados ambientais em R" />
+  <meta name="twitter:title" content="Capítulo 1 R | Introdução a análise de dados ambientais em R" />
   
   <meta name="twitter:description" content="Este é o primeiro livro da série de livros análise de dados ambientais em R" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="r.html"/>
+<link rel="prev" href="sobre-os-autores.html"/>
+<link rel="next" href="importar-organizar-e-sumarizar-os-dados.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -189,20 +189,74 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sobre-os-autores" class="section level1 unnumbered">
-<h1>Sobre os autores</h1>
-<p><strong>Wilson Souza</strong></p>
-<p>Possui graduação em Licenciatura em Ciências Biológicas pela Universidade Federal do Rio de Janeiro com dupla diplomação com a Universidade de Coimbra - Portugal, Bacharelado em Biologia Marinha pela Universidade Federal do Rio de Janeiro e Mestrado em Oceanografia Biológica pela Universidade Federal do Rio Grande. Desde 2012 trabalha em projetos de monitoramento de populações de camarões com foco em aspectos ecológicos e pesqueiros e em projetos de ecologia de benthos marinho. Aprendeu a linguagem R durante o mestrado e desde então tem se dedicado a ampliar seus conhecimentos em bioestatística voltado para análises ambientais e ecológicas de organismos bentônicos marinhos.</p>
-<p><strong>Thiago Couto</strong></p>
+<div id="r" class="section level1">
+<h1><span class="header-section-number">Capítulo 1</span> R</h1>
+<div id="o-que-é" class="section level2">
+<h2><span class="header-section-number">1.1</span> O que é?</h2>
+<p>É uma linguagem de programação derivada da linguagem S e desenvolvida pela Bell Laboratories (Atualmente Lucen Technologies).</p>
+<p>Para mais informações acesse: <a href="https://www.r-project.org/about.html" class="uri">https://www.r-project.org/about.html</a></p>
+</div>
+<div id="porque-usá-lo-para-análise-de-dados" class="section level2">
+<h2><span class="header-section-number">1.2</span> Porque usá-lo para análise de dados?</h2>
+<p>A estatística é essencial para que possamos entender melhor os ecossistemas que estudamos. Com ela podemos compreender melhor os dados que coletamos, sejam eles no âmbito de organismos microscópicos ou macroscópicos, além de dados ambientais.</p>
+<p>Existe uma grande variedade de programas estatísticos que podem satisfazer nossas necessidades na análise dos nossos dados. Então, porque devemos usar o programa R?</p>
+<p>Primeiramente, o R é gratuito. A maioria dos outros programas disponíveis no mercado não são baratos. Em segundo lugar, é possível fazer no R todas as análises que os outros programas fazem. Portanto, não é preciso ter mais de um programa para se realizar diversas análises.</p>
+<p>Vocês podem estar se perguntando se terão que aprender programação para trabalhar com R. A resposta é sim e não. As análises que são feitas no R são realizadas através de linhas de comando de uma linguagem de programação modificada, de mais fácil compreensão e intuítiva. Todavia, nosso objetivo com esta obra não é fazer com que você tenha que criar algum <em>script</em> do zero, mas sim que utilize os comandos e a ideia presente que mostraremos aqui no seu aprendizado do R e estatística em seus trabalhos. Por outro lado, é preciso saber como a plataforma do R funciona, pois um pequeno erro na escrita pode fazer com que a análise não funcione. Mas não se preocupem, não é nenhum bicho de sete cabeças.</p>
+<p>Portanto, neste livro mostraremos desde como se importar uma tabela até fazer algumas análises estatísticas e gráficos que são vastamente utilizados na área ambiental.</p>
+</div>
+<div id="o-rstudio" class="section level2">
+<h2><span class="header-section-number">1.3</span> O RStudio</h2>
+<p>O RStudio foi construído especificamente para a linguagem R e é um ambiente de desenvolvimento integrado (no inglês IDE) (Figura <a href="#fig:RStudio"><strong>??</strong></a>). Ele fornece uma interface gráfica mais amigável para os usuários em geral, principalmente para quem está iniciando no R. Além disso ele fornece características e recursos importantes para o universo da programação como <em>syntax highlighthing</em> que consiste em uma marcação diferenciada que nos sinaliza por meio de cores e outros atributos estéticos (ex.: texto em itálico) o que está sendo escrito indicando se é um objeto, função ou argumento, por exemplo; <em>code completion</em> quando digitarmos três caracteres de um objeto, função etc ele sinaliza os demais elementos presentes em sua memória que contém esses três caracteres; <em>smart indentation</em> o qual faz com que o texto que estamos digitando pule de linha automaticamente ao chegarmos no final do espaço porém ele mantém relação com a linha anterior; <em>Execute R code directly from the source editor</em> neste caso ele tem uma guia destinada ao seu <em>script</em><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> o qual permite executa-lo diretamente dele e o resultado irá aparecer em outra guia denominada <em>console</em>; <em>Quickly jump to function definitions</em> executada, em Windows e Linux, pelo atalho <span class="math inline">\(ALT + SHIFT + G\)</span> e que permite acessar mais rapidamente uma determinada linha do script; <em>Integrated R help and documentation</em> o qual traz consigo, em sua IDE, uma guia destinada a ajuda. Além destas ele traz diversas outras funcionalidades que tornam seu uso diário mais acessível e facilitado. Mais detalhes sobre acesse <a href="https://rstudio.com" class="uri">https://rstudio.com</a>.</p>
+<p><strong>[INSERIR PRINT DO RSTUDIO]</strong></p>
+<p>As guias mais importantes do RStudio para nosso uso.</p>
+<ol style="list-style-type: decimal">
+<li>Script: Área destinada a escrevermos o nosso código e comentários;</li>
+</ol>
+<p><strong>[INSERIR PRINT DA GUIA RELACIONADA AO SCRIPT]</strong></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Environment: Área destinada a indicar os objetos e funções criadas;</li>
+</ol>
+<p><strong>[INSERIR PRINT DA GUIA ENVIRONMENT]</strong></p>
+<ol start="3" style="list-style-type: decimal">
+<li>History: Área destinada a indicar o histórico dos comandos executados;</li>
+</ol>
+<p><strong>[INSERIR PRINT DA GUIA HISTORY]</strong></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Console: Área destinada ao resultado da execução do comando;</li>
+</ol>
+<p><strong>[INSERIR PRINT DA GUIA CONSOLE]</strong></p>
+<ol start="5" style="list-style-type: decimal">
+<li>Files: Área destinada a visualização e acesso dos arquivos do computador;</li>
+</ol>
+<p><strong>[INSERIR PRINT DA GUIA FILES]</strong></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Packages: Área destinada a visualização, instalação e carregamento dos pacotes/bibliotecas do R;</li>
+</ol>
+<p><strong>[INSERIR PRINT DA GUIA PACKAGES]</strong></p>
+<ol start="7" style="list-style-type: decimal">
+<li>Plot: Área destinada a visualização dos gráficos executados;</li>
+</ol>
+<p><strong>[INSERIR PRINT DA GUIA PLOT]</strong></p>
+<ol start="8" style="list-style-type: decimal">
+<li>Help: Área destinada a fornecer informações sobre as funções e pacotes do R;</li>
+</ol>
+<p><strong>[INSERIR PRINT DA GUIA HELP]</strong></p>
 
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Local onde você irá escrever o código para execução de uma determinada tarefa<a href="r.html#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="sobre-os-autores.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="importar-organizar-e-sumarizar-os-dados.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
