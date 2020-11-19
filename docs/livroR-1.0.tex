@@ -156,6 +156,16 @@ Possui graduação em Licenciatura em Ciências Biológicas pela Universidade Fe
 \hypertarget{porque-usuxe1-lo-para-anuxe1lise-de-dados}{%
 \section{Porque usá-lo para análise de dados?}\label{porque-usuxe1-lo-para-anuxe1lise-de-dados}}
 
+A estatística é essencial para que possamos entender melhor os ecossistemas que estudamos. Com ela podemos compreender melhor os dados que coletamos, sejam eles no âmbito de organismos microscópicos ou macroscópicos, além de dados ambientais.
+
+Já existem uma grande variedade de programas estatísticos que podem satisfazer nossas necessidades na análise dos nossos dados. Então, porque devemos usar o programa R?
+
+Primeiramente, o R é gratuito. A maioria dos outros programas disponíveis no mercado não são baratos. Em segundo lugar, é possível fazer no R todas as análises que os outros programas fazem. Portanto, não é preciso ter mais de um programa para se realizar diversas análises.
+
+Vocês podem estar se perguntando se terão que aprender programação para trabalhar com R. A resposta é sim e não. As análises que são feitas no R são realizadas através de scripts, que são uma linguagem de programação. Todavia, nosso intuito com esta obra não é fazer com que você tenha que criar algum script do zero, mas sim que utilize os scripts que mostraremos em seus trabalhos. Por outro lado, é preciso saber como os scripts funcionam e como a plataforma do R funciona, pois apenas um pequeno erro na escrita pode fazer com que a análise não funcione. Mas não se preocupem, não é nenhum bicho de sete cabeças.
+
+Portanto, neste livro mostraremos desde como se importar uma tabela até fazer algumas análises estatísticas e gráficos que são vastamente utilizados na área ambiental.
+
 \hypertarget{o-rstudio}{%
 \chapter{O RStudio}\label{o-rstudio}}
 
@@ -192,23 +202,33 @@ Possui graduação em Licenciatura em Ciências Biológicas pela Universidade Fe
 \hypertarget{primeiro-passo-importando-a-planilha-de-dados-para-o-r}{%
 \section{Primeiro passo: Importando a planilha de dados para o R}\label{primeiro-passo-importando-a-planilha-de-dados-para-o-r}}
 
-Ao se trabalhar com R a primeira pergunta que nos vem a cabeça é: Como inserir meus dados neste ambiente de trabalho? A resposta é simples e também complexa. Pois depende do formato do arquivo de dados que está usando ( *.csv, *.xls, *.xlsx, *.txt entre outros) e para o mesmo formato existem inúmeras vias possíveis para se fazer isso. Não vou especificar todas as vias, mas as mais comuns utilizando os comandos básicos do R e por meio da interface gráfica do RStudio.
+Ao se trabalhar com R a primeira pergunta que nos vem a cabeça é: Como inserir meus dados neste ambiente de trabalho? A resposta é simples e também complexa. Pois depende do formato do arquivo de dados que está usando ( *.csv, *.xls, *.xlsx, *.txt entre outros) e para o mesmo formato existem inúmeras vias possíveis para se fazer isso. Não iremos especificar todas as vias, mas as mais comuns, utilizando os comandos básicos do R e também por meio da interface gráfica do RStudio.
 
-Porém para importar a planilha é necessário definir o ambiente de trabalho no seu computador. Este ambiente é onde sua planilha e seus demais dados a serem trabalhados estão. Podemos realizar isso por via de comandos ou também pela própria interface dos RStudio. Se realizado por via de comandos há diferença entre o sistema operacional (Windows, Linux ou macOS) que estiver utilizando.
+Para importar a planilha é necessário definir o ambiente de trabalho no seu computador. Este ambiente é onde sua planilha e seus demais dados a serem trabalhados estão. Podemos realizar isso via linhas de comando ou pela própria interface do RStudio. Se realizado por linhas de comandos há diferença entre o sistema operacional (Windows, Linux ou macOS) que estiver utilizando.
 
-setwd(choose.dir(``path'')) \# path é o caminho do diretório escolhido para Windows
-setwd(``path'') \# path é o caminho do diretório escolhido para Linux
+Para o sistema operacional Windows utilizamos o seguinte comando: \textcolor{blue}{setwd(choose.dir(*path*))} e para Linux utilizamos \textcolor{blue}{setwd(*path*)}, onde \emph{path} é o caminho do diretório escolhido.
 
-\textbf{{[}INSERIR PRINTS E EXPLICAÇÃO DA VIA GRÁFICA DE DEFINIÇÃO DO AMBIENTE DE TRABALHO{]}}
+Se no Windows utilizarmos apenas a linha de comando \textcolor{blue}{setwd(choose.dir())} sem especificar o caminho a seguinte janela irá aparecer (Figura \ref{fig:setwd}), a partir da qual iremos selecionar a pasta onde estão os arquivos que iremos trabalhar e salvar nosso script.
+
+\begin{figure}
+
+{\centering \includegraphics[width=4.44in]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/setwd} 
+
+}
+
+\caption{Janela que será aberta ao executar o comando: **setwd(choose.dir()**, no sistema operacional Windows.}\label{fig:setwd}
+\end{figure}
+
+\textbf{{[}INSERIR PRINT DA GUIA FILES APÓS A PASTA TER SIDO SELECIONADA{]}}
 
 \emph{setwd()} é a função responsável por escolher e definir o diretório a ser trabalhado. Após isso podemos importar a planilha com os dados que utilizaremos.
 
-Imagine a seguinte planilha no formato *.xlsx, previamente criada em um editor de planilhas, como excel, libreoffice calc e outros.
+Construa a planilha a seguir (Figura \ref{fig:planilha}) no formato *.csv (usando vírgula como separador de colunas e ponto como separador decimal) e *.xlsx em um editor de planilhas, como excel, libreoffice calc ou outros e a salve com o nome de planilha.csv e planilha.xlsx. A seguir faremos a importação desta planilha.
 
 \textbf{{[}Inserir imagem da planilha{]}}
 
-\hypertarget{importando-a-planilha-por-meio-de-comandos}{%
-\subsection{Importando a planilha por meio de comandos:}\label{importando-a-planilha-por-meio-de-comandos}}
+\hypertarget{importando-a-planilha-por-linhas-de-comandos}{%
+\subsection{Importando a planilha por linhas de comandos:}\label{importando-a-planilha-por-linhas-de-comandos}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -239,6 +259,9 @@ O comando \emph{read\_excel()} é similar ao \emph{read.csv()} embora seus argum
 
 \textbf{{[}Inserir imagem do processo de importação via interface gráfica{]}}
 \textbf{{[}Inserir imagem do resultado de importação - o arquivo presente no environment{]}}
+
+\hypertarget{importando-a-planilha-pela-via-gruxe1fica}{%
+\subsection{Importando a planilha pela via gráfica:}\label{importando-a-planilha-pela-via-gruxe1fica}}
 
 \hypertarget{segundo-passo-ajustando-os-dados}{%
 \section{Segundo passo: Ajustando os dados}\label{segundo-passo-ajustando-os-dados}}
@@ -1116,7 +1139,7 @@ Terminamos de construir e entender os componentes do nosso primeiro gráfico com
 
 O entendimento principal para construção desse gráfico consiste em entender como organizar os dados a serem graficados. Ao se usar a função \emph{barplot()} para construção do gráfico de barras com os desvios, devemos ter uma ou mais colunas com as categorias, outra com os valores que desejamos e outra com os valores dos desvios.
 
-Vamos realizar um segundo tipo de gráfico onde temos apenas uma variável categórica e seus respectivos desvios. Para isso utilizaremos nosso conjunto de dados abundancia (lembre-se que mês é uma variável categórica e deve ser identificada como fator) (Figura @ref(fig(bar-ep-abu))).
+Vamos realizar um segundo tipo de gráfico onde temos apenas uma variável categórica e seus respectivos desvios. Para isso utilizaremos nosso conjunto de dados abundancia (lembre-se que mês é uma variável categórica e deve ser identificada como fator) (Figura \ref{fig:bar-ep-abu}).
 
 Neste conjunto de dados não precisamos reorganizar os dados pois eles já se encontram organizados e já temos os valores dos desvios.
 
@@ -1366,7 +1389,7 @@ Imagine que você foi em campo e contabilizou as espécies de cracas que identif
 ##  on 2000 replicates)
 ## 
 ## data:  N.especies
-## X-squared = 4, df = NA, p-value = 0.06297
+## X-squared = 4, df = NA, p-value = 0.05997
 \end{verbatim}
 
 Pronto. Basta usarmos o argumento simulate.p.value e indicar ``FALSE'' quando não queremos a simulação de Monte Carlo, ou apenas omitirmos este argumento, ou usar este argumento e indicar ``TRUE'' o qual realiza a simulação de Monte Carlo. Verifique que com a aplicação desta simulação o p-value aumenta indicando que torna mais dificil rejeitarmos a hipótese nula. Após aplicarmos a correção na nossa análise podemos afirmar que não há diferença na quantidade de cracas observadas em relação as proporções esperadas, para ambas as espécies de cracas.

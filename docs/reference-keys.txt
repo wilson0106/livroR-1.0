@@ -1,3 +1,4 @@
+fig:setwd
 fig:comp-hist
 fig:comp-hist-col
 fig:bar-abu
@@ -43,7 +44,8 @@ plot
 help
 importação-organização-e-sumarização-dos-dados
 primeiro-passo-importando-a-planilha-de-dados-para-o-r
-importando-a-planilha-por-meio-de-comandos
+importando-a-planilha-por-linhas-de-comandos
+importando-a-planilha-pela-via-gráfica
 segundo-passo-ajustando-os-dados
 terceiro-passo-sumarizando-os-dados-graficamente
 histogramas

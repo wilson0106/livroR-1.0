@@ -3,10 +3,22 @@
 
 ## Porque usá-lo para análise de dados?
 
+A estatística é essencial para que possamos entender melhor os ecossistemas que estudamos. Com ela podemos compreender melhor os dados que coletamos, sejam eles no âmbito de organismos microscópicos ou macroscópicos, além de dados ambientais. 
+
+
+Já existem uma grande variedade de programas estatísticos que podem satisfazer nossas necessidades na análise dos nossos dados. Então, porque devemos usar o programa R?
+
+
+Primeiramente, o R é gratuito. A maioria dos outros programas disponíveis no mercado não são baratos. Em segundo lugar, é possível fazer no R todas as análises que os outros programas fazem. Portanto, não é preciso ter mais de um programa para se realizar diversas análises. 
+
+
+Vocês podem estar se perguntando se terão que aprender programação para trabalhar com R. A resposta é sim e não. As análises que são feitas no R são realizadas através de scripts, que são uma linguagem de programação. Todavia, nosso intuito com esta obra não é fazer com que você tenha que criar algum script do zero, mas sim que utilize os scripts que mostraremos em seus trabalhos. Por outro lado, é preciso saber como os scripts funcionam e como a plataforma do R funciona, pois apenas um pequeno erro na escrita pode fazer com que a análise não funcione. Mas não se preocupem, não é nenhum bicho de sete cabeças.
+
+
+Portanto, neste livro mostraremos desde como se importar uma tabela até fazer algumas análises estatísticas e gráficos que são vastamente utilizados na área ambiental.
 
 
 # O RStudio
-
 
 
 ## O ambiente RStudio

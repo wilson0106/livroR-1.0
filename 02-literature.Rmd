@@ -9,29 +9,38 @@ output:
 ## Primeiro passo: Importando a planilha de dados para o R
 
 
-Ao se trabalhar com R a primeira pergunta que nos vem a cabeça é: Como inserir meus dados neste ambiente de trabalho? A resposta é simples e também complexa. Pois depende do formato do arquivo de dados que está usando ( \*.csv, \*.xls, \*.xlsx, \*.txt entre outros) e para o mesmo formato existem inúmeras vias possíveis para se fazer isso. Não vou especificar todas as vias, mas as mais comuns utilizando os comandos básicos do R e por meio da interface gráfica do RStudio.
+Ao se trabalhar com R a primeira pergunta que nos vem a cabeça é: Como inserir meus dados neste ambiente de trabalho? A resposta é simples e também complexa. Pois depende do formato do arquivo de dados que está usando ( \*.csv, \*.xls, \*.xlsx, \*.txt entre outros) e para o mesmo formato existem inúmeras vias possíveis para se fazer isso. Não iremos especificar todas as vias, mas as mais comuns, utilizando os comandos básicos do R e também por meio da interface gráfica do RStudio.
 
 
-Porém para importar a planilha é necessário definir o ambiente de trabalho no seu computador. Este ambiente é onde sua planilha e seus demais dados a serem trabalhados estão. Podemos realizar isso por via de comandos ou também pela própria interface dos RStudio. Se realizado por via de comandos há diferença entre o sistema operacional (Windows, Linux ou macOS) que estiver utilizando.
+Para importar a planilha é necessário definir o ambiente de trabalho no seu computador. Este ambiente é onde sua planilha e seus demais dados a serem trabalhados estão. Podemos realizar isso via linhas de comando ou pela própria interface do RStudio. Se realizado por linhas de comandos há diferença entre o sistema operacional (Windows, Linux ou macOS) que estiver utilizando.
 
 
-setwd(choose.dir("path")) # path é o caminho do diretório escolhido para Windows
-setwd("path") # path é o caminho do diretório escolhido para Linux
+Para o sistema operacional Windows utilizamos o seguinte comando: `r colorize("setwd(choose.dir(*path*))", "blue")` e para Linux utilizamos `r colorize("setwd(*path*)", "blue")`, onde *path* é o caminho do diretório escolhido.
 
 
-**[INSERIR PRINTS E EXPLICAÇÃO DA VIA GRÁFICA DE DEFINIÇÃO DO AMBIENTE DE TRABALHO]**
+Se no Windows utilizarmos apenas a linha de comando `r colorize("setwd(choose.dir())", "blue")` sem especificar o caminho a seguinte janela irá aparecer (Figura \@ref(fig:setwd)), a partir da qual iremos selecionar a pasta onde estão os arquivos que iremos trabalhar e salvar nosso script.
+
+
+```{r setwd, echo = FALSE, fig.cap = "Janela que será aberta ao executar o comando: **setwd(choose.dir()**, no sistema operacional Windows.", fig.align = "center"}
+
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/setwd.JPG')
+
+```
+
+
+**[INSERIR PRINT DA GUIA FILES APÓS A PASTA TER SIDO SELECIONADA]**
 
 
 *setwd()* é a função responsável por escolher e definir o diretório a ser trabalhado. Após isso podemos importar a planilha com os dados que utilizaremos.
 
 
-Imagine a seguinte planilha no formato \*.xlsx, previamente criada em um editor de planilhas, como excel, libreoffice calc e outros.
+Construa a planilha a seguir (Figura \@ref(fig:planilha)) no formato \*.csv (usando vírgula como separador de colunas e ponto como separador decimal) e \*.xlsx em um editor de planilhas, como excel, libreoffice calc ou outros e a salve com o nome de planilha.csv e planilha.xlsx. A seguir faremos a importação desta planilha.
 
 
 **[Inserir imagem da planilha]**
 
 
-### Importando a planilha por meio de comandos:
+### Importando a planilha por linhas de comandos:
 
 
 ```{r}
@@ -64,6 +73,10 @@ O comando *read_excel()* é similar ao *read.csv()* embora seus argumentos sejam
 
 **[Inserir imagem do processo de importação via interface gráfica]**
 **[Inserir imagem do resultado de importação - o arquivo presente no environment]**
+
+
+### Importando a planilha pela via gráfica:
+
 
 
 ## Segundo passo: Ajustando os dados
@@ -761,7 +774,7 @@ Terminamos de construir e entender os componentes do nosso primeiro gráfico com
 O entendimento principal para construção desse gráfico consiste em entender como organizar os dados a serem graficados. Ao se usar a função *barplot()* para construção do gráfico de barras com os desvios, devemos ter uma ou mais colunas com as categorias, outra com os valores que desejamos e outra com os valores dos desvios.
 
 
-Vamos realizar um segundo tipo de gráfico onde temos apenas uma variável categórica e seus respectivos desvios. Para isso utilizaremos nosso conjunto de dados abundancia (lembre-se que mês é uma variável categórica e deve ser identificada como fator) (Figura \@ref(fig(bar-ep-abu))).
+Vamos realizar um segundo tipo de gráfico onde temos apenas uma variável categórica e seus respectivos desvios. Para isso utilizaremos nosso conjunto de dados abundancia (lembre-se que mês é uma variável categórica e deve ser identificada como fator) (Figura \@ref(fig:bar-ep-abu)).
 
 
 Neste conjunto de dados não precisamos reorganizar os dados pois eles já se encontram organizados e já temos os valores dos desvios.
