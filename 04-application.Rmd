@@ -717,4 +717,4 @@ mtext(at = 4,
 ```
 
 
-Como podem ver a função *mtext()* indicou os nomes Observador 1 e Observador 2 no lado do gráfico que os representa. O argumento "at" indica a posição  em relação ao eixo x, "line" indica a posição em relação ao eixo y, "text" indica o que será plotado e side indica o lado da janela gráfica onde o texto será plotado (3 é na parte superior e 1 na inferior).
+Como podem visualizar a função *mtext()* indicou os nomes Observador 1 e Observador 2 no lado do gráfico que os representa. O argumento "at" indica a posição  em relação ao eixo x, "line" indica a posição em relação ao eixo y, "text" indica o que será plotado e side indica o lado da janela gráfica onde o texto será plotado (3 é na parte superior e 1 na inferior).
