@@ -16,47 +16,77 @@ Existe uma grande variedade de programas estatísticos que podem satisfazer noss
 
 Primeiramente, o R é gratuito. A maioria dos outros programas disponíveis no mercado não são baratos. Em segundo lugar, é possível fazer no R todas as análises que os outros programas fazem. Portanto, não é preciso ter mais de um programa para se realizar diversas análises. 
 
-Vocês podem estar se perguntando se terão que aprender programação para trabalhar com R. A resposta é sim e não. As análises que são feitas no R são realizadas através de linhas de comando de uma linguagem de programação modificada, de mais fácil compreensão e intuítiva. Todavia, nosso objetivo com esta obra não é fazer com que você tenha que criar algum *script* do zero, mas sim que utilize os comandos e a ideia presente que mostraremos aqui no seu aprendizado do R e estatística em seus trabalhos. Por outro lado, é preciso saber como a plataforma do R funciona, pois um pequeno erro na escrita pode fazer com que a análise não funcione. Mas não se preocupem, não é nenhum bicho de sete cabeças.
+Vocês podem estar se perguntando se terão que aprender programação para trabalhar com R. A resposta é sim e não. As análises que são feitas no R são realizadas através de linhas de comando de uma linguagem de programação modificada, de mais fácil compreensão e intuítiva. Todavia, nosso objetivo com esta obra não é fazer com que você tenha que criar algum *script* do zero, mas que utilize os comandos e a ideia presente aqui no seu aprendizado do R e estatística em seus trabalhos. Por outro lado, é preciso saber como a plataforma do R funciona, pois um pequeno erro na escrita pode fazer com que a análise não funcione. Mas não se preocupem iremos tentar facilita-lo para você.
 
 Portanto, neste livro mostraremos desde como se importar uma tabela até fazer algumas análises estatísticas e gráficos que são vastamente utilizados na área ambiental.
 
 
 ## O RStudio
 
-O RStudio foi construído especificamente para a linguagem R e é um ambiente de desenvolvimento integrado (no inglês IDE) (Figura \@ref(fig:RStudio)). Ele fornece uma interface gráfica mais amigável para os usuários em geral, principalmente para quem está iniciando no R. Além disso ele fornece características e recursos importantes para o universo da programação como *syntax highlighthing* que consiste em uma marcação diferenciada que nos sinaliza por meio de cores e outros atributos estéticos (ex.: texto em itálico) o que está sendo escrito indicando se é um objeto, função ou argumento, por exemplo; *code completion* quando digitarmos três caracteres de um objeto, função etc ele sinaliza os demais elementos presentes em sua memória que contém esses três caracteres; *smart indentation* o qual faz com que o texto que estamos digitando pule de linha automaticamente ao chegarmos no final do espaço porém ele mantém relação com a linha anterior; *Execute R code directly from the source editor* neste caso ele tem uma guia destinada ao seu *script*^[Local onde você irá escrever o código para execução de uma determinada tarefa] o qual permite executa-lo diretamente dele e o resultado irá aparecer em outra guia denominada *console*; *Quickly jump to function definitions* executada, em Windows e Linux, pelo atalho $ALT + SHIFT + G$ e que permite acessar mais rapidamente uma determinada linha do script; *Integrated R help and documentation* o qual traz consigo, em sua IDE, uma guia destinada a ajuda. Além destas ele traz diversas outras funcionalidades que tornam seu uso diário mais acessível e facilitado. Mais detalhes sobre acesse https://rstudio.com. 
+O RStudio foi construído especificamente para a linguagem R e é um ambiente de desenvolvimento integrado (no inglês IDE) (Figura \@ref(fig:RStudio)). Ele fornece uma interface gráfica mais amigável para os usuários em geral, principalmente para quem está iniciando no R. Além disso ele fornece características e recursos importantes para o universo da programação, tais como: *syntax highlighthing* que consiste em uma marcação diferenciada que nos sinaliza por meio de cores e outros atributos estéticos (ex.: texto em itálico) o que está sendo escrito, indicando se é um objeto, função ou argumento, por exemplo; *code completion* quando digitamos três caracteres de um objeto, função ele sinaliza os demais elementos presentes em sua memória que contém esses três caracteres; *smart indentation* o qual faz com que o texto que estamos digitando pule de linha automaticamente ao chegarmos no final do espaço porém ele mantém relação com a linha anterior^[por padrão não está ativado, precisa ser ativado nas opções do programa]; *Execute R code directly from the source editor* neste caso ele tem uma guia destinada ao seu *script*^[Local onde você irá escrever o código para execução de uma determinada tarefa] o qual permite executa-lo diretamente dele e o resultado irá aparecer em outra guia denominada *console*; *Quickly jump to function definitions* executada, em Windows e Linux, pelo atalho $ALT + SHIFT + G$ e que permite acessar mais rapidamente uma determinada linha do script; *Integrated R help and documentation* o qual traz consigo, em sua IDE, uma guia destinada a ajuda. Além destas ele traz diversas outras funcionalidades que tornam o seu uso diário mais acessível e facilitado. Mais detalhes sobre acesse https://rstudio.com. 
 
-**[INSERIR PRINT DO RSTUDIO]**
+```{r RStudio, message = FALSE, echo = FALSE, fig.align = "center", fig.cap = "Ambiente RStudio.", out.width = '60%'}
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/RStudio.png')
+```
 
-As guias mais importantes do RStudio para nosso uso.
 
-1. Script: Área destinada a escrevermos o nosso código e comentários;
+O primeiro passo para que possamos compreender o R e o RStudio e o que podemos fazer com ele consiste em entender a sua estrutura como ela está organizada e o que ela significa. Uma vez compreendida sua estrutura organizacional e funcionalidade poderemos mergulhar no mundo das análises de dados dentro deste novo ambiente.
 
-**[INSERIR PRINT DA GUIA RELACIONADA AO SCRIPT]**
 
-2. Environment: Área destinada a indicar os objetos e funções criadas;
+Para isso veremos as principais guias do RStudio, como elas estão organizadas e quais as suas funcionalidades.
 
-**[INSERIR PRINT DA GUIA ENVIRONMENT]**
 
-3. History: Área destinada a indicar o histórico dos comandos executados;
+1. Script: Área destinada a escrevermos o nosso código e comentários, para executar os comandos escritos neste ambiente devemos deixar o cursor na linha que queremos executar e utilizar os atalhos do teclado $(CTRL + ENTER)$ ou $(CTRL + R)$ ou clicar em "**Run**" (Figura \@ref(fig:script));
 
-**[INSERIR PRINT DA GUIA HISTORY]**
+```{r script, message = FALSE, echo = FALSE, fig.cap = "Guia do RStudio referente ao ambiente onde o script será desenvolvido.", fig.align = "center", out.width = '60%'}
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/script.png')
+```
 
-4. Console: Área destinada ao resultado da execução do comando;
 
-**[INSERIR PRINT DA GUIA CONSOLE]**
+2. Environment: Área destinada a indicar os objetos e funções criadas (Figura \@ref(fig:environment));
 
-5. Files: Área destinada a visualização e acesso dos arquivos do computador;
+```{r environment, message = FALSE, echo = FALSE, fig.cap = "Guia do RStudio referente ao ambiente environment, local onde estarão indicados os objetos criados.", fig.align = "center", out.width = '60%'}
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/environment.png')
+```
 
-**[INSERIR PRINT DA GUIA FILES]**
 
-6. Packages: Área destinada a visualização, instalação e carregamento dos pacotes/bibliotecas do R;
+3. History: Área destinada a indicar o histórico dos comandos executados (Figura \@ref(fig:history));
 
-**[INSERIR PRINT DA GUIA PACKAGES]**
+```{r history, message = FALSE, echo = FALSE, fig.cap = "Guia do RStudio referente ao ambiente history onde estará listado todos os comandos executados.", fig.align = "center", out.width = '60%'}
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/history.png')
+```
 
-7. Plot: Área destinada a visualização dos gráficos executados;
 
-**[INSERIR PRINT DA GUIA PLOT]**
+4. Console: Área destinada ao resultado da execução do comando (Figura \@ref(fig:console));
 
-8. Help: Área destinada a fornecer informações sobre as funções e pacotes do R;
+```{r console, message = FALSE, echo = FALSE, fig.cap = "Guia do RStudio referente ao ambiente console onde o resultado dos comandos executados irão aparecer.", fig.align = "center", out.width = '60%'}
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/console.png')
+```
 
-**[INSERIR PRINT DA GUIA HELP]**
+
+5. Files: Área destinada a visualização e acesso dos arquivos do computador (Figura \@ref(fig:files));
+
+```{r files, message = FALSE, echo = FALSE, fig.cap = "Guia do RStudio referente ao ambiente files onde estará indicados os arquivos do nosso computador.", fig.align = "center", out.width = '60%'}
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/files.png')
+```
+
+
+6. Packages: Área destinada a visualização, instalação e carregamento dos pacotes/bibliotecas do R (Figura \@ref(fig:packages));
+
+```{r packages, message = FALSE, echo = FALSE, fig.cap = "Guia do RStudio referente ao ambiente packages onde estarão listados todos os pacotes disponíveis no nosso computador e por onde poderemos instalar outros.", fig.align = "center", out.width = '60%'}
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/packages.png')
+```
+
+
+7. Plot: Área destinada a visualização dos gráficos executados (Figura \@ref(fig:plot));
+
+```{r plot, message = FALSE, echo = FALSE, fig.cap = "Guia do RStudio referente ao ambiente plot onde estarão os gráficos criados.", fig.align = "center", out.width = '60%'}
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/plot.png')
+```
+
+
+8. Help: Área destinada a fornecer informações sobre as funções e pacotes do R (Figura \@ref(fig:help));
+
+```{r help, message = FALSE, echo = FALSE, fig.cap = "Guia do RStudio referente ao ambiente help onde terá informações sobre as funções e pacotes do R.", fig.align = "center", out.width = '60%'}
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/help.png')
+```

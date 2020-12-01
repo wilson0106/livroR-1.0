@@ -1,3 +1,12 @@
+fig:RStudio
+fig:script
+fig:environment
+fig:history
+fig:console
+fig:files
+fig:packages
+fig:plot
+fig:help
 fig:setwd
 fig:comp-hist
 fig:comp-hist-col
@@ -39,10 +48,10 @@ passo-definir-o-ambiente-de-trabalho-e-importar-a-planilha-de-dados-para-o-r
 definir-ambiente-de-trabalho-via-linha-de-comando
 definir-ambiente-de-trabalho-via-interface-gráfica
 importar-planilha-via-linha-de-comando
-importar-planilha-pela-via-interface-gráfica
+importar-planilha-via-interface-gráfica
 passo-ajustar-os-dados
 passo-sumarizar-os-dados-graficamente
-histogramas
+histograma
 gráfico-de-barras
 gráfico-de-linhas
 boxplot
