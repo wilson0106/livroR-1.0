@@ -509,8 +509,8 @@ Neste momento uma janela irá abrir (Figura \ref{fig:import-graf-2}) e no canto 
 \caption{mudar a figura e fazer a legenda}\label{fig:import-graf-2}
 \end{figure}
 
-\hypertarget{passo-ajustar-os-dados}{%
-\section{2° passo: Ajustar os dados}\label{passo-ajustar-os-dados}}
+\hypertarget{passo-verificar-e-ajustar-os-dados}{%
+\section{2° passo: Verificar e ajustar os dados}\label{passo-verificar-e-ajustar-os-dados}}
 
 Uma falha comum de muitos usuários iniciantes é passar para as análises antes de verificar se a planilha está organizada corretamente. Uma forma de previnir isso é conhecendo os seus dados e sabendo o que eles significam. Os dados, geralmente, podem ser: categóricos/qualitativos ou mensuráveis/quantitativos. Quando qualitativos temos de informar que eles consistem em fatores. Para isso vamos executar alguns comandos onde poderemos avaliar se no processo de importação as variáveis presentes na planilha de dados são reconhecidas como esperamos que seja.
 
@@ -1419,7 +1419,7 @@ Durante nosso percurso neste livro realizaremos muito mais gráficos aliados as 
 
 }
 
-\caption{Resumo dos passos abordados no capítulo: da definição do ambiente de trabalho até a sumarização dos dados. Com a indicação das funções mais importantes que devem e podem ser aplicadas para cada etapa.}\label{fig:resumo1}
+\caption{Resumo dos passos abordados no capítulo: da definição do ambiente de trabalho até a sumarização dos dados.}\label{fig:resumo1}
 \end{figure}
 
 \hypertarget{qui-quadrado-chi}{%
@@ -1633,7 +1633,7 @@ Imagine que você foi em campo e contabilizou as espécies de cracas que identif
 ##  on 2000 replicates)
 ## 
 ## data:  N.especies
-## X-squared = 4, df = NA, p-value = 0.06997
+## X-squared = 4, df = NA, p-value = 0.06047
 \end{verbatim}
 
 Pronto. Basta usarmos o argumento simulate.p.value e indicar ``FALSE'' quando não queremos a simulação de Monte Carlo, ou apenas omitirmos este argumento, ou usar este argumento e indicar ``TRUE'' o qual realiza a simulação de Monte Carlo. Verifique que com a aplicação desta simulação o p-value aumenta indicando que torna mais dificil rejeitarmos a hipótese nula. Após aplicarmos a correção na nossa análise podemos afirmar que não há diferença na quantidade de cracas observadas em relação as proporções esperadas, para ambas as espécies de cracas.

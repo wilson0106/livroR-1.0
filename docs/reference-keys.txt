@@ -58,7 +58,7 @@ definir-ambiente-de-trabalho-via-linha-de-comando
 definir-ambiente-de-trabalho-via-interface-gráfica
 importar-planilha-via-linha-de-comando
 importar-planilha-via-interface-gráfica
-passo-ajustar-os-dados
+passo-verificar-e-ajustar-os-dados
 passo-sumarizar-os-dados-graficamente
 histograma
 gráfico-de-barras

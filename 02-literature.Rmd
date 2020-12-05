@@ -106,7 +106,7 @@ knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística p
 ```
 
 
-## 2° passo: Ajustar os dados
+## 2° passo: Verificar e ajustar os dados
 
 
 Uma falha comum de muitos usuários iniciantes é passar para as análises antes de verificar se a planilha está organizada corretamente. Uma forma de previnir isso é conhecendo os seus dados e sabendo o que eles significam. Os dados, geralmente, podem ser: categóricos/qualitativos ou mensuráveis/quantitativos. Quando qualitativos temos de informar que eles consistem em fatores. Para isso vamos executar alguns comandos onde poderemos avaliar se no processo de importação as variáveis presentes na planilha de dados são reconhecidas como esperamos que seja.
@@ -815,6 +815,6 @@ Pronto, gráfico realizado.
 Durante nosso percurso neste livro realizaremos muito mais gráficos aliados as análises estatísticas básicas mais comumente utilizadas. Não se assuste com a quantidade de etapas e funções e argumentos e nomes, eles irão se repetir tantas e tantas vezes daqui em diante que você não esquecerá. O aprendizado do R é exponencial e ele lhe permitirá entender como nunca o universo da análise de dados adequando-o para seu campo de atuação.
 
 
-```{r resumo1, message = FALSE, echo = FALSE, fig.cap = "Resumo dos passos abordados no capítulo: da definição do ambiente de trabalho até a sumarização dos dados. Com a indicação das funções mais importantes que devem e podem ser aplicadas para cada etapa.", fig.align = "center", out.width = '100%'}
+```{r resumo1, message = FALSE, echo = FALSE, fig.cap = "Resumo dos passos abordados no capítulo: da definição do ambiente de trabalho até a sumarização dos dados.", fig.align = "center", out.width = '100%'}
 knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/resumo1.png')
 ```
