@@ -132,7 +132,7 @@
 
 \title{Introdução a análise de dados em R: Uma abordagem ambiental e ecológica\thanks{Em primeiro lugar só podemos agradecer a nossa família (pais, mães, irmãos, filhos e esposas), pois são quem estão a nosso lado a todo instante nos dando suporte. Em segundo lugar gostariamos de agradecer a todos os professores pois foram eles que nos deram a base necessária para que esse livro viesse a existir. Em terceiro lugar gostariamos de agradecer a todos os revisores desta obra. E por último e não menos importante gostariamos de agradecer a vocês que a estão lendo porque é pra vocês que este livro foi construído!}}
 \author{Wilson Souza \& Thiago Couto}
-\date{2020-12-04}
+\date{2020-12-05}
 
 \begin{document}
 \maketitle
@@ -1419,7 +1419,7 @@ Durante nosso percurso neste livro realizaremos muito mais gráficos aliados as 
 
 }
 
-\caption{Resumo dos passos do capítulo da importação da planilha até a sumarização gráfica e númerica.}\label{fig:resumo1}
+\caption{Resumo dos passos abordados no capítulo: da definição do ambiente de trabalho até a sumarização dos dados. Com a indicação das funções mais importantes que devem e podem ser aplicadas para cada etapa.}\label{fig:resumo1}
 \end{figure}
 
 \hypertarget{qui-quadrado-chi}{%
@@ -1633,7 +1633,7 @@ Imagine que você foi em campo e contabilizou as espécies de cracas que identif
 ##  on 2000 replicates)
 ## 
 ## data:  N.especies
-## X-squared = 4, df = NA, p-value = 0.06747
+## X-squared = 4, df = NA, p-value = 0.06997
 \end{verbatim}
 
 Pronto. Basta usarmos o argumento simulate.p.value e indicar ``FALSE'' quando não queremos a simulação de Monte Carlo, ou apenas omitirmos este argumento, ou usar este argumento e indicar ``TRUE'' o qual realiza a simulação de Monte Carlo. Verifique que com a aplicação desta simulação o p-value aumenta indicando que torna mais dificil rejeitarmos a hipótese nula. Após aplicarmos a correção na nossa análise podemos afirmar que não há diferença na quantidade de cracas observadas em relação as proporções esperadas, para ambas as espécies de cracas.
