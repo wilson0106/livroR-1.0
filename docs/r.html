@@ -24,7 +24,7 @@
 <meta name="author" content="Wilson Souza &amp; Thiago Couto" />
 
 
-<meta name="date" content="2020-12-01" />
+<meta name="date" content="2020-12-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,8 +52,6 @@
 
 <link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -216,8 +214,9 @@ Figura 1.1: Ambiente RStudio.
 <p>O primeiro passo para que possamos compreender o R e o RStudio e o que podemos fazer com ele consiste em entender a sua estrutura como ela está organizada e o que ela significa. Uma vez compreendida sua estrutura organizacional e funcionalidade poderemos mergulhar no mundo das análises de dados dentro deste novo ambiente.</p>
 <p>Para isso veremos as principais guias do RStudio, como elas estão organizadas e quais as suas funcionalidades.</p>
 <ol style="list-style-type: decimal">
-<li>Script: Área destinada a escrevermos o nosso código e comentários, para executar os comandos escritos neste ambiente devemos deixar o cursor na linha que queremos executar e utilizar os atalhos do teclado <span class="math inline">\((CTRL + ENTER)\)</span> ou <span class="math inline">\((CTRL + R)\)</span> ou clicar em “<strong>Run</strong>” (Figura <a href="r.html#fig:script">1.2</a>);</li>
+<li><em>Script</em>: Guia utilizada para escrevermos o nosso código (comandos que executarão uma determinada tarefa) e comentários. Para executar os comandos escritos neste ambiente devemos deixar o cursor na linha que queremos executar e utilizar os atalhos do teclado <span class="math inline">\((CTRL + ENTER)\)</span> ou <span class="math inline">\((CTRL + R)\)</span> ou clicar em “<strong>Run</strong>” (Figura <a href="r.html#fig:script">1.2</a>). Todo comando executado irá retornar uma saída na guia do “<em>console</em>” (ver item 2). Se o comando executado indicar que o resultado será guardado em um objeto<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>, este irá aparecer na guia “<em>environment</em>” (ver item 3);</li>
 </ol>
+<p><strong>MOSTRAR UMA FIGURA DO SCRIPT COM UMA LINHA ESCRITO: “OLÁ MUNDO”; UMA SEGUNDA LINHA ESCRITO: 1 + 2; UMA TERCEIRA LINHA ESCRITO: SOMA &lt;- 1 + 2; UMA QUARTA LINHA ESCRITO: # NESTE AMBIENTE ESREVEMOS NOSSO CÓDIGO E COMENTÁRIOS</strong> Vamos indicar na legenda da figura isto que está escrito em negrito aqui.</p>
 <div class="figure" style="text-align: center"><span id="fig:script"></span>
 <img src="docs/livroR-1.0_files/figures%20print/script.png" alt="Guia do RStudio referente ao ambiente onde o script será desenvolvido." width="60%" />
 <p class="caption">
@@ -225,34 +224,37 @@ Figura 1.2: Guia do RStudio referente ao ambiente onde o script será desenvolvi
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
-<li>Environment: Área destinada a indicar os objetos e funções criadas (Figura <a href="r.html#fig:environment">1.3</a>);</li>
-</ol>
-<div class="figure" style="text-align: center"><span id="fig:environment"></span>
-<img src="docs/livroR-1.0_files/figures%20print/environment.png" alt="Guia do RStudio referente ao ambiente environment, local onde estarão indicados os objetos criados." width="60%" />
-<p class="caption">
-Figura 1.3: Guia do RStudio referente ao ambiente environment, local onde estarão indicados os objetos criados.
-</p>
-</div>
-<ol start="3" style="list-style-type: decimal">
-<li>History: Área destinada a indicar o histórico dos comandos executados (Figura <a href="r.html#fig:history">1.4</a>);</li>
-</ol>
-<div class="figure" style="text-align: center"><span id="fig:history"></span>
-<img src="docs/livroR-1.0_files/figures%20print/history.png" alt="Guia do RStudio referente ao ambiente history onde estará listado todos os comandos executados." width="60%" />
-<p class="caption">
-Figura 1.4: Guia do RStudio referente ao ambiente history onde estará listado todos os comandos executados.
-</p>
-</div>
-<ol start="4" style="list-style-type: decimal">
-<li>Console: Área destinada ao resultado da execução do comando (Figura <a href="r.html#fig:console">1.5</a>);</li>
+<li><em>Console</em>: Guia que indica o resultado do código executado na guia referente ao <em>script</em>. Nesta guia também pode ser escrito o código, porém ao pressionar ENTER o código é executado e o resultado é indicado na linha imediatamente inferior (Figura <a href="r.html#fig:console">1.3</a>);</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:console"></span>
 <img src="docs/livroR-1.0_files/figures%20print/console.png" alt="Guia do RStudio referente ao ambiente console onde o resultado dos comandos executados irão aparecer." width="60%" />
 <p class="caption">
-Figura 1.5: Guia do RStudio referente ao ambiente console onde o resultado dos comandos executados irão aparecer.
+Figura 1.3: Guia do RStudio referente ao ambiente console onde o resultado dos comandos executados irão aparecer.
 </p>
 </div>
+<p><strong>MOSTRAR UMA FIGURA DO CONSOLE COM UMA LINHA ESCRITO: “OLÁ MUNDO”; UMA SEGUNDA LINHA ESCRITO: 1 + 2; UMA TERCEIRA LINHA ESCRITO: SOMA &lt;- 1 + 2; UMA QUARTA LINHA ESCRITO: # NESTE AMBIENTE ESREVEMOS NOSSO CÓDIGO E COMENTÁRIOS</strong> Vamos indicar na legenda da figura isto que está escrito em negrito aqui.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><em>Environment</em>: Guia que indica os objetos e funções criadas. (Figura <a href="r.html#fig:environment">1.4</a>);</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:environment"></span>
+<img src="docs/livroR-1.0_files/figures%20print/environment.png" alt="Guia do RStudio referente ao ambiente environment, local onde estarão indicados os objetos criados." width="60%" />
+<p class="caption">
+Figura 1.4: Guia do RStudio referente ao ambiente environment, local onde estarão indicados os objetos criados.
+</p>
+</div>
+<p><strong>MOSTRAR UMA FIGURA DO ENVIRONMENT COM ALGUNS OBJETOS: UM DATA FRAME, UM OBJETO COM UM ITEM E UM OBJETO COM VÁRIOS VALORES</strong> Vamos indicar na legenda da figura isto que está escrito em negrito aqui.</p>
+<ol start="4" style="list-style-type: decimal">
+<li><em>History</em>: Guia que indica o histórico dos comandos executados tanto por linha de código quanto por cliques em botões (Figura <a href="r.html#fig:history">1.5</a>);</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:history"></span>
+<img src="docs/livroR-1.0_files/figures%20print/history.png" alt="Guia do RStudio referente ao ambiente history onde estará listado todos os comandos executados." width="60%" />
+<p class="caption">
+Figura 1.5: Guia do RStudio referente ao ambiente history onde estará listado todos os comandos executados.
+</p>
+</div>
+<p><strong>MOSTRAR UMA FIGURA DO HISTORY COM OS COMANDOS EXECUTADOS NOS TÓPICOS ACIMA</strong> Vamos indicar na legenda da figura isto que está escrito em negrito aqui.</p>
 <ol start="5" style="list-style-type: decimal">
-<li>Files: Área destinada a visualização e acesso dos arquivos do computador (Figura <a href="r.html#fig:files">1.6</a>);</li>
+<li><em>Files</em>: Guia que permite a visualização e acesso dos arquivos do computador (Figura <a href="r.html#fig:files">1.6</a>). Sempre defina o ambiente de trabalho<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> antes de iniciar o seu projeto. As planilhas que irão utilizar devem estar neste ambiente de trabalho previamente definido. Embora não seja obrigatório, isso evitará problemas futuros e facilitará o seu trajeto inicial no R. As funções e códigos serão abordados, aqui, seguindo esta ideia.;</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:files"></span>
 <img src="docs/livroR-1.0_files/figures%20print/files.png" alt="Guia do RStudio referente ao ambiente files onde estará indicados os arquivos do nosso computador." width="60%" />
@@ -260,8 +262,9 @@ Figura 1.5: Guia do RStudio referente ao ambiente console onde o resultado dos c
 Figura 1.6: Guia do RStudio referente ao ambiente files onde estará indicados os arquivos do nosso computador.
 </p>
 </div>
+<p><strong>MOSTRAR UMA FIGURA DO FILES COM A GUIA DO DESKTOP MOSTRANDO OS ICONES BÁSICOS</strong> Vamos indicar na legenda da figura isto que está escrito em negrito aqui.</p>
 <ol start="6" style="list-style-type: decimal">
-<li>Packages: Área destinada a visualização, instalação e carregamento dos pacotes/bibliotecas do R (Figura <a href="r.html#fig:packages">1.7</a>);</li>
+<li><em>Packages</em>: Guia destinada a visualização, instalação e carregamento dos pacotes/bibliotecas do R (Figura <a href="r.html#fig:packages">1.7</a>);</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:packages"></span>
 <img src="docs/livroR-1.0_files/figures%20print/packages.png" alt="Guia do RStudio referente ao ambiente packages onde estarão listados todos os pacotes disponíveis no nosso computador e por onde poderemos instalar outros." width="60%" />
@@ -270,7 +273,7 @@ Figura 1.7: Guia do RStudio referente ao ambiente packages onde estarão listado
 </p>
 </div>
 <ol start="7" style="list-style-type: decimal">
-<li>Plot: Área destinada a visualização dos gráficos executados (Figura <a href="r.html#fig:plot">1.8</a>);</li>
+<li><em>Plot</em>: Guia destinada a visualização dos gráficos executados (Figura <a href="r.html#fig:plot">1.8</a>);</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:plot"></span>
 <img src="docs/livroR-1.0_files/figures%20print/plot.png" alt="Guia do RStudio referente ao ambiente plot onde estarão os gráficos criados." width="60%" />
@@ -279,7 +282,7 @@ Figura 1.8: Guia do RStudio referente ao ambiente plot onde estarão os gráfico
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
-<li>Help: Área destinada a fornecer informações sobre as funções e pacotes do R (Figura <a href="r.html#fig:help">1.9</a>);</li>
+<li><em>Help</em>: Guia destinada a fornecer informações sobre as funções e pacotes do R (Figura <a href="r.html#fig:help">1.9</a>);</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:help"></span>
 <img src="docs/livroR-1.0_files/figures%20print/help.png" alt="Guia do RStudio referente ao ambiente help onde terá informações sobre as funções e pacotes do R." width="60%" />
@@ -295,6 +298,8 @@ Figura 1.9: Guia do RStudio referente ao ambiente help onde terá informações 
 <ol start="1">
 <li id="fn1"><p>por padrão não está ativado, precisa ser ativado nas opções do programa<a href="r.html#fnref1" class="footnote-back">↩</a></p></li>
 <li id="fn2"><p>Local onde você irá escrever o código para execução de uma determinada tarefa<a href="r.html#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>Há diferentes tipos de objetos no R, falaremos sobre eles no próximo capítulo.<a href="r.html#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p>No próximo capítulo ensinaremos a como definir o ambiente de trabalho<a href="r.html#fnref4" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>

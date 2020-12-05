@@ -127,26 +127,12 @@
 
 \let\oldmaketitle\maketitle
 \AtBeginDocument{\let\maketitle\relax}
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{array}
-\usepackage{multirow}
-\usepackage{wrapfig}
-\usepackage{float}
-\usepackage{colortbl}
-\usepackage{pdflscape}
-\usepackage{tabu}
-\usepackage{threeparttable}
-\usepackage{threeparttablex}
-\usepackage[normalem]{ulem}
-\usepackage{makecell}
-\usepackage{xcolor}
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
 \title{Introdução a análise de dados em R: Uma abordagem ambiental e ecológica\thanks{Em primeiro lugar só podemos agradecer a nossa família (pais, mães, irmãos, filhos e esposas), pois são quem estão a nosso lado a todo instante nos dando suporte. Em segundo lugar gostariamos de agradecer a todos os professores pois foram eles que nos deram a base necessária para que esse livro viesse a existir. Em terceiro lugar gostariamos de agradecer a todos os revisores desta obra. E por último e não menos importante gostariamos de agradecer a vocês que a estão lendo porque é pra vocês que este livro foi construído!}}
 \author{Wilson Souza \& Thiago Couto}
-\date{2020-12-01}
+\date{2020-12-04}
 
 \begin{document}
 \maketitle
@@ -236,8 +222,10 @@ Para isso veremos as principais guias do RStudio, como elas estão organizadas e
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Script: Área destinada a escrevermos o nosso código e comentários, para executar os comandos escritos neste ambiente devemos deixar o cursor na linha que queremos executar e utilizar os atalhos do teclado \((CTRL + ENTER)\) ou \((CTRL + R)\) ou clicar em ``\textbf{Run}'' (Figura \ref{fig:script});
+  \emph{Script}: Guia utilizada para escrevermos o nosso código (comandos que executarão uma determinada tarefa) e comentários. Para executar os comandos escritos neste ambiente devemos deixar o cursor na linha que queremos executar e utilizar os atalhos do teclado \((CTRL + ENTER)\) ou \((CTRL + R)\) ou clicar em ``\textbf{Run}'' (Figura \ref{fig:script}). Todo comando executado irá retornar uma saída na guia do ``\emph{console}'' (ver item 2). Se o comando executado indicar que o resultado será guardado em um objeto\footnote{Há diferentes tipos de objetos no R, falaremos sobre eles no próximo capítulo.}, este irá aparecer na guia ``\emph{environment}'' (ver item 3);
 \end{enumerate}
+
+\textbf{MOSTRAR UMA FIGURA DO SCRIPT COM UMA LINHA ESCRITO: ``OLÁ MUNDO''; UMA SEGUNDA LINHA ESCRITO: 1 + 2; UMA TERCEIRA LINHA ESCRITO: SOMA \textless{}- 1 + 2; UMA QUARTA LINHA ESCRITO: \# NESTE AMBIENTE ESREVEMOS NOSSO CÓDIGO E COMENTÁRIOS} Vamos indicar na legenda da figura isto que está escrito em negrito aqui.
 
 \begin{figure}
 
@@ -253,41 +241,7 @@ Para isso veremos as principais guias do RStudio, como elas estão organizadas e
 \setcounter{enumi}{1}
 \tightlist
 \item
-  Environment: Área destinada a indicar os objetos e funções criadas (Figura \ref{fig:environment});
-\end{enumerate}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/environment} 
-
-}
-
-\caption{Guia do RStudio referente ao ambiente environment, local onde estarão indicados os objetos criados.}\label{fig:environment}
-\end{figure}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\tightlist
-\item
-  History: Área destinada a indicar o histórico dos comandos executados (Figura \ref{fig:history});
-\end{enumerate}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/history} 
-
-}
-
-\caption{Guia do RStudio referente ao ambiente history onde estará listado todos os comandos executados.}\label{fig:history}
-\end{figure}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\tightlist
-\item
-  Console: Área destinada ao resultado da execução do comando (Figura \ref{fig:console});
+  \emph{Console}: Guia que indica o resultado do código executado na guia referente ao \emph{script}. Nesta guia também pode ser escrito o código, porém ao pressionar ENTER o código é executado e o resultado é indicado na linha imediatamente inferior (Figura \ref{fig:console});
 \end{enumerate}
 
 \begin{figure}
@@ -299,12 +253,52 @@ Para isso veremos as principais guias do RStudio, como elas estão organizadas e
 \caption{Guia do RStudio referente ao ambiente console onde o resultado dos comandos executados irão aparecer.}\label{fig:console}
 \end{figure}
 
+\textbf{MOSTRAR UMA FIGURA DO CONSOLE COM UMA LINHA ESCRITO: ``OLÁ MUNDO''; UMA SEGUNDA LINHA ESCRITO: 1 + 2; UMA TERCEIRA LINHA ESCRITO: SOMA \textless{}- 1 + 2; UMA QUARTA LINHA ESCRITO: \# NESTE AMBIENTE ESREVEMOS NOSSO CÓDIGO E COMENTÁRIOS} Vamos indicar na legenda da figura isto que está escrito em negrito aqui.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \emph{Environment}: Guia que indica os objetos e funções criadas. (Figura \ref{fig:environment});
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/environment} 
+
+}
+
+\caption{Guia do RStudio referente ao ambiente environment, local onde estarão indicados os objetos criados.}\label{fig:environment}
+\end{figure}
+
+\textbf{MOSTRAR UMA FIGURA DO ENVIRONMENT COM ALGUNS OBJETOS: UM DATA FRAME, UM OBJETO COM UM ITEM E UM OBJETO COM VÁRIOS VALORES} Vamos indicar na legenda da figura isto que está escrito em negrito aqui.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  \emph{History}: Guia que indica o histórico dos comandos executados tanto por linha de código quanto por cliques em botões (Figura \ref{fig:history});
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/history} 
+
+}
+
+\caption{Guia do RStudio referente ao ambiente history onde estará listado todos os comandos executados.}\label{fig:history}
+\end{figure}
+
+\textbf{MOSTRAR UMA FIGURA DO HISTORY COM OS COMANDOS EXECUTADOS NOS TÓPICOS ACIMA} Vamos indicar na legenda da figura isto que está escrito em negrito aqui.
+
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{4}
 \tightlist
 \item
-  Files: Área destinada a visualização e acesso dos arquivos do computador (Figura \ref{fig:files});
+  \emph{Files}: Guia que permite a visualização e acesso dos arquivos do computador (Figura \ref{fig:files}). Sempre defina o ambiente de trabalho\footnote{No próximo capítulo ensinaremos a como definir o ambiente de trabalho} antes de iniciar o seu projeto. As planilhas que irão utilizar devem estar neste ambiente de trabalho previamente definido. Embora não seja obrigatório, isso evitará problemas futuros e facilitará o seu trajeto inicial no R. As funções e códigos serão abordados, aqui, seguindo esta ideia.;
 \end{enumerate}
 
 \begin{figure}
@@ -316,12 +310,14 @@ Para isso veremos as principais guias do RStudio, como elas estão organizadas e
 \caption{Guia do RStudio referente ao ambiente files onde estará indicados os arquivos do nosso computador.}\label{fig:files}
 \end{figure}
 
+\textbf{MOSTRAR UMA FIGURA DO FILES COM A GUIA DO DESKTOP MOSTRANDO OS ICONES BÁSICOS} Vamos indicar na legenda da figura isto que está escrito em negrito aqui.
+
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{5}
 \tightlist
 \item
-  Packages: Área destinada a visualização, instalação e carregamento dos pacotes/bibliotecas do R (Figura \ref{fig:packages});
+  \emph{Packages}: Guia destinada a visualização, instalação e carregamento dos pacotes/bibliotecas do R (Figura \ref{fig:packages});
 \end{enumerate}
 
 \begin{figure}
@@ -338,7 +334,7 @@ Para isso veremos as principais guias do RStudio, como elas estão organizadas e
 \setcounter{enumi}{6}
 \tightlist
 \item
-  Plot: Área destinada a visualização dos gráficos executados (Figura \ref{fig:plot});
+  \emph{Plot}: Guia destinada a visualização dos gráficos executados (Figura \ref{fig:plot});
 \end{enumerate}
 
 \begin{figure}
@@ -355,7 +351,7 @@ Para isso veremos as principais guias do RStudio, como elas estão organizadas e
 \setcounter{enumi}{7}
 \tightlist
 \item
-  Help: Área destinada a fornecer informações sobre as funções e pacotes do R (Figura \ref{fig:help});
+  \emph{Help}: Guia destinada a fornecer informações sobre as funções e pacotes do R (Figura \ref{fig:help});
 \end{enumerate}
 
 \begin{figure}
@@ -397,27 +393,60 @@ A função \textcolor{blue}{setwd()} é responsável por selecionar o diretório
 
 Como resultado desta etapa podemos verificar a guia \emph{Files}\footnote{Ver figura \ref{fig:files}}, nela agora situa-se as pastas e arquivos da pasta que selecionamos e onde estará salvo nosso script quando o salvarmos.
 
-\textcolor{red}{Sempre defina o ambiente de trabalho antes de iniciar o seu projeto. As planilhas que irão utilizar devem estar neste ambiente de trabalho previamente definido. Embora não necessário, mas isso evitará problemas futuras e facilitará o seu trajeto inicial no R. As funções e códigos serão abordados, aqui, seguindo está ideia.}
-
 \hypertarget{definir-ambiente-de-trabalho-via-interface-gruxe1fica}{%
 \subsection{Definir ambiente de trabalho via interface gráfica}\label{definir-ambiente-de-trabalho-via-interface-gruxe1fica}}
 
 Diversas formas podem ser utilizadas para definir o ambiente de trabalho, apresentaremos 3. A primeira consiste em usar o atalho do teclado \((CTRL + SHIFT + H)\) onde irá aparecer a janela abaixo (Figura \ref{fig:ctrl-shift-h}) e nela selecionaremos o ambiente de trabalho; a segunda via consiste em acessar a guia \emph{Session} ir até a opção \emph{Set Working Directory} e selecionar a opção \emph{Choose Directory} (Figura \ref{fig:mode-2}) da mesma forma que a opção anterior a mesma janela irá aparecer (Figura \ref{fig:ctrl-shift-h}); por último podemos usar a guia \emph{Files} onde podemos clicar nos 3 pontos ``\ldots{}'' que aparecem no canto superior direito da guia e buscar o ambiente/pasta que iremos utilizar e a seguir na engrenagem (\emph{More}) e selecionar a opção \emph{Set as Working Directory} (Figura \ref{fig:files-guia}).
 
-\textbf{{[}Inserir PRINT da janela ctrl shift h{]}}
+\begin{figure}
 
-\textbf{{[}Inserir PRINT da janela session{]}}
+{\centering \includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/files} 
 
-\textbf{{[}Inserir PRINT da janela files-guia{]}}
+}
+
+\caption{**[Inserir PRINT da janela ctrl shift h]**}\label{fig:ctrl-shift-h}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/files} 
+
+}
+
+\caption{**[Inserir PRINT da janela session]**}\label{fig:mode-2}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/files} 
+
+}
+
+\caption{**[Inserir PRINT da janela files-guia]**}\label{fig:files-guia}
+\end{figure}
 
 \hypertarget{importar-planilha-via-linha-de-comando}{%
 \subsection{Importar planilha via linha de comando:}\label{importar-planilha-via-linha-de-comando}}
 
-Primeiro construa a planilha a seguir (Figura \ref{fig:planilha}) no formato *.csv (usando vírgula como separador de colunas e ponto como separador decimal) e *.xlsx em um editor de planilhas, como excel, libreoffice calc ou outros e a salve com o nome de planilha.csv e planilha.xlsx no diretório que definiu previamente. A seguir demonstraremos as diferenças na importação de ambas as planilhas.
+Primeiro construa as planilhas a seguir nos formatos *.csv (usando vírgula como separador de colunas e ponto como separador decimal) (Figura \ref{fig:planilha}) e *.xlsx (Figura \ref{fig:planilhaxlsx}) em um editor de planilhas, como excel, libreoffice calc ou outros e a salve com o nome de planilha.csv e planilha.xlsx no diretório que definiu previamente. A seguir demonstraremos as diferenças na importação de ambas as planilhas.
 
-\textbf{{[}Inserir imagem da planilha csv{]}}
+\begin{figure}
 
-\textbf{{[}Inserir imagem da planilha xlsx{]}}
+{\centering \includegraphics[width=0.8\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/planilha} 
+
+}
+
+\caption{Planilha com os dados no formato *.csv que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente}\label{fig:planilha}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/planilhaxlsx} 
+
+}
+
+\caption{Planilha com os dados no formato *.xlsx que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente}\label{fig:planlhaxlsx}
+\end{figure}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -444,19 +473,41 @@ Para importar arquivos que estão no formato *.xls ou *.xlsx é necessário a in
 \end{Highlighting}
 \end{Shaded}
 
-O comando \textbackslash{}textcolor\{blue\}\{read\_excel()\} é similar ao \textcolor{blue}{read.csv()} embora seus argumentos sejam diferentes. O argumento path é similar ao file, o argumento col\_names é similar ao header. Repare que não temos o argumento sep, pois em um arquivo excel as variáveis são salvas em colunas.
+O comando \textbackslash{}textcolor\{blue\}\{read\_excel()\} é similar ao \textcolor{blue}{read.csv()} embora seus argumentos sejam diferentes. O argumento path é similar ao file, o argumento col\_names é similar ao header. Repare que não temos o argumento sep, pois em um arquivo excel as variáveis são salvas em colunas. Observe que independente da forma de importação (que é dependente do formato do arquivo *.csv ou *.xlsx) o resultado final é o mesmo (Figura \ref{fig:arqenv}).
 
-\textbf{{[}Inserir imagem do resultado de importação - o arquivo presente no environment{]}}
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/arqenv} 
+
+}
+
+\caption{Resultado da importação do arquivo observado na guia environment. Há um objeto de nome dados, com 40 observações e 4 variáveis.}\label{fig:arqenv}
+\end{figure}
 
 \hypertarget{importar-planilha-via-interface-gruxe1fica}{%
 \subsection{Importar planilha via interface gráfica:}\label{importar-planilha-via-interface-gruxe1fica}}
 
 Para importar a planilha com os dados via interface do RStudio devemos acessar a guia \emph{Environment} e nesta acessar a opção \emph{Import Dataset} a seguir temos várias opções a qual devemos escolher referente a extensão do arquivo que vamos importar, no nosso caso será a opção \emph{From Excel} (Figura \ref{fig:import-graf}).
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/import-graf} 
+
+}
+
+\caption{mudar a figura e fazer a legenda}\label{fig:import-graf}
+\end{figure}
+
 Neste momento uma janela irá abrir (Figura \ref{fig:import-graf-2}) e no canto superior direito haverá o nome \emph{Browse} onde deveremos clicar e escolher o arquivo com o qual iremos trabalhar. Em \emph{Import options} no canto inferior esquerdo haverá algumas opções, na opção \emph{name} deveremos renomear para dados, para coincidir com as vias que fizemos acima. As demais opções podemos deixar em branco. Repare que no canto inferior direito aparecerá o comando relativo ao processo de importação similar ao que fizemos no tópico anterior e, aparecerá também, um comando chamado \textcolor{blue}{View()} que veremos mais adiante, para desabilita-lo basta desmarcar a caixa ao lado de mesmo nome. Conclua o processo clicando em \emph{import} no canto inferior direito.
 
-\textbf{{[}Inserir imagem do processo de importação via interface gráfica{]}}
-\textbf{{[}Inserir imagem do processo de importação via interface gráfica janela com o arquivo{]}}
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/import-graf-2} 
+
+}
+
+\caption{mudar a figura e fazer a legenda}\label{fig:import-graf-2}
+\end{figure}
 
 \hypertarget{passo-ajustar-os-dados}{%
 \section{2° passo: Ajustar os dados}\label{passo-ajustar-os-dados}}
@@ -504,9 +555,8 @@ O comando portanto é lido da seguinte forma:
 1. ``dados\$ano \textless{}-'' indica que uma variável ano será criada dentro do objeto ``dados''.
 2. ``as.factor(dados\$ano)'' indica que o objeto criado consistirá na variável ano que está no objeto dados porém considerando-a como factor.
 
-Uma dúvida pode aparece aqui: É o que aconteceu com a variável ano que já existia dentro da planilha dados? Temos duas variáveis ano, agora?
+Uma dúvida pode aparecer aqui: É o que aconteceu com a variável ano que já existia dentro da planilha dados? Temos duas variáveis ano, agora?
 
-\textbf{Realizar o exemplo abaixo?}
 A resposta é que quando criamos um objeto ou variável com o mesmo nome de um já existente o anterior é substituído. Conduza o seguinte exemplo.
 
 \begin{Shaded}
@@ -526,7 +576,6 @@ Agora crie um segundo objeto com o mesmo nome, porém valor diferente, e repare 
 \end{Shaded}
 
 Reparou que ao criar um segundo objeto de mesmo nome que antes o primeiro foi apagado e substituído pelo segundo? Este é o mesmo processo que ocorreu quando realizamos a função que definiu ano e local como fatores.
-\textbf{Realizar o exemplo acima?}
 
 Vamos observar novamente a função \textcolor{blue}{str()} para verificar se ano e locais, agora, são fatores
 
@@ -651,9 +700,18 @@ Ainda em relação ao histograma podemos ver na função \textcolor{blue}{hist()
 
 O gráfico de barras é um dos mais utilizados. Com ele podemos comparar valores de categorias diferentes. Por exemplo, dados onde temos números de indivíduos de diversas espécies podem ser representados em gráficos de barras, onde cada espécie será representada por uma barra.
 
-Se já chegamos até esse ponto vamos exercitar um pouco antes de plotar o gráfico de barras.
+Se já chegamos até esse ponto vamos exercitar um pouco antes de plotar o gráfico de barras. Construa a seguinte planilha no seu editor de planilhas (Figura \ref{fig:abundancia}).
 
-Acesse a seguinte planilha: abundância. Vamos inseri-la no R com o nome abundancia. repare que retirei o acento. Sempre que trabalharmos com linguagem de programação evite acentuações, espaços, cedilhas (ç) e atente a maiúsculas e minúsculas, pois isso pode interferir no seu código
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/abundancia} 
+
+}
+
+\caption{Planilha de dados de abundância.}\label{fig:abundancia}
+\end{figure}
+
+Acesse a seguinte planilha: abundância. Vamos inseri-la no R com o nome ``abundancia''. repare que retirei o acento e as letras estão em minúsculo. Sempre que trabalharmos com linguagem de programação evite acentuações, espaços, cedilhas (ç) e atente a maiúsculas e minúsculas, pois isso pode interferir no seu código
 
 \textcolor{red}{Se estiver iniciando o R agora lembre-se de definir o ambiente de trabalho.}
 
@@ -663,7 +721,7 @@ Acesse a seguinte planilha: abundância. Vamos inseri-la no R com o nome abundan
 \end{Highlighting}
 \end{Shaded}
 
-Repare que ela está no formato *.xlsx e apresenta as seguintes variáveis: mes e N. Onde N significa o número de indivíduos observados.
+Repare que ela está no formato *.xlsx e apresenta as seguintes variáveis: mes, N e desvio. Onde N significa o número de indivíduos observados e desvio o desvio padrão.
 
 Vamos apenas conferir se está tudo certo com os dados usando a função \textcolor{blue}{str()}.
 
@@ -725,28 +783,9 @@ Vamos portanto adicionar alguns argumentos já conhecidos e outros novos que per
 \caption{\label{fig:bar-abu-col}Gráfico de barras com número de indivíduos da planilha abundância por mês, com barras coloridas}
 \end{figure}
 
-\textbf{MUDAR A TABELA EXPLICANDO OS ARGUMENTOS PARA TEXTO CORRIDO?}
+No código acima definimos o que será gráficado como a variável N presente no objeto abundância, informamos isso por meio do operador ``\textbf{\$}'' (cifrão). Ajustamos os limites do eixo ``y'' através do argumento ylim em 0 e 200, usando a função concatenar \textcolor{blue}{c()}. Definimos os nomes dos eixos x e y por meio dos argumentos xlab e ylab, respectivamente. Definimos o nome das barras de acordo com a variável mes, também presente no objeto abundância e por último definimos a cor das barras, usando o argumento col, como verde.
 
 Podemos extrair desse gráfico que a abundância dos indivíduos variam ao longo dos meses com valores menores em torno de 50 indivíduos nos meses 4, 5 e 6 e valores maiores em torno de 200 indivíduos no mês 11.
-
-Podemos ver que os argumentos utilizados permitiram referenciar as barras, ajustar o eixo y, adicionar cores e adicionar os nomes dos eixos. Para detalhes sobre os argumentos e funções utilizadas no \textcolor{blue}{barplot()} (Tabela \ref{tab:tab-arg}).
-
-\begin{table}
-
-\caption{\label{tab:tab-arg}Descrição dos argumentos utilizados para o gráfico de barras}
-\centering
-\begin{tabular}[t]{>{}l>{\raggedright\arraybackslash}p{30em}}
-\toprule
-Argumentos & Características\\
-\midrule
-\textbf{\cellcolor{gray!6}{ylim}} & \cellcolor{gray!6}{Refere-se aos limites do eixo y}\\
-\textbf{xlab} & É usado para dar nome ao eixo x\\
-\textbf{\cellcolor{gray!6}{ylab}} & \cellcolor{gray!6}{É usado para dar nome ao eixo y}\\
-\textbf{names.arg} & É usado para definir o nome das categorias/barras representadas no eixo x, neste caso as categorias usadas estão vinculadas a coluna mes do objeto abundancia\\
-\textbf{\cellcolor{gray!6}{col}} & \cellcolor{gray!6}{É usado para definir a cor das barras}\\
-\bottomrule
-\end{tabular}
-\end{table}
 
 \hypertarget{gruxe1fico-de-linhas}{%
 \subsection{GRÁFICO DE LINHAS}\label{gruxe1fico-de-linhas}}
@@ -755,7 +794,7 @@ Quando queremos representar dados quantitativos, podemos usar o gráfico de linh
 
 Assim como o gráfico de barras podemos desejar fazer um gráfico de linhas para isso podemos utilizar a função \textcolor{blue}{plot()} e continuar trabalhando com os dados de abundância por mês
 
-Contudo para fazer um gráfico de linhas pelo comando básico do R (utilizando a função \textcolor{blue}{plot()}) precisamos indicar que ambos os eixos apresentam variáveis numéricas. Portanto teremos que modificar a variável mês de fator para numero.
+Contudo para fazer um gráfico de linhas pelo comando básico do R (utilizando a função \textcolor{blue}{plot()}) precisamos indicar que ambos os eixos apresentam variáveis numéricas. Portanto teremos que modificar a variável mês de fator para número.
 
 Porém não precisamos fazer isso em um comando separado podemos aplicar a função que converte uma variável em numérica dentro da função que plota o gráfico. Vamos visualizar como isso ocorre na prática (Figura \ref{fig:pon-graf}).
 
@@ -797,9 +836,7 @@ Porém a função \textcolor{blue}{plot()} não realizou um gráfico de linhas c
 
 Repare que um gráfico de linha foi plotado e o resultado deste indica o mesmo que o gráfico de barras que realizamos acima.
 
-Alguns argumentos novos foram inseridos, os detalhes deles podem ser visualizados na tabela abaixo:
-
-\textbf{{[}INSERIR TABELA OU TEXTO CORRIDO EXPLICANDO OS ARGUMENTOS{]}}
+Alguns argumentos novos foram inseridos, como main que insere o título do gráfico, o type que define que será um gráfico de linhas e lwd que determina a espessura da linha.
 
 \hypertarget{boxplot}{%
 \subsection{BOXPLOT}\label{boxplot}}
@@ -820,7 +857,7 @@ Vamos voltar a nossa primeira planilha (dados) e executar um gráfico do tipo bo
 \caption{\label{fig:box-graf}Gráfico tipo boxplot do comprimento por ano, da planilha dados}
 \end{figure}
 
-Repare que a escrita para esse gráfico é ligeiramente diferente. Ele usa a função \textcolor{blue}{boxplot()}, um argumento chamado formula onde nele inserimos a variável independente (variável do eixo X) e a variável dependente (variável do eixo Y). Entre ambas as variáveis é possível ver o caracter ``\textasciitilde{}'' (til). A forma de ler essa escrita é a seguinte: Realize um boxplot da variável comprimento da planilha dados em função da variável ano da planilha dados. A variável til é lida como (``em função de'')
+Repare que a escrita para esse gráfico é ligeiramente diferente. Ele usa a função \textcolor{blue}{boxplot()}, dentro desta há um argumento chamado formula onde nele inserimos a variável independente (variável do eixo X) e a variável dependente (variável do eixo Y). Entre ambas as variáveis há o caracter ``\textasciitilde{}'' (til). A forma de ler essa escrita é a seguinte: Realize um boxplot da variável comprimento da planilha dados em função da variável ano da planilha dados. A variável til é lida como (``em função de'')
 
 Vamos adicionar alguns argumentos que permitem deixar o gráfico mais apresentável (Figura \ref{fig:box-graf-col}).
 
@@ -840,20 +877,20 @@ Vamos adicionar alguns argumentos que permitem deixar o gráfico mais apresentá
 \caption{\label{fig:box-graf-col}Gráfico tipo boxplot do comprimento por ano com cores por ano, da planilha dados}
 \end{figure}
 
-Repare que não adicionamos nenhum argumento ou função diferente do que já fizemos anteriormente. Ou seja, uma vez conhecendo a função, os argumentos por vezes se repetem.
+Repare que não adicionamos nenhum argumento ou função diferente do que já fizemos anteriormente. Ou seja, uma vez conhecendo a função, os argumentos por vezes se repetem entre funções com o mesmo objetivo (neste caso o objetivo é gerar um gráfico).
 
 O boxplot porém nos fornece algumas informações extras em relação ao resumo dos dados. Podemos extrair dele dados como média, mediana (segundo quartil), primeiro e terceiro quartil, assim como máximos e mínimos da variável dependente.
 
-As linhas de cada box (caixa) que se referem a cada um dos anos representam, em suas extremidades os valores máximos e mínimos de comprimento de cada ano. A topo e a base de cada ``box'' indicam o primeiro e terceiro quartil, respectivamente, do comprimento. A linha no interior da caixa indica a mediana (segundo quartil) e a metade do box (não indicada graficamente) indica a média.
+As linhas de cada \emph{box} (caixa) que se referem a cada um dos anos representam, em suas extremidades os valores máximos e mínimos de comprimento de cada ano. A base e o topo de cada ``\emph{box}'' indicam o primeiro e terceiro quartil, respectivamente, do comprimento. A linha no interior da caixa indica a mediana (segundo quartil) e a metade do \emph{box} (não marcada graficamente) indica a média.
 
-Podemos por meio desse gráfico então ter uma ideia do que os dados indicam quanto as medidas de tendência central e algumas medidas de dispersão em relação as categorias definidas.
+Podemos por meio desse gráfico então ter uma ideia do que os dados indicam quanto as medidas de tendência central e algumas medidas de dispersão em relação as categorias presentes.
 
 \hypertarget{passo-sumarizar-os-dados-numericamente}{%
 \section{4° passo: Sumarizar os dados numericamente}\label{passo-sumarizar-os-dados-numericamente}}
 
 Temos visto, até este ponto de maneira geral, como resumir os dados graficamente.
 
-Porém muitas vezes precisamos demonstrar numericamente quais são os valores que resumem dos dados. Estes valores consistem nas medidas de tendência central e nas suas medidas de dispersão.
+Porém muitas vezes precisamos demonstrar, numericamente, quais são os valores que resumem dos dados. Estes valores consistem nas medidas de tendência central e nas suas medidas de dispersão.
 
 O R permite, de maneira simples, sumarizar os dados por meio da seguinte função.
 
@@ -890,7 +927,7 @@ O R permite, de maneira simples, sumarizar os dados por meio da seguinte funçã
 ##  (Other):6
 \end{verbatim}
 
-Repare que \textcolor{blue}{summary()} o R nos informou as variáveis presentes nestas planilhas e quando fator indicou quais são e quantos de cada existem e quando númerico nos retornou valores como média, mediana, mínimo, máximo, primeiro e terceiro quartis.
+Repare que quando aplicamos a função \textcolor{blue}{summary()} o R nos informou as variáveis presentes nestas planilhas e quando fator indicou quais são e quantos de cada existem e quando númerico nos retornou valores como média, mediana (segundo quartil), mínimo, máximo, primeiro e terceiro quartis.
 
 As medidas de tendência central mais conhecidas e aplicadas são média, mediana e moda.
 
@@ -920,9 +957,9 @@ De maneira similar podemos calcular a mediana, que consiste no valor central da 
 ## [1] 14
 \end{verbatim}
 
-Como podemos verificar o valor que se encontra no meio da distribuição de valores da variável comprimento é 14.
+Percebe-se que o valor que se encontra no meio da distribuição da variável comprimento é 14.
 
-Até o momento aprendemos a explorar e sumarizar nossos dados graficamente. Visualizamos também a função \textbf{summary()} aplicada aos dados, que nos indica as medidas de tendência central média e mediana assim como outras características das variáveis como os quartis, mínimo e máximo. Essas medidas apresentadas tem como função indicar as características gerais das variáveis com as quais você está trabalhando. Porém há outras medidas que explicam os dados que são constantemente requeridas.
+Até o momento aprendemos a explorar e sumarizar nossos dados graficamente. Visualizamos também a função \textcolor{blue}{summary()} aplicada aos dados, que nos indica as medidas de tendência central média e mediana assim como outras características das variáveis como os quartis, mínimo e máximo. Essas medidas apresentadas tem como função indicar as características gerais das variáveis com as quais você está trabalhando. Porém há outras medidas que explicam os dados que são constantemente requeridas.
 
 Medidas de dispersão indicam a propagação dos dados em torno do valor central, ou seja, são utilizadas para demonstrar a variabilidade dos dados. Quando as medidas se concentrarem em torno do centro de distribuição dos dados (baixa dispersão), quer dizer que possuem baixa variabilidade. Quando os dados ficam muito dispersos (alta dispersão), significa que apresentam uma alta variabilidade.
 
@@ -962,7 +999,7 @@ Uma outra forma de obter os valores máximo e mínimo é usando a função \text
 
 Como puderam verificar utilizando a função \textcolor{blue}{min()} e \textcolor{blue}{max()} ou \textcolor{blue}{range()} obtemos os valores mínimo e máximo da variável comprimento. Repare que usamos o operador cifrão (\textbf{\$}) após o nome do conjunto de dados. Como você aprendeu anteriormente ele permite acessar as variáveis que estão dentro do objeto dados.
 
-Com os valores mínimo e máximo podemos obter nossa primeira medida de dispersão dos dados. A amplitude que consiste na diferença entre os valores máximo e mínimo de nossa amostra. Está é a forma mais simples de verificar a dispersão de seus dados. Ela apresenta suas falhas, porém tem a vantagem de fornecer a distância na qual seus dados variam na mesma unidade em que eles estão.
+Com os valores mínimo e máximo podemos obter nossa primeira medida de dispersão dos dados. A amplitude que consiste na diferença entre os valores máximo e mínimo de nossa amostra. Está é a forma mais simples de verificar a dispersão de seus dados. Ela apresenta suas falhas, porém tem a vantagem de fornecer a distância na qual seus dados variam mantendo-se a mesma unidade de medida.
 
 A amplitude é utilizada para dados quantitativos, descrever a variabilidade de uma amostra, porém não para inferência estatística.
 
@@ -976,7 +1013,7 @@ A amplitude é utilizada para dados quantitativos, descrever a variabilidade de 
 ## [1] 9
 \end{verbatim}
 
-Como podemos ver, ao calcular a diferença entre o máximo e mínimo da mesma variável obtemos a diferença entre elas e esse valor consiste na amplitude desta variável.
+Ao calcular a diferença entre o máximo e mínimo da mesma variável obtemos a diferença entre elas e esse valor consiste na amplitude da variável.
 
 Uma outra forma de realizar esta mesma operação é utilizando a função \textcolor{blue}{diff()} que calcula a diferença. Quando inserimos a função \textcolor{blue}{range()} dentro da função \textcolor{blue}{diff()} o R nos retorna o resultado da diferença dos valores obtidos pela função \textcolor{blue}{range()}.
 
@@ -990,7 +1027,7 @@ Uma outra forma de realizar esta mesma operação é utilizando a função \text
 ## [1] 9
 \end{verbatim}
 
-O desvio padrão. Esta é uma das medidas de variação mais importantes que iremos realizar. Ele mede a distância dos valores observados em relação a sua média.
+O desvio padrão é uma das medidas de variação mais importantes que iremos realizar. Ele mede a distância dos valores observados em relação a sua média.
 
 Durante a coleta de dados em estudos ambientais, o que normalmente é extraído de informação é uma fração de um todo, ou seja, uma amostra de uma população. Portanto quando se deseja avaliar o desvio padrão, assim como outras medidas de variabilidade, devemos considerar se estamos avaliando uma amostra ou toda a população. Se uma amostra é considerada o nos referimos a ela como desvio padrão amostral e a representamos por (s) se toda a população é considerada nos referimos a ela como desvio padrão populacional e a representamos por (sigma).
 
@@ -998,7 +1035,9 @@ Neste livro vamos abordar e considerar o desvio padrão como o desvio padrão am
 
 Para calcular o desvio padrão amostral utilizamos a seguinte fórmula abaixo:
 
-\[s = \sqrt{\sum^{N}_{i=1}\frac{(x_{i}-\overline{x})²}{N-1}}\]
+\[s = \sqrt{\sum^{N}_{i = 1}\frac{(x_{i}-\overline{x})²}{N-1}}\]
+
+Onde, \(\sum^{N}_{i=1}\) indica o somatório da expressão \(\frac{(x_{i}-\overline{x})²}{N-1}\) para \(i\) variando de 1 até o número total de elementos \(N\). \(x_{i}\) indica o valor medido da variável \(x\), \(\overline{x}\) indica a média da variável \(x\) e \(N\) indica o número total de elementos da variável \(x\).
 
 Podemos calcular o desvio padrão a partir de suas partes, considerando sua fórmula ou a partir de uma função pré-existente no R. Vamos conferir as duas formas.
 
@@ -1102,9 +1141,9 @@ Mas caso não queira escrever a formula o R fornece a função \textcolor{blue}{
 
 Pronto, agora enetendemos como ler um código que apresenta funções dentro de funções e entendemos como realizar o desvio padrão de três formas distintas (existem diversas outras formas) no R. Agora você já pode escolher a que mais lhe agrada. Qual você prefere? Bem, essa é uma escolha sua.
 
-Assim como o desvio padrão temos também a variância. A mais importante medida de variabilidade dos dados. Há todo um conjunto especial de análise de dados voltado para ela. Mas como poderão ver, ela não difere muito do desvio padrão, apenas pelo fato de que consiste no seu valor elevado ao quadrado, daí a variância amostral ser representada por s² enquanto que o desvio padrão é representado por s.
+Assim como o desvio padrão temos também a variância. Na variância, calculamos o grau de dispersão dos nossos dados em relação à média desses dados. Há todo um conjunto especial de análise de dados voltado para ela. Mas como poderão ver, ela não difere muito do desvio padrão, apenas pelo fato de que consiste no seu valor elevado ao quadrado, daí a variância amostral ser representada por s² enquanto que o desvio padrão é representado por s.
 
-Partindo dessa ideia a variância é nada mais que estimar o desvio padrão e eleva-lo ao quadrado. Vamos observar o seu resultado utilizando sua formula e a função predefinida pelo R.
+Partindo dessa ideia a variância consiste em estimar o desvio padrão e eleva-lo ao quadrado (ou removermos a raíz quadrada da fórmula do desvio padrão). Vamos observar o seu resultado utilizando sua fórmula e a função predefinida pelo R.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1136,13 +1175,13 @@ Partindo dessa ideia a variância é nada mais que estimar o desvio padrão e el
 ## [1] 4.435256
 \end{verbatim}
 
-Pronto aqui estão 3 maneiras de encontrar a variância de seus dados. A primeira é similar ao que realizamos anteriormente para o desvio padrão porém sem a raíz quadrada. A segunda consiste em elevar ao quadrado o resultado do desvio padrão e a terceira é aplicando a função \textcolor{blue}{var()} a variável comprimento presente na planilha dados.
+Pronto, aqui estão 3 maneiras de encontrar a variância de seus dados. A primeira é similar ao que realizamos anteriormente para o desvio padrão porém sem a raíz quadrada. A segunda consiste em elevar ao quadrado o resultado do desvio padrão e a terceira é aplicando a função \textcolor{blue}{var()} à variável comprimento presente na planilha dados.
 
 Difícil? Espero que não.
 
-O coeficiente de variação é outra medida importante e de fácil interpretação sobre a variabilidade dos dados. Este consiste em representar o desvio padrão em termos percentuais. Este é simples de calcular e intuítivo de interpretar.
+O coeficiente de variação é outra medida importante e de fácil interpretação sobre a variabilidade dos dados. Este consiste em representar a variação em torno da média em termos percentuais. Este é simples de calcular e intuítivo de interpretar.
 
-Não há, até o momento, uma função no pacote básico do R que o calcule. Vamos calcular e ver o que ele quer dizer.
+Não há, até o momento, uma função no pacote básico do R que o calcule. Vamos calcula-lo a partir de sua fórmula matemática e ver o que ele quer dizer.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1154,9 +1193,9 @@ Não há, até o momento, uma função no pacote básico do R que o calcule. Vam
 ## [1] 15.0698
 \end{verbatim}
 
-Pronto, calculamos o coeficiente de variação da variável comprimento. O desvio padrão de uma dada observação apresenta a mesma unidade de suas observações, correto? Então podemos dividi-lo pela média das próprias observações e multiplicar por 100 com isso temos que a variável comprimento tem uma variação em torno da média de ±15,07\%.
+Pronto, calculamos o coeficiente de variação da variável comprimento e obtivemos uma variação em torno da média de ±15,07\%.
 
-Com isso verificamos as principais medidas de tendência central e dispersão. Mas fica uma questão, como incorpora-las aos gráficos para que assim possamos resumir os dados graficamente de maneira mais completa.
+Com isso verificamos as principais medidas de tendência central e dispersão. Mas fica uma questão, como incorpora-las aos gráficos para que assim possamos resumir os dados graficamente de maneira mais completa?
 
 Agora vamos utilizar nossa planilha dados e verificar a média do comprimento e do peso por ano e por ambiente e incorporar em cada um dos gráficos seus respectivos desvios padrões.
 
@@ -1180,7 +1219,7 @@ Neste caso vamos primeiro precisar organizar os dados que queremos plotar. Como 
 \end{Highlighting}
 \end{Shaded}
 
-Pronto! Dividimos os nosso dados de acordo com os fatores que desejamos. Agora vamos obter as métricas média e desvio padrão.
+Pronto! Dividimos os nosso dados de acordo com os fatores que desejamos (fatores ano e local) utilizando o argumento ``f'' da função split. Agora vamos obter as métricas média e desvio padrão para cada ano de cada local.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1198,7 +1237,7 @@ Pronto! Dividimos os nosso dados de acordo com os fatores que desejamos. Agora v
 \end{Highlighting}
 \end{Shaded}
 
-Pronto! Média e desvio padrão do comprimento calculado para cada ano e local. Agora vamos unir esses resultados em uma data frame
+Pronto! Média e desvio padrão do comprimento calculado para cada ano e local. Agora vamos unir esses resultados em um objeto com os dados referentes a média (dados.media) e um outro com o desvio padrão (dados.dp).
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1214,7 +1253,7 @@ Pronto! Média e desvio padrão do comprimento calculado para cada ano e local. 
 \end{Highlighting}
 \end{Shaded}
 
-Vamos criar as variáveis categoricas e ano e local para adicionar a esse dados
+Vamos criar as variáveis categóricas ano e local para adicionar aos dados de médias e desvios e unir esses objetos em um \emph{data-frame} chamado ``dados.3''. Posteriormente vamos conferir as classes das variáveis.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1261,7 +1300,7 @@ Repare que durante todo este processo utilizamos três funções que não haviam
 
 Pronto! depois de alguns passos conseguimos construir nossa nova tabela com os dados resumidos.
 
-É um processo longo porém necessário para se acostumar com o ambiente de trabalho e a linguagem que o R usa. Há caminhos mais rápidos e tão eficientes quanto. Que se tornam uteis quando lidamos com muitas categorias dentro de uma variável. Contudo para isso é necessário a instalação de algum pacote (Há vários pacotes que apresentam funções que realizam este processo). Vamos utilizar um exemplo começando pela instalação do pacote chamado \textcolor{green}{Rmisc}.
+É um processo longo porém necessário para se acostumar com o ambiente de trabalho e a linguagem que o R usa. Há caminhos mais rápidos e tão eficientes quanto. Que se tornam úteis quando lidamos com muitas categorias dentro de uma variável. Contudo para isso é necessário a instalação de algum pacote (Há vários pacotes que apresentam funções que permitem a realização deste processo de maneira mais rápida e eficiente). Vamos utilizar um exemplo começando pela instalação do pacote chamado \textcolor{green}{Rmisc}.
 
 O comando abaixo realiza a instalação desse pacote. Conforme já fizemos com o pacote \textcolor{green}{readxl}.
 
@@ -1271,7 +1310,7 @@ O comando abaixo realiza a instalação desse pacote. Conforme já fizemos com o
 \end{Highlighting}
 \end{Shaded}
 
-Após instalado vamos carrega-lo pelo comando a seguir. Conforme já fizemos com o pacote readxl
+Após instalado vamos carrega-lo pelo comando a seguir. Conforme já fizemos com o pacote \textcolor{green}{readxl}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1299,9 +1338,9 @@ Agora vamos conhecer a função \textcolor{blue}{summarySE()} deste pacote o qua
 ## 4 2021 Ambiente 2 15        14.8 1.934647 0.4995236 1.0713715
 \end{verbatim}
 
-Repare que a função \textcolor{blue}{summarySE()} apresenta, basicamente, 3 argumentos, ``data'' que pede que se insira a planilha a ser utilizada, ``measurevar'' o qual pede a variável quantitativa que será sumarizada e ``groupvars'' o qual pede as variáveis categoricas segundo as quais a variável mensurável será agrupada. Observe também que para esta função as variáveis devem ser colocadas entre aspas.
+Repare que a função \textcolor{blue}{summarySE()} apresenta, basicamente, 3 argumentos, ``data'' que pede que se insira a planilha a ser utilizada, ``measurevar'' o qual pede a variável quantitativa que será sumarizada e ``groupvars'' o qual pede as variáveis categóricas segundo as quais a variável mensurável será agrupada. Observe também que para esta função as variáveis devem ser colocadas entre aspas.
 
-Pronto com a função acima realizamos os mesmos passos que antes e guardamos o resultado dentro de um objeto chamado resultado. Repare que essa função nos resumiu os dados de comprimento de acordo com as duas variáveis categóricas que indicamos: ano e local. Em seu resumo ele nos forneceu, na seguinte ordem, a coluna ano, local, N (número de observações), comprimento (média do comprimento), sd (desvio padrão), se (erro padrão), ci (intervalo de confiança de 95\%).
+Pronto com a função acima realizamos os mesmos passos que antes e guardamos o resultado dentro de um objeto chamado resultado. Repare que essa função nos resumiu os dados de comprimento de acordo com as duas variáveis categóricas que indicamos: ano e local. Em seu resumo ele nos forneceu, na seguinte ordem, as colunas: ano, local, N (número de observações), comprimento (média do comprimento), sd (desvio padrão), se (erro padrão) e ci (intervalo de confiança de 95\%).
 
 Agora vamos usar o objeto resultado para desenvolver o gráfico de barras com o erro padrão (Figura \ref{fig:bar-ep}).
 
@@ -1374,8 +1413,14 @@ Pronto, gráfico realizado.
 
 Durante nosso percurso neste livro realizaremos muito mais gráficos aliados as análises estatísticas básicas mais comumente utilizadas. Não se assuste com a quantidade de etapas e funções e argumentos e nomes, eles irão se repetir tantas e tantas vezes daqui em diante que você não esquecerá. O aprendizado do R é exponencial e ele lhe permitirá entender como nunca o universo da análise de dados adequando-o para seu campo de atuação.
 
-\textbf{Resumo das etapas até o presente momento:}
-\textbf{importar planinha \textgreater{}\textgreater{} conferir as variáveis \textgreater{}\textgreater{} sumarizar numericamente os dados \textgreater{}\textgreater{} sumarizar graficamente os dados}
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/resumo1} 
+
+}
+
+\caption{Resumo dos passos do capítulo da importação da planilha até a sumarização gráfica e númerica.}\label{fig:resumo1}
+\end{figure}
 
 \hypertarget{qui-quadrado-chi}{%
 \chapter{\texorpdfstring{Qui-quadrado (\(\chi\)²)}{Qui-quadrado (\textbackslash{}chi²)}}\label{qui-quadrado-chi}}
@@ -1588,7 +1633,7 @@ Imagine que você foi em campo e contabilizou as espécies de cracas que identif
 ##  on 2000 replicates)
 ## 
 ## data:  N.especies
-## X-squared = 4, df = NA, p-value = 0.06247
+## X-squared = 4, df = NA, p-value = 0.06797
 \end{verbatim}
 
 Pronto. Basta usarmos o argumento simulate.p.value e indicar ``FALSE'' quando não queremos a simulação de Monte Carlo, ou apenas omitirmos este argumento, ou usar este argumento e indicar ``TRUE'' o qual realiza a simulação de Monte Carlo. Verifique que com a aplicação desta simulação o p-value aumenta indicando que torna mais dificil rejeitarmos a hipótese nula. Após aplicarmos a correção na nossa análise podemos afirmar que não há diferença na quantidade de cracas observadas em relação as proporções esperadas, para ambas as espécies de cracas.
