@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.11.24)  5 DEC 2020 11:42
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.11.24)  5 DEC 2020 22:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -478,49 +478,148 @@ TinyTeX/texmf-dist/tex/generic/babel/txtbabel.def))
 (/home/wilson/.TinyTeX/texmf-dist/tex/generic/babel-portuges/portuguese.ldf
 Language: portuges 2020/05/04 v1.2r Portuguese support from the babel system
 Package babel Info: Making " an active character on input line 143.
-)) (/home/wilson/.TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
+)) (/home/wilson/.TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen191
+\ar@mcellbox=\box59
+\extrarowheight=\dimen192
+\NC@list=\toks28
+\extratabsurround=\skip62
+\backup@length=\skip63
+\ar@cellbox=\box60
+) (/home/wilson/.TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip64
+\multirow@cntb=\count309
+\multirow@dima=\skip65
+\bigstrutjot=\dimen193
+) (/home/wilson/.TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen194
+\WF@size=\dimen195
+\c@WF@wrappedlines=\count310
+\WF@box=\box61
+\WF@everypar=\toks29
+Package: wrapfig 2003/01/31  v 3.6
+) (/home/wilson/.TinyTeX/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count311
+\float@exts=\toks30
+\float@box=\box62
+\@float@everytoks=\toks31
+\@floatcapt=\box63
+) (/home/wilson/.TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks32
+\minrowclearance=\skip66
+) (/home/wilson/.TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+(/home/wilson/.TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
+
+) (/home/wilson/.TinyTeX/texmf-dist/tex/latex/tabu/tabu.sty
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
+(/home/wilson/.TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box64
+\sift@deathcycles=\count312
+\@vwid@loff=\dimen196
+\@vwid@roff=\dimen197
+)
+\c@taburow=\count313
+\tabu@nbcols=\count314
+\tabu@cnt=\count315
+\tabu@Xcol=\count316
+\tabu@alloc=\count317
+\tabu@nested=\count318
+\tabu@target=\dimen198
+\tabu@spreadtarget=\dimen199
+\tabu@naturalX=\dimen256
+\tabucolX=\dimen257
+\tabu@Xsum=\dimen258
+\extrarowdepth=\dimen259
+\abovetabulinesep=\dimen260
+\belowtabulinesep=\dimen261
+\tabustrutrule=\dimen262
+\tabu@thebody=\toks33
+\tabu@footnotes=\toks34
+\tabu@box=\box65
+\tabu@arstrutbox=\box66
+\tabu@hleads=\box67
+\tabu@vleads=\box68
+\tabu@cellskip=\skip67
+) (/home/wilson/.TinyTeX/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box69
+)
+(/home/wilson/.TinyTeX/texmf-dist/tex/latex/threeparttablex/threeparttablex.sty
+Package: threeparttablex 2013/07/23 v0.3 by daleif
+(/home/wilson/.TinyTeX/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+(/home/wilson/.TinyTeX/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\TPTL@width=\skip68
+) (/home/wilson/.TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box70
+\UL@hyphenbox=\box71
+\UL@skip=\skip69
+\UL@hook=\toks35
+\UL@height=\dimen263
+\UL@pe=\count319
+\UL@pixel=\dimen264
+\ULC@box=\box72
+Package: ulem 2019/11/18
+\ULdepth=\dimen265
+) (/home/wilson/.TinyTeX/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen266
+\c@nlinenum=\count320
+\TeXr@lab=\toks36
+) (/home/wilson/.TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip62
-\bibsep=\skip63
+\bibhang=\skip70
+\bibsep=\skip71
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count309
+\c@NAT@ctr=\count321
 ) (./livroR-1.0.aux)
 \openout1 = `livroR-1.0.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 137.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 151.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 137.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 151.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 137.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 151.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 137.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 151.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 137.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 151.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 137.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 151.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 137.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 151.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -549,7 +648,7 @@ pt=math;language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 137.
+(Font)              scaled to size 10.0pt on input line 151.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -589,18 +688,18 @@ pt=math;language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 137.
+(Font)              scaled to size 10.0pt on input line 151.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 137.
+(Font)              `operators' in the math version `normal' on input line 151.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 137.
+ line 151.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 137.
+(Font)              `operators' in the math version `bold' on input line 151.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 137.
+t line 151.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -688,15 +787,15 @@ t=math;language=dflt;mapping=tex-text;"
 (fontspec)             \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 137.
+(Font)              `symbols' in the math version `normal' on input line 151.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 137.
+t line 151.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 137.
+(Font)              `symbols' in the math version `bold' on input line 151.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 137.
+t line 151.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -767,17 +866,17 @@ pt=math;language=dflt;mapping=tex-text;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-37.
+51.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 137.
+t line 151.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 137
+(Font)              `largesymbols' in the math version `bold' on input line 151
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 137.
-Package hyperref Info: Link coloring ON on input line 137.
+t line 151.
+Package hyperref Info: Link coloring ON on input line 151.
 (/home/wilson/.TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/home/wilson/.TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -786,11 +885,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/home/wilson/.TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count310
+\c@section@level=\count322
 )
-LaTeX Info: Redefining \ref on input line 137.
-LaTeX Info: Redefining \pageref on input line 137.
-LaTeX Info: Redefining \nameref on input line 137.
+LaTeX Info: Redefining \ref on input line 151.
+LaTeX Info: Redefining \pageref on input line 151.
+LaTeX Info: Redefining \nameref on input line 151.
 (./livroR-1.0.out) (./livroR-1.0.out)
 \@outlinefile=\write4
 \openout4 = `livroR-1.0.out'.
@@ -829,14 +928,6 @@ LaTeX Info: Redefining \nameref on input line 137.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/home/wilson/.TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
-Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
-(/home/wilson/.TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
-Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
-)
-Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
-
-)
 File: cover.pdf Graphic file (type pdf)
 <use cover.pdf>
 File: cover.pdf Graphic file (type pdf)
@@ -855,60 +946,60 @@ File: cover.pdf Graphic file (type pdf)
 
 ]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 153.
+(Font)              scaled to size 17.28pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 153.
+(Font)              scaled to size 12.0pt on input line 167.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-53.
+67.
 (/home/wilson/.TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 17.28157pt on input line 153.
+(Font)              scaled to size 17.28157pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.0011pt on input line 153.
+(Font)              scaled to size 12.0011pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 153.
+(Font)              scaled to size 10.00092pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 17.27815pt on input line 153.
+(Font)              scaled to size 17.27815pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 153.
+(Font)              scaled to size 11.99872pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 153.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 153
+(Font)              scaled to size 9.99893pt on input line 167.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 167
 .
 (/home/wilson/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 153
+LaTeX Font Info:    Trying to load font information for U+msb on input line 167
 .
 (/home/wilson/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 153.
+(Font)              scaled to size 8.0pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 153.
+(Font)              scaled to size 6.0pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00073pt on input line 153.
+(Font)              scaled to size 8.00073pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00055pt on input line 153.
+(Font)              scaled to size 6.00055pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 153.
+(Font)              scaled to size 7.99915pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 153.
+(Font)              scaled to size 5.99936pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 153.
+(Font)              scaled to size 9.0pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 153.
+(Font)              scaled to size 5.0pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 9.00082pt on input line 153.
+(Font)              scaled to size 9.00082pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 153.
+(Font)              scaled to size 5.00046pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.99904pt on input line 153.
+(Font)              scaled to size 8.99904pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 153.
+(Font)              scaled to size 4.99947pt on input line 167.
 [1
 
 ] (./livroR-1.0.toc
@@ -918,31 +1009,31 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
 (Font)              scaled to size 7.00064pt on input line 5.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 6.99925pt on input line 5.
-)
+[1
+
+])
 \tf@toc=\write5
 \openout5 = `livroR-1.0.toc'.
 
-[1
-
-] (./livroR-1.0.lot)
+[2] (./livroR-1.0.lot)
 \tf@lot=\write6
 \openout6 = `livroR-1.0.lot'.
 
-[2
+[3
 
-] (./livroR-1.0.lof [3
+] (./livroR-1.0.lof [4
 
-] [4])
+] [5])
 \tf@lof=\write7
 \openout7 = `livroR-1.0.lof'.
 
-[5] [6
+[6] [7
 
-] [7
+] [8
 
 ]
 Cap\'{\i }tulo 1.
-[8
+[9
 
 ]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
@@ -951,11 +1042,11 @@ type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
 /livroR-1.0/docs/livroR-1.0_files/figures print/RStudio.png>
 
-Underfull \hbox (badness 1552) in paragraph at lines 228--229
+Underfull \hbox (badness 1552) in paragraph at lines 242--243
 []\TU/lmr/bx/n/10 MOSTRAR UMA FIGURA DO SCRIPT COM UMA LINHA ESCRITO: “OLÁ
  []
 
-[9] [10]
+[10] [11]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
 l e R/livroR-1.0/docs/livroR-1.0_files/figures print/script.png Graphic file (t
 ype bmp)
@@ -976,7 +1067,7 @@ l e R/livroR-1.0/docs/livroR-1.0_files/figures print/history.png Graphic file (
 type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
 /livroR-1.0/docs/livroR-1.0_files/figures print/history.png>
-[11] [12]
+[12] [13]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
 l e R/livroR-1.0/docs/livroR-1.0_files/figures print/files.png Graphic file (ty
 pe bmp)
@@ -987,7 +1078,7 @@ l e R/livroR-1.0/docs/livroR-1.0_files/figures print/packages.png Graphic file
 (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
 /livroR-1.0/docs/livroR-1.0_files/figures print/packages.png>
-[13]
+[14]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
 l e R/livroR-1.0/docs/livroR-1.0_files/figures print/plot.png Graphic file (typ
 e bmp)
@@ -998,16 +1089,16 @@ l e R/livroR-1.0/docs/livroR-1.0_files/figures print/help.png Graphic file (typ
 e bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
 /livroR-1.0/docs/livroR-1.0_files/figures print/help.png>
-[14] [15]
+[15] [16]
 Cap\'{\i }tulo 2.
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
 l e R/livroR-1.0/docs/livroR-1.0_files/figures print/setwd.png Graphic file (ty
 pe bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
 /livroR-1.0/docs/livroR-1.0_files/figures print/setwd.png>
-[16
+[17
 
-] [17]
+] [18]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
 l e R/livroR-1.0/docs/livroR-1.0_files/figures print/files.png Graphic file (ty
 pe bmp)
@@ -1024,10 +1115,10 @@ pe bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
 /livroR-1.0/docs/livroR-1.0_files/figures print/files.png>
 
-LaTeX Warning: Reference `fig:planilhaxlsx' on page 18 undefined on input line 
-431.
+LaTeX Warning: Reference `fig:planilhaxlsx' on page 19 undefined on input line 
+445.
 
-[18] [19]
+[19] [20]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
 l e R/livroR-1.0/docs/livroR-1.0_files/figures print/planilha.png Graphic file 
 (type bmp)
@@ -1039,7 +1130,7 @@ ile (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
 /livroR-1.0/docs/livroR-1.0_files/figures print/planilhaxlsx.png>
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 453.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 467.
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
 l e R/livroR-1.0/docs/livroR-1.0_files/figures print/arqenv.png Graphic file (t
 ype bmp)
@@ -1050,139 +1141,146 @@ l e R/livroR-1.0/docs/livroR-1.0_files/figures print/import-graf.png Graphic fi
 le (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
 /livroR-1.0/docs/livroR-1.0_files/figures print/import-graf.png>
-[20] [21] [22] [23]
+[21] [22] [23] [24]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
 l e R/livroR-1.0/docs/livroR-1.0_files/figures print/import-graf-2.png Graphic 
 file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
 /livroR-1.0/docs/livroR-1.0_files/figures print/import-graf-2.png>
-[24] [25]
-Overfull \hbox (9.0321pt too wide) in paragraph at lines 594--594
+[25] [26]
+Overfull \hbox (9.0321pt too wide) in paragraph at lines 608--608
 []\TU/lmtt/m/n/10 ##  $ local      : Factor w/ 2 levels "Ambiente 1","Ambiente 
 2": 1 1 1 1 1 1 1 1 1 1 ...[] 
  []
 
-[26] [27]
+[27] [28]
 File: livroR-1.0_files/figure-latex/comp-hist-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/comp-hist-1.pdf>
 File: livroR-1.0_files/figure-latex/comp-hist-col-1.pdf Graphic file (type pdf)
 
 <use livroR-1.0_files/figure-latex/comp-hist-col-1.pdf>
-[28] [29]
+[29] [30]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
 l e R/livroR-1.0/docs/livroR-1.0_files/figures print/abundancia.png Graphic fil
 e (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
 /livroR-1.0/docs/livroR-1.0_files/figures print/abundancia.png>
-[30]
+[31]
 File: livroR-1.0_files/figure-latex/bar-abu-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-abu-1.pdf>
 File: livroR-1.0_files/figure-latex/bar-abu-col-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-abu-col-1.pdf>
-[31] [32] [33]
+[32] [33] [34]
 File: livroR-1.0_files/figure-latex/pon-graf-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/pon-graf-1.pdf>
-[34] [35]
+[35] [36]
 File: livroR-1.0_files/figure-latex/lin-graf-col-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/lin-graf-col-1.pdf>
-[36]
+[37]
 File: livroR-1.0_files/figure-latex/box-graf-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/box-graf-1.pdf>
 File: livroR-1.0_files/figure-latex/box-graf-col-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/box-graf-col-1.pdf>
-[37] [38] [39] [40] [41] [42] [43] [44] [45]
-Overfull \hbox (66.7821pt too wide) in paragraph at lines 1274--1274
+[38] [39] [40] [41] [42] [43] [44] [45] [46]
+Overfull \hbox (66.7821pt too wide) in paragraph at lines 1288--1288
 []\TU/lmtt/m/n/10 ##  $ dados.dp   : chr  "2.84604989415154" "1.28668393770792"
  "1.58113883008419" "1.93464651625488"[] 
  []
 
-[46] [47]
+[47] [48]
 File: livroR-1.0_files/figure-latex/bar-ep-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-ep-1.pdf>
-[48] [49]
+[49] [50]
 File: livroR-1.0_files/figure-latex/bar-ep-abu-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-ep-abu-1.pdf>
+[51] [52]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
 l e R/livroR-1.0/docs/livroR-1.0_files/figures print/resumo1.png Graphic file (
 type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
 /livroR-1.0/docs/livroR-1.0_files/figures print/resumo1.png>
-[50] [51]
+[53]
 Cap\'{\i }tulo 3.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 1426.
+(Font)              scaled to size 24.88pt on input line 1445.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 20.74pt on input line 1426.
+(Font)              scaled to size 20.74pt on input line 1445.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 24.88228pt on input line 1426.
+(Font)              scaled to size 24.88228pt on input line 1445.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 20.7419pt on input line 1426.
+(Font)              scaled to size 20.7419pt on input line 1445.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 24.87733pt on input line 1426.
+(Font)              scaled to size 24.87733pt on input line 1445.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 20.73778pt on input line 1426.
+(Font)              scaled to size 20.73778pt on input line 1445.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 1443.
+(Font)              scaled to size 14.4pt on input line 1454.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 14.4013pt on input line 1443.
+(Font)              scaled to size 14.4013pt on input line 1454.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 14.39845pt on input line 1443.
-[52
+(Font)              scaled to size 14.39845pt on input line 1454.
+[54
 
-] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63]
+] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65]
 File: livroR-1.0_files/figure-latex/bar-tab-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-tab-1.pdf>
-[64] [65] [66]
+[66] [67]
+File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
+l e R/livroR-1.0/docs/livroR-1.0_files/figures print/resumo2.png Graphic file (
+type bmp)
+</media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
+/livroR-1.0/docs/livroR-1.0_files/figures print/resumo2.png>
+[68] [69]
 Cap\'{\i }tulo 4.
-[67
+[70
 
-] [68]
+] [71]
 File: livroR-1.0_files/figure-latex/hist-tam-cam-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-tam-cam-1.pdf>
-[69] [70]
+[72] [73]
 Missing character: There is no μ in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no ≤ in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no μ in font [lmroman10-regular]:mapping=tex-text;!
-[71]
+[74]
 File: livroR-1.0_files/figure-latex/estrelas-hist-1.pdf Graphic file (type pdf)
 
 <use livroR-1.0_files/figure-latex/estrelas-hist-1.pdf>
-[72] [73]
+[75] [76]
 File: livroR-1.0_files/figure-latex/craca-hist-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/craca-hist-1.pdf>
-[74] [75] [76]
+[77] [78] [79]
 File: livroR-1.0_files/figure-latex/cracas-dens-95-1.pdf Graphic file (type pdf
 )
 <use livroR-1.0_files/figure-latex/cracas-dens-95-1.pdf>
 File: livroR-1.0_files/figure-latex/cracas-dens-99-1.pdf Graphic file (type pdf
 )
 <use livroR-1.0_files/figure-latex/cracas-dens-99-1.pdf>
-[77] [78] [79] [80]
+[80] [81] [82] [83]
 File: livroR-1.0_files/figure-latex/hist-ali-A-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-ali-A-1.pdf>
-[81] [82]
+[84] [85]
 File: livroR-1.0_files/figure-latex/hist-ali-B-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-ali-B-1.pdf>
 File: livroR-1.0_files/figure-latex/box-ali-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/box-ali-1.pdf>
-[83] [84] [85] [86]
+[86] [87] [88] [89]
 File: livroR-1.0_files/figure-latex/testet-duas-dens-1.pdf Graphic file (type p
 df)
 <use livroR-1.0_files/figure-latex/testet-duas-dens-1.pdf>
-[87] [88] [89]
+[90] [91] [92]
 File: livroR-1.0_files/figure-latex/hist-temp-0-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-temp-0-1.pdf>
-[90]
+[93]
 File: livroR-1.0_files/figure-latex/hist-temp-20-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-temp-20-1.pdf>
 File: livroR-1.0_files/figure-latex/box-temp-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/box-temp-1.pdf>
-[91] [92] [93] [94]
+[94] [95] [96] [97]
 File: livroR-1.0_files/figure-latex/testet-duas-temp-dens-1.pdf Graphic file (t
 ype pdf)
 <use livroR-1.0_files/figure-latex/testet-duas-temp-dens-1.pdf>
-[95] [96] [97]
-Overfull \hbox (30.0321pt too wide) in paragraph at lines 3033--3033
+[98] [99] [100]
+Overfull \hbox (30.0321pt too wide) in paragraph at lines 3079--3079
 []\TU/lmtt/m/n/10 ##  $ Dia         : Factor w/ 20 levels "Dia 1","Dia 10",..: 
 1 12 14 15 16 17 18 19 20 2 ...[] 
  []
@@ -1190,41 +1288,41 @@ Overfull \hbox (30.0321pt too wide) in paragraph at lines 3033--3033
 File: livroR-1.0_files/figure-latex/hist-par-obs1-1.pdf Graphic file (type pdf)
 
 <use livroR-1.0_files/figure-latex/hist-par-obs1-1.pdf>
-[98]
 File: livroR-1.0_files/figure-latex/hist-par-obs2-1.pdf Graphic file (type pdf)
 
 <use livroR-1.0_files/figure-latex/hist-par-obs2-1.pdf>
+[101] [102] [103]
 File: livroR-1.0_files/figure-latex/box-par-ave-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/box-par-ave-1.pdf>
-[99] [100] [101]
+[104] [105]
 File: livroR-1.0_files/figure-latex/testet-par-ave-1.pdf Graphic file (type pdf
 )
 <use livroR-1.0_files/figure-latex/testet-par-ave-1.pdf>
-[102] [103]
+[106] [107]
 File: livroR-1.0_files/figure-latex/bar-dif-ave-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-dif-ave-1.pdf>
-[104]
+[108]
 File: livroR-1.0_files/figure-latex/bar-dif-ave2-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-dif-ave2-1.pdf>
-[105] [106]
+[109] [110]
 Cap\'{\i }tulo 5.
 No file livroR-1.0.bbl.
-[107
+[111
 
 ] (./livroR-1.0.aux)
 Package rerunfilecheck Info: File `livroR-1.0.out' has not changed.
-(rerunfilecheck)             Checksum: 1B256E6296D4466D92EF593F59D380B3;3593.
+(rerunfilecheck)             Checksum: A8B2FEFD9EC17AD75D9C48532EB2B977;3845.
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 19371 strings out of 479387
- 360732 string characters out of 5879205
- 834225 words of memory out of 5000000
- 38366 multiletter control sequences out of 15000+600000
- 546392 words of font info for 118 fonts, out of 8000000 for 9000
+ 20718 strings out of 479387
+ 380977 string characters out of 5879205
+ 864646 words of memory out of 5000000
+ 39661 multiletter control sequences out of 15000+600000
+ 546498 words of font info for 119 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  94i,18n,118p,1862b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on livroR-1.0.pdf (109 pages).
+Output written on livroR-1.0.pdf (113 pages).

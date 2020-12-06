@@ -28,7 +28,10 @@ fig:box-graf-col
 fig:bar-ep
 fig:bar-ep-abu
 fig:resumo1
+tab:tab1qui
+tab:tab2qui
 fig:bar-tab
+fig:resumo2
 fig:hist-tam-cam
 fig:estrelas-hist
 fig:craca-hist
@@ -65,9 +68,11 @@ gráfico-de-barras
 gráfico-de-linhas
 boxplot
 passo-sumarizar-os-dados-numericamente
+considerações
 qui-quadrado-chi
 chi-para-ajuste-de-frequências
 chi-para-independência
+considerações-1
 teste-t.
 teste-t-para-uma-amostra
 teste-t-para-duas-amostras
