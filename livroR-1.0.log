@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.11.24)  5 DEC 2020 22:47
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.11.24)  15 DEC 2020 20:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1232,55 +1232,52 @@ type bmp)
 /livroR-1.0/docs/livroR-1.0_files/figures print/resumo2.png>
 [68] [69]
 Cap\'{\i }tulo 4.
+
+LaTeX Warning: Reference `(' on page 70 undefined on input line 2031.
+
 [70
 
 ] [71]
 File: livroR-1.0_files/figure-latex/hist-tam-cam-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-tam-cam-1.pdf>
-[72] [73]
-Missing character: There is no μ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ≤ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no μ in font [lmroman10-regular]:mapping=tex-text;!
-[74]
+[72] [73] [74] [75]
 File: livroR-1.0_files/figure-latex/estrelas-hist-1.pdf Graphic file (type pdf)
 
 <use livroR-1.0_files/figure-latex/estrelas-hist-1.pdf>
-[75] [76]
+[76] [77]
 File: livroR-1.0_files/figure-latex/craca-hist-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/craca-hist-1.pdf>
-[77] [78] [79]
+[78] [79] [80]
 File: livroR-1.0_files/figure-latex/cracas-dens-95-1.pdf Graphic file (type pdf
 )
 <use livroR-1.0_files/figure-latex/cracas-dens-95-1.pdf>
 File: livroR-1.0_files/figure-latex/cracas-dens-99-1.pdf Graphic file (type pdf
 )
 <use livroR-1.0_files/figure-latex/cracas-dens-99-1.pdf>
-[80] [81] [82] [83]
+[81] [82] [83] [84]
 File: livroR-1.0_files/figure-latex/hist-ali-A-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-ali-A-1.pdf>
-[84] [85]
 File: livroR-1.0_files/figure-latex/hist-ali-B-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-ali-B-1.pdf>
 File: livroR-1.0_files/figure-latex/box-ali-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/box-ali-1.pdf>
-[86] [87] [88] [89]
+[85] [86] [87] [88] [89] [90] [91]
 File: livroR-1.0_files/figure-latex/testet-duas-dens-1.pdf Graphic file (type p
 df)
 <use livroR-1.0_files/figure-latex/testet-duas-dens-1.pdf>
-[90] [91] [92]
+[92] [93]
 File: livroR-1.0_files/figure-latex/hist-temp-0-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-temp-0-1.pdf>
-[93]
 File: livroR-1.0_files/figure-latex/hist-temp-20-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-temp-20-1.pdf>
 File: livroR-1.0_files/figure-latex/box-temp-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/box-temp-1.pdf>
-[94] [95] [96] [97]
+[94] [95] [96] [97] [98]
 File: livroR-1.0_files/figure-latex/testet-duas-temp-dens-1.pdf Graphic file (t
 ype pdf)
 <use livroR-1.0_files/figure-latex/testet-duas-temp-dens-1.pdf>
-[98] [99] [100]
-Overfull \hbox (30.0321pt too wide) in paragraph at lines 3079--3079
+[99] [100] [101]
+Overfull \hbox (30.0321pt too wide) in paragraph at lines 3136--3136
 []\TU/lmtt/m/n/10 ##  $ Dia         : Factor w/ 20 levels "Dia 1","Dia 10",..: 
 1 12 14 15 16 17 18 19 20 2 ...[] 
  []
@@ -1288,41 +1285,46 @@ Overfull \hbox (30.0321pt too wide) in paragraph at lines 3079--3079
 File: livroR-1.0_files/figure-latex/hist-par-obs1-1.pdf Graphic file (type pdf)
 
 <use livroR-1.0_files/figure-latex/hist-par-obs1-1.pdf>
+[102] [103]
 File: livroR-1.0_files/figure-latex/hist-par-obs2-1.pdf Graphic file (type pdf)
 
 <use livroR-1.0_files/figure-latex/hist-par-obs2-1.pdf>
-[101] [102] [103]
 File: livroR-1.0_files/figure-latex/box-par-ave-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/box-par-ave-1.pdf>
-[104] [105]
+[104] [105] [106]
 File: livroR-1.0_files/figure-latex/testet-par-ave-1.pdf Graphic file (type pdf
 )
 <use livroR-1.0_files/figure-latex/testet-par-ave-1.pdf>
-[106] [107]
+[107] [108]
 File: livroR-1.0_files/figure-latex/bar-dif-ave-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-dif-ave-1.pdf>
-[108]
+[109]
 File: livroR-1.0_files/figure-latex/bar-dif-ave2-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-dif-ave2-1.pdf>
-[109] [110]
+File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
+l e R/livroR-1.0/docs/livroR-1.0_files/figures print/resumo2.png Graphic file (
+type bmp)
+</media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
+/livroR-1.0/docs/livroR-1.0_files/figures print/resumo2.png>
+[110] [111]
 Cap\'{\i }tulo 5.
 No file livroR-1.0.bbl.
-[111
+[112
 
 ] (./livroR-1.0.aux)
 Package rerunfilecheck Info: File `livroR-1.0.out' has not changed.
-(rerunfilecheck)             Checksum: A8B2FEFD9EC17AD75D9C48532EB2B977;3845.
+(rerunfilecheck)             Checksum: D2F7CDEC0FE1894B1776C8E86599CC6B;3971.
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 20718 strings out of 479387
- 380977 string characters out of 5879205
- 864646 words of memory out of 5000000
- 39661 multiletter control sequences out of 15000+600000
+ 20724 strings out of 479387
+ 381049 string characters out of 5879205
+ 865042 words of memory out of 5000000
+ 39667 multiletter control sequences out of 15000+600000
  546498 words of font info for 119 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  94i,18n,118p,1862b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on livroR-1.0.pdf (113 pages).
+Output written on livroR-1.0.pdf (114 pages).

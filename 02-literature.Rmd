@@ -409,7 +409,7 @@ boxplot(formula = dados$comprimento ~ dados$ano)
 ```
 
 
-Repare que a escrita para esse gráfico é ligeiramente diferente. Ele usa a função `r colorize("boxplot()", "blue")`, dentro desta há um argumento chamado formula onde nele inserimos a variável independente (variável do eixo X) e a variável dependente (variável do eixo Y). Entre ambas as variáveis há o caracter "~" (til). A forma de ler essa escrita é a seguinte: Realize um boxplot da variável comprimento da planilha dados em função da variável ano da planilha dados. A variável til é lida como ("em função de")
+Repare que a escrita para esse gráfico é ligeiramente diferente. Ele usa a função `r colorize("boxplot()", "blue")`, dentro desta há um argumento chamado fórmula onde nele inserimos a variável independente (variável do eixo X) e a variável dependente (variável do eixo Y). Entre ambas as variáveis há o caracter "~" (til). A forma de ler essa escrita é a seguinte: Realize um boxplot da variável comprimento da planilha dados em função da variável ano da planilha dados. A variável til é lida como ("em função de")
 
 
 Vamos adicionar alguns argumentos que permitem deixar o gráfico mais apresentável (Figura \@ref(fig:box-graf-col)).
