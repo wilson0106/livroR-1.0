@@ -200,11 +200,13 @@ library(kableExtra)
 text_tbl2 <- data.frame(Atributos = c("Tipo de variável",
                                       "Quantidade de variáveis",
                                       "Hipótese nula",
+                                      "Fórmula",
                                       "Observação"),
-                        Características = c("Categórica",
-                                            "2 ou mais",
-                                            "As proporções relativas de uma variável são independentes de uma segunda variável",
-                                            "Como característica intrinseca a este teste é necessário a construção da tabela de contigência"))
+                        Características = c("Categórica.",
+                                            "2 ou mais.",
+                                            "As proporções relativas de uma variável são independentes de uma segunda variável.",
+                                            "Para uma tabela 2 $\\times$2 temos: $$\\chi^{2} = \\frac{n(f_{11}f_{22}-f_{12}f_{21})^2}{R_{1}R_{2}C_{1}C_{2}}$$ Onde n é onúmero total de observações; $f_{11}$ é o valor da primeira linha e primeira coluna; $f_{22}$ é o valor da segunda linha e segunda coluna; $f_{12}$ é o valor da primeira linha e da segunda coluna; $f_{21}$ é o valor da segunda linha e primeira coluna; $R_{1}$ é a soma da primeira linha; $R_{2}$ é a soma da segunda linha; $C_{1}$ é a soma da primeira coluna e $C_{2}$ é a soma da segunda coluna.",
+                                            "Como característica intrinseca a este teste é necessário a construção da tabela de contigência."))
 
 kbl(text_tbl2, booktabs = T, valign = "c", escape = F, caption = "Principais características do qui-quadrado para independência") %>%
   kable_styling(full_width = F, latex_options = "striped") %>%
@@ -282,12 +284,15 @@ Pronto. Como podem ver a representação do resultado é similar ao exemplo acim
 
 
 Nossa hipótese nula pode ser escrita de três formas. Vejamos os 3 exemplos abaixo:
+
 * H0: Na população amostrada a proporção de machos e fêmeas é independente do ano;
+
 * H0: Na população amostrada a razão sexual dos camarões é a mesma entre os anos;
+
 * H0: A proporção de camarões entre os anos é a mesma para ambos os sexos;
 
 
-Como o teste resultou em um p-value maior que 0,05 podemos dizer, por essa via, que corroboramos nossa hipótese nula.
+Como o teste resultou em um *p-value* maior que 0,05 podemos dizer, por essa via, que corroboramos nossa hipótese nula.
 
 
 Neste ponto é bom relembramos da importância do número de observações de cada grupo. Se este número for pequeno incertezas podem ser geradas e ajustes devem ser feitos. Contudo, para definir o que é um número baixo de observações sigamos o cálculo sugerido por Zar (2010)^[Zar, J. H. (2010). Biostatistical analysis (5th ed.). Upper Saddle River, N.J.: Prentice-Hall/Pearson.] o qual define como: $n = 6rc$. 

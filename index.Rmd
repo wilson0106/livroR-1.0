@@ -13,6 +13,7 @@ bibliography: [book.bib, packages.bib]
 documentclass: book
 classoption: ["titlepage, oneside, openany, a4paper"]
 linestretch: 1.5
+fontsize: 13pt
 geometry: ["left = 2.5cm, right = 2.5cm, top = 2cm, bottom = 3cm"]
 biblio-style: apalike
 always_allow_html: yes

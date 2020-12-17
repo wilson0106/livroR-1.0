@@ -3,9 +3,9 @@
 
 ## O que é?
 
-É uma linguagem de programação derivada da linguagem S e desenvolvida pela Bell Laboratories (Atualmente Lucen Technologies).
+É uma linguagem de programação derivada da linguagem S e desenvolvida pela Bell Laboratories (Atualmente Lucen Technologies). Tem se tornado a principal linguagem para análise de dados, principalmente devido ao seu carater *open-source* (código aberto).
 
-Para mais informações acesse: https://www.r-project.org/about.html
+Para informações detalhadas acesse o site do R (https://www.r-project.org/about.html).
 
 
 ## Porque usá-lo para análise de dados?
@@ -33,7 +33,7 @@ knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística p
 O primeiro passo para que possamos compreender o R e o RStudio e o que podemos fazer com ele consiste em entender a sua estrutura como ela está organizada e o que ela significa. Uma vez compreendida sua estrutura organizacional e funcionalidade poderemos mergulhar no mundo das análises de dados dentro deste novo ambiente.
 
 
-Para isso veremos as principais guias do RStudio, como elas estão organizadas e quais as suas funcionalidades.
+Para isso veremos as principais guias do RStudio, como elas estão organizadas e quais as suas principais funcionalidades.
 
 
 1. *Script*: Guia utilizada para escrevermos o nosso código (comandos que executarão uma determinada tarefa) e comentários. Para executar os comandos escritos neste ambiente devemos deixar o cursor na linha que queremos executar e utilizar os atalhos do teclado $(CTRL + ENTER)$ ou $(CTRL + R)$ ou clicar em "**Run**" (Figura \@ref(fig:script)). Todo comando executado irá retornar uma saída na guia do "*console*" (ver item 2). Se o comando executado indicar que o resultado será guardado em um objeto^[Há diferentes tipos de objetos no R, falaremos sobre eles no próximo capítulo.], este irá aparecer na guia "*environment*" (ver item 3);
@@ -54,13 +54,13 @@ knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística p
 **MOSTRAR UMA FIGURA DO CONSOLE COM UMA LINHA ESCRITO: "OLÁ MUNDO"; UMA SEGUNDA LINHA ESCRITO: 1 + 2; UMA TERCEIRA LINHA ESCRITO: SOMA <- 1 + 2; UMA QUARTA LINHA ESCRITO: # NESTE AMBIENTE ESREVEMOS NOSSO CÓDIGO E COMENTÁRIOS** Vamos indicar na legenda da figura isto que está escrito em negrito aqui.
 
 
-3. *Environment*: Guia que indica os objetos e funções criadas. (Figura \@ref(fig:environment));
+3. *Environment*: Todo objeto^[Consiste em todo simbolo ou variável que armazena um valor ou estrutura de dados. Todo objeto apresenta uma classe (definição do objeto). As classes mais comuns são: vetor (objeto que contêm uma sequência unidimensional de elementos), matriz (Objeto bidimensional onde todos os elementos são da mesma classe. ex.: numérico, caracter, lógico ou inteiro), data-frame (Objeto bidimensional onde os elementos pertencentes podem ser de classes diferentes) e lista (é um vetor que agrupa, de maneira unidimensional, diferentes objetos). Não iremos abordá-los em detalhes neste livro.] ou função desenvolvida será indicado nesta guia. (Figura \@ref(fig:environment));
 
 ```{r environment, message = FALSE, echo = FALSE, fig.cap = "Guia do RStudio referente ao ambiente environment, local onde estarão indicados os objetos criados.", fig.align = "center", out.width = '60%'}
 knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/environment.png')
 ```
 
-**MOSTRAR UMA FIGURA DO ENVIRONMENT COM ALGUNS OBJETOS: UM DATA FRAME, UM OBJETO COM UM ITEM E UM OBJETO COM VÁRIOS VALORES** Vamos indicar na legenda da figura isto que está escrito em negrito aqui.
+**MOSTRAR UMA FIGURA DO ENVIRONMENT COM ALGUNS OBJETOS: UM VETOR, UMA MATRIZ, UM DATA FRAME E UMA LISTA** Vamos indicar na legenda da figura isto que está escrito em negrito aqui.
 
 
 4. *History*: Guia que indica o histórico dos comandos executados tanto por linha de código quanto por cliques em botões (Figura \@ref(fig:history));

@@ -24,7 +24,7 @@
 <meta name="author" content="Wilson Souza &amp; Thiago Couto" />
 
 
-<meta name="date" content="2020-12-15" />
+<meta name="date" content="2020-12-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -342,7 +342,7 @@ Se há apenas 2 categorias, dentro da variável, não há a necessidade de post-
 ##  on 2000 replicates)
 ## 
 ## data:  N.especies
-## X-squared = 4, df = NA, p-value = 0.05597</code></pre>
+## X-squared = 4, df = NA, p-value = 0.06747</code></pre>
 <p>Basta usarmos o argumento “simulate.p.value” e indicar “FALSE” quando não queremos a simulação de Monte Carlo, ou apenas omitirmos este argumento, ou usar este argumento e indicar “TRUE” o qual realiza a simulação de Monte Carlo. Verifique que com a aplicação desta simulação o <em>p-value</em> aumenta indicando que torna mais dificil rejeitarmos a hipótese nula. Após aplicarmos a correção na nossa análise podemos afirmar que não há diferença na quantidade de cracas observadas em relação as proporções esperadas, para ambas as espécies de cracas.</p>
 <p>Relembrando. Sempre tome cuidado com afirmações! Principalmente quando o número de observações é baixo. Mesmo que o teste estatístico indique diferenças uma baixa quantidade de observações devem ser analisadas cuidadosamente, no entanto devemos aplicar correções matemáticas nestes casos.</p>
 </div>
@@ -372,7 +372,7 @@ Características
 Tipo de variável
 </td>
 <td style="text-align:left;width: 30em; ">
-Categórica
+Categórica.
 </td>
 </tr>
 <tr>
@@ -380,7 +380,7 @@ Categórica
 Quantidade de variáveis
 </td>
 <td style="text-align:left;width: 30em; ">
-2 ou mais
+2 ou mais.
 </td>
 </tr>
 <tr>
@@ -388,7 +388,15 @@ Quantidade de variáveis
 Hipótese nula
 </td>
 <td style="text-align:left;width: 30em; ">
-As proporções relativas de uma variável são independentes de uma segunda variável
+As proporções relativas de uma variável são independentes de uma segunda variável.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; font-weight: bold;">
+Fórmula
+</td>
+<td style="text-align:left;width: 30em; ">
+Para uma tabela 2 $$2 temos: <span class="math display">\[\chi^{2} = \frac{n(f_{11}f_{22}-f_{12}f_{21})^2}{R_{1}R_{2}C_{1}C_{2}}\]</span> Onde n é onúmero total de observações; <span class="math inline">\(f_{11}\)</span> é o valor da primeira linha e primeira coluna; <span class="math inline">\(f_{22}\)</span> é o valor da segunda linha e segunda coluna; <span class="math inline">\(f_{12}\)</span> é o valor da primeira linha e da segunda coluna; <span class="math inline">\(f_{21}\)</span> é o valor da segunda linha e primeira coluna; <span class="math inline">\(R_{1}\)</span> é a soma da primeira linha; <span class="math inline">\(R_{2}\)</span> é a soma da segunda linha; <span class="math inline">\(C_{1}\)</span> é a soma da primeira coluna e <span class="math inline">\(C_{2}\)</span> é a soma da segunda coluna.
 </td>
 </tr>
 <tr>
@@ -396,7 +404,7 @@ As proporções relativas de uma variável são independentes de uma segunda var
 Observação
 </td>
 <td style="text-align:left;width: 30em; ">
-Como característica intrinseca a este teste é necessário a construção da tabela de contigência
+Como característica intrinseca a este teste é necessário a construção da tabela de contigência.
 </td>
 </tr>
 </tbody>
@@ -451,12 +459,14 @@ Como característica intrinseca a este teste é necessário a construção da ta
 ## data:  tab.cont
 ## X-squared = 3.2817, df = 1, p-value = 0.07006</code></pre>
 <p>Pronto. Como podem ver a representação do resultado é similar ao exemplo acima. Contudo nossos dados são diferentes e portanto nossa hipótese nula é diferente.</p>
-<p>Nossa hipótese nula pode ser escrita de três formas. Vejamos os 3 exemplos abaixo:
-* H0: Na população amostrada a proporção de machos e fêmeas é independente do ano;
-* H0: Na população amostrada a razão sexual dos camarões é a mesma entre os anos;
-* H0: A proporção de camarões entre os anos é a mesma para ambos os sexos;</p>
-<p>Como o teste resultou em um p-value maior que 0,05 podemos dizer, por essa via, que corroboramos nossa hipótese nula.</p>
-<p>Neste ponto é bom relembramos da importância do número de observações de cada grupo. Se este número for pequeno incertezas podem ser geradas e ajustes devem ser feitos. Contudo, para definir o que é um número baixo de observações sigamos o cálculo sugerido por Zar (2010)<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> o qual define como: <span class="math inline">\(n = 6rc\)</span>.</p>
+<p>Nossa hipótese nula pode ser escrita de três formas. Vejamos os 3 exemplos abaixo:</p>
+<ul>
+<li><p>H0: Na população amostrada a proporção de machos e fêmeas é independente do ano;</p></li>
+<li><p>H0: Na população amostrada a razão sexual dos camarões é a mesma entre os anos;</p></li>
+<li><p>H0: A proporção de camarões entre os anos é a mesma para ambos os sexos;</p></li>
+</ul>
+<p>Como o teste resultou em um <em>p-value</em> maior que 0,05 podemos dizer, por essa via, que corroboramos nossa hipótese nula.</p>
+<p>Neste ponto é bom relembramos da importância do número de observações de cada grupo. Se este número for pequeno incertezas podem ser geradas e ajustes devem ser feitos. Contudo, para definir o que é um número baixo de observações sigamos o cálculo sugerido por Zar (2010)<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a> o qual define como: <span class="math inline">\(n = 6rc\)</span>.</p>
 <p>Onde, n é o número de observações mínimo de cada grupo, r é o número de linhas (<em>rows</em>) e c é o número de colunas (<em>column</em>). Dessa forma, em uma tabela de contigência do tipo 2$$2 o número de observações mínimo para cada grupo deve ser de: <span class="math inline">\(n = 6 \times (2) \times (2) = 24\)</span>. Ou seja, 24 observações.</p>
 <p>Esta análise pode ser conduzida, também, quando lidamos com mais de um grupo em uma categoria e neste caso teriamos uma tabela de contigência 2$<span class="math inline">\(3, 2\)</span><span class="math inline">\(4, 3\)</span>$3 e assim por diante. Vamos ver um exemplo.</p>
 <p>Três pesquisadores analisaram fotografias de espécies bentônicas em um costão objetivando avaliar a abundância de duas espécies, uma introduzida e uma nativa. Considere todo o processo amostral similar e que os pesquisadores avaliaram as mesmas fotografias. Neste caso nossa hipótese nula é que a proporção entre as espécies é similar independentemente dos pesquisadores.</p>
@@ -568,8 +578,8 @@ Figura 3.2: Resumo dos passos abordados no capítulo: da preparação dos dados 
 </div>
 <div class="footnotes">
 <hr />
-<ol start="8">
-<li id="fn8"><p>Zar, J. H. (2010). Biostatistical analysis (5th ed.). Upper Saddle River, N.J.: Prentice-Hall/Pearson.<a href="qui-quadrado-chi.html#fnref8" class="footnote-back">↩</a></p></li>
+<ol start="9">
+<li id="fn9"><p>Zar, J. H. (2010). Biostatistical analysis (5th ed.). Upper Saddle River, N.J.: Prentice-Hall/Pearson.<a href="qui-quadrado-chi.html#fnref9" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>

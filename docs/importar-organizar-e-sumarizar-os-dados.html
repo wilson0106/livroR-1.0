@@ -24,7 +24,7 @@
 <meta name="author" content="Wilson Souza &amp; Thiago Couto" />
 
 
-<meta name="date" content="2020-12-15" />
+<meta name="date" content="2020-12-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -209,7 +209,7 @@ Figura 2.1: Janela que será aberta ao executar o comando: setwd(choose.dir()), 
 </p>
 </div>
 <p>A função <span style="color: blue;">setwd()</span> é responsável por selecionar o diretório a ser trabalhado. Após isso podemos importar a planilha com os dados que utilizaremos.</p>
-<p>Como resultado desta etapa podemos verificar a guia <em>Files</em><a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>, nela agora situa-se as pastas e arquivos da pasta que selecionamos e onde estará salvo nosso script quando o salvarmos.</p>
+<p>Como resultado desta etapa podemos verificar a guia <em>Files</em><a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>, nela agora situa-se as pastas e arquivos da pasta que selecionamos e onde estará salvo nosso script quando o salvarmos.</p>
 </div>
 <div id="definir-ambiente-de-trabalho-via-interface-gráfica" class="section level3">
 <h3><span class="header-section-number">2.1.2</span> Definir ambiente de trabalho via interface gráfica</h3>
@@ -251,7 +251,7 @@ Figura 2.6: Planilha com os dados no formato *.xlsx que deve ser construída em 
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">dados &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="dt">file =</span> <span class="st">&quot;planilha.csv&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>, <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>)</a></code></pre></div>
 <p>O comando <span style="color: blue;">read.csv()</span> importou a planilha que está no formato *.csv utilizando os argumentos: file - o qual indica o nome do arquivo a ser importado; header - o qual indica se as colunas da planilha tem nome e sep - o qual indica qual o caracter separador das colunas</p>
 <p>O comando acima importou a planilha e o guardou em um objeto chamado dados que será o que nós utilizaremos de agora em diante sempre que quisermos acessar essa planilha no R.</p>
-<p>Para importar arquivos que estão no formato *.xls ou *.xlsx é necessário a instalação de algum pacote<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> que permita a realização desse processo. Um pacote que instalaremos aqui é o <span style="color: green;">readxl</span>.</p>
+<p>Para importar arquivos que estão no formato *.xls ou *.xlsx é necessário a instalação de algum pacote<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> que permita a realização desse processo. Um pacote que instalaremos aqui é o <span style="color: green;">readxl</span>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co">## install.packages(&quot;readxl&quot;)</span></a>
 <a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">library</span>(readxl)</a></code></pre></div>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">dados &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="dt">path =</span> <span class="st">&quot;planilha.xlsx&quot;</span>, <span class="dt">col_names =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
@@ -291,7 +291,7 @@ Figura 2.9: mudar a figura e fazer a legenda
 ##  $ local      : chr [1:40] &quot;Ambiente 1&quot; &quot;Ambiente 1&quot; &quot;Ambiente 1&quot; &quot;Ambiente 1&quot; ...
 ##  $ comprimento: num [1:40] 10 11 15 12 17 14 19 16 15 12 ...
 ##  $ peso       : num [1:40] 20 21 24 24 23 28 26 25 21 22 ...</code></pre>
-<p>Seu resultado nos informa sobre o tipo de objeto que o arquivo é. Todo objeto pertence a alguma classe neste caso nosso objeto e da classe tibble ou data frame<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>.</p>
+<p>Seu resultado nos informa sobre o tipo de objeto que o arquivo é. Todo objeto pertence a alguma classe neste caso nosso objeto e da classe tibble ou data frame<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>.</p>
 <p>Também nos e mostrado as variáveis presentes na planilha dados (ano, local, comprimento e peso), cada variável é, também, um objeto e portanto tem suas classes definidas automaticamente, o que pode ser visualizado ao lado de cada variável.</p>
 <p>num = numérico, chr = character e há outras que não estão indicadas aqui, como lógica, inteiro, fator entre outros.</p>
 <p>Repare que a variável ano foi indicada como numérico. Variáveis consideradas numéricas são aquelas as quais foram mensuradas. Ano não é uma variável possível de ser medida, porém devido ao seu registro ter sido em valores numéricos foi assim que ela foi entendida. Portanto temos que transforma-la.</p>
@@ -631,7 +631,7 @@ Figura 2.18: Gráfico tipo boxplot do comprimento por ano com cores por ano, da 
 <a class="sourceLine" id="cb66-7" data-line-number="7">              ano.<span class="fl">2020.</span>local.<span class="fl">2.</span>comp.dp,</a>
 <a class="sourceLine" id="cb66-8" data-line-number="8">              ano.<span class="fl">2021.</span>local.<span class="fl">1.</span>comp.dp,</a>
 <a class="sourceLine" id="cb66-9" data-line-number="9">              ano.<span class="fl">2021.</span>local.<span class="fl">2.</span>comp.dp)</a></code></pre></div>
-<p>Vamos criar as variáveis categóricas ano e local para adicionar aos dados de médias e desvios e unir esses objetos em um <em>data-frame</em> chamado “dados.3”. Posteriormente vamos conferir as classes das variáveis.</p>
+<p>Vamos criar as variáveis categóricas ano e local para adicionar aos dados de médias e desvios e unir esses objetos em um <em>data frame</em> chamado “dados.3”. Posteriormente vamos conferir as classes das variáveis.</p>
 <div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb67-1" data-line-number="1">ano &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;2020&quot;</span>, <span class="st">&quot;2020&quot;</span>, <span class="st">&quot;2021&quot;</span>, <span class="st">&quot;2021&quot;</span>)</a>
 <a class="sourceLine" id="cb67-2" data-line-number="2">local &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Ambiente 1&quot;</span>, <span class="st">&quot;Ambiente 2&quot;</span>, <span class="st">&quot;Ambiente 1&quot;</span>, <span class="st">&quot;Ambiente 2&quot;</span>)</a>
 <a class="sourceLine" id="cb67-3" data-line-number="3"></a>
@@ -652,7 +652,7 @@ Figura 2.18: Gráfico tipo boxplot do comprimento por ano com cores por ano, da 
 ## 2 2020 Ambiente 2        13.1 1.286684
 ## 3 2021 Ambiente 1        13.0 1.581139
 ## 4 2021 Ambiente 2        14.8 1.934647</code></pre>
-<p>Repare que durante todo este processo utilizamos três funções que não haviamos utilizado antes. As funções <span style="color: blue;">split()</span> que divide a planilha de acordo com as categorias presentes na variável que definimos, <span style="color: blue;">as.data.frame()</span> que faz com que um conjunto de objetos sejam convertidos em data frame e <span style="color: blue;">cbind()</span> o qual une objetos como colunas. Essas funções também serão comumente utilizadas durante seus passos iniciais no R.</p>
+<p>Repare que durante todo este processo utilizamos três funções que não haviamos utilizado antes. As funções <span style="color: blue;">split()</span> que divide a planilha de acordo com as categorias presentes na variável que definimos, <span style="color: blue;">as.data.frame()</span> que faz com que um conjunto de objetos sejam convertidos em <em>data frame</em> e <span style="color: blue;">cbind()</span> o qual une objetos como colunas. Essas funções também serão comumente utilizadas durante seus passos iniciais no R.</p>
 <p>Pronto! depois de alguns passos conseguimos construir nossa nova tabela com os dados resumidos.</p>
 <p>É um processo longo porém necessário para se acostumar com o ambiente de trabalho e a linguagem que o R usa. Há caminhos mais rápidos e tão eficientes quanto. Que se tornam úteis quando lidamos com muitas categorias dentro de uma variável. Contudo para isso é necessário a instalação de algum pacote (Há vários pacotes que apresentam funções que permitem a realização deste processo de maneira mais rápida e eficiente). Vamos utilizar um exemplo começando pela instalação do pacote chamado <span style="color: green;">Rmisc</span>.</p>
 <p>O comando abaixo realiza a instalação desse pacote. Conforme já fizemos com o pacote <span style="color: green;">readxl</span>.</p>
@@ -737,10 +737,10 @@ Figura 2.21: Resumo dos passos abordados no capítulo: da definição do ambient
 </div>
 <div class="footnotes">
 <hr />
-<ol start="5">
-<li id="fn5"><p>Ver figura <a href="r.html#fig:files">1.6</a><a href="importar-organizar-e-sumarizar-os-dados.html#fnref5" class="footnote-back">↩</a></p></li>
-<li id="fn6"><p>Tudo que é realizado no R é por meio de comandos, esses comandos são compostos de funções, podemos reconhece-las pois, obrigatoriamente, logo após um nome que representa uma função há um parênteses e cada função apresenta argumentos, o qual depois dele há o sinal de igual (=). As funções estão dentro de pacotes/bibliotecas. Ou seja, cada biblioteca apresenta diversas funções e cada função diversos argumentos. O R, quando instalado, traz consigo alguns pacotes, mas estes pacotes não apresentam uma função que permite carregar arquivos *.xls ou *.xlsx. Portanto para que isso seja possível devemos instalar, neste caso o pacote readxl. Para instalação de pacotes podemos usar a função conhecida por install.packages(“nome do pacote”).<a href="importar-organizar-e-sumarizar-os-dados.html#fnref6" class="footnote-back">↩</a></p></li>
-<li id="fn7"><p>tibble e data frame são em termos práticos objetos similares<a href="importar-organizar-e-sumarizar-os-dados.html#fnref7" class="footnote-back">↩</a></p></li>
+<ol start="6">
+<li id="fn6"><p>Ver figura <a href="r.html#fig:files">1.6</a><a href="importar-organizar-e-sumarizar-os-dados.html#fnref6" class="footnote-back">↩</a></p></li>
+<li id="fn7"><p>Tudo que é realizado no R é por meio de comandos, esses comandos são compostos de funções, podemos reconhece-las pois, obrigatoriamente, logo após um nome que representa uma função há um parênteses e cada função apresenta argumentos, o qual depois dele há o sinal de igual (=). As funções estão dentro de pacotes/bibliotecas. Ou seja, cada biblioteca apresenta diversas funções e cada função diversos argumentos. O R, quando instalado, traz consigo alguns pacotes, mas estes pacotes não apresentam uma função que permite carregar arquivos *.xls ou *.xlsx. Portanto para que isso seja possível devemos instalar, neste caso o pacote readxl. Para instalação de pacotes podemos usar a função conhecida por install.packages(“nome do pacote”).<a href="importar-organizar-e-sumarizar-os-dados.html#fnref7" class="footnote-back">↩</a></p></li>
+<li id="fn8"><p>tibble e data frame são em termos práticos objetos similares<a href="importar-organizar-e-sumarizar-os-dados.html#fnref8" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>

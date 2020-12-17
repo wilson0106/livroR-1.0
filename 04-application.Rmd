@@ -7,7 +7,8 @@ Ao iniciarmos nossos estudos geralmente estamos interessados em saber se alguma 
 ## Teste-t para uma amostra
 
 
-Conduzimos esse teste quando objetivamos verificar se a média de uma dada variável é similar a um valor esperado. Ao falarmos de média percebemos que a variável com a qual estamos lidando é do tipo númerica ou inteiro (a diferença entre ambas consiste na presença de casas decimais), ou seja, quantitativo. Ao compararmos a média de nossa variável a um valor previamente estipulado 2 hipóteses são construídas, a hipótese nula (H0) e a hipótese alternativa (HA) (Tabela \ref(tab:tab1t).
+Conduzimos esse teste quando objetivamos verificar se a média de uma dada variável é similar a um valor esperado. Ao falarmos de média percebemos que a variável com a qual estamos lidando é do tipo númerica ou inteiro (a diferença entre ambas consiste na presença de casas decimais), ou seja, quantitativo. Ao compararmos a média de nossa variável a um valor previamente estipulado 2 hipóteses são construídas, a hipótese nula (H0) e a hipótese alternativa (HA) (Tabela \@ref(tab:tab1t).
+
 
 ```{r tab1t, echo = FALSE, message = FALSE}
 library(kableExtra)
@@ -20,7 +21,7 @@ text_tbl <- data.frame(Atributos = c("Tipo de variável",
                        Características = c("Quantitativa",
                                            "1",
                                            "A média da variável é similar ao valor previamente estipulado",
-                                           "$$t=\\frac{(x-\\mu)}{(s/sqrt(N))}$$, onde, x: média da amostra, $\\mu$: média teórica esperada, s: desvio padrão da amostra e N: tamanho da amostra.",
+                                           "$$t=\\frac{(\\overline{X}-\\mu)}{(s/sqrt(N))}$$ Onde, $\\overline{X}$: média da amostra, $\\mu$: média teórica esperada, s: desvio padrão da amostra e N: tamanho da amostra.",
                                            "Não há a necessidade de post-hoc nem expressa-la graficamente"))
 
 kbl(text_tbl, booktabs = T, valign = "c", escape = F, caption = "Principais características do teste-t para uma amostra") %>%
@@ -593,7 +594,7 @@ Vejamos um exemplo de como conduzir essa análise no R
 Imagine que dois pesquisadores embarcaram com objetivo de fazer contagem de aves em alto mar. Após 20 dias de observações independentes entre os observadores obtivemos os dados abaixo.
 
 
-Começaremos gerando os dados e a modificando se necessário.
+Começaremos gerando os dados e o modificando conforme o necessário.
 
 
 ```{r}
@@ -602,7 +603,9 @@ set.seed(2328)
 aves.1 <- rnorm(n = 20, mean = 20, sd = 1) + runif(n = 20)
 set.seed(3230)
 aves.2 <- rnorm(n = 20, mean = 21, sd = 2) + runif(n = 20)
-dia <- c("Dia 1", "Dia 2", "Dia 3", "Dia 4", "Dia 5", "Dia 6", "Dia 7", "Dia 8", "Dia 9", "Dia 10", "Dia 11", "Dia 12", "Dia 13", "Dia 14", "Dia 15", "Dia 16", "Dia 17", "Dia 18", "Dia 19", "Dia 20")
+dia <- c("Dia 1", "Dia 2", "Dia 3", "Dia 4", "Dia 5", "Dia 6", "Dia 7", "Dia 8", 
+         "Dia 9", "Dia 10", "Dia 11", "Dia 12", "Dia 13", "Dia 14", "Dia 15", "Dia 16",
+         "Dia 17", "Dia 18", "Dia 19", "Dia 20")
 aves <- c(aves.1, aves.2)
 aves <- as.data.frame(cbind(dia, round(aves.1, 0), round(aves.2, 0)))
 colnames(aves) <- c("Dia", "Observador 1", "Observador 2")

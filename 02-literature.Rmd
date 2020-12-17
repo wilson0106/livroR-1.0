@@ -682,10 +682,10 @@ dados.dp <- c(ano.2020.local.1.comp.dp,
 ```
 
 
-Vamos criar as variáveis categóricas ano e local para adicionar aos dados de médias e desvios e unir esses objetos em um *data-frame* chamado "dados.3". Posteriormente vamos conferir as classes das variáveis.
+Vamos criar as variáveis categóricas ano e local para adicionar aos dados de médias e desvios e unir esses objetos em um *data frame* chamado "dados.3". Posteriormente vamos conferir as classes das variáveis.
 
 
-```{r, message = FALSE}
+```{r, message = FALSE, out.width=15}
 ano <- c("2020", "2020", "2021", "2021")
 local <- c("Ambiente 1", "Ambiente 2", "Ambiente 1", "Ambiente 2")
 
@@ -704,7 +704,7 @@ dados.3
 ```
 
 
-Repare que durante todo este processo utilizamos três funções que não haviamos utilizado antes. As funções `r colorize("split()", "blue")` que divide a planilha de acordo com as categorias presentes na variável que definimos, `r colorize("as.data.frame()", "blue")` que faz com que um conjunto de objetos sejam convertidos em data frame e `r colorize("cbind()", "blue")` o qual une objetos como colunas. Essas funções também serão comumente utilizadas durante seus passos iniciais no R.
+Repare que durante todo este processo utilizamos três funções que não haviamos utilizado antes. As funções `r colorize("split()", "blue")` que divide a planilha de acordo com as categorias presentes na variável que definimos, `r colorize("as.data.frame()", "blue")` que faz com que um conjunto de objetos sejam convertidos em *data frame* e `r colorize("cbind()", "blue")` o qual une objetos como colunas. Essas funções também serão comumente utilizadas durante seus passos iniciais no R.
 
 
 Pronto! depois de alguns passos conseguimos construir nossa nova tabela com os dados resumidos.

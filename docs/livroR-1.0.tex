@@ -2,7 +2,7 @@
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
 %
-\documentclass[titlepage, oneside, openany, a4paper]{book}
+\documentclass[13pt,titlepage, oneside, openany, a4paper]{book}
 \usepackage{lmodern}
 \usepackage{setspace}
 \setstretch{1.5}
@@ -123,6 +123,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[portuguese]{babel}
 
+%\lstset{
+%  breaklines=true
+%}
 %\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
 
 \let\oldmaketitle\maketitle
@@ -146,7 +149,7 @@
 
 \title{Introdução a análise de dados em R: Uma abordagem ambiental e ecológica\thanks{Em primeiro lugar só podemos agradecer a nossa família (pais, mães, irmãos, filhos e esposas), pois são quem estão a nosso lado a todo instante nos dando suporte. Em segundo lugar gostariamos de agradecer a todos os professores pois foram eles que nos deram a base necessária para que esse livro viesse a existir. Em terceiro lugar gostariamos de agradecer a todos os revisores desta obra. E por último e não menos importante gostariamos de agradecer a vocês que a estão lendo porque é pra vocês que este livro foi construído!}}
 \author{Wilson Souza \& Thiago Couto}
-\date{2020-12-15}
+\date{2020-12-17}
 
 \begin{document}
 \maketitle
@@ -197,9 +200,9 @@ Possui graduação em Ciências Biológicas pela Universidade Santa Úrsula, Mes
 \hypertarget{o-que-uxe9}{%
 \section{O que é?}\label{o-que-uxe9}}
 
-É uma linguagem de programação derivada da linguagem S e desenvolvida pela Bell Laboratories (Atualmente Lucen Technologies).
+É uma linguagem de programação derivada da linguagem S e desenvolvida pela Bell Laboratories (Atualmente Lucen Technologies). Tem se tornado a principal linguagem para análise de dados, principalmente devido ao seu carater \emph{open-source} (código aberto).
 
-Para mais informações acesse: \url{https://www.r-project.org/about.html}
+Para informações detalhadas acesse o site do R (\url{https://www.r-project.org/about.html}).
 
 \hypertarget{porque-usuxe1-lo-para-anuxe1lise-de-dados}{%
 \section{Porque usá-lo para análise de dados?}\label{porque-usuxe1-lo-para-anuxe1lise-de-dados}}
@@ -230,7 +233,7 @@ O RStudio foi construído especificamente para a linguagem R e é um ambiente de
 
 O primeiro passo para que possamos compreender o R e o RStudio e o que podemos fazer com ele consiste em entender a sua estrutura como ela está organizada e o que ela significa. Uma vez compreendida sua estrutura organizacional e funcionalidade poderemos mergulhar no mundo das análises de dados dentro deste novo ambiente.
 
-Para isso veremos as principais guias do RStudio, como elas estão organizadas e quais as suas funcionalidades.
+Para isso veremos as principais guias do RStudio, como elas estão organizadas e quais as suas principais funcionalidades.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -274,7 +277,7 @@ Para isso veremos as principais guias do RStudio, como elas estão organizadas e
 \setcounter{enumi}{2}
 \tightlist
 \item
-  \emph{Environment}: Guia que indica os objetos e funções criadas. (Figura \ref{fig:environment});
+  \emph{Environment}: Todo objeto\footnote{Consiste em todo simbolo ou variável que armazena um valor ou estrutura de dados. Todo objeto apresenta uma classe (definição do objeto). As classes mais comuns são: vetor (objeto que contêm uma sequência unidimensional de elementos), matriz (Objeto bidimensional onde todos os elementos são da mesma classe. ex.: numérico, caracter, lógico ou inteiro), data-frame (Objeto bidimensional onde os elementos pertencentes podem ser de classes diferentes) e lista (é um vetor que agrupa, de maneira unidimensional, diferentes objetos). Não iremos abordá-los em detalhes neste livro.} ou função desenvolvida será indicado nesta guia. (Figura \ref{fig:environment});
 \end{enumerate}
 
 \begin{figure}
@@ -286,7 +289,7 @@ Para isso veremos as principais guias do RStudio, como elas estão organizadas e
 \caption{Guia do RStudio referente ao ambiente environment, local onde estarão indicados os objetos criados.}\label{fig:environment}
 \end{figure}
 
-\textbf{MOSTRAR UMA FIGURA DO ENVIRONMENT COM ALGUNS OBJETOS: UM DATA FRAME, UM OBJETO COM UM ITEM E UM OBJETO COM VÁRIOS VALORES} Vamos indicar na legenda da figura isto que está escrito em negrito aqui.
+\textbf{MOSTRAR UMA FIGURA DO ENVIRONMENT COM ALGUNS OBJETOS: UM VETOR, UMA MATRIZ, UM DATA FRAME E UMA LISTA} Vamos indicar na legenda da figura isto que está escrito em negrito aqui.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1267,7 +1270,7 @@ Pronto! Média e desvio padrão do comprimento calculado para cada ano e local. 
 \end{Highlighting}
 \end{Shaded}
 
-Vamos criar as variáveis categóricas ano e local para adicionar aos dados de médias e desvios e unir esses objetos em um \emph{data-frame} chamado ``dados.3''. Posteriormente vamos conferir as classes das variáveis.
+Vamos criar as variáveis categóricas ano e local para adicionar aos dados de médias e desvios e unir esses objetos em um \emph{data frame} chamado ``dados.3''. Posteriormente vamos conferir as classes das variáveis.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1310,7 +1313,7 @@ Vamos criar as variáveis categóricas ano e local para adicionar aos dados de m
 ## 4 2021 Ambiente 2        14.8 1.934647
 \end{verbatim}
 
-Repare que durante todo este processo utilizamos três funções que não haviamos utilizado antes. As funções \textcolor{blue}{split()} que divide a planilha de acordo com as categorias presentes na variável que definimos, \textcolor{blue}{as.data.frame()} que faz com que um conjunto de objetos sejam convertidos em data frame e \textcolor{blue}{cbind()} o qual une objetos como colunas. Essas funções também serão comumente utilizadas durante seus passos iniciais no R.
+Repare que durante todo este processo utilizamos três funções que não haviamos utilizado antes. As funções \textcolor{blue}{split()} que divide a planilha de acordo com as categorias presentes na variável que definimos, \textcolor{blue}{as.data.frame()} que faz com que um conjunto de objetos sejam convertidos em \emph{data frame} e \textcolor{blue}{cbind()} o qual une objetos como colunas. Essas funções também serão comumente utilizadas durante seus passos iniciais no R.
 
 Pronto! depois de alguns passos conseguimos construir nossa nova tabela com os dados resumidos.
 
@@ -1659,7 +1662,7 @@ Imagine que você foi em campo e contabilizou as espécies de cracas que identif
 ##  on 2000 replicates)
 ## 
 ## data:  N.especies
-## X-squared = 4, df = NA, p-value = 0.06897
+## X-squared = 4, df = NA, p-value = 0.06747
 \end{verbatim}
 
 Basta usarmos o argumento ``simulate.p.value'' e indicar ``FALSE'' quando não queremos a simulação de Monte Carlo, ou apenas omitirmos este argumento, ou usar este argumento e indicar ``TRUE'' o qual realiza a simulação de Monte Carlo. Verifique que com a aplicação desta simulação o \emph{p-value} aumenta indicando que torna mais dificil rejeitarmos a hipótese nula. Após aplicarmos a correção na nossa análise podemos afirmar que não há diferença na quantidade de cracas observadas em relação as proporções esperadas, para ambas as espécies de cracas.
@@ -1685,10 +1688,11 @@ Para o momento. Veja o sumário abaixo no qual detalhamos as principais caracter
 \toprule
 Atributos & Características\\
 \midrule
-\textbf{\cellcolor{gray!6}{Tipo de variável}} & \cellcolor{gray!6}{Categórica}\\
-\textbf{Quantidade de variáveis} & 2 ou mais\\
-\textbf{\cellcolor{gray!6}{Hipótese nula}} & \cellcolor{gray!6}{As proporções relativas de uma variável são independentes de uma segunda variável}\\
-\textbf{Observação} & Como característica intrinseca a este teste é necessário a construção da tabela de contigência\\
+\textbf{\cellcolor{gray!6}{Tipo de variável}} & \cellcolor{gray!6}{Categórica.}\\
+\textbf{Quantidade de variáveis} & 2 ou mais.\\
+\textbf{\cellcolor{gray!6}{Hipótese nula}} & \cellcolor{gray!6}{As proporções relativas de uma variável são independentes de uma segunda variável.}\\
+\textbf{Fórmula} & Para uma tabela 2 $\times$2 temos: $$\chi^{2} = \frac{n(f_{11}f_{22}-f_{12}f_{21})^2}{R_{1}R_{2}C_{1}C_{2}}$$ Onde n é onúmero total de observações; $f_{11}$ é o valor da primeira linha e primeira coluna; $f_{22}$ é o valor da segunda linha e segunda coluna; $f_{12}$ é o valor da primeira linha e da segunda coluna; $f_{21}$ é o valor da segunda linha e primeira coluna; $R_{1}$ é a soma da primeira linha; $R_{2}$ é a soma da segunda linha; $C_{1}$ é a soma da primeira coluna e $C_{2}$ é a soma da segunda coluna.\\
+\textbf{\cellcolor{gray!6}{Observação}} & \cellcolor{gray!6}{Como característica intrinseca a este teste é necessário a construção da tabela de contigência.}\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -1797,11 +1801,17 @@ Utilizando as funções acima (\textcolor{blue}{c()}, \textcolor{blue}{rep()}, \
 Pronto. Como podem ver a representação do resultado é similar ao exemplo acima. Contudo nossos dados são diferentes e portanto nossa hipótese nula é diferente.
 
 Nossa hipótese nula pode ser escrita de três formas. Vejamos os 3 exemplos abaixo:
-* H0: Na população amostrada a proporção de machos e fêmeas é independente do ano;
-* H0: Na população amostrada a razão sexual dos camarões é a mesma entre os anos;
-* H0: A proporção de camarões entre os anos é a mesma para ambos os sexos;
 
-Como o teste resultou em um p-value maior que 0,05 podemos dizer, por essa via, que corroboramos nossa hipótese nula.
+\begin{itemize}
+\item
+  H0: Na população amostrada a proporção de machos e fêmeas é independente do ano;
+\item
+  H0: Na população amostrada a razão sexual dos camarões é a mesma entre os anos;
+\item
+  H0: A proporção de camarões entre os anos é a mesma para ambos os sexos;
+\end{itemize}
+
+Como o teste resultou em um \emph{p-value} maior que 0,05 podemos dizer, por essa via, que corroboramos nossa hipótese nula.
 
 Neste ponto é bom relembramos da importância do número de observações de cada grupo. Se este número for pequeno incertezas podem ser geradas e ajustes devem ser feitos. Contudo, para definir o que é um número baixo de observações sigamos o cálculo sugerido por Zar (2010)\footnote{Zar, J. H. (2010). Biostatistical analysis (5th ed.). Upper Saddle River, N.J.: Prentice-Hall/Pearson.} o qual define como: \(n = 6rc\).
 
@@ -2028,7 +2038,7 @@ Ao iniciarmos nossos estudos geralmente estamos interessados em saber se alguma 
 \hypertarget{teste-t-para-uma-amostra}{%
 \section{Teste-t para uma amostra}\label{teste-t-para-uma-amostra}}
 
-Conduzimos esse teste quando objetivamos verificar se a média de uma dada variável é similar a um valor esperado. Ao falarmos de média percebemos que a variável com a qual estamos lidando é do tipo númerica ou inteiro (a diferença entre ambas consiste na presença de casas decimais), ou seja, quantitativo. Ao compararmos a média de nossa variável a um valor previamente estipulado 2 hipóteses são construídas, a hipótese nula (H0) e a hipótese alternativa (HA) (Tabela \ref(tab:tab1t).
+Conduzimos esse teste quando objetivamos verificar se a média de uma dada variável é similar a um valor esperado. Ao falarmos de média percebemos que a variável com a qual estamos lidando é do tipo númerica ou inteiro (a diferença entre ambas consiste na presença de casas decimais), ou seja, quantitativo. Ao compararmos a média de nossa variável a um valor previamente estipulado 2 hipóteses são construídas, a hipótese nula (H0) e a hipótese alternativa (HA) (Tabela \ref{tab:tab1t}.
 
 \begin{table}
 
@@ -2041,7 +2051,7 @@ Atributos & Características\\
 \textbf{\cellcolor{gray!6}{Tipo de variável}} & \cellcolor{gray!6}{Quantitativa}\\
 \textbf{Quantidade de variáveis} & 1\\
 \textbf{\cellcolor{gray!6}{Hipótese nula}} & \cellcolor{gray!6}{A média da variável é similar ao valor previamente estipulado}\\
-\textbf{Fórmula} & $$t=\frac{(x-\mu)}{(s/sqrt(N))}$$, onde, x: média da amostra, $\mu$: média teórica esperada, s: desvio padrão da amostra e N: tamanho da amostra.\\
+\textbf{Fórmula} & $$t=\frac{(\overline{X}-\mu)}{(s/sqrt(N))}$$ Onde, $\overline{X}$: média da amostra, $\mu$: média teórica esperada, s: desvio padrão da amostra e N: tamanho da amostra.\\
 \textbf{\cellcolor{gray!6}{Observação}} & \cellcolor{gray!6}{Não há a necessidade de post-hoc nem expressa-la graficamente}\\
 \bottomrule
 \end{tabular}
@@ -3071,7 +3081,7 @@ Vejamos um exemplo de como conduzir essa análise no R
 
 Imagine que dois pesquisadores embarcaram com objetivo de fazer contagem de aves em alto mar. Após 20 dias de observações independentes entre os observadores obtivemos os dados abaixo.
 
-Começaremos gerando os dados e a modificando se necessário.
+Começaremos gerando os dados e o modificando conforme o necessário.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -3080,7 +3090,9 @@ Começaremos gerando os dados e a modificando se necessário.
 \NormalTok{aves}\FloatTok{.1}\NormalTok{ <-}\StringTok{ }\KeywordTok{rnorm}\NormalTok{(}\DataTypeTok{n =} \DecValTok{20}\NormalTok{, }\DataTypeTok{mean =} \DecValTok{20}\NormalTok{, }\DataTypeTok{sd =} \DecValTok{1}\NormalTok{) }\OperatorTok{+}\StringTok{ }\KeywordTok{runif}\NormalTok{(}\DataTypeTok{n =} \DecValTok{20}\NormalTok{)}
 \KeywordTok{set.seed}\NormalTok{(}\DecValTok{3230}\NormalTok{)}
 \NormalTok{aves}\FloatTok{.2}\NormalTok{ <-}\StringTok{ }\KeywordTok{rnorm}\NormalTok{(}\DataTypeTok{n =} \DecValTok{20}\NormalTok{, }\DataTypeTok{mean =} \DecValTok{21}\NormalTok{, }\DataTypeTok{sd =} \DecValTok{2}\NormalTok{) }\OperatorTok{+}\StringTok{ }\KeywordTok{runif}\NormalTok{(}\DataTypeTok{n =} \DecValTok{20}\NormalTok{)}
-\NormalTok{dia <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"Dia 1"}\NormalTok{, }\StringTok{"Dia 2"}\NormalTok{, }\StringTok{"Dia 3"}\NormalTok{, }\StringTok{"Dia 4"}\NormalTok{, }\StringTok{"Dia 5"}\NormalTok{, }\StringTok{"Dia 6"}\NormalTok{, }\StringTok{"Dia 7"}\NormalTok{, }\StringTok{"Dia 8"}\NormalTok{, }\StringTok{"Dia 9"}\NormalTok{, }\StringTok{"Dia 10"}\NormalTok{, }\StringTok{"Dia 11"}\NormalTok{, }\StringTok{"Dia 12"}\NormalTok{, }\StringTok{"Dia 13"}\NormalTok{, }\StringTok{"Dia 14"}\NormalTok{, }\StringTok{"Dia 15"}\NormalTok{, }\StringTok{"Dia 16"}\NormalTok{, }\StringTok{"Dia 17"}\NormalTok{, }\StringTok{"Dia 18"}\NormalTok{, }\StringTok{"Dia 19"}\NormalTok{, }\StringTok{"Dia 20"}\NormalTok{)}
+\NormalTok{dia <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"Dia 1"}\NormalTok{, }\StringTok{"Dia 2"}\NormalTok{, }\StringTok{"Dia 3"}\NormalTok{, }\StringTok{"Dia 4"}\NormalTok{, }\StringTok{"Dia 5"}\NormalTok{, }\StringTok{"Dia 6"}\NormalTok{, }\StringTok{"Dia 7"}\NormalTok{, }\StringTok{"Dia 8"}\NormalTok{, }
+         \StringTok{"Dia 9"}\NormalTok{, }\StringTok{"Dia 10"}\NormalTok{, }\StringTok{"Dia 11"}\NormalTok{, }\StringTok{"Dia 12"}\NormalTok{, }\StringTok{"Dia 13"}\NormalTok{, }\StringTok{"Dia 14"}\NormalTok{, }\StringTok{"Dia 15"}\NormalTok{, }\StringTok{"Dia 16"}\NormalTok{,}
+         \StringTok{"Dia 17"}\NormalTok{, }\StringTok{"Dia 18"}\NormalTok{, }\StringTok{"Dia 19"}\NormalTok{, }\StringTok{"Dia 20"}\NormalTok{)}
 \NormalTok{aves <-}\StringTok{ }\KeywordTok{c}\NormalTok{(aves}\FloatTok{.1}\NormalTok{, aves}\FloatTok{.2}\NormalTok{)}
 \NormalTok{aves <-}\StringTok{ }\KeywordTok{as.data.frame}\NormalTok{(}\KeywordTok{cbind}\NormalTok{(dia, }\KeywordTok{round}\NormalTok{(aves}\FloatTok{.1}\NormalTok{, }\DecValTok{0}\NormalTok{), }\KeywordTok{round}\NormalTok{(aves}\FloatTok{.2}\NormalTok{, }\DecValTok{0}\NormalTok{)))}
 \KeywordTok{colnames}\NormalTok{(aves) <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"Dia"}\NormalTok{, }\StringTok{"Observador 1"}\NormalTok{, }\StringTok{"Observador 2"}\NormalTok{)}
