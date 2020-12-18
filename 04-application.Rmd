@@ -73,7 +73,7 @@ tamanho.camarao
 Vamos observar as métricas e gráficos, conforme já fizemos nos capítulos anteriores, mas relativos ao objeto criado.
 
 
-```{r hist-tam-cam, fig.cap = "Histograma dos valores do objeto relativo ao tamanho dos camarões"}
+```{r hist-tam-cam, fig.cap = "Histograma dos valores do objeto relativo ao tamanho dos camarões", out.width='70%'}
 mean(tamanho.camarao)
 min(tamanho.camarao)
 max(tamanho.camarao)
@@ -139,7 +139,7 @@ estrelas <- rnorm(n = 100, sd = 0.02) + runif(n = 100, min = 0.4, max = 1.3)
 Observe que geramos os dados de maneira similar ao que fizemos no exemplo anterior (inserindo os valores das alturas das estrelas em um objeto chamado estrelas), a diferença é que inserimos o argumento "sd" na função `r colorize("rnorm()", "blue")` que corresponde ao desvio padrão (de 0,02) dos dados normais que estamos gerando.
 
 
-```{r estrelas-hist, fig.cap = "Histograma dos valores relativos a altura das estrelas do mar no costão rochoso"}
+```{r estrelas-hist, fig.cap = "Histograma dos valores relativos a altura das estrelas do mar no costão rochoso", out.width='70%'}
 mean(estrelas)
 min(estrelas)
 max(estrelas)
@@ -185,7 +185,7 @@ HA: O tamanho médio observado difere do teórico
 Conforme já realizado anteriormente vamos gerar os dados e explora-los com algumas métricas estatśticas e gráficas de maneira similar ao que fizemos no exemplo anterior.
 
 
-```{r craca-hist, fig.cap = "Histograma dos valores relativos ao tambanho das cracas incrustantes"}
+```{r craca-hist, fig.cap = "Histograma dos valores relativos ao tambanho das cracas incrustantes", out.width='70%'}
 set.seed(1234)
 cracas <- rnorm(n = 100, sd = 1.9) + runif(n = 100, min = 5, max = 25)
 
@@ -228,7 +228,7 @@ O nível de significância a aplicar nos seus dados depende das informações qu
 **BÔNUS:**
 
 
-Embora não seja comum, podemos plotar um gráfico que represente o nosso resultado estatístico como uma curva de densidade no qual é representado o valor do teste-t, o grau de liberdade e o valor de probabilidade associado. Para isso vamos usar um pacote o qual precisa ser instalado chamado `r colorize("webr", "green")` e precisamos carrega-lo usando a função `r colorize("library()", "blue")`. Após isso é só inserir a função que desenvolve o teste-t dentro da função `r colorize("plot()", "blue")`. Veja o resultado para ambos os níveis de confiança estabelecidos previamente. OBS: Uma vez instalado o pacote não precisa instala-lo novamente.
+Embora não seja comum, podemos plotar um gráfico que represente o nosso resultado estatístico como uma curva de densidade no qual é representado o valor do teste-t, o grau de liberdade e o valor de probabilidade associado. Para isso vamos usar um pacote o qual precisa ser instalado chamado `r colorize("webr", "green")` e precisamos carrega-lo usando a função `r colorize("library()", "blue")`. Após isso é só inserir a função que desenvolve o teste-t dentro da função `r colorize("plot()", "blue")`. Veja o resultado para ambos os níveis de confiança estabelecidos previamente. OBS: Uma vez instalado o pacote não precisa instala-lo novamente apenas carrega-lo se estiver iniciando o R pela primeira vez.
 
 
 ```{r, eval = -1}
@@ -237,13 +237,18 @@ library(webr)
 ```
 
 
-```{r cracas-dens-95, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para o tamanho das cracas em relação a média teórica a um intervalo de confiança de 95%. O ponto azul indica o valor do teste."}
+```{r cracas-dens-95, fig.cap = 'Curva de densidade representando o valor do teste-t bicaudal para o tamanho das cracas em relação a média teórica a um intervalo de confiança de 95%. O ponto azul indica o valor do teste.', out.width = '70%'}
+
+
 plot(t.test(x = cracas, mu = teorico, conf.level = 0.95))
+
+
 ```
 
-```{r cracas-dens-99, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para o tamanho das cracas em relação a média teórica a um intervalo de confiança de 99%. O ponto azul indica o valor do teste."}
-plot(t.test(x = cracas, mu = teorico, conf.level = 0.99))
 
+
+```{r cracas-dens-99, fig.cap = 'Curva de densidade representando o valor do teste-t bicaudal para o tamanho das cracas em relação a média teórica a um intervalo de confiança de 99%. O ponto azul indica o valor do teste.', out.width = '70%'}
+plot(t.test(x = cracas, mu = teorico, conf.level = 0.99))
 ```
 
 
@@ -339,7 +344,7 @@ Agora que importamos e organizamos nossa planilha vamos analisar nosso exemplo.
 Antes de conduzirmos o teste-t vamos praticar fazendo a avaliação gráfica e númerica dos dados.
 
 
-```{r hist-ali-A, fig.cap = "Histograma com valores da mudança do peso dos gastrópodes após a dieta com o Alimento A"}
+```{r hist-ali-A, fig.cap = "Histograma com valores da mudança do peso dos gastrópodes após a dieta com o Alimento A", out.width='70%'}
 hist(gastropode$Peso [gastropode$Alimento == "Alimento A"], 
      xlab = "Alteração do peso", 
      ylab = "Frequência", 
@@ -349,7 +354,7 @@ hist(gastropode$Peso [gastropode$Alimento == "Alimento A"],
 ```
 
 
-```{r hist-ali-B, fig.cap = "Histograma com valores da mudança do peso dos gastrópodes após a dieta com o Alimento B"}
+```{r hist-ali-B, fig.cap = "Histograma com valores da mudança do peso dos gastrópodes após a dieta com o Alimento B", out.width='70%'}
 hist(gastropode$Peso [gastropode$Alimento == "Alimento B"], 
      xlab = "Alteração do peso", 
      ylab = "Frequência", 
@@ -358,7 +363,7 @@ hist(gastropode$Peso [gastropode$Alimento == "Alimento B"],
      xlim = c(-0.5, 1.5))
 ```
 
-```{r box-ali, fig.cap = "Boxplot com os valores da alteração do peso dos gastrópodes por tipo de alimento"}
+```{r box-ali, fig.cap = "Boxplot com os valores da alteração do peso dos gastrópodes por tipo de alimento", out.width='70%'}
 boxplot(Peso ~ Alimento, data = gastropode)
 ```
 
@@ -427,7 +432,7 @@ De acordo com nosso resultado podemos ver que o valor do teste-t é 14,065, o gr
 Da mesma forma que avaliamos para o teste-t de uma amostra, podemos plotar o resultado como um gráfico da função de densidade do teste-t. Só devemos lembrar de carregar o pacote "webr".
 
 
-```{r testet-duas-dens, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para a alteração do peso de gastrópodes em relação ao alimento a um intervalo de confiança de 95%. O ponto azul indica o valor do teste."}
+```{r testet-duas-dens, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para a alteração do peso de gastrópodes em relação ao alimento a um intervalo de confiança de 95%. O ponto azul indica o valor do teste.", out.width='70%'}
 library(webr)
 plot(t.test(Peso ~ Alimento, 
             data = gastropode,
@@ -477,7 +482,7 @@ lagoa$Temperatura <- as.numeric(lagoa$Temperatura)
 str(lagoa)
 ```
 
-```{r hist-temp-0, fig.cap = "Histograma com valores de temperatura da lagoa no Ano 0."}
+```{r hist-temp-0, fig.cap = "Histograma com valores de temperatura da lagoa no Ano 0.", out.width='70%'}
 hist(lagoa$Temperatura [lagoa$Ano == "Ano 0"], 
      xlab = "Temperatura (°C)", 
      ylab = "Frequência", 
@@ -486,7 +491,7 @@ hist(lagoa$Temperatura [lagoa$Ano == "Ano 0"],
      xlim = c(15, 19))
 ```
 
-```{r hist-temp-20, fig.cap = "Histograma com valores de temperatura da lagoa no Ano 20."}
+```{r hist-temp-20, fig.cap = "Histograma com valores de temperatura da lagoa no Ano 20.", out.width='70%'}
 hist(lagoa$Temperatura [lagoa$Ano == "Ano 20"], 
      xlab = "Temperatura (°C)", 
      ylab = "Frequência", 
@@ -495,7 +500,7 @@ hist(lagoa$Temperatura [lagoa$Ano == "Ano 20"],
      xlim = c(15, 19))
 ```
 
-```{r box-temp, fig.cap = "Boxplot com os valores de temperatura da lagoa por ano."}
+```{r box-temp, fig.cap = "Boxplot com os valores de temperatura da lagoa por ano.", out.width='70%'}
 boxplot(Temperatura ~ Ano, data = lagoa)
 ```
 
@@ -550,7 +555,7 @@ Olhando para os dois resultados ambos os testes demonstraram diferenças signifi
 Assim como fizemos anteriormente vamos olhar o resultado em relação a distribuição da função de densidade do teste-t para um nível de confiança de 99% (Figura \@ref(fig:testet-duas-temp-dens)). Só devemos lembrar de carregar o pacote `r colorize("webr", "blue")` se ainda não foi carregado.
 
 
-```{r testet-duas-temp-dens, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para comparação da temperatura em um lago entre dois anos a um intervalo de confiança de 99%. O ponto azul indica o valor do teste."}
+```{r testet-duas-temp-dens, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para comparação da temperatura em um lago entre dois anos a um intervalo de confiança de 99%. O ponto azul indica o valor do teste.", out.width='70%'}
 library(webr)
 plot(t.test(Temperatura ~ Ano, 
             data = lagoa,
@@ -633,7 +638,7 @@ Neste exemplo podemos perceber que temos as variáveis categóricas "Dia" e obse
 Vamos sumarizar os dados grafica e estatisticamente
 
 
-```{r hist-par-obs1, fig.cap = "Histograma com a frequência de observações de aves, por 20 dias, pelo observador 1"}
+```{r hist-par-obs1, fig.cap = "Histograma com a frequência de observações de aves, por 20 dias, pelo observador 1", out.width='70%'}
 hist(aves$`Observador 1`, 
      xlab = "Observações", 
      ylab = "Frequência", 
@@ -643,7 +648,7 @@ hist(aves$`Observador 1`,
 ```
 
 
-```{r hist-par-obs2, fig.cap = "Histograma com a frequência de observações de aves, por 20 dias, pelo observador 2"}
+```{r hist-par-obs2, fig.cap = "Histograma com a frequência de observações de aves, por 20 dias, pelo observador 2", out.width='70%'}
 hist(aves$`Observador 2`, 
      xlab = "Observações", 
      ylab = "Frequência", 
@@ -653,7 +658,7 @@ hist(aves$`Observador 2`,
 ```
 
 
-```{r box-par-ave, fig.cap = "Boxplot com as frequências de observações de aves por 20 dias de 2 observadores."}
+```{r box-par-ave, fig.cap = "Boxplot com as frequências de observações de aves por 20 dias de 2 observadores.", out.width='70%'}
 boxplot(aves$`Observador 1`, 
         aves$`Observador 2`, 
         names = c("Observador 1", "Observador 2"),
@@ -717,7 +722,7 @@ Quanto ao resultado podemos notar que nos é informado que o teste consiste num 
 Assim como fizemos anteriormente vamos olhar o resultado em relação a distribuição função de densidade do teste-t (Figura \@ref(fig:testet-par-ave)). Só devemos lembrar de carregar o pacote `r colorize("webr", "green")` se ainda não foi carregado.
 
 
-```{r testet-par-ave, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para comparação do número de observações de aves por 2 observadores distintos a um intervalo de confiança de 95%. O ponto azul indica o valor do teste."}
+```{r testet-par-ave, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para comparação do número de observações de aves por 2 observadores distintos a um intervalo de confiança de 95%. O ponto azul indica o valor do teste.", out.width='70%'}
 library(webr)
 plot(t.test(aves$`Observador 1`,
             aves$`Observador 2`,
@@ -729,7 +734,7 @@ plot(t.test(aves$`Observador 1`,
 Neste teste em particular como trabalhamos com a diferença entre as observações podemos usar o gráfico de barras para graficar essa diferença.
 
 
-```{r bar-dif-ave, fig.cap = "Diferença entre o número de observações de aves, por dia, para cada observador"}
+```{r bar-dif-ave, fig.cap = "Diferença entre o número de observações de aves, por dia, para cada observador", out.width='70%'}
 barplot(diferenca,
         xlab = "Dias",
         ylab = "Diferença entre observadores (Observador 1 - Observador 2)",
@@ -747,7 +752,7 @@ Para o gráfico acima indicamos em seu comando que faremos um gráfico de barras
 As barras para o lado positivo do eixo y indica uma maior observação de aves pelo "Observador 1" e as barras para baixo indicam um maior número de observações de aves pelo "Observador 2". Vamos indicar isso no gráfico por meio da função `r colorize("mtext()", "blue")` (Figura \@ref(fig:bar-dif-ave2)).
 
 
-```{r bar-dif-ave2, fig.cap = "Diferença entre o número de observações de aves, por dia, para cada observador."}
+```{r bar-dif-ave2, fig.cap = "Diferença entre o número de observações de aves, por dia, para cada observador.", out.width = '70%'}
 barplot(diferenca,
         xlab = "Dias",
         ylab = "Diferença entre observadores (Observador 1 - Observador 2)",
@@ -776,6 +781,6 @@ Como podem visualizar a função `r colorize("mtext()", "blue")` indicou os nome
 
 Durante nosso percurso neste capítulo realizamos etapas que consistem na construção dos dados no próprio programa do R e a condução da análise do teste-t para uma amostra, para duas amostras e pareado. A construção dos dados tem como resultado final um objeto similar a planilha de dados que deve ser importada, caso já a tenha preparado, e juntamente com a sumarização dos dados temos as mesmas etapas trabalhadas no capítulo anterior. A partir daí temos a condução dos pressupostos normalidade e homocedasticidade e da análise estatística o teste-t. Um resumo gráfico das etapas pode ser observado aqui (Figura \@ref(fig:resumo3)).
 
-```{r resumo3, message = FALSE, echo = FALSE, fig.cap = "Resumo dos passos abordados no capítulo: da preparação dos dados até a análise dos dados.", fig.align = "center", out.width = '100%'}
-knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/resumo2.png')
+```{r resumo3, message = FALSE, echo = FALSE, fig.cap = "Resumo dos passos abordados no capítulo: da preparação dos dados até a análise dos dados.", out.width = '100%'}
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/resumo2.png')
 ```

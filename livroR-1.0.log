@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.12.15)  17 DEC 2020 21:21
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.12.18)  18 DEC 2020 12:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -464,9 +464,9 @@ Package: inputenc 2020/08/01 v1.3d Input encoding file
 Package inputenc Warning: inputenc package ignored with utf8 based engines.
 
 ) (/home/wilson/.TinyTeX/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2020/10/27 3.51 The Babel package
+Package: babel 2020/12/16 3.52 The Babel package
 (/home/wilson/.TinyTeX/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2020/10/27 3.51 Babel common definitions
+File: babel.def 2020/12/16 3.52 Babel common definitions
 \babel@savecnt=\count309
 \U@D=\dimen190
 \l@babelnohyphens=\language6
@@ -583,7 +583,12 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibsep=\skip71
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count323
-) (./livroR-1.0.aux)
+)
+
+LaTeX Warning: Unused global option(s):
+    [14pt].
+
+(./livroR-1.0.aux)
 \openout1 = `livroR-1.0.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 154.
@@ -902,8 +907,8 @@ LaTeX Info: Redefining \nameref on input line 154.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
-* v-part:(T,H,B)=(56.9055pt, 702.78308pt, 85.35826pt)
+* h-part:(L,W,R)=(85.35826pt, 455.24411pt, 56.9055pt)
+* v-part:(T,H,B)=(71.13188pt, 688.5567pt, 85.35826pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=452.9679pt
@@ -1037,113 +1042,93 @@ Cap\'{\i }tulo 1.
 
 ]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/RStudio.png Graphic file (
-type bmp)
+l e R/livroR-1.0/figures print/RStudio.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/RStudio.png>
-[10] [11]
-Underfull \hbox (badness 1552) in paragraph at lines 245--246
-[]\TU/lmr/bx/n/10 MOSTRAR UMA FIGURA DO SCRIPT COM UMA LINHA ESCRITO: “OLÁ
+/livroR-1.0/figures print/RStudio.png>
+
+Overfull \hbox (45.2977pt too wide) in paragraph at lines 226--226
+[][]
  []
 
+[10] [11]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/script.png Graphic file (t
-ype bmp)
+l e R/livroR-1.0/figures print/script.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/script.png>
+/livroR-1.0/figures print/script.png>
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/console.png Graphic file (
-type bmp)
+l e R/livroR-1.0/figures print/console.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/console.png>
+/livroR-1.0/figures print/console.png>
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/environment.png Graphic fi
-le (type bmp)
+l e R/livroR-1.0/figures print/environment.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/environment.png>
+/livroR-1.0/figures print/environment.png>
+[12]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/history.png Graphic file (
-type bmp)
+l e R/livroR-1.0/figures print/history.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/history.png>
-[12] [13]
+/livroR-1.0/figures print/history.png>
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/files.png Graphic file (ty
-pe bmp)
+l e R/livroR-1.0/figures print/files.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/files.png>
+/livroR-1.0/figures print/files.png>
+[13]
+File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
+l e R/livroR-1.0/figures print/packages.png Graphic file (type bmp)
+</media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
+/livroR-1.0/figures print/packages.png>
 [14]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/packages.png Graphic file 
-(type bmp)
+l e R/livroR-1.0/figures print/plot.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/packages.png>
+/livroR-1.0/figures print/plot.png>
+[15]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/plot.png Graphic file (typ
-e bmp)
+l e R/livroR-1.0/figures print/help.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/plot.png>
-File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/help.png Graphic file (typ
-e bmp)
-</media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/help.png>
-[15] [16]
+/livroR-1.0/figures print/help.png>
+[16] [17]
 Cap\'{\i }tulo 2.
-File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/setwd.png Graphic file (ty
-pe bmp)
-</media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/setwd.png>
-[17
+[18
 
-] [18]
+]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/files.png Graphic file (ty
-pe bmp)
+l e R/livroR-1.0/figures print/setwd.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/files.png>
+/livroR-1.0/figures print/setwd.png>
+[19]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/files.png Graphic file (ty
-pe bmp)
+l e R/livroR-1.0/figures print/files-guia.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/files.png>
+/livroR-1.0/figures print/files-guia.png>
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/files.png Graphic file (ty
-pe bmp)
+l e R/livroR-1.0/figures print/planilha.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/files.png>
-[19] [20]
+/livroR-1.0/figures print/planilha.png>
+[20]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/planilha.png Graphic file 
-(type bmp)
+l e R/livroR-1.0/figures print/planilhaxlsx.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/planilha.png>
-File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/planilhaxlsx.png Graphic f
-ile (type bmp)
-</media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/planilhaxlsx.png>
+/livroR-1.0/figures print/planilhaxlsx.png>
+[21]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 470.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 377.
+[22]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/arqenv.png Graphic file (t
-ype bmp)
+l e R/livroR-1.0/figures print/arqenv.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/arqenv.png>
+/livroR-1.0/figures print/arqenv.png>
+[23]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/import-graf.png Graphic fi
-le (type bmp)
+l e R/livroR-1.0/figures print/import-graf.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/import-graf.png>
-[21] [22] [23] [24]
+/livroR-1.0/figures print/import-graf.png>
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/import-graf-2.png Graphic 
-file (type bmp)
+l e R/livroR-1.0/figures print/import-graf-2.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/import-graf-2.png>
-[25] [26]
-Overfull \hbox (9.0321pt too wide) in paragraph at lines 611--611
+/livroR-1.0/figures print/import-graf-2.png>
+[24] [25] [26]
+Overfull \hbox (9.0321pt too wide) in paragraph at lines 503--503
 []\TU/lmtt/m/n/10 ##  $ local      : Factor w/ 2 levels "Ambiente 1","Ambiente 
 2": 1 1 1 1 1 1 1 1 1 1 ...[] 
  []
@@ -1151,169 +1136,199 @@ Overfull \hbox (9.0321pt too wide) in paragraph at lines 611--611
 [27] [28]
 File: livroR-1.0_files/figure-latex/comp-hist-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/comp-hist-1.pdf>
+[29]
 File: livroR-1.0_files/figure-latex/comp-hist-col-1.pdf Graphic file (type pdf)
 
 <use livroR-1.0_files/figure-latex/comp-hist-col-1.pdf>
-[29] [30]
+[30]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/abundancia.png Graphic fil
-e (type bmp)
+l e R/livroR-1.0/figures print/abundancia.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/abundancia.png>
-[31]
+/livroR-1.0/figures print/abundancia.png>
+[31] [32]
 File: livroR-1.0_files/figure-latex/bar-abu-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-abu-1.pdf>
+[33]
 File: livroR-1.0_files/figure-latex/bar-abu-col-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-abu-col-1.pdf>
-[32] [33] [34]
+[34]
 File: livroR-1.0_files/figure-latex/pon-graf-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/pon-graf-1.pdf>
-[35] [36]
+[35]
 File: livroR-1.0_files/figure-latex/lin-graf-col-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/lin-graf-col-1.pdf>
-[37]
+[36]
 File: livroR-1.0_files/figure-latex/box-graf-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/box-graf-1.pdf>
+[37]
 File: livroR-1.0_files/figure-latex/box-graf-col-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/box-graf-col-1.pdf>
-[38] [39] [40] [41] [42] [43] [44] [45] [46]
-Overfull \hbox (66.7821pt too wide) in paragraph at lines 1291--1291
+[38] [39] [40] [41] [42] [43] [44] [45] [46] [47]
+Overfull \hbox (66.7821pt too wide) in paragraph at lines 1162--1162
 []\TU/lmtt/m/n/10 ##  $ dados.dp   : chr  "2.84604989415154" "1.28668393770792"
  "1.58113883008419" "1.93464651625488"[] 
  []
 
-[47] [48]
+[48] [49]
 File: livroR-1.0_files/figure-latex/bar-ep-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-ep-1.pdf>
-[49] [50]
+[50] [51]
 File: livroR-1.0_files/figure-latex/bar-ep-abu-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-ep-abu-1.pdf>
-[51] [52]
+[52]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/resumo1.png Graphic file (
-type bmp)
+l e R/livroR-1.0/figures print/resumo1.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/resumo1.png>
-[53]
+/livroR-1.0/figures print/resumo1.png>
+[53] [54]
 Cap\'{\i }tulo 3.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 1448.
+(Font)              scaled to size 24.88pt on input line 1310.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 20.74pt on input line 1448.
+(Font)              scaled to size 20.74pt on input line 1310.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 24.88228pt on input line 1448.
+(Font)              scaled to size 24.88228pt on input line 1310.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 20.7419pt on input line 1448.
+(Font)              scaled to size 20.7419pt on input line 1310.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 24.87733pt on input line 1448.
+(Font)              scaled to size 24.87733pt on input line 1310.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 20.73778pt on input line 1448.
+(Font)              scaled to size 20.73778pt on input line 1310.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 1457.
+(Font)              scaled to size 14.4pt on input line 1319.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 14.4013pt on input line 1457.
+(Font)              scaled to size 14.4013pt on input line 1319.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 14.39845pt on input line 1457.
-[54
+(Font)              scaled to size 14.39845pt on input line 1319.
+[55
 
-] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66]
+] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70]
 File: livroR-1.0_files/figure-latex/bar-tab-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-tab-1.pdf>
-[67]
+[71] [72]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/resumo2.png Graphic file (
-type bmp)
+l e R/livroR-1.0/figures print/resumo2.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/resumo2.png>
-[68]
+/livroR-1.0/figures print/resumo2.png>
+[73] [74]
 Cap\'{\i }tulo 4.
-[69
+[75
 
-] [70]
+] [76] [77]
 File: livroR-1.0_files/figure-latex/hist-tam-cam-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-tam-cam-1.pdf>
-[71] [72] [73] [74]
+[78] [79] [80]
 File: livroR-1.0_files/figure-latex/estrelas-hist-1.pdf Graphic file (type pdf)
 
 <use livroR-1.0_files/figure-latex/estrelas-hist-1.pdf>
-[75] [76]
+[81] [82] [83]
 File: livroR-1.0_files/figure-latex/craca-hist-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/craca-hist-1.pdf>
-[77] [78] [79]
+[84] [85] [86]
 File: livroR-1.0_files/figure-latex/cracas-dens-95-1.pdf Graphic file (type pdf
 )
 <use livroR-1.0_files/figure-latex/cracas-dens-95-1.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 2299--2302
+[]\TU/lmr/m/n/10 \begin{figure}[H] [] \cap-
+ []
+
+[87]
 File: livroR-1.0_files/figure-latex/cracas-dens-99-1.pdf Graphic file (type pdf
 )
 <use livroR-1.0_files/figure-latex/cracas-dens-99-1.pdf>
-[80] [81] [82] [83]
+
+Underfull \hbox (badness 10000) in paragraph at lines 2309--2312
+[]\TU/lmr/m/n/10 \begin{figure}[H] [] \cap-
+ []
+
+[88] [89] [90]
 File: livroR-1.0_files/figure-latex/hist-ali-A-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-ali-A-1.pdf>
+[91]
 File: livroR-1.0_files/figure-latex/hist-ali-B-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-ali-B-1.pdf>
+[92]
 File: livroR-1.0_files/figure-latex/box-ali-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/box-ali-1.pdf>
-[84] [85] [86] [87] [88] [89] [90]
+[93] [94] [95] [96] [97]
 File: livroR-1.0_files/figure-latex/testet-duas-dens-1.pdf Graphic file (type p
 df)
 <use livroR-1.0_files/figure-latex/testet-duas-dens-1.pdf>
-[91] [92]
+
+Underfull \hbox (badness 10000) in paragraph at lines 2628--2631
+[]\TU/lmr/m/n/10 \begin{figure}[H] [] \cap-
+ []
+
+[98] [99]
 File: livroR-1.0_files/figure-latex/hist-temp-0-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-temp-0-1.pdf>
+[100]
 File: livroR-1.0_files/figure-latex/hist-temp-20-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-temp-20-1.pdf>
 File: livroR-1.0_files/figure-latex/box-temp-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/box-temp-1.pdf>
-[93] [94] [95] [96] [97]
+[101] [102] [103] [104] [105]
 File: livroR-1.0_files/figure-latex/testet-duas-temp-dens-1.pdf Graphic file (t
 ype pdf)
 <use livroR-1.0_files/figure-latex/testet-duas-temp-dens-1.pdf>
-[98] [99] [100]
-Overfull \hbox (30.0321pt too wide) in paragraph at lines 3148--3148
+
+Underfull \hbox (badness 10000) in paragraph at lines 2883--2886
+[]\TU/lmr/m/n/10 \begin{figure}[H] [] \cap-
+ []
+
+[106] [107]
+Overfull \hbox (30.0321pt too wide) in paragraph at lines 2979--2979
 []\TU/lmtt/m/n/10 ##  $ Dia         : Factor w/ 20 levels "Dia 1","Dia 10",..: 
 1 12 14 15 16 17 18 19 20 2 ...[] 
  []
 
+[108]
 File: livroR-1.0_files/figure-latex/hist-par-obs1-1.pdf Graphic file (type pdf)
 
 <use livroR-1.0_files/figure-latex/hist-par-obs1-1.pdf>
-[101] [102]
 File: livroR-1.0_files/figure-latex/hist-par-obs2-1.pdf Graphic file (type pdf)
 
 <use livroR-1.0_files/figure-latex/hist-par-obs2-1.pdf>
+[109]
 File: livroR-1.0_files/figure-latex/box-par-ave-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/box-par-ave-1.pdf>
-[103] [104] [105]
+[110] [111] [112]
 File: livroR-1.0_files/figure-latex/testet-par-ave-1.pdf Graphic file (type pdf
 )
 <use livroR-1.0_files/figure-latex/testet-par-ave-1.pdf>
-[106] [107]
+
+Underfull \hbox (badness 10000) in paragraph at lines 3120--3123
+[]\TU/lmr/m/n/10 \begin{figure}[H] [] \cap-
+ []
+
+[113]
 File: livroR-1.0_files/figure-latex/bar-dif-ave-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-dif-ave-1.pdf>
-[108]
+[114]
 File: livroR-1.0_files/figure-latex/bar-dif-ave2-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-dif-ave2-1.pdf>
+[115]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
-l e R/livroR-1.0/docs/livroR-1.0_files/figures print/resumo2.png Graphic file (
-type bmp)
+l e R/livroR-1.0/figures print/resumo2.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
-/livroR-1.0/docs/livroR-1.0_files/figures print/resumo2.png>
-[109] [110]
+/livroR-1.0/figures print/resumo2.png>
+[116] [117]
 Cap\'{\i }tulo 5.
 No file livroR-1.0.bbl.
-[111
+[118
 
 ] (./livroR-1.0.aux)
 Package rerunfilecheck Info: File `livroR-1.0.out' has not changed.
-(rerunfilecheck)             Checksum: D2F7CDEC0FE1894B1776C8E86599CC6B;3971.
+(rerunfilecheck)             Checksum: E001BB1675ED9DE1FD65D9B0F68806A1;3991.
  ) 
 Here is how much of TeX's memory you used:
- 20727 strings out of 479285
- 381072 string characters out of 5876615
- 865746 words of memory out of 5000000
- 39770 multiletter control sequences out of 15000+600000
+ 20766 strings out of 479285
+ 379534 string characters out of 5876615
+ 862760 words of memory out of 5000000
+ 39808 multiletter control sequences out of 15000+600000
  414840 words of font info for 117 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 94i,18n,118p,1873b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 94i,18n,118p,1873b,496s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on livroR-1.0.pdf (113 pages).
+Output written on livroR-1.0.pdf (120 pages).

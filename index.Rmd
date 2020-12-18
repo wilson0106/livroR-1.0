@@ -1,5 +1,5 @@
 ---
-title: "Introdução a análise de dados em R: Uma abordagem ambiental e ecológica"
+title: "Introdução à análise de dados em R: Uma abordagem ambiental"
 author: "Wilson Souza & Thiago Couto"
 thanks: "Em primeiro lugar só podemos agradecer a nossa família (pais, mães, irmãos, filhos e esposas), pois são quem estão a nosso lado a todo instante nos dando suporte. Em segundo lugar gostariamos de agradecer a todos os professores pois foram eles que nos deram a base necessária para que esse livro viesse a existir. Em terceiro lugar gostariamos de agradecer a todos os revisores desta obra. E por último e não menos importante gostariamos de agradecer a vocês que a estão lendo porque é pra vocês que este livro foi construído!"
 linkcolor: "blue"
@@ -12,9 +12,9 @@ site: "bookdown::bookdown_site"
 bibliography: [book.bib, packages.bib]
 documentclass: book
 classoption: ["titlepage, oneside, openany, a4paper"]
-linestretch: 1.5
-fontsize: 13pt
-geometry: ["left = 2.5cm, right = 2.5cm, top = 2cm, bottom = 3cm"]
+linestretch: 2
+fontsize: 14pt
+geometry: ["left = 3cm, right = 2cm, top = 2.5cm, bottom = 3cm"]
 biblio-style: apalike
 always_allow_html: yes
 link-citations: yes
@@ -32,9 +32,14 @@ colorize <- function(x, color) {
 }
 ```
 
+```{r global_options, echo = FALSE, include = FALSE}
+knitr::opts_chunk$set(fig.pos = 'H')
+```
+
+
 # Prefácio {-}
 
-Alguém irá escrever! Mas quem?
+Quem irá escrever?
 
 
 # Sobre os autores {-}
@@ -42,7 +47,7 @@ Alguém irá escrever! Mas quem?
 
 **Wilson Souza**
 
-Possui graduação em Licenciatura em Ciências Biológicas pela Universidade Federal do Rio de Janeiro com dupla diplomação com a Universidade de Coimbra - Portugal, Bacharelado em Biologia Marinha pela Universidade Federal do Rio de Janeiro e Mestrado em Oceanografia Biológica pela Universidade Federal do Rio Grande. Desde 2012 trabalha em projetos de monitoramento de populações de camarões com foco em aspectos ecológicos e pesqueiros e em projetos de ecologia de benthos marinho. Aprendeu a linguagem R durante o mestrado e desde então tem se dedicado a ampliar seus conhecimentos em bioestatística voltado para análises ambientais e ecológicas do benthos marinho.
+Possui graduação em Licenciatura em Ciências Biológicas pela Universidade Federal do Rio de Janeiro com dupla diplomação com a Universidade de Coimbra - Portugal, Bacharelado em Biologia Marinha pela Universidade Federal do Rio de Janeiro e Mestrado em Oceanografia Biológica pela Universidade Federal do Rio Grande. Desde 2012 trabalha em projetos de monitoramento de populações de camarões com foco em aspectos ecológicos e pesqueiros e em projetos de ecologia do benthos marinho. Aprendeu a linguagem R durante o mestrado e desde então tem se dedicado a ampliar seus conhecimentos em bioestatística voltado para análises ambientais e ecológicas do benthos marinho.
 
 
 **Thiago Couto**

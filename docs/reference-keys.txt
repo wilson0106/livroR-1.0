@@ -8,8 +8,6 @@ fig:packages
 fig:plot
 fig:help
 fig:setwd
-fig:ctrl-shift-h
-fig:mode-2
 fig:files-guia
 fig:planilha
 fig:planilhaxlsx
@@ -61,10 +59,10 @@ porque-usá-lo-para-análise-de-dados
 o-rstudio
 importar-organizar-e-sumarizar-os-dados
 passo-definir-o-ambiente-de-trabalho-e-importar-a-planilha-de-dados-para-o-r
-definir-ambiente-de-trabalho-via-linha-de-comando
-definir-ambiente-de-trabalho-via-interface-gráfica
-importar-planilha-via-linha-de-comando
-importar-planilha-via-interface-gráfica
+definindo-ambiente-de-trabalho-via-linha-de-comando
+definindo-ambiente-de-trabalho-via-interface-gráfica
+importando-planilha-via-linha-de-comando
+importando-planilha-via-interface-gráfica
 passo-verificar-e-ajustar-os-dados
 passo-sumarizar-os-dados-graficamente
 histograma
@@ -82,4 +80,4 @@ teste-t-para-uma-amostra
 teste-t-para-duas-amostras
 teste-t-pareado
 considerações-2
-final-words
+palavras-finais
