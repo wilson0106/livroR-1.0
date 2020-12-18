@@ -152,9 +152,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="importar-organizar-e-sumarizar-os-dados.html"><a href="importar-organizar-e-sumarizar-os-dados.html#passo-verificar-e-ajustar-os-dados"><i class="fa fa-check"></i><b>2.2</b> 2° passo: Verificar e ajustar os dados</a></li>
 <li class="chapter" data-level="2.3" data-path="importar-organizar-e-sumarizar-os-dados.html"><a href="importar-organizar-e-sumarizar-os-dados.html#passo-sumarizar-os-dados-graficamente"><i class="fa fa-check"></i><b>2.3</b> 3° passo: Sumarizar os dados graficamente</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="importar-organizar-e-sumarizar-os-dados.html"><a href="importar-organizar-e-sumarizar-os-dados.html#histograma"><i class="fa fa-check"></i><b>2.3.1</b> Histograma</a></li>
-<li class="chapter" data-level="2.3.2" data-path="importar-organizar-e-sumarizar-os-dados.html"><a href="importar-organizar-e-sumarizar-os-dados.html#gráfico-de-barras"><i class="fa fa-check"></i><b>2.3.2</b> GRÁFICO DE BARRAS</a></li>
-<li class="chapter" data-level="2.3.3" data-path="importar-organizar-e-sumarizar-os-dados.html"><a href="importar-organizar-e-sumarizar-os-dados.html#gráfico-de-linhas"><i class="fa fa-check"></i><b>2.3.3</b> GRÁFICO DE LINHAS</a></li>
-<li class="chapter" data-level="2.3.4" data-path="importar-organizar-e-sumarizar-os-dados.html"><a href="importar-organizar-e-sumarizar-os-dados.html#boxplot"><i class="fa fa-check"></i><b>2.3.4</b> BOXPLOT</a></li>
+<li class="chapter" data-level="2.3.2" data-path="importar-organizar-e-sumarizar-os-dados.html"><a href="importar-organizar-e-sumarizar-os-dados.html#gráfico-de-barras"><i class="fa fa-check"></i><b>2.3.2</b> Gráfico de Barras</a></li>
+<li class="chapter" data-level="2.3.3" data-path="importar-organizar-e-sumarizar-os-dados.html"><a href="importar-organizar-e-sumarizar-os-dados.html#gráfico-de-linhas"><i class="fa fa-check"></i><b>2.3.3</b> Gráfico de Linhas</a></li>
+<li class="chapter" data-level="2.3.4" data-path="importar-organizar-e-sumarizar-os-dados.html"><a href="importar-organizar-e-sumarizar-os-dados.html#boxplot"><i class="fa fa-check"></i><b>2.3.4</b> Boxplot</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="importar-organizar-e-sumarizar-os-dados.html"><a href="importar-organizar-e-sumarizar-os-dados.html#passo-sumarizar-os-dados-numericamente"><i class="fa fa-check"></i><b>2.4</b> 4° passo: Sumarizar os dados numericamente</a></li>
 <li class="chapter" data-level="2.5" data-path="importar-organizar-e-sumarizar-os-dados.html"><a href="importar-organizar-e-sumarizar-os-dados.html#considerações"><i class="fa fa-check"></i><b>2.5</b> Considerações</a></li>
@@ -235,27 +235,27 @@ Figura 2.4: <strong>[Inserir PRINT da janela files-guia]</strong>
 </div>
 <div id="importar-planilha-via-linha-de-comando" class="section level3">
 <h3><span class="header-section-number">2.1.3</span> Importar planilha via linha de comando:</h3>
-<p>Primeiro construa as planilhas a seguir nos formatos *.csv (usando vírgula como separador de colunas e ponto como separador decimal) (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:planilha">2.5</a>) e *.xlsx (Figura <a href="#fig:planilhaxlsx"><strong>??</strong></a>) em um editor de planilhas, como excel, libreoffice calc ou outros e a salve com o nome de planilha.csv e planilha.xlsx no diretório que definiu previamente. A seguir demonstraremos as diferenças na importação de ambas as planilhas.</p>
+<p>Primeiro construa as planilhas a seguir nos formatos *.csv (usando vírgula como separador de colunas e ponto como separador decimal) (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:planilha">2.5</a>) e *.xlsx (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:planilhaxlsx">2.6</a>) em um editor de planilhas, como excel, libreoffice calc ou outros e a salve com o nome de planilha.csv e planilha.xlsx no diretório que definiu previamente. A seguir demonstraremos as diferenças na importação de ambas as planilhas.</p>
 <div class="figure" style="text-align: center"><span id="fig:planilha"></span>
 <img src="docs/livroR-1.0_files/figures%20print/planilha.png" alt="Planilha com os dados no formato *.csv que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente" width="80%" />
 <p class="caption">
 Figura 2.5: Planilha com os dados no formato *.csv que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente
 </p>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:planlhaxlsx"></span>
+<div class="figure" style="text-align: center"><span id="fig:planilhaxlsx"></span>
 <img src="docs/livroR-1.0_files/figures%20print/planilhaxlsx.png" alt="Planilha com os dados no formato *.xlsx que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente" width="80%" />
 <p class="caption">
 Figura 2.6: Planilha com os dados no formato *.xlsx que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente
 </p>
 </div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">dados &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="dt">file =</span> <span class="st">&quot;planilha.csv&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>, <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>)</a></code></pre></div>
-<p>O comando <span style="color: blue;">read.csv()</span> importou a planilha que está no formato *.csv utilizando os argumentos: file - o qual indica o nome do arquivo a ser importado; header - o qual indica se as colunas da planilha tem nome e sep - o qual indica qual o caracter separador das colunas</p>
+<p>O comando <span style="color: blue;">read.csv()</span> importou a planilha que está no formato *.csv utilizando os argumentos “file” o qual indica o nome do arquivo a ser importado; “header” o qual indica se as colunas da planilha tem nome e “sep” o qual indica qual o caracter separador das colunas</p>
 <p>O comando acima importou a planilha e o guardou em um objeto chamado dados que será o que nós utilizaremos de agora em diante sempre que quisermos acessar essa planilha no R.</p>
 <p>Para importar arquivos que estão no formato *.xls ou *.xlsx é necessário a instalação de algum pacote<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> que permita a realização desse processo. Um pacote que instalaremos aqui é o <span style="color: green;">readxl</span>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co">## install.packages(&quot;readxl&quot;)</span></a>
 <a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">library</span>(readxl)</a></code></pre></div>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">dados &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="dt">path =</span> <span class="st">&quot;planilha.xlsx&quot;</span>, <span class="dt">col_names =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<p>O comando <span style="color: blue;">read_excel()</span> é similar ao <span style="color: blue;">read.csv()</span> embora seus argumentos sejam diferentes. O argumento path é similar ao file, o argumento col_names é similar ao header. Repare que não temos o argumento sep, pois em um arquivo excel as variáveis são salvas em colunas. Observe que independente da forma de importação (que é dependente do formato do arquivo *.csv ou *.xlsx) o resultado final é o mesmo (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:arqenv">2.7</a>).</p>
+<p>O comando <span style="color: blue;">read_excel()</span> é similar ao <span style="color: blue;">read.csv()</span> embora seus argumentos sejam diferentes. O argumento “path” é similar ao “file”, o argumento “col_names” é similar ao “header”. Repare que não temos o argumento “sep”, pois em um arquivo excel as variáveis são salvas em colunas. Observe que independente da forma de importação (que é dependente do formato do arquivo *.csv ou *.xlsx) o resultado final é o mesmo (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:arqenv">2.7</a>).</p>
 <div class="figure" style="text-align: center"><span id="fig:arqenv"></span>
 <img src="docs/livroR-1.0_files/figures%20print/arqenv.png" alt="Resultado da importação do arquivo observado na guia environment. Há um objeto de nome dados, com 40 observações e 4 variáveis." width="80%" />
 <p class="caption">
@@ -335,7 +335,7 @@ Figura 2.9: mudar a figura e fazer a legenda
 <p>A função <span style="color: blue;">View()</span> abre uma aba, ao lado de seu script mostrando todos dados.</p>
 <p>Experimente agora escrever dados e rodar, o que aparece? experimente clicar no nome dados, presente no environment. O que você observou?</p>
 <p>Se no primeiro caso você observou a planilha aparecendo no console parabéns você está indo no caminho certo. Se no segundo momento você observou que ao clicar sobre o nome dados ele executou a mesma coisa que a função <span style="color: blue;">View()</span> você está indo maravilhosamente bem. Continue assim!</p>
-<p>Isto não é tudo, mas sim o necessário começarmos a sumarizar os dados de maneira eficiente.</p>
+<p>Isto não é tudo, mas sim o necessário para começarmos a sumarizar os dados de maneira eficiente.</p>
 <p>Não se esqueça que antes de trabalharmos nossos dados temos que entender o que eles são e a que eles se referem. A análise de dados sem prévio conhecimento sobre o que eles significam pode levar a interpretações errôneas, caso as análises realizadas indiquem algum resultado, ou então a muita dor de cabeça se algum comando para uma dada análise não funcionar como esperado.</p>
 <p>Portanto siga os passos precisamente, não pule etapas e busque diversificar a fonte do seu conhecimento. Pois o R é uma linguagem de programação e que como demonstramos até o momento há muitas vias possíveis de escrita para um mesmo objetivo e diferentes autores podem escrever de formas diferentes.</p>
 </div>
@@ -343,7 +343,7 @@ Figura 2.9: mudar a figura e fazer a legenda
 <h2><span class="header-section-number">2.3</span> 3° passo: Sumarizar os dados graficamente</h2>
 <p>Já importamos nossa planilha e já a ajustamos. Que tal começarmos a ver a “mágica” acontecer e graficarmos nossso dados.</p>
 <p>Muitos gráficos podem ser realizados, mas lembre-se que há toda uma ciência sobre isso.</p>
-<p>Pensando nos gráficos mais comuns e úteis para nosso dia-a-dia e que nos permitem sumarizar nossos dados temos os histogramas, barras, linhas e boxplots. Vamos então começar com esses e com o objetivo inicial de sumarizar nossos dados.</p>
+<p>Pensando nos gráficos mais comuns e úteis para nosso dia-a-dia e que nos permitem sumarizar nossos dados temos os histogramas, barras, pontos, linhas e boxplots. Vamos então começar com esses e com o objetivo inicial de sumarizar nossos dados.</p>
 <div id="histograma" class="section level3">
 <h3><span class="header-section-number">2.3.1</span> Histograma</h3>
 <p>O histograma nos permite verificar a distribuição da frequência dos nossos dados. Por exemplo, imagine uma amostra com diversos indivíduos de um dado grupo. Caso queiramos representar as frequências relativas das diferentes faixas de peso deste grupo, podemos usar o histograma.</p>
@@ -376,7 +376,7 @@ Figura 2.11: Comprimento dos organismos da planilha dados com barras coloridas
 <p>Ainda em relação ao histograma podemos ver na função <span style="color: blue;">hist()</span> que utilizamos diversos argumentos como: xlim, ylim, col, main, xlab e ylab, além de uma função chamada <span style="color: blue;">c()</span>. Verifique a tabela abaixo para detalhes de cada um desses argumentos e da função <span style="color: blue;">c()</span>. OBS: Essa função <span style="color: blue;">c()</span> é muito importante e será utilizada constantemente ao longo de seu trajeto no R.</p>
 </div>
 <div id="gráfico-de-barras" class="section level3">
-<h3><span class="header-section-number">2.3.2</span> GRÁFICO DE BARRAS</h3>
+<h3><span class="header-section-number">2.3.2</span> Gráfico de Barras</h3>
 <p>O gráfico de barras é um dos mais utilizados. Com ele podemos comparar valores de categorias diferentes. Por exemplo, dados onde temos números de indivíduos de diversas espécies podem ser representados em gráficos de barras, onde cada espécie será representada por uma barra.</p>
 <p>Se já chegamos até esse ponto vamos exercitar um pouco antes de plotar o gráfico de barras. Construa a seguinte planilha no seu editor de planilhas (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:abundancia">2.12</a>).</p>
 <div class="figure" style="text-align: center"><span id="fig:abundancia"></span>
@@ -424,7 +424,7 @@ Figura 2.14: Gráfico de barras com número de indivíduos da planilha abundânc
 <p>Podemos extrair desse gráfico que a abundância dos indivíduos variam ao longo dos meses com valores menores em torno de 50 indivíduos nos meses 4, 5 e 6 e valores maiores em torno de 200 indivíduos no mês 11.</p>
 </div>
 <div id="gráfico-de-linhas" class="section level3">
-<h3><span class="header-section-number">2.3.3</span> GRÁFICO DE LINHAS</h3>
+<h3><span class="header-section-number">2.3.3</span> Gráfico de Linhas</h3>
 <p>Quando queremos representar dados quantitativos, podemos usar o gráfico de linhas. Como ele, geralmente podemos verificar a tendência dos nossos dados em ordem cronológica. Por exemplo, podemos representar num gráfico de linhas a variação da quantidade de indivíduos de uma espécie ao longo do ano ou os valores de precipitação ao longo de décadas.</p>
 <p>Assim como o gráfico de barras podemos desejar fazer um gráfico de linhas para isso podemos utilizar a função <span style="color: blue;">plot()</span> e continuar trabalhando com os dados de abundância por mês</p>
 <p>Contudo para fazer um gráfico de linhas pelo comando básico do R (utilizando a função <span style="color: blue;">plot()</span>) precisamos indicar que ambos os eixos apresentam variáveis numéricas. Portanto teremos que modificar a variável mês de fator para número.</p>
@@ -457,7 +457,7 @@ Figura 2.16: Representação gráfica do número de indivíduos por mês em um g
 <p>Alguns argumentos novos foram inseridos, como main que insere o título do gráfico, o type que define que será um gráfico de linhas e lwd que determina a espessura da linha.</p>
 </div>
 <div id="boxplot" class="section level3">
-<h3><span class="header-section-number">2.3.4</span> BOXPLOT</h3>
+<h3><span class="header-section-number">2.3.4</span> Boxplot</h3>
 <p>Podemos usar os bloxplots para verificar a tendência das amostras e a distribuição desta. Quando se tem uma pequena quantidade de amostras (por exemplo, 3 réplicas) esse gráfico não é indicado. Nele também podemos verificar se temos alguma anomalia nos dados, os chamados outliers.</p>
 <p>Vamos voltar a nossa primeira planilha (dados) e executar um gráfico do tipo boxplot (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:box-graf">2.17</a>) e ver o que ele nos informa.</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1"><span class="kw">boxplot</span>(<span class="dt">formula =</span> dados<span class="op">$</span>comprimento <span class="op">~</span><span class="st"> </span>dados<span class="op">$</span>ano)</a></code></pre></div>
@@ -538,8 +538,8 @@ Figura 2.18: Gráfico tipo boxplot do comprimento por ano com cores por ano, da 
 <div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" data-line-number="1"><span class="kw">diff</span>(<span class="kw">range</span>(dados<span class="op">$</span>comprimento))</a></code></pre></div>
 <pre><code>## [1] 9</code></pre>
 <p>O desvio padrão é uma das medidas de variação mais importantes que iremos realizar. Ele mede a distância dos valores observados em relação a sua média.</p>
-<p>Durante a coleta de dados em estudos ambientais, o que normalmente é extraído de informação é uma fração de um todo, ou seja, uma amostra de uma população. Portanto quando se deseja avaliar o desvio padrão, assim como outras medidas de variabilidade, devemos considerar se estamos avaliando uma amostra ou toda a população. Se uma amostra é considerada o nos referimos a ela como desvio padrão amostral e a representamos por (s) se toda a população é considerada nos referimos a ela como desvio padrão populacional e a representamos por (sigma).</p>
-<p>Neste livro vamos abordar e considerar o desvio padrão como o desvio padrão amostral.</p>
+<p>Durante a coleta de dados em estudos ambientais, o que normalmente é extraído de informação é uma fração de um todo, ou seja, uma amostra de uma população. Portanto quando se deseja avaliar o desvio padrão, assim como outras medidas de variabilidade, devemos considerar se estamos avaliando uma amostra ou toda a população. Se uma amostra é considerada o nos referimos a ela como desvio padrão amostral e a representamos por (s) se toda a população é considerada nos referimos a ela como desvio padrão populacional e a representamos por (<span class="math inline">\(\sigma\)</span>).</p>
+<p>Neste livro vamos abordar e considerar o desvio padrão amostral.</p>
 <p>Para calcular o desvio padrão amostral utilizamos a seguinte fórmula abaixo:</p>
 <p><span class="math display">\[s = \sqrt{\sum^{N}_{i = 1}\frac{(x_{i}-\overline{x})²}{N-1}}\]</span></p>
 <p>Onde, <span class="math inline">\(\sum^{N}_{i=1}\)</span> indica o somatório da expressão <span class="math inline">\(\frac{(x_{i}-\overline{x})²}{N-1}\)</span> para <span class="math inline">\(i\)</span> variando de 1 até o número total de elementos <span class="math inline">\(N\)</span>. <span class="math inline">\(x_{i}\)</span> indica o valor medido da variável <span class="math inline">\(x\)</span>, <span class="math inline">\(\overline{x}\)</span> indica a média da variável <span class="math inline">\(x\)</span> e <span class="math inline">\(N\)</span> indica o número total de elementos da variável <span class="math inline">\(x\)</span>.</p>

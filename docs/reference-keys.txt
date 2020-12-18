@@ -12,7 +12,7 @@ fig:ctrl-shift-h
 fig:mode-2
 fig:files-guia
 fig:planilha
-fig:planlhaxlsx
+fig:planilhaxlsx
 fig:arqenv
 fig:import-graf
 fig:import-graf-2

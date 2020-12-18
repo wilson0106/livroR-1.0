@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.12.15)  17 DEC 2020 11:08
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.12.15)  17 DEC 2020 21:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1113,10 +1113,6 @@ l e R/livroR-1.0/docs/livroR-1.0_files/figures print/files.png Graphic file (ty
 pe bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
 /livroR-1.0/docs/livroR-1.0_files/figures print/files.png>
-
-LaTeX Warning: Reference `fig:planilhaxlsx' on page 19 undefined on input line 
-448.
-
 [19] [20]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
 l e R/livroR-1.0/docs/livroR-1.0_files/figures print/planilha.png Graphic file 
@@ -1310,17 +1306,14 @@ No file livroR-1.0.bbl.
 ] (./livroR-1.0.aux)
 Package rerunfilecheck Info: File `livroR-1.0.out' has not changed.
 (rerunfilecheck)             Checksum: D2F7CDEC0FE1894B1776C8E86599CC6B;3971.
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 20728 strings out of 479285
- 381089 string characters out of 5876615
- 866746 words of memory out of 5000000
- 39771 multiletter control sequences out of 15000+600000
+ 20727 strings out of 479285
+ 381072 string characters out of 5876615
+ 865746 words of memory out of 5000000
+ 39770 multiletter control sequences out of 15000+600000
  414840 words of font info for 117 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 94i,18n,118p,1862b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 94i,18n,118p,1873b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on livroR-1.0.pdf (113 pages).

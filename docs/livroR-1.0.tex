@@ -200,7 +200,7 @@ Possui graduação em Ciências Biológicas pela Universidade Santa Úrsula, Mes
 \hypertarget{o-que-uxe9}{%
 \section{O que é?}\label{o-que-uxe9}}
 
-É uma linguagem de programação derivada da linguagem S e desenvolvida pela Bell Laboratories (Atualmente Lucen Technologies). Tem se tornado a principal linguagem para análise de dados, principalmente devido ao seu carater \emph{open-source} (código aberto).
+É uma linguagem de programação derivada da linguagem S e desenvolvida pela Bell Laboratories (Atualmente Lucen Technologies). Tem se tornado a principal ferramenta para análise de dados, principalmente devido ao seu carater \emph{open-source} (código aberto).
 
 Para informações detalhadas acesse o site do R (\url{https://www.r-project.org/about.html}).
 
@@ -220,7 +220,7 @@ Portanto, neste livro mostraremos desde como se importar uma tabela até fazer a
 \hypertarget{o-rstudio}{%
 \section{O RStudio}\label{o-rstudio}}
 
-O RStudio foi construído especificamente para a linguagem R e é um ambiente de desenvolvimento integrado (no inglês IDE) (Figura \ref{fig:RStudio}). Ele fornece uma interface gráfica mais amigável para os usuários em geral, principalmente para quem está iniciando no R. Além disso ele fornece características e recursos importantes para o universo da programação, tais como: \emph{syntax highlighthing} que consiste em uma marcação diferenciada que nos sinaliza por meio de cores e outros atributos estéticos (ex.: texto em itálico) o que está sendo escrito, indicando se é um objeto, função ou argumento, por exemplo; \emph{code completion} quando digitamos três caracteres de um objeto, função ele sinaliza os demais elementos presentes em sua memória que contém esses três caracteres; \emph{smart indentation} o qual faz com que o texto que estamos digitando pule de linha automaticamente ao chegarmos no final do espaço porém ele mantém relação com a linha anterior\footnote{por padrão não está ativado, precisa ser ativado nas opções do programa}; \emph{Execute R code directly from the source editor} neste caso ele tem uma guia destinada ao seu \emph{script}\footnote{Local onde você irá escrever o código para execução de uma determinada tarefa} o qual permite executa-lo diretamente dele e o resultado irá aparecer em outra guia denominada \emph{console}; \emph{Quickly jump to function definitions} executada, em Windows e Linux, pelo atalho \(ALT + SHIFT + G\) e que permite acessar mais rapidamente uma determinada linha do script; \emph{Integrated R help and documentation} o qual traz consigo, em sua IDE, uma guia destinada a ajuda. Além destas ele traz diversas outras funcionalidades que tornam o seu uso diário mais acessível e facilitado. Mais detalhes sobre acesse \url{https://rstudio.com}.
+O RStudio foi construído especificamente para a linguagem R e é um ambiente de desenvolvimento integrado (no inglês IDE) (Figura \ref{fig:RStudio}). Ele fornece uma interface gráfica mais amigável para os usuários em geral, principalmente para quem está iniciando no R. Além disso ele fornece características e recursos importantes para o universo da programação, tais como: \emph{syntax highlighthing} que consiste em uma marcação diferenciada que nos sinaliza por meio de cores e outros atributos estéticos (ex.: texto em itálico) o que está sendo escrito, indicando se é um objeto, função ou argumento, por exemplo; \emph{code completion} quando digitamos três caracteres de um objeto, função ele sinaliza os demais elementos presentes em sua memória que contém esses três caracteres; \emph{smart indentation} o qual faz com que o texto que estamos digitando pule de linha automaticamente ao chegarmos no final do espaço porém ele mantém relação com a linha anterior\footnote{Por padrão esta opção não está ativada, precisa ser ativado nas opções do programa}; \emph{Execute R code directly from the source editor} neste caso ele tem uma guia destinada ao seu \emph{script}\footnote{Local onde você irá escrever o código para execução de uma determinada tarefa} o qual permite executa-lo diretamente dele e o resultado irá aparecer em outra guia denominada \emph{console}; \emph{Quickly jump to function definitions} executada, em Windows e Linux, pelo atalho \(ALT + SHIFT + G\) e que permite acessar mais rapidamente uma determinada linha do script; \emph{Integrated R help and documentation} o qual traz consigo, em sua IDE, uma guia destinada a ajuda. Além destas ele traz diversas outras funcionalidades que tornam o seu uso diário mais acessível e facilitado. Mais detalhes sobre acesse \url{https://rstudio.com}.
 
 \begin{figure}
 
@@ -462,7 +462,7 @@ Primeiro construa as planilhas a seguir nos formatos *.csv (usando vírgula como
 
 }
 
-\caption{Planilha com os dados no formato *.xlsx que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente}\label{fig:planlhaxlsx}
+\caption{Planilha com os dados no formato *.xlsx que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente}\label{fig:planilhaxlsx}
 \end{figure}
 
 \begin{Shaded}
@@ -471,7 +471,7 @@ Primeiro construa as planilhas a seguir nos formatos *.csv (usando vírgula como
 \end{Highlighting}
 \end{Shaded}
 
-O comando \textcolor{blue}{read.csv()} importou a planilha que está no formato *.csv utilizando os argumentos: file - o qual indica o nome do arquivo a ser importado; header - o qual indica se as colunas da planilha tem nome e sep - o qual indica qual o caracter separador das colunas
+O comando \textcolor{blue}{read.csv()} importou a planilha que está no formato *.csv utilizando os argumentos ``file'' o qual indica o nome do arquivo a ser importado; ``header'' o qual indica se as colunas da planilha tem nome e ``sep'' o qual indica qual o caracter separador das colunas
 
 O comando acima importou a planilha e o guardou em um objeto chamado dados que será o que nós utilizaremos de agora em diante sempre que quisermos acessar essa planilha no R.
 
@@ -490,7 +490,7 @@ Para importar arquivos que estão no formato *.xls ou *.xlsx é necessário a in
 \end{Highlighting}
 \end{Shaded}
 
-O comando \textbackslash{}textcolor\{blue\}\{read\_excel()\} é similar ao \textcolor{blue}{read.csv()} embora seus argumentos sejam diferentes. O argumento path é similar ao file, o argumento col\_names é similar ao header. Repare que não temos o argumento sep, pois em um arquivo excel as variáveis são salvas em colunas. Observe que independente da forma de importação (que é dependente do formato do arquivo *.csv ou *.xlsx) o resultado final é o mesmo (Figura \ref{fig:arqenv}).
+O comando \textbackslash{}textcolor\{blue\}\{read\_excel()\} é similar ao \textcolor{blue}{read.csv()} embora seus argumentos sejam diferentes. O argumento ``path'' é similar ao ``file'', o argumento ``col\_names'' é similar ao ``header''. Repare que não temos o argumento ``sep'', pois em um arquivo excel as variáveis são salvas em colunas. Observe que independente da forma de importação (que é dependente do formato do arquivo *.csv ou *.xlsx) o resultado final é o mesmo (Figura \ref{fig:arqenv}).
 
 \begin{figure}
 
@@ -648,7 +648,7 @@ Experimente agora escrever dados e rodar, o que aparece? experimente clicar no n
 
 Se no primeiro caso você observou a planilha aparecendo no console parabéns você está indo no caminho certo. Se no segundo momento você observou que ao clicar sobre o nome dados ele executou a mesma coisa que a função \textcolor{blue}{View()} você está indo maravilhosamente bem. Continue assim!
 
-Isto não é tudo, mas sim o necessário começarmos a sumarizar os dados de maneira eficiente.
+Isto não é tudo, mas sim o necessário para começarmos a sumarizar os dados de maneira eficiente.
 
 Não se esqueça que antes de trabalharmos nossos dados temos que entender o que eles são e a que eles se referem. A análise de dados sem prévio conhecimento sobre o que eles significam pode levar a interpretações errôneas, caso as análises realizadas indiquem algum resultado, ou então a muita dor de cabeça se algum comando para uma dada análise não funcionar como esperado.
 
@@ -661,7 +661,7 @@ Já importamos nossa planilha e já a ajustamos. Que tal começarmos a ver a ``m
 
 Muitos gráficos podem ser realizados, mas lembre-se que há toda uma ciência sobre isso.
 
-Pensando nos gráficos mais comuns e úteis para nosso dia-a-dia e que nos permitem sumarizar nossos dados temos os histogramas, barras, linhas e boxplots. Vamos então começar com esses e com o objetivo inicial de sumarizar nossos dados.
+Pensando nos gráficos mais comuns e úteis para nosso dia-a-dia e que nos permitem sumarizar nossos dados temos os histogramas, barras, pontos, linhas e boxplots. Vamos então começar com esses e com o objetivo inicial de sumarizar nossos dados.
 
 \hypertarget{histograma}{%
 \subsection{Histograma}\label{histograma}}
@@ -713,7 +713,7 @@ Podemos observar nele que o valor mínimo observado é 10 e que o máximo é 19 
 Ainda em relação ao histograma podemos ver na função \textcolor{blue}{hist()} que utilizamos diversos argumentos como: xlim, ylim, col, main, xlab e ylab, além de uma função chamada \textcolor{blue}{c()}. Verifique a tabela abaixo para detalhes de cada um desses argumentos e da função \textcolor{blue}{c()}. OBS: Essa função \textcolor{blue}{c()} é muito importante e será utilizada constantemente ao longo de seu trajeto no R.
 
 \hypertarget{gruxe1fico-de-barras}{%
-\subsection{GRÁFICO DE BARRAS}\label{gruxe1fico-de-barras}}
+\subsection{Gráfico de Barras}\label{gruxe1fico-de-barras}}
 
 O gráfico de barras é um dos mais utilizados. Com ele podemos comparar valores de categorias diferentes. Por exemplo, dados onde temos números de indivíduos de diversas espécies podem ser representados em gráficos de barras, onde cada espécie será representada por uma barra.
 
@@ -805,7 +805,7 @@ No código acima definimos o que será gráficado como a variável N presente no
 Podemos extrair desse gráfico que a abundância dos indivíduos variam ao longo dos meses com valores menores em torno de 50 indivíduos nos meses 4, 5 e 6 e valores maiores em torno de 200 indivíduos no mês 11.
 
 \hypertarget{gruxe1fico-de-linhas}{%
-\subsection{GRÁFICO DE LINHAS}\label{gruxe1fico-de-linhas}}
+\subsection{Gráfico de Linhas}\label{gruxe1fico-de-linhas}}
 
 Quando queremos representar dados quantitativos, podemos usar o gráfico de linhas. Como ele, geralmente podemos verificar a tendência dos nossos dados em ordem cronológica. Por exemplo, podemos representar num gráfico de linhas a variação da quantidade de indivíduos de uma espécie ao longo do ano ou os valores de precipitação ao longo de décadas.
 
@@ -856,7 +856,7 @@ Repare que um gráfico de linha foi plotado e o resultado deste indica o mesmo q
 Alguns argumentos novos foram inseridos, como main que insere o título do gráfico, o type que define que será um gráfico de linhas e lwd que determina a espessura da linha.
 
 \hypertarget{boxplot}{%
-\subsection{BOXPLOT}\label{boxplot}}
+\subsection{Boxplot}\label{boxplot}}
 
 Podemos usar os bloxplots para verificar a tendência das amostras e a distribuição desta. Quando se tem uma pequena quantidade de amostras (por exemplo, 3 réplicas) esse gráfico não é indicado. Nele também podemos verificar se temos alguma anomalia nos dados, os chamados outliers.
 
@@ -1046,9 +1046,9 @@ Uma outra forma de realizar esta mesma operação é utilizando a função \text
 
 O desvio padrão é uma das medidas de variação mais importantes que iremos realizar. Ele mede a distância dos valores observados em relação a sua média.
 
-Durante a coleta de dados em estudos ambientais, o que normalmente é extraído de informação é uma fração de um todo, ou seja, uma amostra de uma população. Portanto quando se deseja avaliar o desvio padrão, assim como outras medidas de variabilidade, devemos considerar se estamos avaliando uma amostra ou toda a população. Se uma amostra é considerada o nos referimos a ela como desvio padrão amostral e a representamos por (s) se toda a população é considerada nos referimos a ela como desvio padrão populacional e a representamos por (sigma).
+Durante a coleta de dados em estudos ambientais, o que normalmente é extraído de informação é uma fração de um todo, ou seja, uma amostra de uma população. Portanto quando se deseja avaliar o desvio padrão, assim como outras medidas de variabilidade, devemos considerar se estamos avaliando uma amostra ou toda a população. Se uma amostra é considerada o nos referimos a ela como desvio padrão amostral e a representamos por (s) se toda a população é considerada nos referimos a ela como desvio padrão populacional e a representamos por (\(\sigma\)).
 
-Neste livro vamos abordar e considerar o desvio padrão como o desvio padrão amostral.
+Neste livro vamos abordar e considerar o desvio padrão amostral.
 
 Para calcular o desvio padrão amostral utilizamos a seguinte fórmula abaixo:
 
@@ -1662,7 +1662,7 @@ Imagine que você foi em campo e contabilizou as espécies de cracas que identif
 ##  on 2000 replicates)
 ## 
 ## data:  N.especies
-## X-squared = 4, df = NA, p-value = 0.06747
+## X-squared = 4, df = NA, p-value = 0.06297
 \end{verbatim}
 
 Basta usarmos o argumento ``simulate.p.value'' e indicar ``FALSE'' quando não queremos a simulação de Monte Carlo, ou apenas omitirmos este argumento, ou usar este argumento e indicar ``TRUE'' o qual realiza a simulação de Monte Carlo. Verifique que com a aplicação desta simulação o \emph{p-value} aumenta indicando que torna mais dificil rejeitarmos a hipótese nula. Após aplicarmos a correção na nossa análise podemos afirmar que não há diferença na quantidade de cracas observadas em relação as proporções esperadas, para ambas as espécies de cracas.

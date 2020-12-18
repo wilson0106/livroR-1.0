@@ -54,7 +54,7 @@ Primeiro construa as planilhas a seguir nos formatos \*.csv (usando vírgula com
 knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/planilha.png')
 ```
 
-```{r planlhaxlsx, message = FALSE, echo = FALSE, fig.cap = "Planilha com os dados no formato *.xlsx que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente", fig.align = "center", out.width = '80%'}
+```{r planilhaxlsx, message = FALSE, echo = FALSE, fig.cap = "Planilha com os dados no formato *.xlsx que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente", fig.align = "center", out.width = '80%'}
 knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/planilhaxlsx.png')
 ```
 
@@ -64,7 +64,7 @@ dados <- read.csv(file = "planilha.csv", header = TRUE, sep = ",")
 ```
 
 
-O comando `r colorize("read.csv()", "blue")` importou a planilha que está no formato \*.csv utilizando os argumentos: file - o qual indica o nome do arquivo a ser importado; header - o qual indica se as colunas da planilha tem nome e sep - o qual indica qual o caracter separador das colunas
+O comando `r colorize("read.csv()", "blue")` importou a planilha que está no formato \*.csv utilizando os argumentos "file" o qual indica o nome do arquivo a ser importado; "header" o qual indica se as colunas da planilha tem nome e "sep" o qual indica qual o caracter separador das colunas
 
 
 O comando acima importou a planilha e o guardou em um objeto chamado dados que será o que nós utilizaremos de agora em diante sempre que quisermos acessar essa planilha no R.
@@ -84,7 +84,7 @@ dados <- read_excel(path = "planilha.xlsx", col_names = TRUE)
 ```
 
 
-O comando `r colorize("read_excel()", "blue")` é similar ao `r colorize("read.csv()", "blue")` embora seus argumentos sejam diferentes. O argumento path é similar ao file, o argumento col_names é similar ao header. Repare que não temos o argumento sep, pois em um arquivo excel as variáveis são salvas em colunas. Observe que independente da forma de importação (que é dependente do formato do arquivo \*.csv ou *.xlsx) o resultado final é o mesmo (Figura \@ref(fig:arqenv)).
+O comando `r colorize("read_excel()", "blue")` é similar ao `r colorize("read.csv()", "blue")` embora seus argumentos sejam diferentes. O argumento "path" é similar ao "file", o argumento "col_names" é similar ao "header". Repare que não temos o argumento "sep", pois em um arquivo excel as variáveis são salvas em colunas. Observe que independente da forma de importação (que é dependente do formato do arquivo \*.csv ou *.xlsx) o resultado final é o mesmo (Figura \@ref(fig:arqenv)).
 
 ```{r arqenv, message = FALSE, echo = FALSE, fig.cap = "Resultado da importação do arquivo observado na guia environment. Há um objeto de nome dados, com 40 observações e 4 variáveis.", fig.align = "center", out.width = '80%'}
 knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/docs/livroR-1.0_files/figures print/arqenv.png')
@@ -216,7 +216,7 @@ Experimente agora escrever dados e rodar, o que aparece? experimente clicar no n
 Se no primeiro caso você observou a planilha aparecendo no console parabéns você está indo no caminho certo. Se no segundo momento você observou que ao clicar sobre o nome dados ele executou a mesma coisa que a função `r colorize("View()", "blue")` você está indo maravilhosamente bem. Continue assim!
 
 
-Isto não é tudo, mas sim o necessário começarmos a sumarizar os dados de maneira eficiente. 
+Isto não é tudo, mas sim o necessário para começarmos a sumarizar os dados de maneira eficiente. 
 
 
 Não se esqueça que antes de trabalharmos nossos dados temos que entender o que eles são e a que eles se referem. A análise de dados sem prévio conhecimento sobre o que eles significam pode levar a interpretações errôneas, caso as análises realizadas indiquem algum resultado, ou então a muita dor de cabeça se algum comando para uma dada análise não funcionar como esperado.
@@ -234,7 +234,7 @@ Já importamos nossa planilha e já a ajustamos. Que tal começarmos a ver a "m�
 Muitos gráficos podem ser realizados, mas lembre-se que há toda uma ciência sobre isso.
 
 
-Pensando nos gráficos mais comuns e úteis para nosso dia-a-dia e que nos permitem sumarizar nossos dados temos os histogramas, barras, linhas e boxplots. Vamos então começar com esses e com o objetivo inicial de sumarizar nossos dados.
+Pensando nos gráficos mais comuns e úteis para nosso dia-a-dia e que nos permitem sumarizar nossos dados temos os histogramas, barras, pontos, linhas e boxplots. Vamos então começar com esses e com o objetivo inicial de sumarizar nossos dados.
 
 
 ### Histograma
@@ -278,7 +278,7 @@ Podemos observar nele que o valor mínimo observado é 10 e que o máximo é 19 
 Ainda em relação ao histograma podemos ver na função `r colorize("hist()", "blue")` que utilizamos diversos argumentos como: xlim, ylim, col, main, xlab e ylab, além de uma função chamada `r colorize("c()", "blue")`. Verifique a tabela abaixo para detalhes de cada um desses argumentos e da função `r colorize("c()", "blue")`. OBS: Essa função `r colorize("c()", "blue")` é muito importante e será utilizada constantemente ao longo de seu trajeto no R.
 
 
-### GRÁFICO DE BARRAS
+### Gráfico de Barras
 
 O gráfico de barras é um dos mais utilizados. Com ele podemos comparar valores de categorias diferentes. Por exemplo, dados onde temos números de indivíduos de diversas espécies podem ser representados em gráficos de barras, onde cada espécie será representada por uma barra.
 
@@ -352,7 +352,7 @@ No código acima definimos o que será gráficado como a variável N presente no
 Podemos extrair desse gráfico que a abundância dos indivíduos variam ao longo dos meses com valores menores em torno de 50 indivíduos nos meses 4, 5 e 6 e valores maiores em torno de 200 indivíduos no mês 11.
 
 
-### GRÁFICO DE LINHAS
+### Gráfico de Linhas
 
 Quando queremos representar dados quantitativos, podemos usar o gráfico de linhas. Como ele, geralmente podemos verificar a tendência dos nossos dados em ordem cronológica. Por exemplo, podemos representar num gráfico de linhas a variação da quantidade de indivíduos de uma espécie ao longo do ano ou os valores de precipitação ao longo de décadas.
 
@@ -396,7 +396,7 @@ Repare que um gráfico de linha foi plotado e o resultado deste indica o mesmo q
 Alguns argumentos novos foram inseridos, como main que insere o título do gráfico, o type que define que será um gráfico de linhas e lwd que determina a espessura da linha.
 
 
-### BOXPLOT
+### Boxplot
 
 Podemos usar os bloxplots para verificar a tendência das amostras e a distribuição desta. Quando se tem uma pequena quantidade de amostras (por exemplo, 3 réplicas) esse gráfico não é indicado. Nele também podemos verificar se temos alguma anomalia nos dados, os chamados outliers.
 
@@ -531,10 +531,10 @@ diff(range(dados$comprimento))
 O desvio padrão é uma das medidas de variação mais importantes que iremos realizar. Ele mede a distância dos valores observados em relação a sua média.
 
 
-Durante a coleta de dados em estudos ambientais, o que normalmente é extraído de informação é uma fração de um todo, ou seja, uma amostra de uma população. Portanto quando se deseja avaliar o desvio padrão, assim como outras medidas de variabilidade, devemos considerar se estamos avaliando uma amostra ou toda a população. Se uma amostra é considerada o nos referimos a ela como desvio padrão amostral e a representamos por (s) se toda a população é considerada nos referimos a ela como desvio padrão populacional e a representamos por (sigma).
+Durante a coleta de dados em estudos ambientais, o que normalmente é extraído de informação é uma fração de um todo, ou seja, uma amostra de uma população. Portanto quando se deseja avaliar o desvio padrão, assim como outras medidas de variabilidade, devemos considerar se estamos avaliando uma amostra ou toda a população. Se uma amostra é considerada o nos referimos a ela como desvio padrão amostral e a representamos por (s) se toda a população é considerada nos referimos a ela como desvio padrão populacional e a representamos por ($\sigma$).
 
 
-Neste livro vamos abordar e considerar o desvio padrão como o desvio padrão amostral.
+Neste livro vamos abordar e considerar o desvio padrão amostral.
 
 
 Para calcular o desvio padrão amostral utilizamos a seguinte fórmula abaixo:
