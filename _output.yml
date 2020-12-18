@@ -16,7 +16,7 @@ bookdown::pdf_book:
   toc: yes
   toc-depth: 2
   toc-float: yes
-  fig_caption: yes
+  fig-caption: yes
   number-sections: yes
   latex_engine: xelatex
   citation_package: natbib

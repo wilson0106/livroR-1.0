@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 4 Teste-t. | Introdução à análise de dados em R: Uma abordagem ambiental</title>
+  <title>Capítulo 4 Teste-t | Introdução à análise de dados em R: Uma abordagem ambiental</title>
   <meta name="description" content="Este é o primeiro livro da série de livros: Análise de dados em R" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 4 Teste-t. | Introdução à análise de dados em R: Uma abordagem ambiental" />
+  <meta property="og:title" content="Capítulo 4 Teste-t | Introdução à análise de dados em R: Uma abordagem ambiental" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 4 Teste-t. | Introdução à análise de dados em R: Uma abordagem ambiental" />
+  <meta name="twitter:title" content="Capítulo 4 Teste-t | Introdução à análise de dados em R: Uma abordagem ambiental" />
   
   <meta name="twitter:description" content="Este é o primeiro livro da série de livros: Análise de dados em R" />
   
@@ -162,11 +162,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2" data-path="qui-quadrado-chi.html"><a href="qui-quadrado-chi.html#chi-para-independência"><i class="fa fa-check"></i><b>3.2</b> <span class="math inline">\(\chi\)</span>² para independência</a></li>
 <li class="chapter" data-level="3.3" data-path="qui-quadrado-chi.html"><a href="qui-quadrado-chi.html#considerações-1"><i class="fa fa-check"></i><b>3.3</b> Considerações</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="teste-t-.html"><a href="teste-t-.html"><i class="fa fa-check"></i><b>4</b> Teste-t.</a><ul>
-<li class="chapter" data-level="4.1" data-path="teste-t-.html"><a href="teste-t-.html#teste-t-para-uma-amostra"><i class="fa fa-check"></i><b>4.1</b> Teste-t para uma amostra</a></li>
-<li class="chapter" data-level="4.2" data-path="teste-t-.html"><a href="teste-t-.html#teste-t-para-duas-amostras"><i class="fa fa-check"></i><b>4.2</b> Teste-t para duas amostras</a></li>
-<li class="chapter" data-level="4.3" data-path="teste-t-.html"><a href="teste-t-.html#teste-t-pareado"><i class="fa fa-check"></i><b>4.3</b> Teste-t pareado</a></li>
-<li class="chapter" data-level="4.4" data-path="teste-t-.html"><a href="teste-t-.html#considerações-2"><i class="fa fa-check"></i><b>4.4</b> Considerações</a></li>
+<li class="chapter" data-level="4" data-path="teste-t.html"><a href="teste-t.html"><i class="fa fa-check"></i><b>4</b> Teste-t</a><ul>
+<li class="chapter" data-level="4.1" data-path="teste-t.html"><a href="teste-t.html#teste-t-para-uma-amostra"><i class="fa fa-check"></i><b>4.1</b> Teste-t para uma amostra</a></li>
+<li class="chapter" data-level="4.2" data-path="teste-t.html"><a href="teste-t.html#teste-t-para-duas-amostras"><i class="fa fa-check"></i><b>4.2</b> Teste-t para duas amostras</a></li>
+<li class="chapter" data-level="4.3" data-path="teste-t.html"><a href="teste-t.html#teste-t-pareado"><i class="fa fa-check"></i><b>4.3</b> Teste-t pareado</a></li>
+<li class="chapter" data-level="4.4" data-path="teste-t.html"><a href="teste-t.html#considerações-2"><i class="fa fa-check"></i><b>4.4</b> Considerações</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="palavras-finais.html"><a href="palavras-finais.html"><i class="fa fa-check"></i><b>5</b> Palavras finais</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -190,12 +190,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="teste-t." class="section level1">
-<h1><span class="header-section-number">Capítulo 4</span> Teste-t.</h1>
+<div id="teste-t" class="section level1">
+<h1><span class="header-section-number">Capítulo 4</span> Teste-t</h1>
 <p>Ao iniciarmos nossos estudos geralmente estamos interessados em saber se alguma característica da população que coletamos e analisamos é similar a uma outra população. Podemos abordar essa ideia por diversos caminhos porém vamos iniciar essas análises em R através do teste-t para uma amostra e a discussão sobre hipótese nula, caudalidade e nível de confiança. A partir de então seguiremos para o teste-t com duas amostras e o teste-t pareado.</p>
 <div id="teste-t-para-uma-amostra" class="section level2">
 <h2><span class="header-section-number">4.1</span> Teste-t para uma amostra</h2>
-<p>Conduzimos esse teste quando objetivamos verificar se a média de uma dada variável é similar a um valor esperado. Ao falarmos de média percebemos que a variável com a qual estamos lidando é do tipo númerica ou inteiro (a diferença entre ambas consiste na presença de casas decimais), ou seja, quantitativo. Ao compararmos a média de nossa variável a um valor previamente estipulado 2 hipóteses são construídas, a hipótese nula (H0) e a hipótese alternativa (HA) (Tabela <a href="teste-t-.html#tab:tab1t">4.1</a>).</p>
+<p>Conduzimos esse teste quando objetivamos verificar se a média de uma dada variável é similar a um valor esperado. Ao falarmos de média percebemos que a variável com a qual estamos lidando é do tipo númerica ou inteiro (a diferença entre ambas consiste na presença de casas decimais), ou seja, quantitativo. Ao compararmos a média de nossa variável a um valor previamente estipulado 2 hipóteses são construídas, a hipótese nula (H0) e a hipótese alternativa (HA) (Tabela <a href="teste-t.html#tab:tab1t">4.1</a>).</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:tab1t">Tabela 4.1: </span>Principais características do teste-t para uma amostra
@@ -295,7 +295,7 @@ Não há a necessidade de post-hoc nem expressa-la graficamente
 Figura 4.1: Histograma dos valores do objeto relativo ao tamanho dos camarões
 </p>
 </div>
-<p>Como podemos ver os valores mínimo e máximo são similares ao que definimos e o número de elementos é o mesmo. Graficamente podemos ver que a distribuição é normal, pois como vimos utilizamos uma função que cria uma distribuição normal com limites definidos pela função <span style="color: blue;">runif()</span>. Além disso vemos que há uma maior frequência dos valores em torno de 25 (Figura <a href="teste-t-.html#fig:hist-tam-cam">4.1</a>).</p>
+<p>Como podemos ver os valores mínimo e máximo são similares ao que definimos e o número de elementos é o mesmo. Graficamente podemos ver que a distribuição é normal, pois como vimos utilizamos uma função que cria uma distribuição normal com limites definidos pela função <span style="color: blue;">runif()</span>. Além disso vemos que há uma maior frequência dos valores em torno de 25 (Figura <a href="teste-t.html#fig:hist-tam-cam">4.1</a>).</p>
 <p>Vamos verificar, agora se esse valor que geramos (obtivemos de tamanho do camarão) são similares ao observado em outra localidade, por meio do teste-t para uma amostra.</p>
 <div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb139-1" data-line-number="1">esperado =<span class="st"> </span><span class="fl">25.80</span></a>
 <a class="sourceLine" id="cb139-2" data-line-number="2"><span class="kw">t.test</span>(<span class="dt">x =</span> tamanho.camarao, <span class="dt">mu =</span> esperado)</a></code></pre></div>
@@ -343,7 +343,7 @@ Figura 4.1: Histograma dos valores do objeto relativo ao tamanho dos camarões
 Figura 4.2: Histograma dos valores relativos a altura das estrelas do mar no costão rochoso
 </p>
 </div>
-<p>Conforme também fizemos anteriormente calculamos algumas métricas para entender os dados e um histograma básico (Figura <a href="teste-t-.html#fig:estrelas-hist">4.2</a>) para visualizar a forma dos dados que representam a altura que as estrelas se encontram no ambiente.</p>
+<p>Conforme também fizemos anteriormente calculamos algumas métricas para entender os dados e um histograma básico (Figura <a href="teste-t.html#fig:estrelas-hist">4.2</a>) para visualizar a forma dos dados que representam a altura que as estrelas se encontram no ambiente.</p>
 <div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb151-1" data-line-number="1">dia<span class="fl">.0</span> =<span class="st"> </span><span class="fl">0.90</span></a>
 <a class="sourceLine" id="cb151-2" data-line-number="2"><span class="kw">t.test</span>(<span class="dt">x =</span> estrelas, <span class="dt">mu =</span> dia<span class="fl">.0</span>, <span class="dt">alternative =</span> <span class="st">&quot;less&quot;</span>)</a></code></pre></div>
 <pre><code>## 
@@ -385,7 +385,7 @@ Figura 4.2: Histograma dos valores relativos a altura das estrelas do mar no cos
 Figura 4.3: Histograma dos valores relativos ao tambanho das cracas incrustantes
 </p>
 </div>
-<p>Agora que visualizamos as métricas e graficamos os dados (Figura <a href="teste-t-.html#fig:craca-hist">4.3</a>), sigamos com a condução da análise.</p>
+<p>Agora que visualizamos as métricas e graficamos os dados (Figura <a href="teste-t.html#fig:craca-hist">4.3</a>), sigamos com a condução da análise.</p>
 <div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb162-1" data-line-number="1">teorico &lt;-<span class="st"> </span><span class="fl">13.5</span></a>
 <a class="sourceLine" id="cb162-2" data-line-number="2"><span class="kw">t.test</span>(<span class="dt">x =</span> cracas, <span class="dt">mu =</span> teorico, <span class="dt">conf.level =</span> <span class="fl">0.95</span>)</a></code></pre></div>
 <pre><code>## 
@@ -435,11 +435,11 @@ Figura 4.4: Curva de densidade representando o valor do teste-t bicaudal para o 
 Figura 4.5: Curva de densidade representando o valor do teste-t bicaudal para o tamanho das cracas em relação a média teórica a um intervalo de confiança de 99%. O ponto azul indica o valor do teste.
 </p>
 </div>
-<p>Verifique que esses plots nos fornecem as curvas do teste-t aos intervalos de confiança de 95% (Figura <a href="teste-t-.html#fig:cracas-dens-95">4.4</a>) e 99% (Figura <a href="teste-t-.html#fig:cracas-dens-99">4.5</a>), demarca os limites inferior e superior de vermelho e marca como ponto azul na curva de densidade o valor do teste-t associado. Como esse valor está dentro da região demarcada no intervalo de confiança de 95%, neste caso rejeitamos a hipótese nula e como no intervalo de confiança de 99% o ponto azul está fora da região demarcada aceitamos a hipótese nula.</p>
+<p>Verifique que esses plots nos fornecem as curvas do teste-t aos intervalos de confiança de 95% (Figura <a href="teste-t.html#fig:cracas-dens-95">4.4</a>) e 99% (Figura <a href="teste-t.html#fig:cracas-dens-99">4.5</a>), demarca os limites inferior e superior de vermelho e marca como ponto azul na curva de densidade o valor do teste-t associado. Como esse valor está dentro da região demarcada no intervalo de confiança de 95%, neste caso rejeitamos a hipótese nula e como no intervalo de confiança de 99% o ponto azul está fora da região demarcada aceitamos a hipótese nula.</p>
 </div>
 <div id="teste-t-para-duas-amostras" class="section level2">
 <h2><span class="header-section-number">4.2</span> Teste-t para duas amostras</h2>
-<p>Conduzimos esse teste quando objetivamos comparar se a média de dois grupos são similares (Tabela <a href="teste-t-.html#tab:tab2t">4.2</a>).</p>
+<p>Conduzimos esse teste quando objetivamos comparar se a média de dois grupos são similares (Tabela <a href="teste-t.html#tab:tab2t">4.2</a>).</p>
 <div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb169-1" data-line-number="1"><span class="kw">library</span>(kableExtra)</a>
 <a class="sourceLine" id="cb169-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb169-3" data-line-number="3">text_tbl &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">Atributos =</span> <span class="kw">c</span>(<span class="st">&quot;Tipo de variável&quot;</span>,</a>
@@ -593,7 +593,7 @@ Figura 4.7: Histograma com valores da mudança do peso dos gastrópodes após a 
 Figura 4.8: Boxplot com os valores da alteração do peso dos gastrópodes por tipo de alimento
 </p>
 </div>
-<p>Os comandos acima realizam: o histograma dos dados para Alimento A (Figura <a href="teste-t-.html#fig:hist-ali-A">4.6</a>), o histograma dos dados para Alimento B (Figura <a href="teste-t-.html#fig:hist-ali-B">4.7</a>) e o boxplot para ambos os dados (Figura <a href="teste-t-.html#fig:box-ali">4.8</a>), respectivamente.</p>
+<p>Os comandos acima realizam: o histograma dos dados para Alimento A (Figura <a href="teste-t.html#fig:hist-ali-A">4.6</a>), o histograma dos dados para Alimento B (Figura <a href="teste-t.html#fig:hist-ali-B">4.7</a>) e o boxplot para ambos os dados (Figura <a href="teste-t.html#fig:box-ali">4.8</a>), respectivamente.</p>
 <p>Os 2 primeiros gráficos consistem em histogramas em relação aos dados de peso por Alimento. Na primeira linha indicamos a variável peso dentro da planilha gastropode por meio do operador matemático $ (cifrão) e selecionamos os dados correspondentes ao Alimento utilizando colchetes [] dentro do qual selecionamos a variável Alimento dentro da planilha gastropode e por meio do sinal de igual duplicado (==) indicamos entre aspas (&quot;“) o grupo (ou categoria) que desejamos. Os demais argumentos já são bem conhecidos e iguais para ambos os histogramas, diferindo apenas o título do gráfico que é definido pelo argumento”main&quot;.</p>
 <p>O Boxplot resume os dados por Alimento e nos indica outras métricas (quartis), como vimos anteriormente no tópico sobre gráficos.</p>
 <p>Mas se desejarmos observar os valores numéricos que resumem os dados, podemos seguir o que aprendemos anteriormente.</p>
@@ -662,12 +662,12 @@ Figura 4.8: Boxplot com os valores da alteração do peso dos gastrópodes por t
 <a class="sourceLine" id="cb198-4" data-line-number="4">            <span class="dt">var.equal =</span> <span class="ot">TRUE</span>,</a>
 <a class="sourceLine" id="cb198-5" data-line-number="5">            <span class="dt">conf.level =</span> <span class="fl">0.95</span>))</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:testet-duas-dens"></span>
-<img src="livroR-1.0_files/figure-html/testet-duas-dens-1.png" alt="Curva de densidade representando o valor do teste-t bicaudal para a alteração do peso de gastrópodes em relação ao alimento a um intervalo de confiança de 95%. O ponto azul indica o valor do teste." width="70%" />
+<img src="livroR-1.0_files/figure-html/testet-duas-dens-1.png" alt="Curva de densidade representando o valor do teste-t bicaudal para a alteração do peso de gastrópodes em relação ao alimento a um intervalo de confiança de 95\%. O ponto azul indica o valor do teste." width="70%" />
 <p class="caption">
 Figura 4.9: Curva de densidade representando o valor do teste-t bicaudal para a alteração do peso de gastrópodes em relação ao alimento a um intervalo de confiança de 95%. O ponto azul indica o valor do teste.
 </p>
 </div>
-<p>Neste gráfico podemos ver que o resultado do teste-t (Figura <a href="teste-t-.html#fig:testet-duas-dens">4.9</a>), indicado pelo ponto azul, está muito além do nível da zona de rejeição, indicando que os dois grupos apresentam médias bem diferentes, ou seja, a diferença entre as duas médias é altamente significativa.</p>
+<p>Neste gráfico podemos ver que o resultado do teste-t (Figura <a href="teste-t.html#fig:testet-duas-dens">4.9</a>), indicado pelo ponto azul, está muito além do nível da zona de rejeição, indicando que os dois grupos apresentam médias bem diferentes, ou seja, a diferença entre as duas médias é altamente significativa.</p>
 <p>Vamos exercitar nosso conhecimento em R e teste-t com um outro exemplo (Gere a planilha abaixo).</p>
 <div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb199-1" data-line-number="1">grupos &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">rep</span>(<span class="dt">x =</span> <span class="st">&quot;Ano 0&quot;</span>, <span class="dv">36</span>), <span class="kw">rep</span>(<span class="dt">x =</span> <span class="st">&quot;Ano 20&quot;</span>, <span class="dv">36</span>))</a>
 <a class="sourceLine" id="cb199-2" data-line-number="2"><span class="kw">set.seed</span>(<span class="dv">245</span>)</a>
@@ -732,7 +732,7 @@ Figura 4.11: Histograma com valores de temperatura da lagoa no Ano 20.
 Figura 4.12: Boxplot com os valores de temperatura da lagoa por ano.
 </p>
 </div>
-<p>Como podem verificar os comandos para a análise gráfica não diferiu do que fizemos no exemplo anterior. Os comandos acima realizam: o histograma dos valores de temperatura no “ano 0” (Figura <a href="teste-t-.html#fig:hist-temp-0">4.10</a>), o histograma dos valores de temperatura no “ano 20” (Figura <a href="teste-t-.html#fig:hist-temp-20">4.11</a>) e o boxplot para ambos os dados (Figura <a href="teste-t-.html#fig:box-temp">4.12</a>), respectivamente. Quanto ao seu resultado podemos notar uma maior temperatura média anual da lagoa 20 anos depois da primeira amostragem.</p>
+<p>Como podem verificar os comandos para a análise gráfica não diferiu do que fizemos no exemplo anterior. Os comandos acima realizam: o histograma dos valores de temperatura no “ano 0” (Figura <a href="teste-t.html#fig:hist-temp-0">4.10</a>), o histograma dos valores de temperatura no “ano 20” (Figura <a href="teste-t.html#fig:hist-temp-20">4.11</a>) e o boxplot para ambos os dados (Figura <a href="teste-t.html#fig:box-temp">4.12</a>), respectivamente. Quanto ao seu resultado podemos notar uma maior temperatura média anual da lagoa 20 anos depois da primeira amostragem.</p>
 <div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb209-1" data-line-number="1"><span class="kw">summary</span>(lagoa)</a></code></pre></div>
 <pre><code>##      Ano      Temperatura   
 ##  Ano 0 :36   Min.   :15.58  
@@ -799,14 +799,14 @@ Figura 4.12: Boxplot com os valores de temperatura da lagoa por ano.
 ##             16.14661             16.89750</code></pre>
 <p>Como podem notar a forma de escrever o teste é similar ao exemplo anterior as alterações consistem nas variáveis e conjunto de dados utilizado e como foi pedido no teste a alteração do nível de confiança para 99% (conf.level = 0,99) e os dois teste-t (com variância igual e com variância desigual - Welch).</p>
 <p>Olhando para os dois resultados ambos os testes demonstraram diferenças significativas entre os anos, pois o <em>p-value</em> foi menor que 0,01 (lembrar que como o nível de confiança foi alterado para 0,99 a significância só ocorrerá se o <em>p-value</em> for menor que 0,01, como é o caso). Porém podemos ver que não há muita diferença em relação aos valores de ambos os teste-t, pois como ressaltamos a aplicação do teste de Welch apresenta maior peso quando as variâncias são desiguais e o número amostral de um dos grupos é muito pequeno (&lt;10).</p>
-<p>Assim como fizemos anteriormente vamos olhar o resultado em relação a distribuição da função de densidade do teste-t para um nível de confiança de 99% (Figura <a href="teste-t-.html#fig:testet-duas-temp-dens">4.13</a>). Só devemos lembrar de carregar o pacote <span style="color: blue;">webr</span> se ainda não foi carregado.</p>
+<p>Assim como fizemos anteriormente vamos olhar o resultado em relação a distribuição da função de densidade do teste-t para um nível de confiança de 99% (Figura <a href="teste-t.html#fig:testet-duas-temp-dens">4.13</a>). Só devemos lembrar de carregar o pacote <span style="color: blue;">webr</span> se ainda não foi carregado.</p>
 <div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb223-1" data-line-number="1"><span class="kw">library</span>(webr)</a>
 <a class="sourceLine" id="cb223-2" data-line-number="2"><span class="kw">plot</span>(<span class="kw">t.test</span>(Temperatura <span class="op">~</span><span class="st"> </span>Ano, </a>
 <a class="sourceLine" id="cb223-3" data-line-number="3">            <span class="dt">data =</span> lagoa,</a>
 <a class="sourceLine" id="cb223-4" data-line-number="4">            <span class="dt">var.equal =</span> <span class="ot">TRUE</span>,</a>
 <a class="sourceLine" id="cb223-5" data-line-number="5">            <span class="dt">conf.level =</span> <span class="fl">0.99</span>))</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:testet-duas-temp-dens"></span>
-<img src="livroR-1.0_files/figure-html/testet-duas-temp-dens-1.png" alt="Curva de densidade representando o valor do teste-t bicaudal para comparação da temperatura em um lago entre dois anos a um intervalo de confiança de 99%. O ponto azul indica o valor do teste." width="70%" />
+<img src="livroR-1.0_files/figure-html/testet-duas-temp-dens-1.png" alt="Curva de densidade representando o valor do teste-t bicaudal para comparação da temperatura em um lago entre dois anos a um intervalo de confiança de 99\%. O ponto azul indica o valor do teste." width="70%" />
 <p class="caption">
 Figura 4.13: Curva de densidade representando o valor do teste-t bicaudal para comparação da temperatura em um lago entre dois anos a um intervalo de confiança de 99%. O ponto azul indica o valor do teste.
 </p>
@@ -815,7 +815,7 @@ Figura 4.13: Curva de densidade representando o valor do teste-t bicaudal para c
 </div>
 <div id="teste-t-pareado" class="section level2">
 <h2><span class="header-section-number">4.3</span> Teste-t pareado</h2>
-<p>Aplicamos este teste quando as duas amostras de uma variável categórica são independentes e desejamos verificar se os pares de observações entre os grupos diferem entre si (Tabela <a href="teste-t-.html#tab:tab3t">4.3</a>). Cada observação de ambas as amostras devem estar associadas para podermos dizer que ocorrem em pares.</p>
+<p>Aplicamos este teste quando as duas amostras de uma variável categórica são independentes e desejamos verificar se os pares de observações entre os grupos diferem entre si (Tabela <a href="teste-t.html#tab:tab3t">4.3</a>). Cada observação de ambas as amostras devem estar associadas para podermos dizer que ocorrem em pares.</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:tab3t">Tabela 4.3: </span>Principais características do teste-t pareado
@@ -946,7 +946,7 @@ Figura 4.15: Histograma com a frequência de observações de aves, por 20 dias,
 Figura 4.16: Boxplot com as frequências de observações de aves por 20 dias de 2 observadores.
 </p>
 </div>
-<p>Como podem notar os comandos para a análise gráfica não diferiu do que fizemos nos exemplos anteriores para os histogramas (Figura <a href="teste-t-.html#fig:hist-par-obs1">4.14</a> e <a href="teste-t-.html#fig:hist-par-obs2">4.15</a>) e pouco diferiu para o boxplot ((Figura <a href="teste-t-.html#fig:box-par-ave">4.16</a>).</p>
+<p>Como podem notar os comandos para a análise gráfica não diferiu do que fizemos nos exemplos anteriores para os histogramas (Figura <a href="teste-t.html#fig:hist-par-obs1">4.14</a> e <a href="teste-t.html#fig:hist-par-obs2">4.15</a>) e pouco diferiu para o boxplot ((Figura <a href="teste-t.html#fig:box-par-ave">4.16</a>).</p>
 <p>A estrutura da planilha é diferente das anteriores o que por sua vez alterou a escrita do comando para construção para o boxplot. Não utilizamos o til (~), mas inserimos o nome da planilha seguido pelo operador matemático $ (cifrão) mais o nome da variável quantitativa que queremos representar. Inserimos também outros 2 argumentos que são “names” com dois nomes concatenados pela função <span style="color: blue;">c()</span> que representam as variaveis quantitativas na ordem em que foram inseridas e o argumento “ylab” que dá nome ao eixo y.</p>
 <div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb234-1" data-line-number="1"><span class="kw">summary</span>(aves)</a></code></pre></div>
 <pre><code>##       Dia      Observador 1    Observador 2  
@@ -987,14 +987,14 @@ Figura 4.16: Boxplot com as frequências de observações de aves por 20 dias de
 ##                    -1.2</code></pre>
 <p>Para a execução do teste-t pareado 2 diferenças podem ser notadas na escrita da função, em relação ao teste-t para duas amostras. A primeira consiste no fato de que não utilizamos o til (~), mas sim as variáveis referentes as observações e a segunda é o argumento paired que tem valor lógico (ou seja, verdadeiro ou falso) e indicamos ele como “TRUE” (verdadeiro).</p>
 <p>Quanto ao resultado podemos notar que nos é informado que o teste consiste num teste-t pareado e que o número de aves observadas pelos observadores é ligeiramente diferente a um nível de confiança de 95%, visto que o <em>p-value</em> é próximo à 0,05 e na última linha nos é indicado que a média da diferença das observações é de -1,2. Em outras palavras o teste nos diz que a média das diferenças nas observações de aves é diferente de 0<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a>, portanto rejeitamos a hipótese nula.</p>
-<p>Assim como fizemos anteriormente vamos olhar o resultado em relação a distribuição função de densidade do teste-t (Figura <a href="teste-t-.html#fig:testet-par-ave">4.17</a>). Só devemos lembrar de carregar o pacote <span style="color: green;">webr</span> se ainda não foi carregado.</p>
+<p>Assim como fizemos anteriormente vamos olhar o resultado em relação a distribuição função de densidade do teste-t (Figura <a href="teste-t.html#fig:testet-par-ave">4.17</a>). Só devemos lembrar de carregar o pacote <span style="color: green;">webr</span> se ainda não foi carregado.</p>
 <div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb241-1" data-line-number="1"><span class="kw">library</span>(webr)</a>
 <a class="sourceLine" id="cb241-2" data-line-number="2"><span class="kw">plot</span>(<span class="kw">t.test</span>(aves<span class="op">$</span><span class="st">`</span><span class="dt">Observador 1</span><span class="st">`</span>,</a>
 <a class="sourceLine" id="cb241-3" data-line-number="3">            aves<span class="op">$</span><span class="st">`</span><span class="dt">Observador 2</span><span class="st">`</span>,</a>
 <a class="sourceLine" id="cb241-4" data-line-number="4">            <span class="dt">paired =</span> <span class="ot">TRUE</span>,</a>
 <a class="sourceLine" id="cb241-5" data-line-number="5">            <span class="dt">conf.level =</span> <span class="fl">0.95</span>))</a></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:testet-par-ave"></span>
-<img src="livroR-1.0_files/figure-html/testet-par-ave-1.png" alt="Curva de densidade representando o valor do teste-t bicaudal para comparação do número de observações de aves por 2 observadores distintos a um intervalo de confiança de 95%. O ponto azul indica o valor do teste." width="70%" />
+<img src="livroR-1.0_files/figure-html/testet-par-ave-1.png" alt="Curva de densidade representando o valor do teste-t bicaudal para comparação do número de observações de aves por 2 observadores distintos a um intervalo de confiança de 95\%. O ponto azul indica o valor do teste." width="70%" />
 <p class="caption">
 Figura 4.17: Curva de densidade representando o valor do teste-t bicaudal para comparação do número de observações de aves por 2 observadores distintos a um intervalo de confiança de 95%. O ponto azul indica o valor do teste.
 </p>
@@ -1014,8 +1014,8 @@ Figura 4.17: Curva de densidade representando o valor do teste-t bicaudal para c
 Figura 4.18: Diferença entre o número de observações de aves, por dia, para cada observador
 </p>
 </div>
-<p>Para o gráfico acima indicamos em seu comando que faremos um gráfico de barras onde o que será plotado é a diferença no número de observação de aves entre observadores (Figura <a href="teste-t-.html#fig:bar-dif-ave">4.18</a>). O argumento “xlab” indica o nome do eixo x, “ylab” o nome do eixo y, “main” indica o título do gráfico, “names.arg” indica a coluna referente aos nomes das barras (que são os dias), “las” indica se os nomes das barras serão plotados na horizontal ou vertical (o valor 2 indica vertical), “ylim” indica os limites do eixo y e “cex.names” indica o tamanho da letra dos nomes das barras.</p>
-<p>As barras para o lado positivo do eixo y indica uma maior observação de aves pelo “Observador 1” e as barras para baixo indicam um maior número de observações de aves pelo “Observador 2”. Vamos indicar isso no gráfico por meio da função <span style="color: blue;">mtext()</span> (Figura <a href="teste-t-.html#fig:bar-dif-ave2">4.19</a>).</p>
+<p>Para o gráfico acima indicamos em seu comando que faremos um gráfico de barras onde o que será plotado é a diferença no número de observação de aves entre observadores (Figura <a href="teste-t.html#fig:bar-dif-ave">4.18</a>). O argumento “xlab” indica o nome do eixo x, “ylab” o nome do eixo y, “main” indica o título do gráfico, “names.arg” indica a coluna referente aos nomes das barras (que são os dias), “las” indica se os nomes das barras serão plotados na horizontal ou vertical (o valor 2 indica vertical), “ylim” indica os limites do eixo y e “cex.names” indica o tamanho da letra dos nomes das barras.</p>
+<p>As barras para o lado positivo do eixo y indica uma maior observação de aves pelo “Observador 1” e as barras para baixo indicam um maior número de observações de aves pelo “Observador 2”. Vamos indicar isso no gráfico por meio da função <span style="color: blue;">mtext()</span> (Figura <a href="teste-t.html#fig:bar-dif-ave2">4.19</a>).</p>
 <div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb243-1" data-line-number="1"><span class="kw">barplot</span>(diferenca,</a>
 <a class="sourceLine" id="cb243-2" data-line-number="2">        <span class="dt">xlab =</span> <span class="st">&quot;Dias&quot;</span>,</a>
 <a class="sourceLine" id="cb243-3" data-line-number="3">        <span class="dt">ylab =</span> <span class="st">&quot;Diferença entre observadores (Observador 1 - Observador 2)&quot;</span>,</a>
@@ -1043,7 +1043,7 @@ Figura 4.19: Diferença entre o número de observações de aves, por dia, para 
 </div>
 <div id="considerações-2" class="section level2">
 <h2><span class="header-section-number">4.4</span> Considerações</h2>
-<p>Durante nosso percurso neste capítulo realizamos etapas que consistem na construção dos dados no próprio programa do R e a condução da análise do teste-t para uma amostra, para duas amostras e pareado. A construção dos dados tem como resultado final um objeto similar a planilha de dados que deve ser importada, caso já a tenha preparado, e juntamente com a sumarização dos dados temos as mesmas etapas trabalhadas no capítulo anterior. A partir daí temos a condução dos pressupostos normalidade e homocedasticidade e da análise estatística o teste-t. Um resumo gráfico das etapas pode ser observado aqui (Figura <a href="teste-t-.html#fig:resumo3">4.20</a>).</p>
+<p>Durante nosso percurso neste capítulo realizamos etapas que consistem na construção dos dados no próprio programa do R e a condução da análise do teste-t para uma amostra, para duas amostras e pareado. A construção dos dados tem como resultado final um objeto similar a planilha de dados que deve ser importada, caso já a tenha preparado, e juntamente com a sumarização dos dados temos as mesmas etapas trabalhadas no capítulo anterior. A partir daí temos a condução dos pressupostos normalidade e homocedasticidade e da análise estatística o teste-t. Um resumo gráfico das etapas pode ser observado aqui (Figura <a href="teste-t.html#fig:resumo3">4.20</a>).</p>
 <div class="figure" style="text-align: center"><span id="fig:resumo3"></span>
 <img src="figures%20print/resumo2.png" alt="Resumo dos passos abordados no capítulo: da preparação dos dados até a análise dos dados." width="100%" />
 <p class="caption">
@@ -1056,9 +1056,9 @@ Figura 4.20: Resumo dos passos abordados no capítulo: da preparação dos dados
 <div class="footnotes">
 <hr />
 <ol start="11">
-<li id="fn11"><p> Consiste na subtração do nível de significância (alfa) de 1. Ou seja: nível de confiança = 1 - alfa.<a href="teste-t-.html#fnref11" class="footnote-back">↩</a></p></li>
-<li id="fn12"><p>por padrão o valor lógico para este argumento é FALSE e a função <span style="color: blue;">t.test()</span> realiza o teste de Welch)<a href="teste-t-.html#fnref12" class="footnote-back">↩</a></p></li>
-<li id="fn13"><p>Zero (0) indica igualdade no número de observações.<a href="teste-t-.html#fnref13" class="footnote-back">↩</a></p></li>
+<li id="fn11"><p> Consiste na subtração do nível de significância (alfa) de 1. Ou seja: nível de confiança = 1 - alfa.<a href="teste-t.html#fnref11" class="footnote-back">↩</a></p></li>
+<li id="fn12"><p>por padrão o valor lógico para este argumento é FALSE e a função <span style="color: blue;">t.test()</span> realiza o teste de Welch)<a href="teste-t.html#fnref12" class="footnote-back">↩</a></p></li>
+<li id="fn13"><p>Zero (0) indica igualdade no número de observações.<a href="teste-t.html#fnref13" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>

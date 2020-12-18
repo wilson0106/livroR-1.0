@@ -32,10 +32,14 @@ colorize <- function(x, color) {
 }
 ```
 
-```{r global_options, echo = FALSE, include = FALSE}
+```{r, echo = FALSE, include = FALSE}
 knitr::opts_chunk$set(fig.pos = 'H')
 ```
 
+
+```{r, echo = FALSE, include = FALSE}
+knitr::opts_chunk$set(fig.align = 'center')
+```
 
 # Prefácio {-}
 
@@ -52,6 +56,6 @@ Possui graduação em Licenciatura em Ciências Biológicas pela Universidade Fe
 
 **Thiago Couto**
 
-Possui graduação em Ciências Biológicas pela Universidade Santa Úrsula, Mestrado em Ecologia pela Universidade de Coimbra – Portugal, Doutorado em Biociências com especialização em Ecologia Marinha também pela Universidade de Coimbra – Portugal e Pós-Doutorado em Oceanografia Biológica pela Universidade Federal do Rio de Janeiro. Em sua vida acadêmica já trabalhou com avaliação da qualidade ambiental usando organismos bentônicos, sequestro de carbono em vegetação de marisma, monitoramento ambiental, entre outras coisas. Nos últimos anos têm se dedicado ao monitoramento ambiental de costões rochosos e análise de risco de espécies invasoras, mais especificamente, o coral-sol.
+Possui graduação em Ciências Biológicas pela Universidade Santa Úrsula, Mestrado em Ecologia pela Universidade de Coimbra – Portugal, Doutorado em Biociências com especialização em Ecologia Marinha também pela Universidade de Coimbra – Portugal e Pós-Doutorado em Oceanografia Biológica pela Universidade Federal do Rio de Janeiro. Em sua vida acadêmica já trabalhou com avaliação da qualidade ambiental usando organismos bentônicos, sequestro de carbono em vegetação de marisma, monitoramento ambiental, entre outras coisas. Nos últimos anos têm se dedicado ao monitoramento ambiental de costões rochosos e análise de risco de espécies invasoras.
 
 

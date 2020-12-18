@@ -50,8 +50,6 @@
 
 
 
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
@@ -164,11 +162,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2" data-path="qui-quadrado-chi.html"><a href="qui-quadrado-chi.html#chi-para-independência"><i class="fa fa-check"></i><b>3.2</b> <span class="math inline">\(\chi\)</span>² para independência</a></li>
 <li class="chapter" data-level="3.3" data-path="qui-quadrado-chi.html"><a href="qui-quadrado-chi.html#considerações-1"><i class="fa fa-check"></i><b>3.3</b> Considerações</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="teste-t-.html"><a href="teste-t-.html"><i class="fa fa-check"></i><b>4</b> Teste-t.</a><ul>
-<li class="chapter" data-level="4.1" data-path="teste-t-.html"><a href="teste-t-.html#teste-t-para-uma-amostra"><i class="fa fa-check"></i><b>4.1</b> Teste-t para uma amostra</a></li>
-<li class="chapter" data-level="4.2" data-path="teste-t-.html"><a href="teste-t-.html#teste-t-para-duas-amostras"><i class="fa fa-check"></i><b>4.2</b> Teste-t para duas amostras</a></li>
-<li class="chapter" data-level="4.3" data-path="teste-t-.html"><a href="teste-t-.html#teste-t-pareado"><i class="fa fa-check"></i><b>4.3</b> Teste-t pareado</a></li>
-<li class="chapter" data-level="4.4" data-path="teste-t-.html"><a href="teste-t-.html#considerações-2"><i class="fa fa-check"></i><b>4.4</b> Considerações</a></li>
+<li class="chapter" data-level="4" data-path="teste-t.html"><a href="teste-t.html"><i class="fa fa-check"></i><b>4</b> Teste-t</a><ul>
+<li class="chapter" data-level="4.1" data-path="teste-t.html"><a href="teste-t.html#teste-t-para-uma-amostra"><i class="fa fa-check"></i><b>4.1</b> Teste-t para uma amostra</a></li>
+<li class="chapter" data-level="4.2" data-path="teste-t.html"><a href="teste-t.html#teste-t-para-duas-amostras"><i class="fa fa-check"></i><b>4.2</b> Teste-t para duas amostras</a></li>
+<li class="chapter" data-level="4.3" data-path="teste-t.html"><a href="teste-t.html#teste-t-pareado"><i class="fa fa-check"></i><b>4.3</b> Teste-t pareado</a></li>
+<li class="chapter" data-level="4.4" data-path="teste-t.html"><a href="teste-t.html#considerações-2"><i class="fa fa-check"></i><b>4.4</b> Considerações</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="palavras-finais.html"><a href="palavras-finais.html"><i class="fa fa-check"></i><b>5</b> Palavras finais</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -202,7 +200,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">2.1.1</span> Definindo ambiente de trabalho via linha de comando</h3>
 <p>Para o sistema operacional Windows utilizamos o seguinte comando: <span style="color: blue;">setwd(choose.dir(path))</span> e para Linux utilizamos <span style="color: blue;">setwd(path)</span>, onde <span style="color: blue;">path</span> é o caminho do diretório escolhido.</p>
 <p>Se no Windows utilizarmos apenas a linha de comando <span style="color: blue;">setwd(choose.dir())</span> sem especificar o caminho a seguinte janela irá aparecer (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:setwd">2.1</a>), a partir da qual iremos selecionar a pasta onde estão os arquivos que iremos trabalhar e salvar nosso <em>script</em>.</p>
-<div class="figure"><span id="fig:setwd"></span>
+<div class="figure" style="text-align: center"><span id="fig:setwd"></span>
 <img src="figures%20print/setwd.png" alt="Janela que será aberta ao executar o comando: setwd(choose.dir()), no sistema operacional Windows." width="40%" />
 <p class="caption">
 Figura 2.1: Janela que será aberta ao executar o comando: setwd(choose.dir()), no sistema operacional Windows.
@@ -214,7 +212,7 @@ Figura 2.1: Janela que será aberta ao executar o comando: setwd(choose.dir()), 
 <div id="definindo-ambiente-de-trabalho-via-interface-gráfica" class="section level3">
 <h3><span class="header-section-number">2.1.2</span> Definindo ambiente de trabalho via interface gráfica</h3>
 <p>Diversas formas podem ser utilizadas para definir o ambiente de trabalho, apresentaremos 3. A primeira consiste em usar o atalho do teclado <span class="math inline">\((CTRL + SHIFT + H)\)</span> e nela selecionaremos o ambiente de trabalho; a segunda via consiste em acessar a guia <em>Session</em> ir até a opção <em>Set Working Directory</em> e selecionar a opção <em>Choose Directory</em> da mesma forma que a opção anterior a mesma janela irá aparecer; por último podemos usar a guia <em>Files</em> onde podemos clicar nos 3 pontos “…” que aparecem no canto superior direito da guia e buscar o ambiente/pasta que iremos utilizar e a seguir na engrenagem (<em>More</em>) e selecionar a opção <em>Set as Working Directory</em> (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:files-guia">2.2</a>).</p>
-<div class="figure"><span id="fig:files-guia"></span>
+<div class="figure" style="text-align: center"><span id="fig:files-guia"></span>
 <img src="figures%20print/files-guia.png" alt="Guia *Files* indicando a opção para definir o local do computadors que será utilizado como ambiente de trabalho" width="50%" />
 <p class="caption">
 Figura 2.2: Guia <em>Files</em> indicando a opção para definir o local do computadors que será utilizado como ambiente de trabalho
@@ -224,13 +222,13 @@ Figura 2.2: Guia <em>Files</em> indicando a opção para definir o local do comp
 <div id="importando-planilha-via-linha-de-comando" class="section level3">
 <h3><span class="header-section-number">2.1.3</span> Importando planilha via linha de comando:</h3>
 <p>Primeiro construa as planilhas a seguir nos formatos *.csv (usando vírgula como separador de colunas e ponto como separador decimal) (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:planilha">2.3</a>) e *.xlsx (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:planilhaxlsx">2.4</a>) em um editor de planilhas, como excel, libreoffice calc ou outros e a salve com o nome de planilha.csv e planilha.xlsx no diretório que definiu previamente. A seguir demonstraremos as diferenças na importação de ambas as planilhas.</p>
-<div class="figure"><span id="fig:planilha"></span>
+<div class="figure" style="text-align: center"><span id="fig:planilha"></span>
 <img src="figures%20print/planilha.png" alt="Planilha com os dados no formato *.csv que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente" width="40%" />
 <p class="caption">
 Figura 2.3: Planilha com os dados no formato *.csv que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente
 </p>
 </div>
-<div class="figure"><span id="fig:planilhaxlsx"></span>
+<div class="figure" style="text-align: center"><span id="fig:planilhaxlsx"></span>
 <img src="figures%20print/planilhaxlsx.png" alt="Planilha com os dados no formato *.xlsx que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente" width="50%" />
 <p class="caption">
 Figura 2.4: Planilha com os dados no formato *.xlsx que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente
@@ -244,7 +242,7 @@ Figura 2.4: Planilha com os dados no formato *.xlsx que deve ser construída em 
 <a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">library</span>(readxl)</a></code></pre></div>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">dados &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="dt">path =</span> <span class="st">&quot;planilha.xlsx&quot;</span>, <span class="dt">col_names =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p>O comando <span style="color: blue;">read_excel()</span> é similar ao <span style="color: blue;">read.csv()</span> embora seus argumentos sejam diferentes. O argumento “path” é similar ao “file”, o argumento “col_names” é similar ao “header”. Repare que não temos o argumento “sep”, pois em um arquivo excel as variáveis são salvas em colunas. Observe que independente da forma de importação (que é dependente do formato do arquivo *.csv ou *.xlsx) o resultado final é o mesmo (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:arqenv">2.5</a>).</p>
-<div class="figure"><span id="fig:arqenv"></span>
+<div class="figure" style="text-align: center"><span id="fig:arqenv"></span>
 <img src="figures%20print/arqenv.png" alt="Resultado da importação do arquivo observado na guia environment. Há um objeto de nome dados, com 40 observações e 4 variáveis." width="80%" />
 <p class="caption">
 Figura 2.5: Resultado da importação do arquivo observado na guia environment. Há um objeto de nome dados, com 40 observações e 4 variáveis.
@@ -254,14 +252,14 @@ Figura 2.5: Resultado da importação do arquivo observado na guia environment. 
 <div id="importando-planilha-via-interface-gráfica" class="section level3">
 <h3><span class="header-section-number">2.1.4</span> Importando planilha via interface gráfica:</h3>
 <p>Para importar a planilha com os dados via interface do RStudio devemos acessar a guia <em>Environment</em> e nesta acessar a opção <em>Import Dataset</em> a seguir temos várias opções a qual devemos escolher referente a extensão do arquivo que vamos importar, no nosso caso será a opção <em>From Excel</em> (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:import-graf">2.6</a>).</p>
-<div class="figure"><span id="fig:import-graf"></span>
+<div class="figure" style="text-align: center"><span id="fig:import-graf"></span>
 <img src="figures%20print/import-graf.png" alt="mudar a figura e fazer a legenda" width="80%" />
 <p class="caption">
 Figura 2.6: mudar a figura e fazer a legenda
 </p>
 </div>
 <p>Neste momento uma janela irá abrir (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:import-graf-2">2.7</a>) e no canto superior direito haverá o nome <em>Browse</em> onde deveremos clicar e escolher o arquivo com o qual iremos trabalhar. Em <em>Import options</em> no canto inferior esquerdo haverá algumas opções, na opção <em>name</em> deveremos renomear para dados, para coincidir com as vias que fizemos acima. As demais opções podemos deixar em branco. Repare que no canto inferior direito aparecerá o comando relativo ao processo de importação similar ao que fizemos no tópico anterior e, aparecerá também, um comando chamado <span style="color: blue;">View()</span> que veremos mais adiante, para desabilita-lo basta desmarcar a caixa ao lado de mesmo nome. Conclua o processo clicando em <em>import</em> no canto inferior direito.</p>
-<div class="figure"><span id="fig:import-graf-2"></span>
+<div class="figure" style="text-align: center"><span id="fig:import-graf-2"></span>
 <img src="figures%20print/import-graf-2.png" alt="mudar a figura e fazer a legenda" width="80%" />
 <p class="caption">
 Figura 2.7: mudar a figura e fazer a legenda
@@ -337,7 +335,7 @@ Figura 2.7: mudar a figura e fazer a legenda
 <p>O histograma nos permite verificar a distribuição da frequência dos nossos dados. Por exemplo, imagine uma amostra com diversos indivíduos de um dado grupo. Caso queiramos representar as frequências relativas das diferentes faixas de peso deste grupo, podemos usar o histograma.</p>
 <p>A função <span style="color: blue;">hist()</span> permite visualizar os valores da variável comprimento (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:comp-hist">2.8</a>).</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw">hist</span>(dados<span class="op">$</span>comprimento)</a></code></pre></div>
-<div class="figure"><span id="fig:comp-hist"></span>
+<div class="figure" style="text-align: center"><span id="fig:comp-hist"></span>
 <img src="livroR-1.0_files/figure-html/comp-hist-1.png" alt="Comprimento dos organismos da planilha dados" width="70%" />
 <p class="caption">
 Figura 2.8: Comprimento dos organismos da planilha dados
@@ -353,7 +351,7 @@ Figura 2.8: Comprimento dos organismos da planilha dados
 <a class="sourceLine" id="cb15-5" data-line-number="5">     <span class="dt">main =</span> <span class="st">&quot;Meu Histograma&quot;</span>,</a>
 <a class="sourceLine" id="cb15-6" data-line-number="6">     <span class="dt">xlab =</span> <span class="st">&quot;Comprimento&quot;</span>,</a>
 <a class="sourceLine" id="cb15-7" data-line-number="7">     <span class="dt">ylab =</span> <span class="st">&quot;Frequência absoluta&quot;</span>)</a></code></pre></div>
-<div class="figure"><span id="fig:comp-hist-col"></span>
+<div class="figure" style="text-align: center"><span id="fig:comp-hist-col"></span>
 <img src="livroR-1.0_files/figure-html/comp-hist-col-1.png" alt="Comprimento dos organismos da planilha dados com barras coloridas" width="70%" />
 <p class="caption">
 Figura 2.9: Comprimento dos organismos da planilha dados com barras coloridas
@@ -367,7 +365,7 @@ Figura 2.9: Comprimento dos organismos da planilha dados com barras coloridas
 <h3><span class="header-section-number">2.3.2</span> Gráfico de Barras</h3>
 <p>O gráfico de barras é um dos mais utilizados. Com ele podemos comparar valores de categorias diferentes. Por exemplo, dados onde temos números de indivíduos de diversas espécies podem ser representados em gráficos de barras, onde cada espécie será representada por uma barra.</p>
 <p>Se já chegamos até esse ponto vamos exercitar um pouco antes de plotar o gráfico de barras. Construa a seguinte planilha no seu editor de planilhas (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:abundancia">2.10</a>) e nomeie-a abundancia.</p>
-<div class="figure"><span id="fig:abundancia"></span>
+<div class="figure" style="text-align: center"><span id="fig:abundancia"></span>
 <img src="figures%20print/abundancia.png" alt="Planilha de dados de abundância." width="40%" />
 <p class="caption">
 Figura 2.10: Planilha de dados de abundância.
@@ -388,7 +386,7 @@ Figura 2.10: Planilha de dados de abundância.
 <p>Repare que agora que sabemos os passos a realizar, da importação dos arquivos até este momento tudo ficou muito mais fácil e fluido, e apenas realizamos três etapas, sendo uma delas apenas para conferir os dados.</p>
 <p>Seguindo para o gráfico de barras (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:bar-abu">2.11</a>) a fim de mostrar o número de indivíduos ao longo dos meses temos que:</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="kw">barplot</span>(abundancia<span class="op">$</span>N)</a></code></pre></div>
-<div class="figure"><span id="fig:bar-abu"></span>
+<div class="figure" style="text-align: center"><span id="fig:bar-abu"></span>
 <img src="livroR-1.0_files/figure-html/bar-abu-1.png" alt="Gráfico de barras com número de indivíduos da planilha abundância por mês" width="70%" />
 <p class="caption">
 Figura 2.11: Gráfico de barras com número de indivíduos da planilha abundância por mês
@@ -402,7 +400,7 @@ Figura 2.11: Gráfico de barras com número de indivíduos da planilha abundânc
 <a class="sourceLine" id="cb21-4" data-line-number="4"><span class="st">        ylab = &quot;</span>Abundância<span class="st">&quot;,</span></a>
 <a class="sourceLine" id="cb21-5" data-line-number="5"><span class="st">        names.arg = abundancia$mes,</span></a>
 <a class="sourceLine" id="cb21-6" data-line-number="6"><span class="st">        col = &quot;</span>green<span class="st">&quot;)</span></a></code></pre></div>
-<div class="figure"><span id="fig:bar-abu-col"></span>
+<div class="figure" style="text-align: center"><span id="fig:bar-abu-col"></span>
 <img src="livroR-1.0_files/figure-html/bar-abu-col-1.png" alt="Gráfico de barras com número de indivíduos da planilha abundância por mês, com barras coloridas" width="70%" />
 <p class="caption">
 Figura 2.12: Gráfico de barras com número de indivíduos da planilha abundância por mês, com barras coloridas
@@ -418,7 +416,7 @@ Figura 2.12: Gráfico de barras com número de indivíduos da planilha abundânc
 <p>Contudo para fazer um gráfico de linhas pelo comando básico do R (utilizando a função <span style="color: blue;">plot()</span>) precisamos indicar que ambos os eixos apresentam variáveis numéricas. Portanto teremos que modificar a variável mês de fator para número.</p>
 <p>Porém não precisamos fazer isso em um comando separado podemos aplicar a função que converte uma variável em numérica dentro da função que plota o gráfico. Vamos visualizar como isso ocorre na prática (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:pon-graf">2.13</a>).</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1"><span class="kw">plot</span>(<span class="dt">x =</span> <span class="kw">as.numeric</span>(abundancia<span class="op">$</span>mes), <span class="dt">y =</span> abundancia<span class="op">$</span>N)</a></code></pre></div>
-<div class="figure"><span id="fig:pon-graf"></span>
+<div class="figure" style="text-align: center"><span id="fig:pon-graf"></span>
 <img src="livroR-1.0_files/figure-html/pon-graf-1.png" alt="Representação gráfica do número de indivíduos por mês em pontos" width="70%" />
 <p class="caption">
 Figura 2.13: Representação gráfica do número de indivíduos por mês em pontos
@@ -435,7 +433,7 @@ Figura 2.13: Representação gráfica do número de indivíduos por mês em pont
 <a class="sourceLine" id="cb23-7" data-line-number="7"><span class="st">     type = &quot;</span>l<span class="st">&quot;,</span></a>
 <a class="sourceLine" id="cb23-8" data-line-number="8"><span class="st">     col = &quot;</span>green<span class="st">&quot;,</span></a>
 <a class="sourceLine" id="cb23-9" data-line-number="9"><span class="st">     lwd = 2)</span></a></code></pre></div>
-<div class="figure"><span id="fig:lin-graf-col"></span>
+<div class="figure" style="text-align: center"><span id="fig:lin-graf-col"></span>
 <img src="livroR-1.0_files/figure-html/lin-graf-col-1.png" alt="Representação gráfica do número de indivíduos por mês em um gráfico de linhas" width="70%" />
 <p class="caption">
 Figura 2.14: Representação gráfica do número de indivíduos por mês em um gráfico de linhas
@@ -449,7 +447,7 @@ Figura 2.14: Representação gráfica do número de indivíduos por mês em um g
 <p>Podemos usar os bloxplots para verificar a tendência das amostras e a distribuição destas. Quando se tem uma pequena quantidade de amostras (por exemplo, 3 réplicas) esse gráfico não é indicado. Nele também podemos verificar se temos alguma anomalia nos dados, os chamados outliers.</p>
 <p>Vamos voltar a nossa primeira planilha (dados) e executar um gráfico do tipo boxplot (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:box-graf">2.15</a>) e ver o que ele nos informa.</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1"><span class="kw">boxplot</span>(<span class="dt">formula =</span> dados<span class="op">$</span>comprimento <span class="op">~</span><span class="st"> </span>dados<span class="op">$</span>ano)</a></code></pre></div>
-<div class="figure"><span id="fig:box-graf"></span>
+<div class="figure" style="text-align: center"><span id="fig:box-graf"></span>
 <img src="livroR-1.0_files/figure-html/box-graf-1.png" alt="Gráfico tipo boxplot do comprimento por ano, da planilha dados" width="70%" />
 <p class="caption">
 Figura 2.15: Gráfico tipo boxplot do comprimento por ano, da planilha dados
@@ -462,7 +460,7 @@ Figura 2.15: Gráfico tipo boxplot do comprimento por ano, da planilha dados
 <a class="sourceLine" id="cb25-3" data-line-number="3">        <span class="dt">xlab =</span> <span class="st">&quot;Ano&quot;</span>,</a>
 <a class="sourceLine" id="cb25-4" data-line-number="4">        <span class="dt">ylab =</span> <span class="st">&quot;Comprimento&quot;</span>,</a>
 <a class="sourceLine" id="cb25-5" data-line-number="5">        <span class="dt">main =</span> <span class="st">&quot;Meu Boxplot&quot;</span>)</a></code></pre></div>
-<div class="figure"><span id="fig:box-graf-col"></span>
+<div class="figure" style="text-align: center"><span id="fig:box-graf-col"></span>
 <img src="livroR-1.0_files/figure-html/box-graf-col-1.png" alt="Gráfico tipo boxplot do comprimento por ano com cores por ano, da planilha dados" width="70%" />
 <p class="caption">
 Figura 2.16: Gráfico tipo boxplot do comprimento por ano com cores por ano, da planilha dados
@@ -675,7 +673,7 @@ Figura 2.16: Gráfico tipo boxplot do comprimento por ano com cores por ano, da 
 <a class="sourceLine" id="cb76-12" data-line-number="12">       <span class="dt">code =</span> <span class="dv">3</span>,</a>
 <a class="sourceLine" id="cb76-13" data-line-number="13">       <span class="dt">angle =</span> <span class="dv">90</span>,</a>
 <a class="sourceLine" id="cb76-14" data-line-number="14">       <span class="dt">length =</span> <span class="fl">0.05</span>)</a></code></pre></div>
-<div class="figure"><span id="fig:bar-ep"></span>
+<div class="figure" style="text-align: center"><span id="fig:bar-ep"></span>
 <img src="livroR-1.0_files/figure-html/bar-ep-1.png" alt="Gráfico de barras com erro padrão do comprimento por ano e local, da planilha resultado (derivada da planilha dados)" width="70%" />
 <p class="caption">
 Figura 2.17: Gráfico de barras com erro padrão do comprimento por ano e local, da planilha resultado (derivada da planilha dados)
@@ -701,7 +699,7 @@ Figura 2.17: Gráfico de barras com erro padrão do comprimento por ano e local,
 <a class="sourceLine" id="cb77-11" data-line-number="11"><span class="st">       code = 3,</span></a>
 <a class="sourceLine" id="cb77-12" data-line-number="12"><span class="st">       angle = 90,</span></a>
 <a class="sourceLine" id="cb77-13" data-line-number="13"><span class="st">       length = 0.05)</span></a></code></pre></div>
-<div class="figure"><span id="fig:bar-ep-abu"></span>
+<div class="figure" style="text-align: center"><span id="fig:bar-ep-abu"></span>
 <img src="livroR-1.0_files/figure-html/bar-ep-abu-1.png" alt="Gráfico de barras com erro padrão da abundância por mês da planilha abundância" width="70%" />
 <p class="caption">
 Figura 2.18: Gráfico de barras com erro padrão da abundância por mês da planilha abundância
@@ -714,7 +712,7 @@ Figura 2.18: Gráfico de barras com erro padrão da abundância por mês da plan
 <h2><span class="header-section-number">2.5</span> Considerações</h2>
 <p>Ao longo dos tópicos abordados neste capítulo demonstramos as etapas mais importantes e de diversos modos para nossa trajetória inicial e necessária no R, desde a definição do ambiente de trabalho, passando pela importação da planilha de dados, verificação e ajuste dos dados e sua sumarização gráfica e numérica (Figura <a href="importar-organizar-e-sumarizar-os-dados.html#fig:resumo1">2.19</a>).</p>
 <p>Durante nosso percurso neste livro realizaremos mais gráficos aliados as análises estatísticas básicas comumente utilizadas. Não se assuste com a quantidade de etapas, funções, argumentos e nomes, eles irão se repetir tantas e tantas vezes daqui em diante que você não esquecerá. O aprendizado do R é exponencial e ele lhe permitirá entender como nunca o universo da análise de dados adequando-o para seu campo de atuação.</p>
-<div class="figure"><span id="fig:resumo1"></span>
+<div class="figure" style="text-align: center"><span id="fig:resumo1"></span>
 <img src="figures%20print/resumo1.png" alt="Resumo dos passos abordados no capítulo: da definição do ambiente de trabalho até a sumarização dos dados." width="100%" />
 <p class="caption">
 Figura 2.19: Resumo dos passos abordados no capítulo: da definição do ambiente de trabalho até a sumarização dos dados.

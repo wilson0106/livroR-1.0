@@ -75,7 +75,7 @@ qui-quadrado-chi
 chi-para-ajuste-de-frequências
 chi-para-independência
 considerações-1
-teste-t.
+teste-t
 teste-t-para-uma-amostra
 teste-t-para-duas-amostras
 teste-t-pareado

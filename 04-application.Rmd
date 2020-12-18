@@ -1,4 +1,4 @@
-# Teste-t.
+# Teste-t
 
 
 Ao iniciarmos nossos estudos geralmente estamos interessados em saber se alguma característica da população que coletamos e analisamos é similar a uma outra população. Podemos abordar essa ideia por diversos caminhos porém vamos iniciar essas análises em R através do teste-t para uma amostra e a discussão sobre hipótese nula, caudalidade e nível de confiança. A partir de então seguiremos para o teste-t com duas amostras e o teste-t pareado.
@@ -7,7 +7,7 @@ Ao iniciarmos nossos estudos geralmente estamos interessados em saber se alguma 
 ## Teste-t para uma amostra
 
 
-Conduzimos esse teste quando objetivamos verificar se a média de uma dada variável é similar a um valor esperado. Ao falarmos de média percebemos que a variável com a qual estamos lidando é do tipo númerica ou inteiro (a diferença entre ambas consiste na presença de casas decimais), ou seja, quantitativo. Ao compararmos a média de nossa variável a um valor previamente estipulado 2 hipóteses são construídas, a hipótese nula (H0) e a hipótese alternativa (HA) (Tabela \@ref(tab:tab1t).
+Conduzimos esse teste quando objetivamos verificar se a média de uma dada variável é similar a um valor esperado. Ao falarmos de média percebemos que a variável com a qual estamos lidando é do tipo númerica ou inteiro (a diferença entre ambas consiste na presença de casas decimais), ou seja, quantitativo. Ao compararmos a média de nossa variável a um valor previamente estipulado 2 hipóteses são construídas, a hipótese nula (H0) e a hipótese alternativa (HA) (Tabela \@ref(tab:tab1t)).
 
 
 ```{r tab1t, echo = FALSE, message = FALSE}
@@ -31,7 +31,7 @@ kbl(text_tbl, booktabs = T, valign = "c", escape = F, caption = "Principais cara
 ```
 
 
-Caso você ainda não tenha seus dados, vamos verificar como conduzir esse o teste-t no R por meio de exemplos utilizando valores fictícios. Vamos ensinar como criar valores aleatórios no R.
+Caso você ainda não tenha seus dados, vamos verificar como conduzir o teste-t no R por meio de exemplos utilizando valores fictícios. Vamos ensinar como criar valores aleatórios no R.
 
 
 Vamos verificar como conduzir esse teste no R por meio de exemplos utilizando valores fictícios.
@@ -227,27 +227,28 @@ O nível de significância a aplicar nos seus dados depende das informações qu
 
 **BÔNUS:**
 
-
 Embora não seja comum, podemos plotar um gráfico que represente o nosso resultado estatístico como uma curva de densidade no qual é representado o valor do teste-t, o grau de liberdade e o valor de probabilidade associado. Para isso vamos usar um pacote o qual precisa ser instalado chamado `r colorize("webr", "green")` e precisamos carrega-lo usando a função `r colorize("library()", "blue")`. Após isso é só inserir a função que desenvolve o teste-t dentro da função `r colorize("plot()", "blue")`. Veja o resultado para ambos os níveis de confiança estabelecidos previamente. OBS: Uma vez instalado o pacote não precisa instala-lo novamente apenas carrega-lo se estiver iniciando o R pela primeira vez.
 
 
-```{r, eval = -1}
+```{r, message = FALSE}
 install.packages("webr")
 library(webr)
 ```
 
-```{r cracas-dens-95, fig.cap = 'Curva de densidade representando o valor do teste-t bicaudal para o tamanho das cracas em relação a média teórica a um intervalo de confiança de 95%. O ponto azul indica o valor do teste.', out.width = '70%'}
+
+
+```{r cracas-dens-95, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para o tamanho das cracas em relação a média teórica a um intervalo de confiança de 95\\%. O ponto azul indica o valor do teste.", out.width = '70%'}
+
 plot(t.test(x = cracas, mu = teorico, conf.level = 0.95))
 ```
 
 
-```{r cracas-dens-99, fig.cap = 'Curva de densidade representando o valor do teste-t bicaudal para o tamanho das cracas em relação a média teórica a um intervalo de confiança de 99%. O ponto azul indica o valor do teste.', out.width = '70%'}
+```{r cracas-dens-99, fig.cap = 'Curva de densidade representando o valor do teste-t bicaudal para o tamanho das cracas em relação a média teórica a um intervalo de confiança de 99\\%. O ponto azul indica o valor do teste.', out.width = '70%'}
 plot(t.test(x = cracas, mu = teorico, conf.level = 0.99))
 ```
 
 
 Verifique que esses plots nos fornecem as curvas do teste-t aos intervalos de confiança de 95% (Figura \@ref(fig:cracas-dens-95)) e 99% (Figura \@ref(fig:cracas-dens-99)), demarca os limites inferior e superior de vermelho e marca como ponto azul na curva de densidade o valor do teste-t associado. Como esse valor está dentro da região demarcada no intervalo de confiança de 95%, neste caso rejeitamos a hipótese nula e como no intervalo de confiança de 99% o ponto azul está fora da região demarcada aceitamos a hipótese nula.
-
 
 ## Teste-t para duas amostras
 
@@ -255,7 +256,7 @@ Verifique que esses plots nos fornecem as curvas do teste-t aos intervalos de co
 Conduzimos esse teste quando objetivamos comparar se a média de dois grupos são similares (Tabela \@ref(tab:tab2t)).
 
 
-```{r tab2t, echo = FALSE, message = FALSE}
+```{r tab2t, message = FALSE}
 library(kableExtra)
 
 text_tbl <- data.frame(Atributos = c("Tipo de variável",
@@ -426,7 +427,7 @@ De acordo com nosso resultado podemos ver que o valor do teste-t é 14,065, o gr
 Da mesma forma que avaliamos para o teste-t de uma amostra, podemos plotar o resultado como um gráfico da função de densidade do teste-t. Só devemos lembrar de carregar o pacote "webr".
 
 
-```{r testet-duas-dens, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para a alteração do peso de gastrópodes em relação ao alimento a um intervalo de confiança de 95%. O ponto azul indica o valor do teste.", out.width='70%'}
+```{r testet-duas-dens, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para a alteração do peso de gastrópodes em relação ao alimento a um intervalo de confiança de 95\\%. O ponto azul indica o valor do teste.", out.width='70%'}
 library(webr)
 plot(t.test(Peso ~ Alimento, 
             data = gastropode,
@@ -549,7 +550,7 @@ Olhando para os dois resultados ambos os testes demonstraram diferenças signifi
 Assim como fizemos anteriormente vamos olhar o resultado em relação a distribuição da função de densidade do teste-t para um nível de confiança de 99% (Figura \@ref(fig:testet-duas-temp-dens)). Só devemos lembrar de carregar o pacote `r colorize("webr", "blue")` se ainda não foi carregado.
 
 
-```{r testet-duas-temp-dens, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para comparação da temperatura em um lago entre dois anos a um intervalo de confiança de 99%. O ponto azul indica o valor do teste.", out.width='70%'}
+```{r testet-duas-temp-dens, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para comparação da temperatura em um lago entre dois anos a um intervalo de confiança de 99\\%. O ponto azul indica o valor do teste.", out.width='70%'}
 library(webr)
 plot(t.test(Temperatura ~ Ano, 
             data = lagoa,
@@ -716,7 +717,7 @@ Quanto ao resultado podemos notar que nos é informado que o teste consiste num 
 Assim como fizemos anteriormente vamos olhar o resultado em relação a distribuição função de densidade do teste-t (Figura \@ref(fig:testet-par-ave)). Só devemos lembrar de carregar o pacote `r colorize("webr", "green")` se ainda não foi carregado.
 
 
-```{r testet-par-ave, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para comparação do número de observações de aves por 2 observadores distintos a um intervalo de confiança de 95%. O ponto azul indica o valor do teste.", out.width='70%'}
+```{r testet-par-ave, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para comparação do número de observações de aves por 2 observadores distintos a um intervalo de confiança de 95\\%. O ponto azul indica o valor do teste.", out.width='70%'}
 library(webr)
 plot(t.test(aves$`Observador 1`,
             aves$`Observador 2`,

@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="importar-organizar-e-sumarizar-os-dados.html"/>
-<link rel="next" href="teste-t-.html"/>
+<link rel="next" href="teste-t.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,8 +50,6 @@
 
 
 
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
@@ -164,11 +162,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2" data-path="qui-quadrado-chi.html"><a href="qui-quadrado-chi.html#chi-para-independência"><i class="fa fa-check"></i><b>3.2</b> <span class="math inline">\(\chi\)</span>² para independência</a></li>
 <li class="chapter" data-level="3.3" data-path="qui-quadrado-chi.html"><a href="qui-quadrado-chi.html#considerações-1"><i class="fa fa-check"></i><b>3.3</b> Considerações</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="teste-t-.html"><a href="teste-t-.html"><i class="fa fa-check"></i><b>4</b> Teste-t.</a><ul>
-<li class="chapter" data-level="4.1" data-path="teste-t-.html"><a href="teste-t-.html#teste-t-para-uma-amostra"><i class="fa fa-check"></i><b>4.1</b> Teste-t para uma amostra</a></li>
-<li class="chapter" data-level="4.2" data-path="teste-t-.html"><a href="teste-t-.html#teste-t-para-duas-amostras"><i class="fa fa-check"></i><b>4.2</b> Teste-t para duas amostras</a></li>
-<li class="chapter" data-level="4.3" data-path="teste-t-.html"><a href="teste-t-.html#teste-t-pareado"><i class="fa fa-check"></i><b>4.3</b> Teste-t pareado</a></li>
-<li class="chapter" data-level="4.4" data-path="teste-t-.html"><a href="teste-t-.html#considerações-2"><i class="fa fa-check"></i><b>4.4</b> Considerações</a></li>
+<li class="chapter" data-level="4" data-path="teste-t.html"><a href="teste-t.html"><i class="fa fa-check"></i><b>4</b> Teste-t</a><ul>
+<li class="chapter" data-level="4.1" data-path="teste-t.html"><a href="teste-t.html#teste-t-para-uma-amostra"><i class="fa fa-check"></i><b>4.1</b> Teste-t para uma amostra</a></li>
+<li class="chapter" data-level="4.2" data-path="teste-t.html"><a href="teste-t.html#teste-t-para-duas-amostras"><i class="fa fa-check"></i><b>4.2</b> Teste-t para duas amostras</a></li>
+<li class="chapter" data-level="4.3" data-path="teste-t.html"><a href="teste-t.html#teste-t-pareado"><i class="fa fa-check"></i><b>4.3</b> Teste-t pareado</a></li>
+<li class="chapter" data-level="4.4" data-path="teste-t.html"><a href="teste-t.html#considerações-2"><i class="fa fa-check"></i><b>4.4</b> Considerações</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="palavras-finais.html"><a href="palavras-finais.html"><i class="fa fa-check"></i><b>5</b> Palavras finais</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -342,7 +340,7 @@ Se há apenas 2 categorias, dentro da variável, não há a necessidade de post-
 ##  on 2000 replicates)
 ## 
 ## data:  N.especies
-## X-squared = 4, df = NA, p-value = 0.05947</code></pre>
+## X-squared = 4, df = NA, p-value = 0.06597</code></pre>
 <p>Basta usarmos o argumento “simulate.p.value” e indicar “FALSE” quando não queremos a simulação de Monte Carlo, ou apenas omitirmos este argumento, ou usar este argumento e indicar “TRUE” o qual realiza a simulação de Monte Carlo. Verifique que com a aplicação desta simulação o <em>p-value</em> aumenta indicando que torna mais dificil rejeitarmos a hipótese nula. Após aplicarmos a correção na nossa análise podemos afirmar que não há diferença na quantidade de cracas observadas em relação as proporções esperadas, para ambas as espécies de cracas.</p>
 <p>Relembrando. Sempre tome cuidado com afirmações! Principalmente quando o número de observações é baixo. Mesmo que o teste estatístico indique diferenças uma baixa quantidade de observações devem ser analisadas cuidadosamente, no entanto devemos aplicar correções matemáticas nestes casos.</p>
 </div>
@@ -553,7 +551,7 @@ Como característica intrinseca a este teste é necessário a construção da ta
 <a class="sourceLine" id="cb126-7" data-line-number="7">        <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;darkblue&quot;</span>), </a>
 <a class="sourceLine" id="cb126-8" data-line-number="8">        <span class="dt">legend.text =</span> <span class="ot">TRUE</span>, </a>
 <a class="sourceLine" id="cb126-9" data-line-number="9">        <span class="dt">args.legend =</span> <span class="kw">list</span>(<span class="dt">x =</span> <span class="st">&quot;right&quot;</span>, <span class="dt">bty =</span> <span class="st">&quot;n&quot;</span>, <span class="dt">inset =</span> <span class="fl">-0.5</span>))</a></code></pre></div>
-<div class="figure"><span id="fig:bar-tab"></span>
+<div class="figure" style="text-align: center"><span id="fig:bar-tab"></span>
 <img src="livroR-1.0_files/figure-html/bar-tab-1.png" alt="Gráfico de barras sobrepostas indicando o percentual relativo da observação de espécies nativas (cor vermelha) e introduzidas (cor azul), por pesquisador." width="768" />
 <p class="caption">
 Figura 3.1: Gráfico de barras sobrepostas indicando o percentual relativo da observação de espécies nativas (cor vermelha) e introduzidas (cor azul), por pesquisador.
@@ -567,7 +565,7 @@ Figura 3.1: Gráfico de barras sobrepostas indicando o percentual relativo da ob
 <div id="considerações-1" class="section level2">
 <h2><span class="header-section-number">3.3</span> Considerações</h2>
 <p>Durante nosso percurso neste capítulo realizamos etapas que consistem na construção dos dados no próprio programa do R e a condução da análise do qui-quadrado para ajuste das frequências e para a independência. A construção dos dados tem como resultado final um objeto similar a planilha de dados que deve ser importada, caso já a tenha preparado, e juntamente com a sumarização dos dados temos as mesmas etapas trabalhadas no capítulo anterior. A partir daí temos a condução da análise estatística pelo qui-quadrado. Um resumo gráfico das etapas pode ser observado aqui (Figura <a href="qui-quadrado-chi.html#fig:resumo2">3.2</a>).</p>
-<div class="figure"><span id="fig:resumo2"></span>
+<div class="figure" style="text-align: center"><span id="fig:resumo2"></span>
 <img src="figures%20print/resumo2.png" alt="Resumo dos passos abordados no capítulo: da preparação dos dados até a análise dos dados." width="100%" />
 <p class="caption">
 Figura 3.2: Resumo dos passos abordados no capítulo: da preparação dos dados até a análise dos dados.
@@ -588,7 +586,7 @@ Figura 3.2: Resumo dos passos abordados no capítulo: da preparação dos dados 
         </div>
       </div>
 <a href="importar-organizar-e-sumarizar-os-dados.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="teste-t-.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="teste-t.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

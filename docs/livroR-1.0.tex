@@ -192,7 +192,7 @@ Possui graduação em Licenciatura em Ciências Biológicas pela Universidade Fe
 
 \textbf{Thiago Couto}
 
-Possui graduação em Ciências Biológicas pela Universidade Santa Úrsula, Mestrado em Ecologia pela Universidade de Coimbra -- Portugal, Doutorado em Biociências com especialização em Ecologia Marinha também pela Universidade de Coimbra -- Portugal e Pós-Doutorado em Oceanografia Biológica pela Universidade Federal do Rio de Janeiro. Em sua vida acadêmica já trabalhou com avaliação da qualidade ambiental usando organismos bentônicos, sequestro de carbono em vegetação de marisma, monitoramento ambiental, entre outras coisas. Nos últimos anos têm se dedicado ao monitoramento ambiental de costões rochosos e análise de risco de espécies invasoras, mais especificamente, o coral-sol.
+Possui graduação em Ciências Biológicas pela Universidade Santa Úrsula, Mestrado em Ecologia pela Universidade de Coimbra -- Portugal, Doutorado em Biociências com especialização em Ecologia Marinha também pela Universidade de Coimbra -- Portugal e Pós-Doutorado em Oceanografia Biológica pela Universidade Federal do Rio de Janeiro. Em sua vida acadêmica já trabalhou com avaliação da qualidade ambiental usando organismos bentônicos, sequestro de carbono em vegetação de marisma, monitoramento ambiental, entre outras coisas. Nos últimos anos têm se dedicado ao monitoramento ambiental de costões rochosos e análise de risco de espécies invasoras.
 
 \hypertarget{r}{%
 \chapter{R}\label{r}}
@@ -223,7 +223,12 @@ Portanto, neste livro mostraremos desde como se importar uma tabela até fazer a
 O RStudio foi construído especificamente para a linguagem R e é um ambiente de desenvolvimento integrado (no inglês IDE) (Figura \ref{fig:RStudio}). Ele fornece uma interface gráfica mais amigável para os usuários em geral, principalmente para quem está iniciando no R. Além disso ele fornece características e recursos importantes para o universo da programação, tais como: \emph{syntax highlighthing} que consiste em uma marcação diferenciada que nos sinaliza por meio de cores e outros atributos estéticos (ex.: texto em itálico) o que está sendo escrito, indicando se é um objeto, função ou argumento, por exemplo; \emph{code completion} quando digitamos três caracteres de um objeto, função ele sinaliza os demais elementos presentes em sua memória que contém esses três caracteres; \emph{smart indentation} o qual faz com que o texto que estamos digitando pule de linha automaticamente ao chegarmos no final do espaço porém ele mantém relação com a linha anterior\footnote{Por padrão esta opção não está ativada, precisa ser ativado nas opções do programa}; \emph{Execute R code directly from the source editor} neste caso ele tem uma guia destinada ao seu \emph{script}\footnote{Local onde você irá escrever o código para execução de uma determinada tarefa} o qual permite executa-lo diretamente dele e o resultado irá aparecer em outra guia denominada \emph{console}; \emph{Quickly jump to function definitions} executada, em Windows e Linux, pelo atalho \(ALT + SHIFT + G\) e que permite acessar mais rapidamente uma determinada linha do script; \emph{Integrated R help and documentation} o qual traz consigo, em sua IDE, uma guia destinada a ajuda. Além destas ele traz diversas outras funcionalidades que tornam o seu uso diário mais acessível e facilitado. Mais detalhes sobre acesse \url{https://rstudio.com}.
 
 \begin{figure}[H]
-\includegraphics[width=1.1\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/RStudio} \caption{Ambiente RStudio.}\label{fig:RStudio}
+
+{\centering \includegraphics[width=1.1\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/RStudio} 
+
+}
+
+\caption{Ambiente RStudio.}\label{fig:RStudio}
 \end{figure}
 
 O primeiro passo para que possamos compreender o R e o RStudio e o que podemos fazer com ele consiste em entender a sua estrutura como ela está organizada e o que ela significa. Uma vez compreendida sua estrutura organizacional e funcionalidade poderemos mergulhar no mundo das análises de dados dentro deste novo ambiente.
@@ -238,7 +243,12 @@ Para isso veremos as principais guias do RStudio, como elas estão organizadas e
 \end{enumerate}
 
 \begin{figure}[H]
-\includegraphics[width=1\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/script} \caption{Guia do RStudio referente ao ambiente onde o script será desenvolvido.}\label{fig:script}
+
+{\centering \includegraphics[width=1\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/script} 
+
+}
+
+\caption{Guia do RStudio referente ao ambiente onde o script será desenvolvido.}\label{fig:script}
 \end{figure}
 
 \begin{enumerate}
@@ -250,7 +260,12 @@ Para isso veremos as principais guias do RStudio, como elas estão organizadas e
 \end{enumerate}
 
 \begin{figure}[H]
-\includegraphics[width=1\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/console} \caption{Guia do RStudio referente ao ambiente console onde o resultado dos comandos executados irão aparecer.}\label{fig:console}
+
+{\centering \includegraphics[width=1\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/console} 
+
+}
+
+\caption{Guia do RStudio referente ao ambiente console onde o resultado dos comandos executados irão aparecer.}\label{fig:console}
 \end{figure}
 
 \begin{enumerate}
@@ -262,7 +277,12 @@ Para isso veremos as principais guias do RStudio, como elas estão organizadas e
 \end{enumerate}
 
 \begin{figure}[H]
-\includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/environment} \caption{Guia do RStudio referente ao ambiente environment, local onde estarão indicados os objetos criados.}\label{fig:environment}
+
+{\centering \includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/environment} 
+
+}
+
+\caption{Guia do RStudio referente ao ambiente environment, local onde estarão indicados os objetos criados.}\label{fig:environment}
 \end{figure}
 
 \begin{enumerate}
@@ -274,7 +294,12 @@ Para isso veremos as principais guias do RStudio, como elas estão organizadas e
 \end{enumerate}
 
 \begin{figure}[H]
-\includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/history} \caption{Guia do RStudio referente ao ambiente history onde estará listado todos os comandos executados.}\label{fig:history}
+
+{\centering \includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/history} 
+
+}
+
+\caption{Guia do RStudio referente ao ambiente history onde estará listado todos os comandos executados.}\label{fig:history}
 \end{figure}
 
 \begin{enumerate}
@@ -286,7 +311,12 @@ Para isso veremos as principais guias do RStudio, como elas estão organizadas e
 \end{enumerate}
 
 \begin{figure}[H]
-\includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/files} \caption{Guia do RStudio referente ao ambiente files onde estará indicados os arquivos do nosso computador.}\label{fig:files}
+
+{\centering \includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/files} 
+
+}
+
+\caption{Guia do RStudio referente ao ambiente files onde estará indicados os arquivos do nosso computador.}\label{fig:files}
 \end{figure}
 
 \begin{enumerate}
@@ -298,7 +328,12 @@ Para isso veremos as principais guias do RStudio, como elas estão organizadas e
 \end{enumerate}
 
 \begin{figure}[H]
-\includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/packages} \caption{Guia do RStudio referente ao ambiente packages onde estarão listados todos os pacotes disponíveis no nosso computador e por onde poderemos instalar outros.}\label{fig:packages}
+
+{\centering \includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/packages} 
+
+}
+
+\caption{Guia do RStudio referente ao ambiente packages onde estarão listados todos os pacotes disponíveis no nosso computador e por onde poderemos instalar outros.}\label{fig:packages}
 \end{figure}
 
 \begin{enumerate}
@@ -310,7 +345,12 @@ Para isso veremos as principais guias do RStudio, como elas estão organizadas e
 \end{enumerate}
 
 \begin{figure}[H]
-\includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/plot} \caption{Guia do RStudio referente ao ambiente plot onde estarão os gráficos criados.}\label{fig:plot}
+
+{\centering \includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/plot} 
+
+}
+
+\caption{Guia do RStudio referente ao ambiente plot onde estarão os gráficos criados.}\label{fig:plot}
 \end{figure}
 
 \begin{enumerate}
@@ -322,7 +362,12 @@ Para isso veremos as principais guias do RStudio, como elas estão organizadas e
 \end{enumerate}
 
 \begin{figure}[H]
-\includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/help} \caption{Guia do RStudio referente ao ambiente help onde terá informações sobre as funções e pacotes do R.}\label{fig:help}
+
+{\centering \includegraphics[width=0.6\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/help} 
+
+}
+
+\caption{Guia do RStudio referente ao ambiente help onde terá informações sobre as funções e pacotes do R.}\label{fig:help}
 \end{figure}
 
 \hypertarget{importar-organizar-e-sumarizar-os-dados}{%
@@ -343,7 +388,12 @@ Para o sistema operacional Windows utilizamos o seguinte comando: \textcolor{blu
 Se no Windows utilizarmos apenas a linha de comando \textcolor{blue}{setwd(choose.dir())} sem especificar o caminho a seguinte janela irá aparecer (Figura \ref{fig:setwd}), a partir da qual iremos selecionar a pasta onde estão os arquivos que iremos trabalhar e salvar nosso \emph{script}.
 
 \begin{figure}[H]
-\includegraphics[width=0.4\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/setwd} \caption{Janela que será aberta ao executar o comando: setwd(choose.dir()), no sistema operacional Windows.}\label{fig:setwd}
+
+{\centering \includegraphics[width=0.4\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/setwd} 
+
+}
+
+\caption{Janela que será aberta ao executar o comando: setwd(choose.dir()), no sistema operacional Windows.}\label{fig:setwd}
 \end{figure}
 
 A função \textcolor{blue}{setwd()} é responsável por selecionar o diretório a ser trabalhado. Após isso podemos importar a planilha com os dados que utilizaremos.
@@ -356,7 +406,12 @@ Como resultado desta etapa podemos verificar a guia \emph{Files}\footnote{Ver fi
 Diversas formas podem ser utilizadas para definir o ambiente de trabalho, apresentaremos 3. A primeira consiste em usar o atalho do teclado \((CTRL + SHIFT + H)\) e nela selecionaremos o ambiente de trabalho; a segunda via consiste em acessar a guia \emph{Session} ir até a opção \emph{Set Working Directory} e selecionar a opção \emph{Choose Directory} da mesma forma que a opção anterior a mesma janela irá aparecer; por último podemos usar a guia \emph{Files} onde podemos clicar nos 3 pontos ``\ldots{}'' que aparecem no canto superior direito da guia e buscar o ambiente/pasta que iremos utilizar e a seguir na engrenagem (\emph{More}) e selecionar a opção \emph{Set as Working Directory} (Figura \ref{fig:files-guia}).
 
 \begin{figure}[H]
-\includegraphics[width=0.5\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/files-guia} \caption{Guia *Files* indicando a opção para definir o local do computadors que será utilizado como ambiente de trabalho}\label{fig:files-guia}
+
+{\centering \includegraphics[width=0.5\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/files-guia} 
+
+}
+
+\caption{Guia *Files* indicando a opção para definir o local do computadors que será utilizado como ambiente de trabalho}\label{fig:files-guia}
 \end{figure}
 
 \hypertarget{importando-planilha-via-linha-de-comando}{%
@@ -365,11 +420,21 @@ Diversas formas podem ser utilizadas para definir o ambiente de trabalho, aprese
 Primeiro construa as planilhas a seguir nos formatos *.csv (usando vírgula como separador de colunas e ponto como separador decimal) (Figura \ref{fig:planilha}) e *.xlsx (Figura \ref{fig:planilhaxlsx}) em um editor de planilhas, como excel, libreoffice calc ou outros e a salve com o nome de planilha.csv e planilha.xlsx no diretório que definiu previamente. A seguir demonstraremos as diferenças na importação de ambas as planilhas.
 
 \begin{figure}[H]
-\includegraphics[width=0.4\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/planilha} \caption{Planilha com os dados no formato *.csv que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente}\label{fig:planilha}
+
+{\centering \includegraphics[width=0.4\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/planilha} 
+
+}
+
+\caption{Planilha com os dados no formato *.csv que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente}\label{fig:planilha}
 \end{figure}
 
 \begin{figure}[H]
-\includegraphics[width=0.5\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/planilhaxlsx} \caption{Planilha com os dados no formato *.xlsx que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente}\label{fig:planilhaxlsx}
+
+{\centering \includegraphics[width=0.5\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/planilhaxlsx} 
+
+}
+
+\caption{Planilha com os dados no formato *.xlsx que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente}\label{fig:planilhaxlsx}
 \end{figure}
 
 \begin{Shaded}
@@ -400,7 +465,12 @@ Para importar arquivos que estão no formato *.xls ou *.xlsx é necessário a in
 O comando \textbackslash{}textcolor\{blue\}\{read\_excel()\} é similar ao \textcolor{blue}{read.csv()} embora seus argumentos sejam diferentes. O argumento ``path'' é similar ao ``file'', o argumento ``col\_names'' é similar ao ``header''. Repare que não temos o argumento ``sep'', pois em um arquivo excel as variáveis são salvas em colunas. Observe que independente da forma de importação (que é dependente do formato do arquivo *.csv ou *.xlsx) o resultado final é o mesmo (Figura \ref{fig:arqenv}).
 
 \begin{figure}[H]
-\includegraphics[width=0.8\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/arqenv} \caption{Resultado da importação do arquivo observado na guia environment. Há um objeto de nome dados, com 40 observações e 4 variáveis.}\label{fig:arqenv}
+
+{\centering \includegraphics[width=0.8\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/arqenv} 
+
+}
+
+\caption{Resultado da importação do arquivo observado na guia environment. Há um objeto de nome dados, com 40 observações e 4 variáveis.}\label{fig:arqenv}
 \end{figure}
 
 \hypertarget{importando-planilha-via-interface-gruxe1fica}{%
@@ -409,13 +479,23 @@ O comando \textbackslash{}textcolor\{blue\}\{read\_excel()\} é similar ao \text
 Para importar a planilha com os dados via interface do RStudio devemos acessar a guia \emph{Environment} e nesta acessar a opção \emph{Import Dataset} a seguir temos várias opções a qual devemos escolher referente a extensão do arquivo que vamos importar, no nosso caso será a opção \emph{From Excel} (Figura \ref{fig:import-graf}).
 
 \begin{figure}[H]
-\includegraphics[width=0.8\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/import-graf} \caption{mudar a figura e fazer a legenda}\label{fig:import-graf}
+
+{\centering \includegraphics[width=0.8\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/import-graf} 
+
+}
+
+\caption{mudar a figura e fazer a legenda}\label{fig:import-graf}
 \end{figure}
 
 Neste momento uma janela irá abrir (Figura \ref{fig:import-graf-2}) e no canto superior direito haverá o nome \emph{Browse} onde deveremos clicar e escolher o arquivo com o qual iremos trabalhar. Em \emph{Import options} no canto inferior esquerdo haverá algumas opções, na opção \emph{name} deveremos renomear para dados, para coincidir com as vias que fizemos acima. As demais opções podemos deixar em branco. Repare que no canto inferior direito aparecerá o comando relativo ao processo de importação similar ao que fizemos no tópico anterior e, aparecerá também, um comando chamado \textcolor{blue}{View()} que veremos mais adiante, para desabilita-lo basta desmarcar a caixa ao lado de mesmo nome. Conclua o processo clicando em \emph{import} no canto inferior direito.
 
 \begin{figure}[H]
-\includegraphics[width=0.8\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/import-graf-2} \caption{mudar a figura e fazer a legenda}\label{fig:import-graf-2}
+
+{\centering \includegraphics[width=0.8\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/import-graf-2} 
+
+}
+
+\caption{mudar a figura e fazer a legenda}\label{fig:import-graf-2}
 \end{figure}
 
 \hypertarget{passo-verificar-e-ajustar-os-dados}{%
@@ -569,7 +649,12 @@ A função \textcolor{blue}{hist()} permite visualizar os valores da variável c
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/comp-hist-1} \caption{Comprimento dos organismos da planilha dados}\label{fig:comp-hist}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/comp-hist-1} 
+
+}
+
+\caption{Comprimento dos organismos da planilha dados}\label{fig:comp-hist}
 \end{figure}
 
 Repare que um gráfico foi gerado na sua janela lateral, na guia plots.
@@ -591,7 +676,12 @@ Nosso gráfico não está aparentemente muito agradável e um pouco sem cor. Pod
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/comp-hist-col-1} \caption{Comprimento dos organismos da planilha dados com barras coloridas}\label{fig:comp-hist-col}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/comp-hist-col-1} 
+
+}
+
+\caption{Comprimento dos organismos da planilha dados com barras coloridas}\label{fig:comp-hist-col}
 \end{figure}
 
 Temos aqui nosso histograma (Figura \ref{fig:comp-hist-col}) com alguns argumentos que permitem melhorar sua visualização. Ele nos permite visualizar os dados da variável comprimento e sua frequência de ocorrência.
@@ -608,7 +698,12 @@ O gráfico de barras é um dos mais utilizados. Com ele podemos comparar valores
 Se já chegamos até esse ponto vamos exercitar um pouco antes de plotar o gráfico de barras. Construa a seguinte planilha no seu editor de planilhas (Figura \ref{fig:abundancia}) e nomeie-a abundancia.
 
 \begin{figure}[H]
-\includegraphics[width=0.4\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/abundancia} \caption{Planilha de dados de abundância.}\label{fig:abundancia}
+
+{\centering \includegraphics[width=0.4\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/abundancia} 
+
+}
+
+\caption{Planilha de dados de abundância.}\label{fig:abundancia}
 \end{figure}
 
 Acesse a planilha abundância. Vamos inseri-la no R com o nome ``abundancia''. repare que retirei o acento e as letras estão em minúsculo. Sempre que trabalharmos com linguagem de programação evite acentuações, espaços, cedilhas (ç) e atente a maiúsculas e minúsculas, pois isso pode interferir no seu código
@@ -657,7 +752,12 @@ Seguindo para o gráfico de barras (Figura \ref{fig:bar-abu}) a fim de mostrar o
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/bar-abu-1} \caption{Gráfico de barras com número de indivíduos da planilha abundância por mês}\label{fig:bar-abu}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/bar-abu-1} 
+
+}
+
+\caption{Gráfico de barras com número de indivíduos da planilha abundância por mês}\label{fig:bar-abu}
 \end{figure}
 
 Assim como o histograma, o simples uso da função sem argumentos gera um gráfico de difícil análise e esteticamente não muito agradável.
@@ -676,7 +776,12 @@ Vamos portanto adicionar alguns argumentos já conhecidos e outros novos que per
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/bar-abu-col-1} \caption{Gráfico de barras com número de indivíduos da planilha abundância por mês, com barras coloridas}\label{fig:bar-abu-col}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/bar-abu-col-1} 
+
+}
+
+\caption{Gráfico de barras com número de indivíduos da planilha abundância por mês, com barras coloridas}\label{fig:bar-abu-col}
 \end{figure}
 
 No código acima definimos o que será graficado como a variável N presente no objeto abundância, informamos isso por meio do operador ``\textbf{\$}'' (cifrão). Ajustamos os limites do eixo ``y'' através do argumento ylim em 0 e 200, usando a função concatenar \textcolor{blue}{c()}. Definimos os nomes dos eixos x e y por meio dos argumentos xlab e ylab, respectivamente. Definimos o nome das barras de acordo com a variável mes, também presente no objeto abundância e por último definimos a cor das barras, usando o argumento col, como verde.
@@ -701,7 +806,12 @@ Porém não precisamos fazer isso em um comando separado podemos aplicar a funç
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/pon-graf-1} \caption{Representação gráfica do número de indivíduos por mês em pontos}\label{fig:pon-graf}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/pon-graf-1} 
+
+}
+
+\caption{Representação gráfica do número de indivíduos por mês em pontos}\label{fig:pon-graf}
 \end{figure}
 
 Pronto, na função acima aplicamos a função \textcolor{blue}{plot()} indicando os argumentos x e y que definem quem estará no eixo x e quem estará no eixo y, e para a variável que estará no eixo x (variável mês) adicionamos a função \textcolor{blue}{as.numeric()}, a qual a converte em numérico apenas para a execução do plot.
@@ -723,7 +833,12 @@ Porém a função \textcolor{blue}{plot()} não realizou um gráfico de linhas c
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/lin-graf-col-1} \caption{Representação gráfica do número de indivíduos por mês em um gráfico de linhas}\label{fig:lin-graf-col}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/lin-graf-col-1} 
+
+}
+
+\caption{Representação gráfica do número de indivíduos por mês em um gráfico de linhas}\label{fig:lin-graf-col}
 \end{figure}
 
 Repare que um gráfico de linha foi plotado e o resultado deste indica o mesmo que o gráfico de barras que realizamos acima.
@@ -744,7 +859,12 @@ Vamos voltar a nossa primeira planilha (dados) e executar um gráfico do tipo bo
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/box-graf-1} \caption{Gráfico tipo boxplot do comprimento por ano, da planilha dados}\label{fig:box-graf}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/box-graf-1} 
+
+}
+
+\caption{Gráfico tipo boxplot do comprimento por ano, da planilha dados}\label{fig:box-graf}
 \end{figure}
 
 Repare que a escrita para esse gráfico é ligeiramente diferente. Ele usa a função \textcolor{blue}{boxplot()}. Dentro desta há um argumento chamado fórmula, onde inserimos a variável independente (variável do eixo X) e a variável dependente (variável do eixo Y). Entre ambas as variáveis há o caracter ``\textasciitilde{}'' (til). A forma de ler essa escrita é a seguinte: Realize um boxplot da variável comprimento da planilha dados em função da variável ano da planilha dados. A variável til é lida como (``em função de'')
@@ -762,7 +882,12 @@ Vamos adicionar alguns argumentos que permitem deixar o gráfico mais apresentá
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/box-graf-col-1} \caption{Gráfico tipo boxplot do comprimento por ano com cores por ano, da planilha dados}\label{fig:box-graf-col}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/box-graf-col-1} 
+
+}
+
+\caption{Gráfico tipo boxplot do comprimento por ano com cores por ano, da planilha dados}\label{fig:box-graf-col}
 \end{figure}
 
 Repare que não adicionamos nenhum argumento ou função diferente do que já fizemos anteriormente. Ou seja, uma vez conhecendo a função, os argumentos por vezes se repetem entre funções com o mesmo objetivo (neste caso o objetivo é gerar um gráfico).
@@ -1252,7 +1377,12 @@ Agora vamos usar o objeto resultado para desenvolver o gráfico de barras com o 
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/bar-ep-1} \caption{Gráfico de barras com erro padrão do comprimento por ano e local, da planilha resultado (derivada da planilha dados)}\label{fig:bar-ep}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/bar-ep-1} 
+
+}
+
+\caption{Gráfico de barras com erro padrão do comprimento por ano e local, da planilha resultado (derivada da planilha dados)}\label{fig:bar-ep}
 \end{figure}
 
 Note que na função \textcolor{blue}{barplot()} utilizamos algumas mudanças em relação ao que fizemos anteriormente, como os argumentos ``formula'' o qual indica a variável resposta em função das variáveis categóricas o qual será plotado (caso altere a ordem ano + local para local + ano a ordem do gráfico também será alterado. Teste você mesmo, veja o acontece). Neste caso como temos mais de uma variável categórica adicionamos um argumento novo chamado ``legend.text'' o qual adiciona uma legenda ao gráfico.
@@ -1288,7 +1418,12 @@ Neste conjunto de dados não precisamos reorganizar os dados pois eles já se en
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/bar-ep-abu-1} \caption{Gráfico de barras com erro padrão da abundância por mês da planilha abundância}\label{fig:bar-ep-abu}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/bar-ep-abu-1} 
+
+}
+
+\caption{Gráfico de barras com erro padrão da abundância por mês da planilha abundância}\label{fig:bar-ep-abu}
 \end{figure}
 
 Repare que é quase a mesma coisa que fizemos antes. A única diferença é que guardamos o gráfico gerado em um objeto chamado ``grafico''.
@@ -1303,7 +1438,12 @@ Ao longo dos tópicos abordados neste capítulo demonstramos as etapas mais impo
 Durante nosso percurso neste livro realizaremos mais gráficos aliados as análises estatísticas básicas comumente utilizadas. Não se assuste com a quantidade de etapas, funções, argumentos e nomes, eles irão se repetir tantas e tantas vezes daqui em diante que você não esquecerá. O aprendizado do R é exponencial e ele lhe permitirá entender como nunca o universo da análise de dados adequando-o para seu campo de atuação.
 
 \begin{figure}[H]
-\includegraphics[width=1\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/resumo1} \caption{Resumo dos passos abordados no capítulo: da definição do ambiente de trabalho até a sumarização dos dados.}\label{fig:resumo1}
+
+{\centering \includegraphics[width=1\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/resumo1} 
+
+}
+
+\caption{Resumo dos passos abordados no capítulo: da definição do ambiente de trabalho até a sumarização dos dados.}\label{fig:resumo1}
 \end{figure}
 
 \hypertarget{qui-quadrado-chi}{%
@@ -1524,7 +1664,7 @@ Imagine que você foi em campo e contabilizou as espécies de cracas que identif
 ##  on 2000 replicates)
 ## 
 ## data:  N.especies
-## X-squared = 4, df = NA, p-value = 0.05947
+## X-squared = 4, df = NA, p-value = 0.06197
 \end{verbatim}
 
 Basta usarmos o argumento ``simulate.p.value'' e indicar ``FALSE'' quando não queremos a simulação de Monte Carlo, ou apenas omitirmos este argumento, ou usar este argumento e indicar ``TRUE'' o qual realiza a simulação de Monte Carlo. Verifique que com a aplicação desta simulação o \emph{p-value} aumenta indicando que torna mais dificil rejeitarmos a hipótese nula. Após aplicarmos a correção na nossa análise podemos afirmar que não há diferença na quantidade de cracas observadas em relação as proporções esperadas, para ambas as espécies de cracas.
@@ -1864,10 +2004,13 @@ Vamos utilizar ``margin = 2'' para construir nossa tabela e plotarmos nosso grá
 \end{Highlighting}
 \end{Shaded}
 
-\begin{figure}
-\centering
-\includegraphics{livroR-1.0_files/figure-latex/bar-tab-1.pdf}
-\caption{\label{fig:bar-tab}Gráfico de barras sobrepostas indicando o percentual relativo da observação de espécies nativas (cor vermelha) e introduzidas (cor azul), por pesquisador.}
+\begin{figure}[H]
+
+{\centering \includegraphics{livroR-1.0_files/figure-latex/bar-tab-1} 
+
+}
+
+\caption{Gráfico de barras sobrepostas indicando o percentual relativo da observação de espécies nativas (cor vermelha) e introduzidas (cor azul), por pesquisador.}\label{fig:bar-tab}
 \end{figure}
 
 Como podem ver o nosso gráfico foi realizado. Mas adicionamos uma série de comandos novos. Vamos explica-lo passo a passo.
@@ -1884,18 +2027,23 @@ Nosso último passo é a nossa já conhecida função \textcolor{blue}{barplot()
 Durante nosso percurso neste capítulo realizamos etapas que consistem na construção dos dados no próprio programa do R e a condução da análise do qui-quadrado para ajuste das frequências e para a independência. A construção dos dados tem como resultado final um objeto similar a planilha de dados que deve ser importada, caso já a tenha preparado, e juntamente com a sumarização dos dados temos as mesmas etapas trabalhadas no capítulo anterior. A partir daí temos a condução da análise estatística pelo qui-quadrado. Um resumo gráfico das etapas pode ser observado aqui (Figura \ref{fig:resumo2}).
 
 \begin{figure}[H]
-\includegraphics[width=1\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/resumo2} \caption{Resumo dos passos abordados no capítulo: da preparação dos dados até a análise dos dados.}\label{fig:resumo2}
+
+{\centering \includegraphics[width=1\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/resumo2} 
+
+}
+
+\caption{Resumo dos passos abordados no capítulo: da preparação dos dados até a análise dos dados.}\label{fig:resumo2}
 \end{figure}
 
-\hypertarget{teste-t.}{%
-\chapter{Teste-t.}\label{teste-t.}}
+\hypertarget{teste-t}{%
+\chapter{Teste-t}\label{teste-t}}
 
 Ao iniciarmos nossos estudos geralmente estamos interessados em saber se alguma característica da população que coletamos e analisamos é similar a uma outra população. Podemos abordar essa ideia por diversos caminhos porém vamos iniciar essas análises em R através do teste-t para uma amostra e a discussão sobre hipótese nula, caudalidade e nível de confiança. A partir de então seguiremos para o teste-t com duas amostras e o teste-t pareado.
 
 \hypertarget{teste-t-para-uma-amostra}{%
 \section{Teste-t para uma amostra}\label{teste-t-para-uma-amostra}}
 
-Conduzimos esse teste quando objetivamos verificar se a média de uma dada variável é similar a um valor esperado. Ao falarmos de média percebemos que a variável com a qual estamos lidando é do tipo númerica ou inteiro (a diferença entre ambas consiste na presença de casas decimais), ou seja, quantitativo. Ao compararmos a média de nossa variável a um valor previamente estipulado 2 hipóteses são construídas, a hipótese nula (H0) e a hipótese alternativa (HA) (Tabela \ref{tab:tab1t}.
+Conduzimos esse teste quando objetivamos verificar se a média de uma dada variável é similar a um valor esperado. Ao falarmos de média percebemos que a variável com a qual estamos lidando é do tipo númerica ou inteiro (a diferença entre ambas consiste na presença de casas decimais), ou seja, quantitativo. Ao compararmos a média de nossa variável a um valor previamente estipulado 2 hipóteses são construídas, a hipótese nula (H0) e a hipótese alternativa (HA) (Tabela \ref{tab:tab1t}).
 
 \begin{table}
 
@@ -1914,7 +2062,7 @@ Atributos & Características\\
 \end{tabular}
 \end{table}
 
-Caso você ainda não tenha seus dados, vamos verificar como conduzir esse o teste-t no R por meio de exemplos utilizando valores fictícios. Vamos ensinar como criar valores aleatórios no R.
+Caso você ainda não tenha seus dados, vamos verificar como conduzir o teste-t no R por meio de exemplos utilizando valores fictícios. Vamos ensinar como criar valores aleatórios no R.
 
 Vamos verificar como conduzir esse teste no R por meio de exemplos utilizando valores fictícios.
 
@@ -2012,7 +2160,12 @@ Vamos observar as métricas e gráficos, conforme já fizemos nos capítulos ant
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/hist-tam-cam-1} \caption{Histograma dos valores do objeto relativo ao tamanho dos camarões}\label{fig:hist-tam-cam}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/hist-tam-cam-1} 
+
+}
+
+\caption{Histograma dos valores do objeto relativo ao tamanho dos camarões}\label{fig:hist-tam-cam}
 \end{figure}
 
 Como podemos ver os valores mínimo e máximo são similares ao que definimos e o número de elementos é o mesmo. Graficamente podemos ver que a distribuição é normal, pois como vimos utilizamos uma função que cria uma distribuição normal com limites definidos pela função \textcolor{blue}{runif()}. Além disso vemos que há uma maior frequência dos valores em torno de 25 (Figura \ref{fig:hist-tam-cam}).
@@ -2125,7 +2278,12 @@ Observe que geramos os dados de maneira similar ao que fizemos no exemplo anteri
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/estrelas-hist-1} \caption{Histograma dos valores relativos a altura das estrelas do mar no costão rochoso}\label{fig:estrelas-hist}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/estrelas-hist-1} 
+
+}
+
+\caption{Histograma dos valores relativos a altura das estrelas do mar no costão rochoso}\label{fig:estrelas-hist}
 \end{figure}
 
 Conforme também fizemos anteriormente calculamos algumas métricas para entender os dados e um histograma básico (Figura \ref{fig:estrelas-hist}) para visualizar a forma dos dados que representam a altura que as estrelas se encontram no ambiente.
@@ -2221,7 +2379,12 @@ Conforme já realizado anteriormente vamos gerar os dados e explora-los com algu
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/craca-hist-1} \caption{Histograma dos valores relativos ao tambanho das cracas incrustantes}\label{fig:craca-hist}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/craca-hist-1} 
+
+}
+
+\caption{Histograma dos valores relativos ao tambanho das cracas incrustantes}\label{fig:craca-hist}
 \end{figure}
 
 Agora que visualizamos as métricas e graficamos os dados (Figura \ref{fig:craca-hist}), sigamos com a condução da análise.
@@ -2285,7 +2448,7 @@ Embora não seja comum, podemos plotar um gráfico que represente o nosso result
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{## install.packages("webr")}
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"webr"}\NormalTok{)}
 \KeywordTok{library}\NormalTok{(webr)}
 \end{Highlighting}
 \end{Shaded}
@@ -2296,9 +2459,14 @@ Embora não seja comum, podemos plotar um gráfico que represente o nosso result
 \end{Highlighting}
 \end{Shaded}
 
-\textbackslash{}begin\{figure\}{[}H{]}
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/cracas-dens-95-1} \textbackslash{}caption\{Curva de densidade representando o valor do teste-t bicaudal para o tamanho das cracas em relação a média teórica a um intervalo de confiança de 95\%. O ponto azul indica o valor do teste.\}\label{fig:cracas-dens-95}
-\textbackslash{}end\{figure\}
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/cracas-dens-95-1} 
+
+}
+
+\caption{Curva de densidade representando o valor do teste-t bicaudal para o tamanho das cracas em relação a média teórica a um intervalo de confiança de 95\%. O ponto azul indica o valor do teste.}\label{fig:cracas-dens-95}
+\end{figure}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2306,9 +2474,14 @@ Embora não seja comum, podemos plotar um gráfico que represente o nosso result
 \end{Highlighting}
 \end{Shaded}
 
-\textbackslash{}begin\{figure\}{[}H{]}
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/cracas-dens-99-1} \textbackslash{}caption\{Curva de densidade representando o valor do teste-t bicaudal para o tamanho das cracas em relação a média teórica a um intervalo de confiança de 99\%. O ponto azul indica o valor do teste.\}\label{fig:cracas-dens-99}
-\textbackslash{}end\{figure\}
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/cracas-dens-99-1} 
+
+}
+
+\caption{Curva de densidade representando o valor do teste-t bicaudal para o tamanho das cracas em relação a média teórica a um intervalo de confiança de 99\%. O ponto azul indica o valor do teste.}\label{fig:cracas-dens-99}
+\end{figure}
 
 Verifique que esses plots nos fornecem as curvas do teste-t aos intervalos de confiança de 95\% (Figura \ref{fig:cracas-dens-95}) e 99\% (Figura \ref{fig:cracas-dens-99}), demarca os limites inferior e superior de vermelho e marca como ponto azul na curva de densidade o valor do teste-t associado. Como esse valor está dentro da região demarcada no intervalo de confiança de 95\%, neste caso rejeitamos a hipótese nula e como no intervalo de confiança de 99\% o ponto azul está fora da região demarcada aceitamos a hipótese nula.
 
@@ -2316,6 +2489,28 @@ Verifique que esses plots nos fornecem as curvas do teste-t aos intervalos de co
 \section{Teste-t para duas amostras}\label{teste-t-para-duas-amostras}}
 
 Conduzimos esse teste quando objetivamos comparar se a média de dois grupos são similares (Tabela \ref{tab:tab2t}).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(kableExtra)}
+
+\NormalTok{text_tbl <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{Atributos =} \KeywordTok{c}\NormalTok{(}\StringTok{"Tipo de variável"}\NormalTok{,}
+                                     \StringTok{"Quantidade de variáveis"}\NormalTok{,}
+                                     \StringTok{"Hipótese nula"}\NormalTok{,}
+                                     \StringTok{"Fórmula",}
+\StringTok{                                     "}\NormalTok{Observação}\StringTok{"),}
+\StringTok{                       Características = c("}\NormalTok{Quantitativa e categórica",}
+                                           \StringTok{"2 (1 de cada tipo obrigatoriamente)"}\NormalTok{,}
+                                           \StringTok{"A diferença na média da variável quantitativa dos grupos é igual a 0."}\NormalTok{,}
+                                           \StringTok{"$$t=}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{frac\{}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{overline\{X\}_1-}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{overline\{X\}_2\}\{s_\{}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{overline\{X\}_1-}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{overline\{X\}_2\}\}$$, onde, $}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{overline\{X\}_1$: média do grupo 1, $}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{overline\{X\}_2$: média do grupo 2, s: erro padrão da diferença entre os dois grupos."}\NormalTok{,}
+                                           \StringTok{"Não há a necessidade de post-hoc nem expressa-la graficamente."}\NormalTok{))}
+
+\KeywordTok{kbl}\NormalTok{(text_tbl, }\DataTypeTok{booktabs =}\NormalTok{ T, }\DataTypeTok{valign =} \StringTok{"c"}\NormalTok{, }\DataTypeTok{escape =}\NormalTok{ F, }\DataTypeTok{caption =} \StringTok{"Principais características do teste-t para duas amostras"}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{kable_styling}\NormalTok{(}\DataTypeTok{full_width =}\NormalTok{ F, }\DataTypeTok{latex_options =} \StringTok{"striped"}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{column_spec}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DataTypeTok{bold =}\NormalTok{ T, }\DataTypeTok{width =} \StringTok{"10em"}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{column_spec}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DataTypeTok{width =} \StringTok{"30em"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
 \begin{table}
 
@@ -2441,7 +2636,12 @@ Antes de conduzirmos o teste-t vamos praticar fazendo a avaliação gráfica e n
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/hist-ali-A-1} \caption{Histograma com valores da mudança do peso dos gastrópodes após a dieta com o Alimento A}\label{fig:hist-ali-A}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/hist-ali-A-1} 
+
+}
+
+\caption{Histograma com valores da mudança do peso dos gastrópodes após a dieta com o Alimento A}\label{fig:hist-ali-A}
 \end{figure}
 
 \begin{Shaded}
@@ -2456,7 +2656,12 @@ Antes de conduzirmos o teste-t vamos praticar fazendo a avaliação gráfica e n
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/hist-ali-B-1} \caption{Histograma com valores da mudança do peso dos gastrópodes após a dieta com o Alimento B}\label{fig:hist-ali-B}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/hist-ali-B-1} 
+
+}
+
+\caption{Histograma com valores da mudança do peso dos gastrópodes após a dieta com o Alimento B}\label{fig:hist-ali-B}
 \end{figure}
 
 \begin{Shaded}
@@ -2466,7 +2671,12 @@ Antes de conduzirmos o teste-t vamos praticar fazendo a avaliação gráfica e n
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/box-ali-1} \caption{Boxplot com os valores da alteração do peso dos gastrópodes por tipo de alimento}\label{fig:box-ali}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/box-ali-1} 
+
+}
+
+\caption{Boxplot com os valores da alteração do peso dos gastrópodes por tipo de alimento}\label{fig:box-ali}
 \end{figure}
 
 Os comandos acima realizam: o histograma dos dados para Alimento A (Figura \ref{fig:hist-ali-A}), o histograma dos dados para Alimento B (Figura \ref{fig:hist-ali-B}) e o boxplot para ambos os dados (Figura \ref{fig:box-ali}), respectivamente.
@@ -2625,9 +2835,14 @@ Da mesma forma que avaliamos para o teste-t de uma amostra, podemos plotar o res
 \end{Highlighting}
 \end{Shaded}
 
-\textbackslash{}begin\{figure\}{[}H{]}
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/testet-duas-dens-1} \textbackslash{}caption\{Curva de densidade representando o valor do teste-t bicaudal para a alteração do peso de gastrópodes em relação ao alimento a um intervalo de confiança de 95\%. O ponto azul indica o valor do teste.\}\label{fig:testet-duas-dens}
-\textbackslash{}end\{figure\}
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/testet-duas-dens-1} 
+
+}
+
+\caption{Curva de densidade representando o valor do teste-t bicaudal para a alteração do peso de gastrópodes em relação ao alimento a um intervalo de confiança de 95\%. O ponto azul indica o valor do teste.}\label{fig:testet-duas-dens}
+\end{figure}
 
 Neste gráfico podemos ver que o resultado do teste-t (Figura \ref{fig:testet-duas-dens}), indicado pelo ponto azul, está muito além do nível da zona de rejeição, indicando que os dois grupos apresentam médias bem diferentes, ou seja, a diferença entre as duas médias é altamente significativa.
 
@@ -2711,7 +2926,12 @@ Com a hipótese construída vamos verificar a estrutura dos dados (modificar se 
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/hist-temp-0-1} \caption{Histograma com valores de temperatura da lagoa no Ano 0.}\label{fig:hist-temp-0}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/hist-temp-0-1} 
+
+}
+
+\caption{Histograma com valores de temperatura da lagoa no Ano 0.}\label{fig:hist-temp-0}
 \end{figure}
 
 \begin{Shaded}
@@ -2726,7 +2946,12 @@ Com a hipótese construída vamos verificar a estrutura dos dados (modificar se 
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/hist-temp-20-1} \caption{Histograma com valores de temperatura da lagoa no Ano 20.}\label{fig:hist-temp-20}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/hist-temp-20-1} 
+
+}
+
+\caption{Histograma com valores de temperatura da lagoa no Ano 20.}\label{fig:hist-temp-20}
 \end{figure}
 
 \begin{Shaded}
@@ -2736,7 +2961,12 @@ Com a hipótese construída vamos verificar a estrutura dos dados (modificar se 
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/box-temp-1} \caption{Boxplot com os valores de temperatura da lagoa por ano.}\label{fig:box-temp}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/box-temp-1} 
+
+}
+
+\caption{Boxplot com os valores de temperatura da lagoa por ano.}\label{fig:box-temp}
 \end{figure}
 
 Como podem verificar os comandos para a análise gráfica não diferiu do que fizemos no exemplo anterior. Os comandos acima realizam: o histograma dos valores de temperatura no ``ano 0'' (Figura \ref{fig:hist-temp-0}), o histograma dos valores de temperatura no ``ano 20'' (Figura \ref{fig:hist-temp-20}) e o boxplot para ambos os dados (Figura \ref{fig:box-temp}), respectivamente. Quanto ao seu resultado podemos notar uma maior temperatura média anual da lagoa 20 anos depois da primeira amostragem.
@@ -2880,9 +3110,14 @@ Assim como fizemos anteriormente vamos olhar o resultado em relação a distribu
 \end{Highlighting}
 \end{Shaded}
 
-\textbackslash{}begin\{figure\}{[}H{]}
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/testet-duas-temp-dens-1} \textbackslash{}caption\{Curva de densidade representando o valor do teste-t bicaudal para comparação da temperatura em um lago entre dois anos a um intervalo de confiança de 99\%. O ponto azul indica o valor do teste.\}\label{fig:testet-duas-temp-dens}
-\textbackslash{}end\{figure\}
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/testet-duas-temp-dens-1} 
+
+}
+
+\caption{Curva de densidade representando o valor do teste-t bicaudal para comparação da temperatura em um lago entre dois anos a um intervalo de confiança de 99\%. O ponto azul indica o valor do teste.}\label{fig:testet-duas-temp-dens}
+\end{figure}
 
 De acordo com esse exemplo podemos afirmar que os anos diferem entre si e que em 20 anos a lagoa amostrada apresentou um aumento da temperatura.
 
@@ -2994,7 +3229,12 @@ Vamos sumarizar os dados grafica e estatisticamente
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/hist-par-obs1-1} \caption{Histograma com a frequência de observações de aves, por 20 dias, pelo observador 1}\label{fig:hist-par-obs1}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/hist-par-obs1-1} 
+
+}
+
+\caption{Histograma com a frequência de observações de aves, por 20 dias, pelo observador 1}\label{fig:hist-par-obs1}
 \end{figure}
 
 \begin{Shaded}
@@ -3009,7 +3249,12 @@ Vamos sumarizar os dados grafica e estatisticamente
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/hist-par-obs2-1} \caption{Histograma com a frequência de observações de aves, por 20 dias, pelo observador 2}\label{fig:hist-par-obs2}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/hist-par-obs2-1} 
+
+}
+
+\caption{Histograma com a frequência de observações de aves, por 20 dias, pelo observador 2}\label{fig:hist-par-obs2}
 \end{figure}
 
 \begin{Shaded}
@@ -3022,7 +3267,12 @@ Vamos sumarizar os dados grafica e estatisticamente
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/box-par-ave-1} \caption{Boxplot com as frequências de observações de aves por 20 dias de 2 observadores.}\label{fig:box-par-ave}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/box-par-ave-1} 
+
+}
+
+\caption{Boxplot com as frequências de observações de aves por 20 dias de 2 observadores.}\label{fig:box-par-ave}
 \end{figure}
 
 Como podem notar os comandos para a análise gráfica não diferiu do que fizemos nos exemplos anteriores para os histogramas (Figura \ref{fig:hist-par-obs1} e \ref{fig:hist-par-obs2}) e pouco diferiu para o boxplot ((Figura \ref{fig:box-par-ave}).
@@ -3117,9 +3367,14 @@ Assim como fizemos anteriormente vamos olhar o resultado em relação a distribu
 \end{Highlighting}
 \end{Shaded}
 
-\textbackslash{}begin\{figure\}{[}H{]}
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/testet-par-ave-1} \textbackslash{}caption\{Curva de densidade representando o valor do teste-t bicaudal para comparação do número de observações de aves por 2 observadores distintos a um intervalo de confiança de 95\%. O ponto azul indica o valor do teste.\}\label{fig:testet-par-ave}
-\textbackslash{}end\{figure\}
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/testet-par-ave-1} 
+
+}
+
+\caption{Curva de densidade representando o valor do teste-t bicaudal para comparação do número de observações de aves por 2 observadores distintos a um intervalo de confiança de 95\%. O ponto azul indica o valor do teste.}\label{fig:testet-par-ave}
+\end{figure}
 
 Neste teste em particular como trabalhamos com a diferença entre as observações podemos usar o gráfico de barras para graficar essa diferença.
 
@@ -3137,7 +3392,12 @@ Neste teste em particular como trabalhamos com a diferença entre as observaçõ
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/bar-dif-ave-1} \caption{Diferença entre o número de observações de aves, por dia, para cada observador}\label{fig:bar-dif-ave}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/bar-dif-ave-1} 
+
+}
+
+\caption{Diferença entre o número de observações de aves, por dia, para cada observador}\label{fig:bar-dif-ave}
 \end{figure}
 
 Para o gráfico acima indicamos em seu comando que faremos um gráfico de barras onde o que será plotado é a diferença no número de observação de aves entre observadores (Figura \ref{fig:bar-dif-ave}). O argumento ``xlab'' indica o nome do eixo x, ``ylab'' o nome do eixo y, ``main'' indica o título do gráfico, ``names.arg'' indica a coluna referente aos nomes das barras (que são os dias), ``las'' indica se os nomes das barras serão plotados na horizontal ou vertical (o valor 2 indica vertical), ``ylim'' indica os limites do eixo y e ``cex.names'' indica o tamanho da letra dos nomes das barras.
@@ -3167,7 +3427,12 @@ As barras para o lado positivo do eixo y indica uma maior observação de aves p
 \end{Shaded}
 
 \begin{figure}[H]
-\includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/bar-dif-ave2-1} \caption{Diferença entre o número de observações de aves, por dia, para cada observador.}\label{fig:bar-dif-ave2}
+
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/bar-dif-ave2-1} 
+
+}
+
+\caption{Diferença entre o número de observações de aves, por dia, para cada observador.}\label{fig:bar-dif-ave2}
 \end{figure}
 
 Como podem visualizar a função \textcolor{blue}{mtext()} indicou os nomes ``Observador 1'' e ``Observador 2'' no lado do gráfico que os representa. O argumento ``at'' indica a posição em relação ao eixo x, ``line'' indica a posição em relação ao eixo y, ``text'' indica o que será plotado e side indica o lado da janela gráfica onde o texto será plotado (3 é na parte superior e 1 na inferior).
@@ -3178,7 +3443,12 @@ Como podem visualizar a função \textcolor{blue}{mtext()} indicou os nomes ``Ob
 Durante nosso percurso neste capítulo realizamos etapas que consistem na construção dos dados no próprio programa do R e a condução da análise do teste-t para uma amostra, para duas amostras e pareado. A construção dos dados tem como resultado final um objeto similar a planilha de dados que deve ser importada, caso já a tenha preparado, e juntamente com a sumarização dos dados temos as mesmas etapas trabalhadas no capítulo anterior. A partir daí temos a condução dos pressupostos normalidade e homocedasticidade e da análise estatística o teste-t. Um resumo gráfico das etapas pode ser observado aqui (Figura \ref{fig:resumo3}).
 
 \begin{figure}[H]
-\includegraphics[width=1\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/resumo2} \caption{Resumo dos passos abordados no capítulo: da preparação dos dados até a análise dos dados.}\label{fig:resumo3}
+
+{\centering \includegraphics[width=1\linewidth]{/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/resumo2} 
+
+}
+
+\caption{Resumo dos passos abordados no capítulo: da preparação dos dados até a análise dos dados.}\label{fig:resumo3}
 \end{figure}
 
 \hypertarget{palavras-finais}{%
