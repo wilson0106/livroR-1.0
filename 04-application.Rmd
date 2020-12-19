@@ -256,7 +256,7 @@ Verifique que esses plots nos fornecem as curvas do teste-t aos intervalos de co
 Conduzimos esse teste quando objetivamos comparar se a média de dois grupos são similares (Tabela \@ref(tab:tab2t)).
 
 
-```{r tab2t, message = FALSE}
+```{r tab2t, message = FALSE,echo = FALSE}
 library(kableExtra)
 
 text_tbl <- data.frame(Atributos = c("Tipo de variável",
@@ -424,10 +424,10 @@ Repare que a forma da escrita se alterou um pouco. Mas como podem ver, nada comp
 De acordo com nosso resultado podemos ver que o valor do teste-t é 14,065, o grau de liberdade de 98 (o qual consiste no total de observações subtraído de um por grupo), o valor de probabilidade associado ao teste ($2,2\times10^{-16}$), o intervalo de confiança de 95% (0,415 e 0,551) que refere-se a diferença da média entre os grupos (a diferença da média dos grupos é: 0,70690 - 0,22348 = 0,48342), ou seja, o intervalo de confiança é em função dessa diferença e as últimas linhas do resultado representam as médias de alteração do peso para cada Alimento (Alimento A = 0,70690 e Alimento B = 0,22348). De acordo com esse resultado refutamos a hipótese nula de que as médias são similares. Portanto podemos dizer que dependendo do Alimento (A ou B) utilizada na dieta podemos ter diferentes alterações no peso dos gastropodes.
 
 
-Da mesma forma que avaliamos para o teste-t de uma amostra, podemos plotar o resultado como um gráfico da função de densidade do teste-t. Só devemos lembrar de carregar o pacote "webr".
+Da mesma forma que avaliamos para o teste-t de uma amostra, podemos plotar o resultado como um gráfico da função de densidade do teste-t. Só devemos lembrar de carregar o pacote `r colorize("webr", "green")`.
 
 
-```{r testet-duas-dens, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para a alteração do peso de gastrópodes em relação ao alimento a um intervalo de confiança de 95\\%. O ponto azul indica o valor do teste.", out.width='70%'}
+```{r testetduasdens, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para a alteração do peso de gastrópodes em relação ao alimento a um intervalo de confiança de 95\\%. O ponto azul indica o valor do teste.", out.width = '70%'}
 library(webr)
 plot(t.test(Peso ~ Alimento, 
             data = gastropode,
@@ -436,7 +436,7 @@ plot(t.test(Peso ~ Alimento,
 ```
 
 
-Neste gráfico podemos ver que o resultado do teste-t (Figura \@ref(fig:testet-duas-dens)), indicado pelo ponto azul, está muito além do nível da zona de rejeição, indicando que os dois grupos apresentam médias bem diferentes, ou seja, a diferença entre as duas médias é altamente significativa.
+Neste gráfico podemos ver que o resultado do teste-t (Figura \@ref(fig:testetduasdens)), indicado pelo ponto azul, está muito além do nível da zona de rejeição, indicando que os dois grupos apresentam médias bem diferentes, ou seja, a diferença entre as duas médias é altamente significativa.
 
 
 Vamos exercitar nosso conhecimento em R e teste-t com um outro exemplo (Gere a planilha abaixo).

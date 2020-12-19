@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.12.18)  18 DEC 2020 16:26
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.12.18)  19 DEC 2020 07:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1236,63 +1236,62 @@ File: livroR-1.0_files/figure-latex/cracas-dens-99-1.pdf Graphic file (type pdf
 [88] [89] [90] [91]
 File: livroR-1.0_files/figure-latex/hist-ali-A-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-ali-A-1.pdf>
-[92]
 File: livroR-1.0_files/figure-latex/hist-ali-B-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-ali-B-1.pdf>
-[93]
+[92]
 File: livroR-1.0_files/figure-latex/box-ali-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/box-ali-1.pdf>
-[94] [95] [96] [97] [98]
-File: livroR-1.0_files/figure-latex/testet-duas-dens-1.pdf Graphic file (type p
-df)
-<use livroR-1.0_files/figure-latex/testet-duas-dens-1.pdf>
-[99] [100]
+[93] [94] [95] [96] [97]
+File: livroR-1.0_files/figure-latex/testetduasdens-1.pdf Graphic file (type pdf
+)
+<use livroR-1.0_files/figure-latex/testetduasdens-1.pdf>
+[98] [99]
 File: livroR-1.0_files/figure-latex/hist-temp-0-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-temp-0-1.pdf>
-[101]
+[100]
 File: livroR-1.0_files/figure-latex/hist-temp-20-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-temp-20-1.pdf>
 File: livroR-1.0_files/figure-latex/box-temp-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/box-temp-1.pdf>
-[102] [103] [104] [105] [106]
+[101] [102] [103] [104] [105]
 File: livroR-1.0_files/figure-latex/testet-duas-temp-dens-1.pdf Graphic file (t
 ype pdf)
 <use livroR-1.0_files/figure-latex/testet-duas-temp-dens-1.pdf>
-[107] [108]
-Overfull \hbox (30.0321pt too wide) in paragraph at lines 3214--3214
+[106] [107]
+Overfull \hbox (30.0321pt too wide) in paragraph at lines 3192--3192
 []\TU/lmtt/m/n/10 ##  $ Dia         : Factor w/ 20 levels "Dia 1","Dia 10",..: 
 1 12 14 15 16 17 18 19 20 2 ...[] 
  []
 
-[109]
+[108]
 File: livroR-1.0_files/figure-latex/hist-par-obs1-1.pdf Graphic file (type pdf)
 
 <use livroR-1.0_files/figure-latex/hist-par-obs1-1.pdf>
 File: livroR-1.0_files/figure-latex/hist-par-obs2-1.pdf Graphic file (type pdf)
 
 <use livroR-1.0_files/figure-latex/hist-par-obs2-1.pdf>
-[110]
+[109]
 File: livroR-1.0_files/figure-latex/box-par-ave-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/box-par-ave-1.pdf>
-[111] [112] [113]
+[110] [111] [112]
 File: livroR-1.0_files/figure-latex/testet-par-ave-1.pdf Graphic file (type pdf
 )
 <use livroR-1.0_files/figure-latex/testet-par-ave-1.pdf>
-[114]
+[113]
 File: livroR-1.0_files/figure-latex/bar-dif-ave-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-dif-ave-1.pdf>
-[115] [116]
+[114] [115]
 File: livroR-1.0_files/figure-latex/bar-dif-ave2-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-dif-ave2-1.pdf>
-[117]
+[116]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
 l e R/livroR-1.0/figures print/resumo2.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
 /livroR-1.0/figures print/resumo2.png>
-[118]
+[117]
 Cap\'{\i }tulo 5.
 No file livroR-1.0.bbl.
-[119
+[118
 
 ] (./livroR-1.0.aux)
 Package rerunfilecheck Info: File `livroR-1.0.out' has not changed.
@@ -1300,11 +1299,11 @@ Package rerunfilecheck Info: File `livroR-1.0.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  20767 strings out of 479285
- 379572 string characters out of 5876615
+ 379556 string characters out of 5876615
  863627 words of memory out of 5000000
  39809 multiletter control sequences out of 15000+600000
  414840 words of font info for 117 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  94i,18n,118p,1873b,492s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on livroR-1.0.pdf (121 pages).
+Output written on livroR-1.0.pdf (120 pages).

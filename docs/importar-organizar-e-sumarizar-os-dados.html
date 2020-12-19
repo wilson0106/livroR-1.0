@@ -24,7 +24,7 @@
 <meta name="author" content="Wilson Souza &amp; Thiago Couto" />
 
 
-<meta name="date" content="2020-12-18" />
+<meta name="date" content="2020-12-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -642,7 +642,7 @@ Figura 2.16: Gráfico tipo boxplot do comprimento por ano com cores por ano, da 
 <p>Pronto! depois de alguns passos conseguimos construir nossa nova tabela com os dados resumidos.</p>
 <p>É um processo longo porém necessário para se acostumar com o ambiente de trabalho e a linguagem que o R usa. Há caminhos mais rápidos e tão eficientes quanto. Que se tornam úteis quando lidamos com muitas categorias dentro de uma variável. Contudo para isso é necessário a instalação de algum pacote (Há vários pacotes que apresentam funções que permitem a realização deste processo de maneira mais rápida e eficiente). Vamos utilizar um exemplo começando pela instalação do pacote chamado <span style="color: green;">Rmisc</span>.</p>
 <p>O comando abaixo realiza a instalação desse pacote. Conforme já fizemos com o pacote <span style="color: green;">readxl</span>.</p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb72-1" data-line-number="1"><span class="co">## install.packages(&quot;Rmisc&quot;)</span></a></code></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb72-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;Rmisc&quot;</span>)</a></code></pre></div>
 <p>Após instalado vamos carrega-lo pelo comando a seguir. Conforme já fizemos com o pacote <span style="color: green;">readxl</span>.</p>
 <div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb73-1" data-line-number="1"><span class="kw">library</span>(Rmisc)</a></code></pre></div>
 <p>Agora vamos conhecer a função <span style="color: blue;">summarySE()</span> deste pacote o qual realiza os passos que fizemos acima e ainda apresenta outros resultados. Mas iremos focar na média e desvio padrão.</p>

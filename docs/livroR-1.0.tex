@@ -149,7 +149,7 @@
 
 \title{Introdução à análise de dados em R: Uma abordagem ambiental\thanks{Em primeiro lugar só podemos agradecer a nossa família (pais, mães, irmãos, filhos e esposas), pois são quem estão a nosso lado a todo instante nos dando suporte. Em segundo lugar gostariamos de agradecer a todos os professores pois foram eles que nos deram a base necessária para que esse livro viesse a existir. Em terceiro lugar gostariamos de agradecer a todos os revisores desta obra. E por último e não menos importante gostariamos de agradecer a vocês que a estão lendo porque é pra vocês que este livro foi construído!}}
 \author{Wilson Souza \& Thiago Couto}
-\date{2020-12-18}
+\date{2020-12-19}
 
 \begin{document}
 \maketitle
@@ -1319,7 +1319,7 @@ O comando abaixo realiza a instalação desse pacote. Conforme já fizemos com o
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{## install.packages("Rmisc")}
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"Rmisc"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1664,7 +1664,7 @@ Imagine que você foi em campo e contabilizou as espécies de cracas que identif
 ##  on 2000 replicates)
 ## 
 ## data:  N.especies
-## X-squared = 4, df = NA, p-value = 0.06197
+## X-squared = 4, df = NA, p-value = 0.06147
 \end{verbatim}
 
 Basta usarmos o argumento ``simulate.p.value'' e indicar ``FALSE'' quando não queremos a simulação de Monte Carlo, ou apenas omitirmos este argumento, ou usar este argumento e indicar ``TRUE'' o qual realiza a simulação de Monte Carlo. Verifique que com a aplicação desta simulação o \emph{p-value} aumenta indicando que torna mais dificil rejeitarmos a hipótese nula. Após aplicarmos a correção na nossa análise podemos afirmar que não há diferença na quantidade de cracas observadas em relação as proporções esperadas, para ambas as espécies de cracas.
@@ -2490,28 +2490,6 @@ Verifique que esses plots nos fornecem as curvas do teste-t aos intervalos de co
 
 Conduzimos esse teste quando objetivamos comparar se a média de dois grupos são similares (Tabela \ref{tab:tab2t}).
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{library}\NormalTok{(kableExtra)}
-
-\NormalTok{text_tbl <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{Atributos =} \KeywordTok{c}\NormalTok{(}\StringTok{"Tipo de variável"}\NormalTok{,}
-                                     \StringTok{"Quantidade de variáveis"}\NormalTok{,}
-                                     \StringTok{"Hipótese nula"}\NormalTok{,}
-                                     \StringTok{"Fórmula",}
-\StringTok{                                     "}\NormalTok{Observação}\StringTok{"),}
-\StringTok{                       Características = c("}\NormalTok{Quantitativa e categórica",}
-                                           \StringTok{"2 (1 de cada tipo obrigatoriamente)"}\NormalTok{,}
-                                           \StringTok{"A diferença na média da variável quantitativa dos grupos é igual a 0."}\NormalTok{,}
-                                           \StringTok{"$$t=}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{frac\{}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{overline\{X\}_1-}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{overline\{X\}_2\}\{s_\{}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{overline\{X\}_1-}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{overline\{X\}_2\}\}$$, onde, $}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{overline\{X\}_1$: média do grupo 1, $}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{overline\{X\}_2$: média do grupo 2, s: erro padrão da diferença entre os dois grupos."}\NormalTok{,}
-                                           \StringTok{"Não há a necessidade de post-hoc nem expressa-la graficamente."}\NormalTok{))}
-
-\KeywordTok{kbl}\NormalTok{(text_tbl, }\DataTypeTok{booktabs =}\NormalTok{ T, }\DataTypeTok{valign =} \StringTok{"c"}\NormalTok{, }\DataTypeTok{escape =}\NormalTok{ F, }\DataTypeTok{caption =} \StringTok{"Principais características do teste-t para duas amostras"}\NormalTok{) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{kable_styling}\NormalTok{(}\DataTypeTok{full_width =}\NormalTok{ F, }\DataTypeTok{latex_options =} \StringTok{"striped"}\NormalTok{) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{column_spec}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DataTypeTok{bold =}\NormalTok{ T, }\DataTypeTok{width =} \StringTok{"10em"}\NormalTok{) }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{column_spec}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DataTypeTok{width =} \StringTok{"30em"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{table}
 
 \caption{\label{tab:tab2t}Principais características do teste-t para duas amostras}
@@ -2823,7 +2801,7 @@ Repare que a forma da escrita se alterou um pouco. Mas como podem ver, nada comp
 
 De acordo com nosso resultado podemos ver que o valor do teste-t é 14,065, o grau de liberdade de 98 (o qual consiste no total de observações subtraído de um por grupo), o valor de probabilidade associado ao teste (\(2,2\times10^{-16}\)), o intervalo de confiança de 95\% (0,415 e 0,551) que refere-se a diferença da média entre os grupos (a diferença da média dos grupos é: 0,70690 - 0,22348 = 0,48342), ou seja, o intervalo de confiança é em função dessa diferença e as últimas linhas do resultado representam as médias de alteração do peso para cada Alimento (Alimento A = 0,70690 e Alimento B = 0,22348). De acordo com esse resultado refutamos a hipótese nula de que as médias são similares. Portanto podemos dizer que dependendo do Alimento (A ou B) utilizada na dieta podemos ter diferentes alterações no peso dos gastropodes.
 
-Da mesma forma que avaliamos para o teste-t de uma amostra, podemos plotar o resultado como um gráfico da função de densidade do teste-t. Só devemos lembrar de carregar o pacote ``webr''.
+Da mesma forma que avaliamos para o teste-t de uma amostra, podemos plotar o resultado como um gráfico da função de densidade do teste-t. Só devemos lembrar de carregar o pacote \textcolor{green}{webr}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2837,14 +2815,14 @@ Da mesma forma que avaliamos para o teste-t de uma amostra, podemos plotar o res
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/testet-duas-dens-1} 
+{\centering \includegraphics[width=0.7\linewidth]{livroR-1.0_files/figure-latex/testetduasdens-1} 
 
 }
 
-\caption{Curva de densidade representando o valor do teste-t bicaudal para a alteração do peso de gastrópodes em relação ao alimento a um intervalo de confiança de 95\%. O ponto azul indica o valor do teste.}\label{fig:testet-duas-dens}
+\caption{Curva de densidade representando o valor do teste-t bicaudal para a alteração do peso de gastrópodes em relação ao alimento a um intervalo de confiança de 95\%. O ponto azul indica o valor do teste.}\label{fig:testetduasdens}
 \end{figure}
 
-Neste gráfico podemos ver que o resultado do teste-t (Figura \ref{fig:testet-duas-dens}), indicado pelo ponto azul, está muito além do nível da zona de rejeição, indicando que os dois grupos apresentam médias bem diferentes, ou seja, a diferença entre as duas médias é altamente significativa.
+Neste gráfico podemos ver que o resultado do teste-t (Figura \ref{fig:testetduasdens}), indicado pelo ponto azul, está muito além do nível da zona de rejeição, indicando que os dois grupos apresentam médias bem diferentes, ou seja, a diferença entre as duas médias é altamente significativa.
 
 Vamos exercitar nosso conhecimento em R e teste-t com um outro exemplo (Gere a planilha abaixo).
 

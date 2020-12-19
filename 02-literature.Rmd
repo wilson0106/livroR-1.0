@@ -709,7 +709,7 @@ Pronto! depois de alguns passos conseguimos construir nossa nova tabela com os d
 O comando abaixo realiza a instalação desse pacote. Conforme já fizemos com o pacote `r colorize("readxl", "green")`.
 
 
-```{r, message = FALSE, eval = -1}
+```{r, message = FALSE}
 install.packages("Rmisc")
 ```
 

@@ -40,7 +40,7 @@ tab:tab2t
 fig:hist-ali-A
 fig:hist-ali-B
 fig:box-ali
-fig:testet-duas-dens
+fig:testetduasdens
 fig:hist-temp-0
 fig:hist-temp-20
 fig:box-temp
