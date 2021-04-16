@@ -1,7 +1,6 @@
 ---
 title: "Introdução à análise de dados em R: Uma abordagem ambiental"
 author: "Wilson Souza & Thiago Couto"
-thanks: "Em primeiro lugar só podemos agradecer a nossa família (pais, mães, irmãos, filhos e esposas), pois são quem estão a nosso lado a todo instante nos dando suporte. Em segundo lugar gostariamos de agradecer a todos os professores pois foram eles que nos deram a base necessária para que esse livro viesse a existir. Em terceiro lugar gostariamos de agradecer a todos os revisores desta obra. E por último e não menos importante gostariamos de agradecer a vocês que a estão lendo porque é pra vocês que este livro foi construído!"
 linkcolor: "blue"
 urlcolor: "blue"
 toc-title: "Índice"
@@ -32,6 +31,7 @@ colorize <- function(x, color) {
 }
 ```
 
+
 ```{r, echo = FALSE, include = FALSE}
 knitr::opts_chunk$set(fig.pos = 'H')
 ```
@@ -43,7 +43,19 @@ knitr::opts_chunk$set(fig.align = 'center')
 
 # Prefácio {-}
 
-Quem irá escrever?
+## Estrutura do livro {-}
+
+
+Este livro é composto de 4 capítulos, com diversos exemplos e todos com exercícios. O capítulo 1 traz uma breve explicação sobre a linguagem R, as vantagens do uso de sua interface gráfica RStudio, assim como do uso dessa ferramenta para análise de dados. Iremos, ainda neste capítulo, explorar as principais guias do RStudio, como elas estão organizadas e quais as suas principais funcionalidades. O capítulo 2 vem demonstrar como se dá o processo de importação de um conjunto de dados para o RStudio por diferentes meios (linhas de comando e interface gráfica), Fazer a verificação e ajuste dos dados, sumarizar os dados estatisticamente tanto por suas métricas quanto por gráficos, usando os pacotes básicos do R. O capítulo 3 traz a análise do qui-quadrado, tanto para ajuste das frequências quanto para o teste de independência e é apresentado brevemente a construção de suas hipóteses nulas e em detalhes o seu resultado. O capítulo 4 traz a análise do teste-t para uma amostra, duas amostras e pareado os quais, também, tem suas hipóteses apresentadas e detalhamento de seus resultados e a análise de seus pressupostos. Ao fim do livro é disponibilizado um apêndice com a resposta para os exercícios.
+
+
+Alumas marcações são feitas no livro para melhor apresentação, tais como: Nomes de funções estão em azul; Nomes dos pacotes estão em marrom; Observações estão em vermelho; Objetos estão em negrito; Argumentos estão entre aspas; Operadores matemáticos estão em negrito e entre aspas; Nomes em inglês estão em itálico; Classes dos objetos estão em itálico^[pois são nomes em inglês e não iremos detalha-las só reforça-las quando fatores];
+
+
+## Agradecimentos {-}
+
+
+Em primeiro lugar só podemos agradecer a nossa família, pois são quem estão ao nosso lado a todo instante nos dando suporte. Em segundo lugar gostaríamos de agradecer a todos os professores pois foram eles que nos deram a base necessária para que esse livro viesse a existir. Em terceiro lugar gostaríamos de agradecer ao Rodrigo Luiz Lisboa Leitão por seus valiosos comentários e revisão dos capítulos 1 e 2. Por último e não menos importante gostaríamos de agradecer a vocês que estão utilizando o conhecimento presente aqui, porque é para vocês que este livro foi construído.
 
 
 # Sobre os autores {-}
@@ -51,7 +63,7 @@ Quem irá escrever?
 
 **Wilson Souza**
 
-Possui graduação em Licenciatura em Ciências Biológicas pela Universidade Federal do Rio de Janeiro com dupla diplomação com a Universidade de Coimbra - Portugal, Bacharelado em Biologia Marinha pela Universidade Federal do Rio de Janeiro e Mestrado em Oceanografia Biológica pela Universidade Federal do Rio Grande. Desde 2012 trabalha em projetos de monitoramento de populações de camarões com foco em aspectos ecológicos e pesqueiros e em projetos de ecologia do benthos marinho. Aprendeu a linguagem R durante o mestrado e desde então tem se dedicado a ampliar seus conhecimentos em bioestatística voltado para análises ambientais e ecológicas do benthos marinho.
+Possui graduação em Licenciatura Plena em Ciências Biológicas pela Universidade Federal do Rio de Janeiro (UFRJ) com dupla diplomação com a Universidade de Coimbra (UC) - Portugal, Bacharelado em Biologia Marinha pela Universidade Federal do Rio de Janeiro (UFRJ) e Mestrado em Oceanografia Biológica pela Universidade Federal do Rio Grande (FURG). Desde 2012 trabalha em projetos de monitoramento de populações de camarões com foco em aspectos ecológicos e pesqueiros e em projetos de ecologia do benthos marinho. Aprendeu a linguagem R durante o mestrado e desde então tem se dedicado a ampliar seus conhecimentos em análise de dados voltado para monitoramento ambiental e aspectos ecológicos do benthos marinho.
 
 
 **Thiago Couto**

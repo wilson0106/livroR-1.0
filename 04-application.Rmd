@@ -7,7 +7,7 @@ Ao iniciarmos nossos estudos geralmente estamos interessados em saber se alguma 
 ## Teste-t para uma amostra
 
 
-Conduzimos esse teste quando objetivamos verificar se a média de uma dada variável é similar a um valor esperado. Ao falarmos de média percebemos que a variável com a qual estamos lidando é do tipo númerica ou inteiro (a diferença entre ambas consiste na presença de casas decimais), ou seja, quantitativo. Ao compararmos a média de nossa variável a um valor previamente estipulado 2 hipóteses são construídas, a hipótese nula (H0) e a hipótese alternativa (HA) (Tabela \@ref(tab:tab1t)).
+Conduzimos esse teste quando objetivamos verificar se a média de uma dada variável é similar a um valor esperado. Ao falarmos de média percebemos que a variável com a qual estamos lidando é do tipo númerica ou inteiro (a diferença entre ambas consiste na presença de casas decimais, na variável númerica), ou seja, mensurável (= quantitativo). Ao compararmos a média de nossa variável a um valor previamente estipulado duas hipóteses são naturalmente construídas, a hipótese nula (H0) e a hipótese alternativa (HA) (Tabela \@ref(tab:tab1t)).
 
 
 ```{r tab1t, echo = FALSE, message = FALSE}
@@ -31,35 +31,31 @@ kbl(text_tbl, booktabs = T, valign = "c", escape = F, caption = "Principais cara
 ```
 
 
-Caso você ainda não tenha seus dados, vamos verificar como conduzir o teste-t no R por meio de exemplos utilizando valores fictícios. Vamos ensinar como criar valores aleatórios no R.
+Caso você ainda não tenha seus dados, vamos verificar como conduzir o teste-t por meio de exemplos utilizando valores fictícios.
 
 
-Vamos verificar como conduzir esse teste no R por meio de exemplos utilizando valores fictícios.
-
-
-Imagine o seguinte exemplo: 100 camarões foram coletados em um estuário. Suas medidas em relação ao tamanho foram tomadas e deseja-se saber se o seu tamanho médio é similar ou não ao tamanho médio (25,80 mm) da mesma espécie observada em outro estuario.
+Imagine o seguinte exemplo: 100 camarões foram coletados em um estuário. Suas medidas em relação ao tamanho foram tomadas e deseja-se saber se o seu tamanho médio é similar ou não ao tamanho médio (25,80mm) da mesma espécie, observada em outro estuário.
 
 
 A partir do exemplo acima podemos definir nossas hipóteses, onde.
 
-H0: média observada igual à média esperada;
-
-HA: média observada diferente da média esperada;
+* H0: média observada é igual à média esperada;
+* HA: média observada é diferente da média esperada;
 
 
 Vamos começar gerando os dados relativos ao tamanho observado dos camarões que coletamos.
+
+
+Para isso vamos utilizar a função `r colorize("set.seed()", "blue")` que define os números aleatórios que serão gerados. Dessa forma, quando aplicado essa função associada a um número comum, no caso "1234", os números aleatórios que você irá gerar para o objeto **tamanho.camarao**, por exemplo, serão os mesmos dos apresentados aqui.
+
+
+A nossa segunda linha de comando utilizará a função `r colorize("rnorm()", "blue")` o qual gera números aleatórios considerando uma distribuição normal e soma esses valores gerados a uma distribuição uniforme gerada pela função `r colorize("runif()", "blue")`. A estas funções adicionamos argumentos que definem a quantidade de números gerados (argumento "n"), o valor mínimo que pode ser gerado (argumento "min") e o valor máximo que pode ser gerado (argumento "max"). E guardamos o resultado obtido em um objeto chamado **tamanho.camarao**. Relembre que o nome do objeto não deve apresentar espaços ou acentos, que pode gerar problemas e/ou dificuldades na condução das análises.
 
 
 ```{r}
 set.seed(1234)
 tamanho.camarao <- rnorm(n = 100) + runif(n = 100, min = 17, max = 33)
 ```
-
-
-A função `r colorize("set.seed()", "blue")` define os números aleatórios que serão gerados. Dessa forma, quando aplicado essa função associada a um número comum, no caso "1234", os números aleatórios gerados para o objeto tamanho.camarao, através das funções serão os mesmos dos apresentados aqui.
-
- 
-A nossa segunda linha de comando utiliza a função `r colorize("rnorm()", "blue")` o qual gera números aleatórios considerando uma distribuição normal e soma esses valores gerados a uma distribuição uniforme gerada pela função `r colorize("runif()", "blue")`. A estas funções adicionamos argumentos que definem a quantidade de números gerados (argumento "n"), o valor mínimo que pode ser gerado (argumento "min") e o valor máximo que pode ser gerado (argumento "max"). E guardamos o resultado obtido em um objeto chamado tamanho.camarao. Repare que o nome do objeto não apresenta espaços ou acentos, que pode gerar problemas e/ou dificuldades na condução das análises.
 
 
 Vamos verificar o resultado. Basta digitarmos o nome do objeto.
@@ -85,32 +81,38 @@ hist(tamanho.camarao)
 Como podemos ver os valores mínimo e máximo são similares ao que definimos e o número de elementos é o mesmo. Graficamente podemos ver que a distribuição é normal, pois como vimos utilizamos uma função que cria uma distribuição normal com limites definidos pela função `r colorize("runif()", "blue")`. Além disso vemos que há uma maior frequência dos valores em torno de 25 (Figura \@ref(fig:hist-tam-cam)).
 
 
-Vamos verificar, agora se esse valor que geramos (obtivemos de tamanho do camarão) são similares ao observado em outra localidade, por meio do teste-t para uma amostra.
+Vamos verificar se esse valor que geramos (obtivemos de tamanho do camarão) são similares ao observado em outra localidade, por meio do teste-t para uma amostra. Para isso imaginemos que o valor médio esperado para o tamanho desta espécie de camarão em outra localidade é de 25,80mm. Para isso iremos criar o objeto **esperado** que contem esse valor.
 
 
 ```{r}
 esperado = 25.80
+```
+
+
+Agora vamos, por meio da função `r colorize("t.test()", "blue")` realizar o teste-t para verificar se os nossos dados tem média similar ao esperado.
+
+
+```{r}
 t.test(x = tamanho.camarao, mu = esperado)
 ```
 
 
+O primeiro argumento da função `r colorize("t.test()", "blue")`: "x" refere-se ao nosso objeto que contem os dados referentes ao tamanho que coletamos (**tamanho.camarao**) e o segundo argumento "mu" refere-se ao objeto que contem a média do tamanho obtido em outro estuário (**esperado**).
 
-Dois comandos foram executados, no primeiro criamos um objeto, denominado "esperado", que guarda o valor referente ao tamanho de camarão observado em outro estuário (25,80 mm). O segundo comando que realizamos refere-se a função do teste-t no qual inserimos 2 argumentos. O primeiro argumento (x) refere-se ao nosso objeto que contem os dados referentes ao tamanho que coletamos e o segundo argumento (mu) refere-se ao objeto que contem a média do tamanho obtido em outro estuário.
 
-
-Conforme podemos visualizar no resultado temos 9 linhas. A primeira linha nos diz qual teste está sendo conduzido, neste caso é ("One Sample t-test" ou teste-t para uma amostra), a segunda linha nos retorna o conjunto de dados que utilizamos, a terceira linha nos retorna o valor do teste t (t = -2,2432) o grau de liberdade (df = 99) e o valor de probabilidade associado ao teste (p-value = 0,02711), a quarta linha nos retorna qual é nossa hipótese alternativa, caso a aceitemos (a qual nos diz que: a média dos nossos dados não é igual à 25,8), a quinta e sexta linhas nos fornece o intervalo de confiança de 95% dos nossos dados (24,03263 e 25,69173) e da sétima a nona linha refere-se a informação relativa a média dos nossos dados (24,86218).
+Conforme podemos visualizar no resultado temos 9 linhas. A primeira linha nos diz qual teste está sendo conduzido, neste caso é (*One Sample t-test* ou teste-t para uma amostra), a segunda linha nos retorna o conjunto de dados que utilizamos, a terceira linha nos retorna o valor do teste-t (*t* = -2,2432) o grau de liberdade (*df* = 99) e o valor de probabilidade associado ao teste (*p-value* = 0,02711), a quarta linha nos retorna qual é nossa hipótese alternativa, caso a aceitemos (a qual nos diz que: a média dos nossos dados não é igual à 25,8), a quinta e sexta linhas nos fornece o intervalo de confiança de 95% dos nossos dados (24,03263 e 25,69173) e da sétima a nona linha refere-se a informação relativa a média dos nossos dados (24,86218).
 
 
 Em resumo, podemos inferir que a média dos nossos dados é diferente do valor esperado pois o *p-value* foi menor que 0,05. Detalhadamente podemos dizer que: a média do tamanho dos camarões que coletamos (24,86 mm) é estatisticamente menor do que a média presente no outro estuário (25,80 mm) a um nível de confiança de 95%, portanto rejeitamos H0.
 
 
-Ok, verificamos e entendemos como conduzir a análise. Mas há um conceito estatístico importante na análise do teste-t, a caudalidade. No exemplo anterior nós trabalhamos com as hipóteses de que a média de um conjunto de dados é igual (H0) ou diferente (HA) da média esperada. O que implica em dizer que a média que observamos pode ser maior ou menor do que o esperado. Contudo em algumas instâncias podemos querer verificar se a média do nosso conjunto de dados é maior ou igual ou menor ou igual a média esperada e não diferente. Desta diferença na construção da hipótese que emerge o conceito da caudalidade. No exemplo anterior foi testado a hipótese bicaudal que é tido como padrão ("default") na função do R que executamos.
+Ok, verificamos e entendemos como conduzir a análise. Mas há um conceito estatístico importante na análise do teste-t, a caudalidade. No exemplo anterior nós trabalhamos com as hipóteses de que a média de um conjunto de dados é igual (H0) ou diferente (HA) da média esperada. O que implica em dizer que a média que observamos pode ser maior ou menor do que o esperado. Contudo em algumas instâncias podemos querer verificar se a média do nosso conjunto de dados é maior ou igual ou menor ou igual a média esperada e não diferente. Desta diferença na construção da hipótese que emerge o conceito da caudalidade. No exemplo anterior foi testado a hipótese bicaudal que é tido como padrão (*default*) na função do R que executamos.
 
 
 A diferença do teste-t bicaudal para o unicaudal depende da pergunta e hipótese levantada previamente. Então antes de realizar este teste mantenha-se atento ao que se deseja testar.
 
 
-Vejamos o seguinte exemplo: Em um costão rochoso foi observado ao longo do "dia 1" 100 estrelas do mar em diferentes alturas, em relação a baixamar. Essas alturas foram quantificadas (valores serão construídos abaixo no objeto denominado "estrela"). Sabe-se que no dia anterior "dia 0" a altura média das estrelas no mesmo costão foi de 0,90m. Sabe-se também que o "dia 0" foi mais frio e que dias mais frios implicam em maiores alturas.
+Vejamos o seguinte exemplo: Em um costão rochoso foi observado ao longo do "dia 1" 100 estrelas do mar em diferentes alturas, em relação a baixamar. Essas alturas foram mensuradas (valores serão construídos abaixo no objeto denominado **estrela**). Sabe-se que no dia anterior "dia 0" a altura média das estrelas no mesmo costão foi de 0,90m. Sabe-se também que o "dia 0" foi mais frio e que dias mais frios implicam em maiores alturas.
 
 
 Neste exemplo estamos interessado em saber se a altura das estrelas do mar no "dia 1" é menor que a do "dia 0", visto que o "dia 1" é mais quente.
@@ -119,15 +121,16 @@ Neste exemplo estamos interessado em saber se a altura das estrelas do mar no "d
 A partir dessas informações podemos construir as seguintes hipóteses:
 
 * H0: A média da altura das estrelas do mar no dia 1 é maior ou igual ao dia 0;
-
 * HA: A média da altura das estrelas do mar no dia 1 é menor que a do dia 0;
 
 
 Matematicamente podemos escrever as hipóteses da seguinte forma:
 
-H0: $\mu_{dia.1} \geq \mu_{dia.0}$
+* H0: $\mu_{dia.1} \geq \mu_{dia.0}$
+* HA: $\mu_{dia.1} < \mu_{dia.0}$
 
-HA: $\mu_{dia.1} < \mu_{dia.0}$
+
+De maneira similar ao exemplo anterior vamos gerar nosso conjunto de dados que contêm os valores de altura das estrelas do mar no costão rochoso, a diferença é que iremos inserir o argumento "sd" na função `r colorize("rnorm()", "blue")` que corresponde ao desvio padrão (de 0,02) dos dados normais que estamos gerando e guardar esse resultado no objeto **estrelas**.
 
 
 ```{r}
@@ -136,7 +139,7 @@ estrelas <- rnorm(n = 100, sd = 0.02) + runif(n = 100, min = 0.4, max = 1.3)
 ```
 
 
-Observe que geramos os dados de maneira similar ao que fizemos no exemplo anterior (inserindo os valores das alturas das estrelas em um objeto chamado estrelas), a diferença é que inserimos o argumento "sd" na função `r colorize("rnorm()", "blue")` que corresponde ao desvio padrão (de 0,02) dos dados normais que estamos gerando.
+Conforme também fizemos anteriormente calcularemos algumas métricas para entender os dados e um histograma básico (Figura \@ref(fig:estrelas-hist)) para visualizar a forma dos dados que representam a altura que as estrelas se encontram no ambiente.
 
 
 ```{r estrelas-hist, fig.cap = "Histograma dos valores relativos a altura das estrelas do mar no costão rochoso", out.width='70%'}
@@ -148,28 +151,32 @@ hist(estrelas)
 ```
 
 
-Conforme também fizemos anteriormente calculamos algumas métricas para entender os dados e um histograma básico (Figura \@ref(fig:estrelas-hist)) para visualizar a forma dos dados que representam a altura que as estrelas se encontram no ambiente.
+Agora vamos criar o objeto **dia.0** que contêm o valor referente a altura das estrelas no dia 0.
 
 
 ```{r}
 dia.0 = 0.90
+```
+
+
+Agora o teste-t onde avaliaremos se a média da altura das estrelas do mar que obtivemos para o "dia 1" são maiores ou iguais ao "dia 0", utilizando o argumento "*alternative*" e definido-o como *less*. Este argumento pode ser definido de 3 formas: *two-sided* que é o padrão (*default*), *greater* ou *less*. O argumento "*alternative*" seguirá o sinal da hipótese alternativa (HA) que foi construída para o teste.
+
+
+```{r}
 t.test(x = estrelas, mu = dia.0, alternative = "less")
 ```
 
 
-Agora construímos um objeto chamado dia.0 que nos retorna o valor médio encontrado para altura das estrelas do mar no costão no "dia 0". Seguimos com o teste-t onde avaliamos se a média da altura das estrelas do mar que obtivemos para o "dia 1" são maiores ou iguais ao "dia 0", utilizando o argumento "alternative" e definido-o como "less". Este argumento pode ser definido de 3 formas: "two-sided" que é o padrão ("default"), "greater" ou "less". O argumento "alternative" seguirá o sinal da hipótese alternativa (HA) que foi construída para o teste.
-
-
-Com isso podemos avaliar o resultado que é similar ao que vimos anteriormente com poucas mudanças. A primeira linha (One Sample t-test) informa sobre o teste realizado. A segunda linha indica o nome do conjunto de dados que inserimos. A terceira linha nos dá o valor do teste-t (t = -2,2073), do grau de liberdade (df = 99) e da probabilidade associada ao teste (*p-value* = 0.0148). A quarta linha indica a hipótese alternativa, caso seja aceita (o que é o caso), que é verdade que a média da altura das estrelas do mar do "dia 1" é menor que 0,90m. A quinta e sexta linha indicam o intervalo de confiança de 95% dos nossos dados (-Inf e 0,8870986). A sétima, oitava e nona linha referem-se a média do "dia 1".
+Com isso podemos avaliar o resultado que é similar ao que vimos anteriormente com poucas mudanças. A primeira linha (*One Sample t-test*) informa sobre o teste realizado. A segunda linha indica o nome do conjunto de dados que inserimos. A terceira linha nos dá o valor do teste-t (*t* = -2,2073), do grau de liberdade (*df* = 99) e da probabilidade associada ao teste (*p-value* = 0.0148). A quarta linha indica a hipótese alternativa, caso seja aceita (o que é o caso), que é verdade que a média da altura das estrelas do mar do "dia 1" é menor que 0,90m. A quinta e sexta linha indicam o intervalo de confiança de 95% dos nossos dados (-Inf e 0,8870986). A sétima, oitava e nona linha referem-se a média do "dia 1".
 
 
 Como podemos notar pelo *p-value* rejeitamos nossa hipótese nula (H0). Portanto a média na altura das estrelas do mar do "dia 1" (aproximadamente 0,85m) é menor que a do dia "0" (0,90m).
 
 
-Outro conceito importante de qualquer teste inferencial é o nível de confiança^[ Consiste na subtração do nível de significância (alfa) de 1. Ou seja: nível de confiança = 1 - alfa.]. Até o presente momento consideramos o nível de confiança de 95%. Se quisermos altera-lo no teste-t devemos adicionar o argumento "conf.level" em proporção (valores entre 0 e 1). A sua alteração implica na alteração do nível de significância e consequentemente na zona de rejeição da hipótese nula. Se aumentarmos o seu valor fica mais difícil rejeitarmos a hipótese nula e se diminuirmos o seu valor fica mais fácil rejeitar a hipótese nula. Vejamos outro exemplo.
+Outro conceito importante de qualquer teste inferencial é o nível de confiança^[Consiste na subtração do nível de significância (alfa) de 1. Ou seja: nível de confiança = 1 - alfa.]. Até o presente momento consideramos o nível de confiança de 95%. Se quisermos altera-lo no teste-t devemos adicionar o argumento "conf.level" em proporção (valores entre 0 e 1). A sua alteração implica na alteração do nível de significância e consequentemente na zona de rejeição da hipótese nula. Se aumentarmos o seu valor fica mais difícil rejeitarmos a hipótese nula e se diminuirmos o seu valor fica mais fácil rejeitar a hipótese nula. Vejamos outro exemplo.
 
 
-Um pesquisador avaliou o tamanho de cracas incrustados no casco de uma embarcação. Objetivando saber se o tamanho médio de cracas difere do teórico esperado (20 mm) um teste-t bicaudal foi aplicado a um nível de confiança de 95% e 99%.
+Um pesquisador avaliou o tamanho de cracas incrustadas no casco de uma embarcação. Objetivando saber se o tamanho médio de cracas difere do teórico esperado (13,5 mm) um teste-t bicaudal foi aplicado a um nível de confiança de 95% e 99%.
 
 
 Vamos descrever as hipóteses e realizar a análise para ambos os níveis de confiança.
@@ -177,18 +184,16 @@ Vamos descrever as hipóteses e realizar a análise para ambos os níveis de con
 
 Neste caso temos as seguintes hipóteses:
 
-H0: O tamanho médio observado é similar ao teórico
+* H0: O tamanho médio observado é similar ao teórico
+* HA: O tamanho médio observado difere do teórico
 
-HA: O tamanho médio observado difere do teórico
 
-
-Conforme já realizado anteriormente vamos gerar os dados e explora-los com algumas métricas estatśticas e gráficas de maneira similar ao que fizemos no exemplo anterior.
+Conforme já realizado anteriormente vamos gerar os dados iguais aos gerados aqui por meio das funções `r colorize("set.seed()", "blue")`, `r colorize("rnorm()", "blue")` e `r colorize("runif()", "blue")`, guardando o seu resultado em um objeto chamado **cracas**e explora-los com algumas métricas estatśticas e gráficas de maneira similar ao que fizemos no exemplo anterior.
 
 
 ```{r craca-hist, fig.cap = "Histograma dos valores relativos ao tambanho das cracas incrustantes", out.width='70%'}
 set.seed(1234)
 cracas <- rnorm(n = 100, sd = 1.9) + runif(n = 100, min = 5, max = 25)
-
 mean(cracas)
 min(cracas)
 max(cracas)
@@ -197,7 +202,7 @@ hist(cracas)
 ```
 
 
-Agora que visualizamos as métricas e graficamos os dados (Figura \@ref(fig:craca-hist)), sigamos com a condução da análise.
+Agora que visualizamos as métricas e graficamos os dados (Figura \@ref(fig:craca-hist)), sigamos construindo o objeto que guarda o valor teórico (13,5mm) e com a condução da análise.
 
 
 ```{r}
@@ -216,10 +221,13 @@ Quando representamos o nível de confiança (representado pelo argumento "conf.l
 Vejamos o nosso resultado. 
 
 
-No primeiro caso ("conf.level = 0.95") temos *p-value* = 0.02289, como este valor é menor que 0,05 (nosso nível de significância), isso quer dizer que a média teórica está fora do intervalo de confiança dos dados, portanto rejeitamos a hipótese nula.
+No primeiro caso ("*conf.level* = 0.95") temos *p-value* = 0,02289, como este valor é menor que 0,05 (nosso nível de significância), isso quer dizer que a média teórica está fora do intervalo de confiança dos dados, portanto rejeitamos a hipótese nula.
 
 
-No segundo caso ("conf.level = 0.99") temos o mesmo *p-value*, contudo este valor é maior que nosso nível de significância (0,01), isso quer dizer que nossa média teórica está dentro do intervalo de confiança, portanto aceitamos a hipótese nula de que a média observada é similar a média teórica.
+No segundo caso ("conf.level = 0.99") temos o mesmo *p-value* (0,02289), contudo este valor é maior que nosso nível de significância (0,01), isso quer dizer que nossa média teórica está dentro do intervalo de confiança, portanto aceitamos a hipótese nula de que a média observada é similar a média teórica.
+
+
+`r colorize("OBS: Em um primeiro momento pode parecer confuso, portanto releia o exemplo acima, assim como outras literaturas.", "red")`
 
 
 O nível de significância a aplicar nos seus dados depende das informações que possui sobre o organismo ou o ambiente que está estudando. Apesar da regra-de-bolso dizer 0,05 e por padrão o R definir esse nível de significância é necessário entender o que ele representa para seus dados e qual a implicação para sua hipótese e as medidas que serão tomadas. Uma dica importante é: reporte sempre o intervalo de confiança, indique o nível de significância que foi aplicado e no seu texto deixe claro o porquê de sua escolha, principalmente se for diferente do que é definido como padrão. 
@@ -227,7 +235,10 @@ O nível de significância a aplicar nos seus dados depende das informações qu
 
 **BÔNUS:**
 
-Embora não seja comum, podemos plotar um gráfico que represente o nosso resultado estatístico como uma curva de densidade no qual é representado o valor do teste-t, o grau de liberdade e o valor de probabilidade associado. Para isso vamos usar um pacote o qual precisa ser instalado chamado `r colorize("webr", "green")` e precisamos carrega-lo usando a função `r colorize("library()", "blue")`. Após isso é só inserir a função que desenvolve o teste-t dentro da função `r colorize("plot()", "blue")`. Veja o resultado para ambos os níveis de confiança estabelecidos previamente. OBS: Uma vez instalado o pacote não precisa instala-lo novamente apenas carrega-lo se estiver iniciando o R pela primeira vez.
+Embora não seja comum, podemos plotar um gráfico que represente o nosso resultado estatístico como uma curva de densidade no qual é representado o valor do teste-t, o grau de liberdade e o valor de probabilidade associado. Para isso vamos usar um pacote o qual precisa ser instalado chamado `r colorize("webr", "brown")` e precisamos carrega-lo usando a função `r colorize("library()", "blue")`. Após isso é só inserir a função que desenvolve o teste-t dentro da função `r colorize("plot()", "blue")`. Veja o resultado para ambos os níveis de confiança estabelecidos previamente. 
+
+
+`r colorize("OBS: Uma vez instalado o pacote não precisa instala-lo novamente apenas carrega-lo se estiver iniciando o R pela primeira vez.", "red")`
 
 
 ```{r, message = FALSE}
@@ -235,6 +246,8 @@ install.packages("webr")
 library(webr)
 ```
 
+
+Após instalar e carregar o pacote devemos inserir o teste-t dentro da função `r colorize("plot()", "blue")`. Veja os dois exemplos abaixo.
 
 
 ```{r cracas-dens-95, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para o tamanho das cracas em relação a média teórica a um intervalo de confiança de 95\\%. O ponto azul indica o valor do teste.", out.width = '70%'}
@@ -248,7 +261,8 @@ plot(t.test(x = cracas, mu = teorico, conf.level = 0.99))
 ```
 
 
-Verifique que esses plots nos fornecem as curvas do teste-t aos intervalos de confiança de 95% (Figura \@ref(fig:cracas-dens-95)) e 99% (Figura \@ref(fig:cracas-dens-99)), demarca os limites inferior e superior de vermelho e marca como ponto azul na curva de densidade o valor do teste-t associado. Como esse valor está dentro da região demarcada no intervalo de confiança de 95%, neste caso rejeitamos a hipótese nula e como no intervalo de confiança de 99% o ponto azul está fora da região demarcada aceitamos a hipótese nula.
+Verifique que esses plots nos fornecem as curvas do teste-t os intervalos de confiança de 95% (Figura \@ref(fig:cracas-dens-95)) e 99% (Figura \@ref(fig:cracas-dens-99)), demarca os limites inferior e superior de vermelho e marca como ponto azul na curva de densidade o valor do teste-t associado. Como esse valor está dentro da região demarcada no intervalo de confiança de 95%, neste caso rejeitamos a hipótese nula e como no intervalo de confiança de 99% o ponto azul está fora da região demarcada aceitamos a hipótese nula.
+
 
 ## Teste-t para duas amostras
 
@@ -280,25 +294,25 @@ kbl(text_tbl, booktabs = T, valign = "c", escape = F, caption = "Principais cara
 Partindo desse objetivo as hipóteses nula e alternativa desse teste podem ser escritas da seguinte forma:
 
 * H0: A diferença na média da variável quantitativa dos grupos é igual a 0;
-
 * HA: A diferença na média da variável quantitativa dos grupos é diferente de 0;
 
 
 Outra forma de apresentarmos as hipóteses relativa a este teste é:
 
 * H0: A média da variável quantitativa é igual entre grupos;
-
 * HA: A média da variável quantitativa é diferente entre grupos;
 
 
 Outra forma de escrevermos a hipótese é em relação a caudalidade do teste e, se unicaudal, pode ser escrita da seguinte forma:
 
 * H0: A média da variável quantitativa é maior ou igual (ou menor ou igual) entre grupos;
-
 * HA: A média da variável quantitativa é menor (ou maior) entre grupos;
 
 
-A partir desse teste, alguns pressupostos estatísticos precisam ser avaliados e portanto algumas análises precisam ser realizadas antes da interpretação do resultado do teste-t. Pressupostos como normalidade (ambos os grupos devem provir de uma população com distribuição normal) e homocedasticidade (A variância entre os dois grupos devem ser iguais). Demonstraremos a frente como realizar alguns desses testes. Mas, primeiro vamos gerar os dados a serem trabalhados para esta etapa. Execute o código abaixo e você irá visualizar no "environment" do seu RStudio um objeto chamado "gastropode" que corresponde a um data frame com o conjunto de dados que iremos trabalhar.
+A partir desse teste, alguns pressupostos estatísticos precisam ser avaliados e portanto algumas análises precisam ser realizadas antes da interpretação do resultado do teste-t. Pressupostos como normalidade (ambos os grupos devem provir de uma população com distribuição normal) e homocedasticidade (A variância entre os dois grupos devem ser iguais). Demonstraremos a frente como realizar alguns desses testes. Mas, primeiro vamos gerar os dados a serem trabalhados para esta etapa. Execute o código abaixo e você irá visualizar no *environment* do seu RStudio um objeto chamado **gastropode** que corresponde a um *data frame* com o conjunto de dados que iremos trabalhar.
+
+
+`r colorize("OBS: Neste momento não entraremos em detalhes sobre os comandos aplicados para construção dos dados.", "red")`
 
 
 ```{r}
@@ -314,16 +328,12 @@ rm(list = "grupos", "alimento.A", "alimento.B", "Alimento")
 ```
 
 
-`r colorize("Neste momento não entraremos em detalhes sobre os comandos aplicados para construção dos dados acima.", "red")`
-
-
 Vamos, agora, verificar os dados por meio da função `r colorize("head()", "blue")` e a estrutura dos dados por meio da função `r colorize("str()", "blue")` e alterar a estrutura dos dados se necessário.
 
 
 ```{r}
 head(gastropode)
 str(gastropode)
-
 gastropode$Alimento <- as.factor(gastropode$Alimento)
 gastropode$Peso <- as.numeric(gastropode$Peso)
 str(gastropode)
@@ -337,6 +347,12 @@ Agora que importamos e organizamos nossa planilha vamos analisar nosso exemplo.
 
 
 Antes de conduzirmos o teste-t vamos praticar fazendo a avaliação gráfica e númerica dos dados.
+
+
+Os comandos abaixo realizam: o histograma dos dados para Alimento A (Figura \@ref(fig:hist-ali-A)), o histograma dos dados para Alimento B (Figura \@ref(fig:hist-ali-B)) e o boxplot para ambos os dados (Figura \@ref(fig:box-ali)), respectivamente.
+
+
+Os 2 primeiros gráficos consistem em histogramas em relação aos dados de peso por Alimento. Na primeira linha indicaremos a variável peso dentro da planilha **gastropode** por meio do operador matemático "**$**" (cifrão) e selecionamos os dados correspondentes ao Alimento utilizando colchetes [] dentro do qual selecionamos a variável Alimento dentro da planilha **gastropode** e por meio do sinal de igual duplicado (==) indicamos entre aspas ("") o grupo (ou categoria) que desejamos. Os demais argumentos já são bem conhecidos e iguais para ambos os histogramas, diferindo apenas o título do gráfico que é definido pelo argumento "*main*".
 
 
 ```{r hist-ali-A, fig.cap = "Histograma com valores da mudança do peso dos gastrópodes após a dieta com o Alimento A", out.width='70%'}
@@ -358,18 +374,13 @@ hist(gastropode$Peso [gastropode$Alimento == "Alimento B"],
      xlim = c(-0.5, 1.5))
 ```
 
+
+O Boxplot resume os dados por Alimento e nos indica outras métricas (quartis), como vimos anteriormente no tópico sobre gráficos.
+
+
 ```{r box-ali, fig.cap = "Boxplot com os valores da alteração do peso dos gastrópodes por tipo de alimento", out.width='70%'}
 boxplot(Peso ~ Alimento, data = gastropode)
 ```
-
-
-Os comandos acima realizam: o histograma dos dados para Alimento A (Figura \@ref(fig:hist-ali-A)), o histograma dos dados para Alimento B (Figura \@ref(fig:hist-ali-B)) e o boxplot para ambos os dados (Figura \@ref(fig:box-ali)), respectivamente.
-
-
-Os 2 primeiros gráficos consistem em histogramas em relação aos dados de peso por Alimento. Na primeira linha indicamos a variável peso dentro da planilha gastropode por meio do operador matemático $ (cifrão) e selecionamos os dados correspondentes ao Alimento utilizando colchetes [] dentro do qual selecionamos a variável Alimento dentro da planilha gastropode e por meio do sinal de igual duplicado (==) indicamos entre aspas ("") o grupo (ou categoria) que desejamos. Os demais argumentos já são bem conhecidos e iguais para ambos os histogramas, diferindo apenas o título do gráfico que é definido pelo argumento "main".
-
-
-O Boxplot resume os dados por Alimento e nos indica outras métricas (quartis), como vimos anteriormente no tópico sobre gráficos.
 
 
 Mas se desejarmos observar os valores numéricos que resumem os dados, podemos seguir o que aprendemos anteriormente.
@@ -377,14 +388,16 @@ Mas se desejarmos observar os valores numéricos que resumem os dados, podemos s
 
 ```{r}
 summary(gastropode)
-
 mean(gastropode$Peso)
 mean(gastropode$Peso [gastropode$Alimento == "Alimento A"])
 mean(gastropode$Peso [gastropode$Alimento == "Alimento B"])
 ```
 
 
-Utilizando o pacote `r colorize("Rmisc", "green")` temos uma forma mais simples de escrita e eficiente para observar esses valores e algumas outras métricas (ex.: número amostral, média, desvio padrão, erro padrão e intervalo de confiança).
+Utilizando o pacote `r colorize("Rmisc", "brown")` temos uma forma mais simples de escrita e eficiente para observar esses valores e algumas outras métricas.
+
+
+`r colorize("OBS: Não se esqueça de carregar o pacote por meio da função", "red")` `r colorize("library()", "blue")``r colorize(".", "red")`
 
 
 ```{r}
@@ -393,21 +406,20 @@ summarySE(data = gastropode, measurevar = "Peso", groupvars = "Alimento")
 ```
 
 
-Ok, até aqui observamos como estão os nossos dados e podemos ver que a administração do "Alimento A" resultou em um maior ganho de peso pelos gastropodes do que a "Alimento B". Mas será que o que observamos grafica e numericamente se reflete estatisticamente? Vamos a nossa avaliação dos pressupostos do teste-t para duas amostras e se cumpridos vamos para o teste-t.
+Até o momento observamos como estão os nossos dados e podemos ver que a administração do "Alimento A" resultou em um maior ganho de peso pelos gastropodes do que a "Alimento B". Mas será que o que observamos grafica e numericamente se reflete estatisticamente? Vamos a nossa avaliação dos pressupostos do teste-t para duas amostras e se cumpridos vamos para o teste-t.
 
 
-Uma das formas mais convencionais de avaliar a normalidade é pelo teste de Shapiro-Wilks e a homocedasticidade pelo teste de Bartlett. Vamos avalia-las.
+Uma das formas mais convencionais de avaliar a normalidade é pelo teste de Shapiro-Wilks aplicando a função `r colorize("shapiro.test()", "blue")` e a homocedasticidade pelo teste de Bartlett `r colorize("bartlett.test()", "blue")`. Para o teste de normalidade de Shapiro-Wilks devemos aplica-lo à variável númerica desejada (ex: Peso) e realiza-lo para cada categória (ex: "Alimento A" e "Alimento B") da variável categorica escolhida (ex: Alimento) separadamente. Para o teste de homocedasticidade de Bartlett devemos avaliar a variável mensurável (ex: Peso) em função da variável categorica (ex: Alimento). Veja os comandos e resultado abaixo.
 
 
 ```{r}
 shapiro.test(gastropode$Peso [gastropode$Alimento == "Alimento A"])
 shapiro.test(gastropode$Peso [gastropode$Alimento == "Alimento B"])
-
 bartlett.test(Peso ~ Alimento, data = gastropode)
 ```
 
 
-Como podemos observar, ambos os grupos apresentam dados normais e homocedásticos, para um nível de confiança de 95%, já que o *p-value* foi superior a 0,05. Dessa forma vamos dar continuidade a nossa análise e verificar se as médias dos grupos são diferentes.
+Como podemos observar, ambos os grupos apresentam dados normais e homocedásticos, para um nível de confiança de 95%, já que o *p-value* foi superior a 0,05. Dessa forma vamos dar continuidade a nossa análise e verificar se as médias dos grupos são diferentes aplicando a já conhecida função `r colorize("t.test()", "blue")`.
 
 
 ```{r}
@@ -418,13 +430,13 @@ t.test(Peso ~ Alimento,
 ```
 
 
-Repare que a forma da escrita se alterou um pouco. Mas como podem ver, nada complicado. Agora escrevemos a variável quantitativa (peso) em função da (~) variável categórica (Alimento). Guarde bem essa forma de escrita (similar ao que realizamos no boxplot e barplot) pois ela será utilizada para praticamente todos os testes a partir daqui e para inúmeras outras funções. Adcionamos o argumento "data" que indica a planilha de onde estamos utilizando as variáveis, o argumento "var.equal" o qual indica que a variância entre os grupos é igual^[por padrão o valor lógico para este argumento é FALSE e a função `r colorize("t.test()", "blue")` realiza o teste de Welch)] e o argumento "conf.level" o qual define o nível de confiança com qual estamos trabalhando.
+Repare que a forma da escrita se alterou um pouco. Mas como podem ver, nada complicado. Agora escrevemos a variável mensurável (Peso) em função da (~) variável categórica (Alimento). Guarde bem essa forma de escrita (similar ao que realizamos no boxplot e barplot) pois ela será utilizada para praticamente todos os testes a partir daqui e para inúmeras outras funções. Adcionamos o argumento "*data*" que indica a planilha de onde estamos utilizando as variáveis, o argumento "*var.equal*" o qual indica que a variância entre os grupos é igual^[por padrão o valor lógico para este argumento é FALSE e a função `r colorize("t.test()", "blue")` realiza o teste de Welch)] e o argumento "*conf.level*" o qual define o nível de confiança com qual estamos trabalhando.
 
 
-De acordo com nosso resultado podemos ver que o valor do teste-t é 14,065, o grau de liberdade de 98 (o qual consiste no total de observações subtraído de um por grupo), o valor de probabilidade associado ao teste ($2,2\times10^{-16}$), o intervalo de confiança de 95% (0,415 e 0,551) que refere-se a diferença da média entre os grupos (a diferença da média dos grupos é: 0,70690 - 0,22348 = 0,48342), ou seja, o intervalo de confiança é em função dessa diferença e as últimas linhas do resultado representam as médias de alteração do peso para cada Alimento (Alimento A = 0,70690 e Alimento B = 0,22348). De acordo com esse resultado refutamos a hipótese nula de que as médias são similares. Portanto podemos dizer que dependendo do Alimento (A ou B) utilizada na dieta podemos ter diferentes alterações no peso dos gastropodes.
+De acordo com nosso resultado podemos ver que o valor do teste-t é 14,065, o grau de liberdade de 98 (o qual consiste no total de observações subtraído de um por grupo), o valor de probabilidade associado ao teste (*p-value* = $2,2\times10^{-16}$), o intervalo de confiança de 95% (0,415 e 0,551) que refere-se a diferença da média entre os grupos (a diferença da média dos grupos é: 0,70690 - 0,22348 = 0,48342), ou seja, o intervalo de confiança é em função dessa diferença e as últimas linhas do resultado representam as médias de alteração do peso para cada Alimento (Alimento A = 0,70690 e Alimento B = 0,22348). De acordo com esse resultado refutamos a hipótese nula de que as médias são similares. Portanto podemos dizer que dependendo do Alimento (A ou B) utilizada na dieta podemos ter diferentes alterações no peso dos gastropodes.
 
 
-Da mesma forma que avaliamos para o teste-t de uma amostra, podemos plotar o resultado como um gráfico da função de densidade do teste-t. Só devemos lembrar de carregar o pacote `r colorize("webr", "green")`.
+Da mesma forma que avaliamos para o teste-t de uma amostra, podemos plotar o resultado como um gráfico da função de densidade do teste-t. Só devemos lembrar de carregar o pacote `r colorize("webr", "brown")`.
 
 
 ```{r testetduasdens, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para a alteração do peso de gastrópodes em relação ao alimento a um intervalo de confiança de 95\\%. O ponto azul indica o valor do teste.", out.width = '70%'}
@@ -439,7 +451,10 @@ plot(t.test(Peso ~ Alimento,
 Neste gráfico podemos ver que o resultado do teste-t (Figura \@ref(fig:testetduasdens)), indicado pelo ponto azul, está muito além do nível da zona de rejeição, indicando que os dois grupos apresentam médias bem diferentes, ou seja, a diferença entre as duas médias é altamente significativa.
 
 
-Vamos exercitar nosso conhecimento em R e teste-t com um outro exemplo (Gere a planilha abaixo).
+Vamos exercitar nosso conhecimento em R e teste-t com um outro exemplo (Gere os dados abaixo).
+
+
+`r colorize("OBS: Neste momento não entraremos em detalhes sobre os comandos aplicados para construção dos dados.", "red")`
 
 
 ```{r}
@@ -455,17 +470,19 @@ rm(list = "grupos", "ano.0", "ano.20", "ano")
 ```
 
 
-Imagine que durante um ano você mensurou a temperatura de uma lagoa três vezes por mês durante todos os meses ao longo de 1 ano. 20 anos depois você retornou a lagoa e mensurou novamente a temperatura três vezes por mês durante um ano. Considerando um nível de confiança de 99% a temperatura é igual ou diferente entre os anos?
+Imagine que durante um ano você mensurou a temperatura de uma lagoa três vezes por mês durante todos os meses ao longo de um ano. 20 anos depois você retornou a lagoa e mensurou novamente a temperatura três vezes por mês durante um ano. Considerando um nível de confiança de 99% a temperatura é igual ou diferente entre os anos?
 
 
 A primeira coisa que devemos fazer é escrever nossa hipótese. Vamos a ela.
 
-H0: A média da temperatura é igual entre os anos ($\mu_{ano0} = \mu_{ano 20}$);
+* H0: A média da temperatura é igual entre os anos ($\mu_{ano0} = \mu_{ano 20}$);
+* HA: A média da temperatura é diferente entre os anos ($\mu_{ano0} \neq \mu_{ano 20}$);
 
-HA: A média da temperatura é diferente entre os anos ($\mu_{ano0} \neq \mu_{ano 20}$);
+
+Com a hipótese construída vamos verificar a estrutura dos dados (modificar se necessário) e sumarizar nossos dados grafica e estatisticamente. Conforme realizado no exemplo anterior.
 
 
-Com a hipótese construída vamos verificar a estrutura dos dados (modificar se necessário) e sumarizar nossos dados grafica e matematicamente.
+Os comandos abaixo realizam a análise gráfica: o histograma dos valores de temperatura no "ano 0" (Figura \@ref(fig:hist-temp-0)), o histograma dos valores de temperatura no "ano 20" (Figura \@ref(fig:hist-temp-20)) e o boxplot para ambos os dados (Figura \@ref(fig:box-temp)), respectivamente. Quanto ao seu resultado podemos notar uma maior temperatura média anual da lagoa 20 anos depois da primeira amostragem.
 
 
 ```{r}
@@ -477,6 +494,7 @@ lagoa$Temperatura <- as.numeric(lagoa$Temperatura)
 str(lagoa)
 ```
 
+
 ```{r hist-temp-0, fig.cap = "Histograma com valores de temperatura da lagoa no Ano 0.", out.width='70%'}
 hist(lagoa$Temperatura [lagoa$Ano == "Ano 0"], 
      xlab = "Temperatura (°C)", 
@@ -485,6 +503,7 @@ hist(lagoa$Temperatura [lagoa$Ano == "Ano 0"],
      ylim = c(0, 15),
      xlim = c(15, 19))
 ```
+
 
 ```{r hist-temp-20, fig.cap = "Histograma com valores de temperatura da lagoa no Ano 20.", out.width='70%'}
 hist(lagoa$Temperatura [lagoa$Ano == "Ano 20"], 
@@ -495,32 +514,31 @@ hist(lagoa$Temperatura [lagoa$Ano == "Ano 20"],
      xlim = c(15, 19))
 ```
 
+
 ```{r box-temp, fig.cap = "Boxplot com os valores de temperatura da lagoa por ano.", out.width='70%'}
 boxplot(Temperatura ~ Ano, data = lagoa)
 ```
 
 
-Como podem verificar os comandos para a análise gráfica não diferiu do que fizemos no exemplo anterior. Os comandos acima realizam: o histograma dos valores de temperatura no "ano 0" (Figura \@ref(fig:hist-temp-0)), o histograma dos valores de temperatura no "ano 20" (Figura \@ref(fig:hist-temp-20)) e o boxplot para ambos os dados (Figura \@ref(fig:box-temp)), respectivamente. Quanto ao seu resultado podemos notar uma maior temperatura média anual da lagoa 20 anos depois da primeira amostragem.
+Abaixo temos o comando para realizar a sumarização numérica dos dados.
 
 
 ```{r}
 summary(lagoa)
-
 library(Rmisc)
 summarySE(data = lagoa, measurevar = "Temperatura", groupvars = "Ano")
 ```
 
 
-Aplicando a função `r colorize("summarySE()", "blue")` do pacote `r colorize("Rmisc", "green")` obtivemos sumarizamos nossos dados como mostrado acima e em relação aos valores de média e desvios podemos observar que a média é bem próxima, mas será que elas são estatisticamente iguais? Para isso vamos realizar o teste-t.
+Aplicando a função `r colorize("summarySE()", "blue")` do pacote `r colorize("Rmisc", "brown")` sumarizamos nossos dados como mostrado acima e em relação aos valores de média e desvios podemos observar que a média é bem próxima, mas será que elas são estatisticamente iguais? Para isso vamos realizar o teste-t.
 
 
-Antes do teste vamos calcular os pressupostos do teste, normalidade e homocedasticidade.
+Antes do teste-t vamos calcular os pressupostos requeridos, normalidade e homocedasticidade. Conforme realizado no exemplo anterior.
 
 
 ```{r}
 shapiro.test(lagoa$Temperatura [lagoa$Ano == "Ano 0"])
 shapiro.test(lagoa$Temperatura [lagoa$Ano == "Ano 20"])
-
 bartlett.test(Temperatura ~ Ano, data = lagoa)
 ```
 
@@ -533,7 +551,6 @@ t.test(Temperatura ~ Ano,
        data = lagoa,
        var.equal = TRUE,
        conf.level = 0.99)
-
 t.test(Temperatura ~ Ano, 
        data = lagoa,
        var.equal = FALSE,
@@ -541,13 +558,13 @@ t.test(Temperatura ~ Ano,
 ```
 
 
-Como podem notar a forma de escrever o teste é similar ao exemplo anterior as alterações consistem nas variáveis e conjunto de dados utilizado e como foi pedido no teste a alteração do nível de confiança para 99% (conf.level = 0,99) e os dois teste-t (com variância igual e com variância desigual - Welch).
+Como podem notar a forma de escrever o teste é similar ao exemplo anterior as alterações consistem nas variáveis e no conjunto de dados utilizado e como foi pedido no teste a alteração do nível de confiança para 99% (conf.level = 0,99) e os dois teste-t (com variância igual e com variância desigual - Welch).
 
 
-Olhando para os dois resultados ambos os testes demonstraram diferenças significativas entre os anos, pois o *p-value* foi menor que 0,01 (lembrar que como o nível de confiança foi alterado para 0,99 a significância só ocorrerá se o *p-value* for menor que 0,01, como é o caso). Porém podemos ver que não há muita diferença em relação aos valores de ambos os teste-t, pois como ressaltamos a aplicação do teste de Welch apresenta maior peso quando as variâncias são desiguais e o número amostral de um dos grupos é muito pequeno (<10).
+Olhando para os dois resultados ambos os testes demonstraram diferenças significativas entre os anos, pois o *p-value* foi menor que 0,01 (lembrar que como o nível de confiança foi alterado para 0,99 a significância só ocorrerá se o *p-value* for menor que 0,01, como é o caso). Porém podemos ver que não há muita diferença em relação aos valores de ambos os testes-t, pois como ressaltamos a aplicação do teste de Welch apresenta maior peso quando as variâncias são desiguais e o número amostral de um dos grupos é muito pequeno (<10).
 
 
-Assim como fizemos anteriormente vamos olhar o resultado em relação a distribuição da função de densidade do teste-t para um nível de confiança de 99% (Figura \@ref(fig:testet-duas-temp-dens)). Só devemos lembrar de carregar o pacote `r colorize("webr", "blue")` se ainda não foi carregado.
+Assim como fizemos anteriormente vamos olhar o resultado em relação a distribuição da função de densidade do teste-t para um nível de confiança de 99% (Figura \@ref(fig:testet-duas-temp-dens)). Só devemos lembrar de carregar o pacote `r colorize("webr", "brown")`, se ainda não foi carregado.
 
 
 ```{r testet-duas-temp-dens, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para comparação da temperatura em um lago entre dois anos a um intervalo de confiança de 99\\%. O ponto azul indica o valor do teste.", out.width='70%'}
@@ -566,6 +583,7 @@ De acordo com esse exemplo podemos afirmar que os anos diferem entre si e que em
 
 
 Aplicamos este teste quando as duas amostras de uma variável categórica são independentes e desejamos verificar se os pares de observações entre os grupos diferem entre si (Tabela \@ref(tab:tab3t)). Cada observação de ambas as amostras devem estar associadas para podermos dizer que ocorrem em pares.
+
 
 ```{r tab3t, echo = FALSE, message = FALSE}
 library(kableExtra)
@@ -588,17 +606,18 @@ kbl(text_tbl, booktabs = T, valign = "c", escape = F, caption = "Principais cara
 ```
 
 
-Vejamos um exemplo de como conduzir essa análise no R
+Vejamos um exemplo de como conduzir essa análise.
 
 
-Imagine que dois pesquisadores embarcaram com objetivo de fazer contagem de aves em alto mar. Após 20 dias de observações independentes entre os observadores obtivemos os dados abaixo.
-
+Imagine que dois pesquisadores embarcaram com objetivo de fazer contagem de aves em alto mar. Após 20 dias de observações, independentes entre os observadores, obtivemos os dados abaixo.
 
 Começaremos gerando os dados e o modificando conforme o necessário.
 
 
+`r colorize("OBS: Neste momento não entraremos em detalhes sobre os comandos aplicados para construção dos dados.", "red")`
+
+
 ```{r}
-observadores <- c(rep(x = "Observador 1", 20), rep(x = "Observador 2", 20))
 set.seed(2328)
 aves.1 <- rnorm(n = 20, mean = 20, sd = 1) + runif(n = 20)
 set.seed(3230)
@@ -606,11 +625,16 @@ aves.2 <- rnorm(n = 20, mean = 21, sd = 2) + runif(n = 20)
 dia <- c("Dia 1", "Dia 2", "Dia 3", "Dia 4", "Dia 5", "Dia 6", "Dia 7", "Dia 8", 
          "Dia 9", "Dia 10", "Dia 11", "Dia 12", "Dia 13", "Dia 14", "Dia 15", "Dia 16",
          "Dia 17", "Dia 18", "Dia 19", "Dia 20")
-aves <- c(aves.1, aves.2)
 aves <- as.data.frame(cbind(dia, round(aves.1, 0), round(aves.2, 0)))
-colnames(aves) <- c("Dia", "Observador 1", "Observador 2")
-rm(list = "observadores", "aves.1", "aves.2", "dia")
+colnames(aves) <- c("Dia", "Observador.1", "Observador.2")
+rm(list = "aves.1", "aves.2", "dia")
 ```
+
+
+Nestes casos temos as seguintes hipoteses:
+
+* H0: A diferença na média do número de observações de aves entre os Observadores é igual a 0.
+* HA: A diferença na média do número de observações de aves entre os Observadores difere de 0.
 
 
 Vamos verificar a estrutura dos dados e modificar conforme a necessidade.
@@ -619,10 +643,9 @@ Vamos verificar a estrutura dos dados e modificar conforme a necessidade.
 ```{r}
 head(aves)
 str(aves)
-
 aves$Dia <- as.factor(aves$Dia)
-aves$`Observador 1` <- as.numeric(aves$`Observador 1`)
-aves$`Observador 2` <- as.numeric(aves$`Observador 2`)
+aves$Observador.1 <- as.numeric(aves$Observador.1)
+aves$Observador.2 <- as.numeric(aves$Observador.2)
 str(aves)
 ```
 
@@ -630,11 +653,14 @@ str(aves)
 Neste exemplo podemos perceber que temos as variáveis categóricas "Dia" e observadores os quais estão em colunas como: "Observador 1" e "Observador 2" e a variável quantitativa "aves" que consiste no número de aves avistadas.
 
 
-Vamos sumarizar os dados grafica e estatisticamente
+Vamos sumarizar os dados grafica e estatisticamente.
+
+
+Primeiro vejamos nossos histogramas relativos a observações em relação aos observadores (Figura \@ref(fig:hist-par-obs1) e \@ref(fig:hist-par-obs2)).
 
 
 ```{r hist-par-obs1, fig.cap = "Histograma com a frequência de observações de aves, por 20 dias, pelo observador 1", out.width='70%'}
-hist(aves$`Observador 1`, 
+hist(aves$Observador.1, 
      xlab = "Observações", 
      ylab = "Frequência", 
      main = "Observador 1", 
@@ -644,7 +670,7 @@ hist(aves$`Observador 1`,
 
 
 ```{r hist-par-obs2, fig.cap = "Histograma com a frequência de observações de aves, por 20 dias, pelo observador 2", out.width='70%'}
-hist(aves$`Observador 2`, 
+hist(aves$Observador.2, 
      xlab = "Observações", 
      ylab = "Frequência", 
      main = "Observador 2", 
@@ -653,18 +679,18 @@ hist(aves$`Observador 2`,
 ```
 
 
+Agora vejamos o boxplot, repare que neste caso a sua escrita difere um pouco do que fizemos nos exemplos anteriores, pois agora inserimos a coluna referente ao "Observador 1" e depois a coluna referente ao "Observador 2" ((Figura \@ref(fig:box-par-ave)). Isso se deve ao fato da planilha estar estruturada de forma diferente das anteriores. Não utilizamos o til (~), mas inserimos o nome da planilha seguido pelo operador matemático "**$**" (cifrão) mais o nome da variável quantitativa que queremos representar. Inserimos também outros 2 argumentos que são "*names*" com dois nomes concatenados pela função `r colorize("c()", "blue")` que representam as variaveis quantitativas na ordem em que foram inseridas e o argumento "ylab" que dá nome ao eixo y.
+
+
 ```{r box-par-ave, fig.cap = "Boxplot com as frequências de observações de aves por 20 dias de 2 observadores.", out.width='70%'}
-boxplot(aves$`Observador 1`, 
-        aves$`Observador 2`, 
+boxplot(aves$Observador.1, 
+        aves$Observador.2, 
         names = c("Observador 1", "Observador 2"),
         ylab = "Frequência de Observações")
 ```
 
 
-Como podem notar os comandos para a análise gráfica não diferiu do que fizemos nos exemplos anteriores para os histogramas (Figura \@ref(fig:hist-par-obs1) e \@ref(fig:hist-par-obs2)) e pouco diferiu para o boxplot ((Figura \@ref(fig:box-par-ave)).
-
-
-A estrutura da planilha é diferente das anteriores o que por sua vez alterou a escrita do comando para construção para o boxplot. Não utilizamos o til (~), mas inserimos o nome da planilha seguido pelo operador matemático $ (cifrão) mais o nome da variável quantitativa que queremos representar. Inserimos também outros 2 argumentos que são "names" com dois nomes concatenados pela função `r colorize("c()", "blue")` que representam as variaveis quantitativas na ordem em que foram inseridas e o argumento "ylab" que dá nome ao eixo y.
+Vejamos o o resumo de nossos dados utilizando a função padrão do R `r colorize("summary", "blue")`.
 
 
 ```{r}
@@ -672,20 +698,20 @@ summary(aves)
 ```
 
 
-Como podemos notar, devido a organização dos dados na planilha a função `r colorize("summary()", "blue")` já sumariza de maneira adequada nossos dados.
+Como podemos notar, devido a organização dos dados na planilha a função `r colorize("summary()", "blue")` já resume de maneira adequada nossos dados.
 
 
-Em relação ao resumo dos nossos dados temos que o observador 2 contabilizou um número maior de aves que o observador 1, mas será que a diferença nos pares de observações é zero? Ou seja, será que a média da diferença entre os pares de obsevações de aves entre os observadores é similar? 
+Em relação ao resumo dos nossos dados temos que o observador 2 contabilizou um número maior de aves que o observador 1, mas será que a diferença nos pares de observações é zero? De outra maneira, será que a média da diferença entre os pares de obsevações de aves entre os observadores é similar? 
 
 
-O teste-t pareado não aparesenta pressuposto quanto aos dados, porém como ele avalia a diferença entre dois grupos o pressuposto requerido é a normalidade da diferença dos dados. Vamos a nossa avaliação do pressuposto.
+O teste-t pareado não apresenta pressuposto quanto aos dados, porém como ele avalia a diferença entre dois grupos o pressuposto requerido é a normalidade da diferença dos dados. Vamos a nossa avaliação do pressuposto.
 
 
 Primeiro vamos criar um objeto que consiste na diferença entre observadores
 
 
 ```{r}
-diferenca <- aves$`Observador 1` - aves$`Observador 2`
+diferenca <- aves$Observador.1 - aves$Observador.2
 ```
 
 
@@ -697,36 +723,39 @@ shapiro.test(diferenca)
 ```
 
 
-De acordo com o teste de Shapiro os dados são normais. Vamos a nossa avaliação pelo teste-t
+De acordo com o teste de Shapiro os dados são normais. Vamos a nossa avaliação pelo teste-t.
 
 
 ```{r}
-t.test(aves$`Observador 1`,
-       aves$`Observador 2`,
+t.test(aves$Observador.1,
+       aves$Observador.2,
        paired = TRUE,
        conf.level = 0.95)
 ```
 
 
-Para a execução do teste-t pareado 2 diferenças podem ser notadas na escrita da função, em relação ao teste-t para duas amostras. A primeira consiste no fato de que não utilizamos o til (~), mas sim as variáveis referentes as observações e a segunda é o argumento paired que tem valor lógico (ou seja, verdadeiro ou falso) e indicamos ele como "TRUE" (verdadeiro).
+Para a execução do teste-t pareado 2 diferenças podem ser notadas na escrita da função, em relação ao teste-t para duas amostras. A primeira consiste no fato de que não utilizamos o til (~), mas sim as variáveis referentes as observações e a segunda é o argumento "*paired*" que tem valor lógico (ou seja, TRUE ou FALSE) e indicamos ele como "TRUE" (verdadeiro).
 
 
 Quanto ao resultado podemos notar que nos é informado que o teste consiste num teste-t pareado e que o número de aves observadas pelos observadores é ligeiramente diferente a um nível de confiança de 95%, visto que o *p-value* é próximo à 0,05 e na última linha nos é indicado que a média da diferença das observações é de -1,2. Em outras palavras o teste nos diz que a média das diferenças nas observações de aves é diferente de 0^[Zero (0) indica igualdade no número de observações.], portanto rejeitamos a hipótese nula.
 
 
-Assim como fizemos anteriormente vamos olhar o resultado em relação a distribuição função de densidade do teste-t (Figura \@ref(fig:testet-par-ave)). Só devemos lembrar de carregar o pacote `r colorize("webr", "green")` se ainda não foi carregado.
+Assim como fizemos anteriormente vamos olhar o resultado em relação a distribuição função de densidade do teste-t (Figura \@ref(fig:testet-par-ave)). Só devemos lembrar de carregar o pacote `r colorize("webr", "brown")` se ainda não foi carregado.
 
 
 ```{r testet-par-ave, fig.cap = "Curva de densidade representando o valor do teste-t bicaudal para comparação do número de observações de aves por 2 observadores distintos a um intervalo de confiança de 95\\%. O ponto azul indica o valor do teste.", out.width='70%'}
 library(webr)
-plot(t.test(aves$`Observador 1`,
-            aves$`Observador 2`,
+plot(t.test(aves$Observador.1,
+            aves$Observador.2,
             paired = TRUE,
             conf.level = 0.95))
 ```
 
 
 Neste teste em particular como trabalhamos com a diferença entre as observações podemos usar o gráfico de barras para graficar essa diferença.
+
+
+Para o gráfico indicaremos em seu comando que faremos um gráfico de barras onde o que será plotado é o objeto que consiste na diferença entre o número de observação de aves entre observadores (objeto: **diferenca**) (Figura \@ref(fig:bar-dif-ave)). O argumento "xlab" indica o nome do eixo x, "ylab" o nome do eixo y, "*main*" indica o título do gráfico, "*names.arg*" indica a coluna referente aos nomes das barras (que são os dias), "las" indica se os nomes das barras serão plotados na horizontal ou vertical (o valor 2 indica vertical), "ylim" indica os limites do eixo y e "*cex.names*" indica o tamanho da letra dos nomes das barras.
 
 
 ```{r bar-dif-ave, fig.cap = "Diferença entre o número de observações de aves, por dia, para cada observador", out.width='70%'}
@@ -741,9 +770,6 @@ barplot(diferenca,
 ```
 
 
-Para o gráfico acima indicamos em seu comando que faremos um gráfico de barras onde o que será plotado é a diferença no número de observação de aves entre observadores (Figura \@ref(fig:bar-dif-ave)). O argumento "xlab" indica o nome do eixo x, "ylab" o nome do eixo y, "main" indica o título do gráfico, "names.arg" indica a coluna referente aos nomes das barras (que são os dias), "las" indica se os nomes das barras serão plotados na horizontal ou vertical (o valor 2 indica vertical), "ylim" indica os limites do eixo y e "cex.names" indica o tamanho da letra dos nomes das barras.
-
-
 As barras para o lado positivo do eixo y indica uma maior observação de aves pelo "Observador 1" e as barras para baixo indicam um maior número de observações de aves pelo "Observador 2". Vamos indicar isso no gráfico por meio da função `r colorize("mtext()", "blue")` (Figura \@ref(fig:bar-dif-ave2)).
 
 
@@ -756,7 +782,6 @@ barplot(diferenca,
         las = 2,
         ylim = c(-7.3, 7.3),
         cex.names = 0.9)
-
 mtext(at = 4,
       line = -2,
       text = "Observador 1", 
@@ -768,7 +793,7 @@ mtext(at = 4,
 ```
 
 
-Como podem visualizar a função `r colorize("mtext()", "blue")` indicou os nomes "Observador 1" e "Observador 2" no lado do gráfico que os representa. O argumento "at" indica a posição  em relação ao eixo x, "line" indica a posição em relação ao eixo y, "text" indica o que será plotado e side indica o lado da janela gráfica onde o texto será plotado (3 é na parte superior e 1 na inferior).
+Como podem visualizar a função `r colorize("mtext()", "blue")` indicou os nomes "Observador 1" e "Observador 2" no lado do gráfico que os representa. O argumento "at" indica a posição  em relação ao eixo x, "*line*" indica a posição em relação ao eixo y, "*text*" indica o que será plotado e side indica o lado da janela gráfica onde o texto será plotado (3 é na parte superior e 1 na inferior).
 
 
 ## Considerações
@@ -779,3 +804,64 @@ Durante nosso percurso neste capítulo realizamos etapas que consistem na constr
 ```{r resumo3, message = FALSE, echo = FALSE, fig.cap = "Resumo dos passos abordados no capítulo: da preparação dos dados até a análise dos dados.", out.width = '100%'}
 knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/resumo2.png')
 ```
+
+
+## Exercícios
+
+
+1) Durante uma aula de biologia marinha, os alunos foram até um costão rochoso e realizaram amostragens não destrutivas da comunidade de organismos presentes na região entre marés. Foi observado ao final das amostragens os percentuais de algas a cada metro ao longo de um transecto de 20m.
+O resultado dos dados de algas, obtidos pelos alunos, pode ser obtido pela execução dos comandos abaixo:
+
+```{r, message = FALSE}
+set.seed(45)
+algas <- (rnorm(n = 20, sd = 0.1) + runif(n = 20, min = 0, max = 0.8))*100
+```
+
+Na mesma aula oferecida à turma anterior, um ano antes no mesmo costão, foi observado uma média geral da população de algas de 52%.
+Usando seus conhecimentos sobre teste-t. Podemos dizer que o percentual de algas se manteve? Considere os níveis de confiança de 95% e 99%.
+
+
+2) Qual foi o intervalo de confiança de 95% e 99% obtido no exercício anterior? A média de algas observada pela turma anterior (52%) encontra-se dentro ou fora destes intervalos?
+
+
+3) Considerando o exemplo do exercício 1. Em um segundo momento a professora disponibilizou a turma os dados de algas obtidos pela turma anterior.
+Uma tabela com os dados de ambas as turmas pode ser obtido executando os comandos abaixo:
+
+```{r, message = FALSE}
+turmas <- c(rep(x = "turma.1", 20), rep(x = "turma.2", 20))
+set.seed(44)
+algas.turma1 <- (rnorm(n = 20, sd = 0.05) + runif(n = 20, min = 0.30, max = 0.83))*100
+set.seed(45)
+algas.turma2 <- (rnorm(n = 20, sd = 0.1) + runif(n = 20, min = 0, max = 0.8))*100
+cobertura <- c(algas.turma1, algas.turma2)
+algas.duasamostras <- as.data.frame(cbind(turmas, round(cobertura, 2)))
+colnames(algas.duasamostras) <- c("turmas", "cobertura")
+algas.duasamostras$turma <- as.factor(algas.duasamostras$turmas)
+algas.duasamostras$cobertura <- as.numeric(algas.duasamostras$cobertura)
+rm(list = "turmas", "algas.turma1", "algas.turma2", "cobertura")
+```
+
+Considerando, agora, o objeto **algas.duasamostras**. O que podemos dizer sobre o percentual de cobertura de algas, obtido por ambas as turmas, para os níveis de confiança de 95% e 99%?
+OBS: Converta as variáveis e conduza os pressupostos, se necessário.
+
+
+4) Utilizando o objeto **algas.duasamostras**, do exercício anterior, realize um gráfico que demonstre o percentual obtido por cada turma contendo o desvio padrão.
+
+
+5) Dois observadores independentes foram ao mesmo costão rochoso, anterior quantificaram a cobertura algal por metro, nos 20 metros do costão. Os dados obtidos por ambos os observadores pode ser obtido executando os comandos abaixo.
+
+```{r, message = FALSE}
+set.seed(235)
+algas.observador1 <- (rnorm(n = 20, sd = 0.05) + runif(n = 20, min = 0.30, max = 0.83))*100
+set.seed(236)
+algas.observador2 <- (rnorm(n = 20, sd = 0.15) + runif(n = 20, min = 0.20, max = 0.80))*100
+posicao <- seq(1:20)
+algas.pareado <- as.data.frame(cbind(posicao, round(algas.observador1, 2), round(algas.observador2, 2)))
+colnames(algas.pareado) <- c("posicao", "observador.1", "observador.2")
+algas.pareado$observador.1 <- as.numeric(algas.pareado$observador.1)
+algas.pareado$observador.2 <- as.numeric(algas.pareado$observador.2)
+rm(list = "algas.observador1", "algas.observador2", "posicao")
+```
+
+De acordo com este novo objeto **algas.pareado**, o que podemos dizer sobre o percentual de cobertura de algas, em relação aos observadores para cada posição do costão, para os níveis de confiança de 95% e 99%?
+OBS: Conduza os pressupostos se necessário.

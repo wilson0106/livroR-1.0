@@ -1,3 +1,134 @@
-# Palavras finais
+# (APPENDIX) Appendix {-}
 
-Nós terminamos o livro!?
+# Resolução dos Exercícios
+
+
+## Capítulo 1
+1) b
+2) a
+3) c
+4) b
+5) e
+
+## Capítulo 2
+1) e
+2) d
+3) d
+4) b
+5) c
+
+## Capítulo 3
+1)
+```{r}
+observados <- c(550, 620)
+esperados <- c(0.5, 0.5)
+chisq.test(x = observados, p = esperados)
+```
+De acordo com o resultado obtido *p-value* < 0,05, temos que o número decarros observados entre os períodos (manhã e tarde) são diferentes e de acordo com os valores obtidos (550 carros no período da manha e 620 no período da tarde) corroboramos corroboramos a observação do pesquisador que no período da tarde há um maior trafego de carros.
+
+
+2)
+```{r}
+dados <- matrix(data = c(200, 350, 230, 390), ncol = 2, byrow = TRUE)
+rownames(dados) <- c("Manhã", "Tarde")
+colnames(dados) <- c("Quarta-feira", "Sexta-feira")
+dados
+chisq.test(x = dados)
+```
+De acordo com o resultado obtido *p-value* > 0,05, não podemos refutar a hipótese nula (H0: As proporções relativas da circulação de carros na praia por período do dia são independentes dos dias da semana avaliados). Portanto dizemos que a proporção de carros que circulam durante o período do dia é similar em ambos os dias da semana a um nível de confiança de 95%.
+
+
+3)
+```{r}
+resultado <- chisq.test(x = dados)
+prop.table(dados, margin = 2)*100
+```
+
+
+4)
+O erro tipo 1 consiste em rejeitar a hipótese nula quando ela é verdadeira. O erro tipo 2 consiste em aceitar a hipótese nula quando ela é falsa.
+No exercício 2 o *p-value* obtido foi de 0,057, o que corrobora a hipótese nula (H0), a um nível de confiança de 95%. Neste caso, como o nível de significância é próximo do limite estabelecido, há o risco de cometer o erro tipo 2.
+
+
+5)
+```{r}
+tabela <- prop.table(x = dados, margin = 2)*100
+par(mar = c(4, 4, 4, 13))
+barplot(tabela, 
+        xlab = "Dia da semana",
+        col = c("red", "darkblue"), 
+        legend.text = TRUE, 
+        args.legend = list(x = "right", bty = "n", inset = -0.5))
+```
+
+
+## Capítulo 4
+1)
+```{r}
+set.seed(45)
+algas <- (rnorm(n = 20, sd = 0.1) + runif(n = 20, min = 0, max = 0.8))*100
+t.test(x = algas, mu = 52, conf.level = 0.95)
+t.test(x = algas, mu = 52, conf.level = 0.99)
+```
+A depender do nível de confiança podemos ter diferentes conclusões. Se considerarmos um nível de confiança de 95% podemos dizer que a média do percentual de algas obtido pela turma que foi de 40,01% difere da média obtida pela turma anterior que foi de 52% com um *p-value* de 0,02. Se considerarmos um nível de confiança de 99% podemos dizer que a média do percentual de algas obtido pela turma que foi de 40,01% é similar ao obtido pela turma anterior que foi de 52% com um *p-value* de 0,02. 
+
+
+2) 
+O intervalo de confiança para o nível de 95% encontra-se entre: 30,11 e 49,90. O valor de 52% encontra-se fora do intervalo de confiança; 
+O intervalo de confiança para o nível de 99% encontra-se entre: 26,49 e 53,53. O valor de 52% encontra-se dentro do intervalo de confiança;
+
+
+3)
+```{r}
+shapiro.test(algas.duasamostras$cobertura [algas.duasamostras$turmas == "turma.1"])
+shapiro.test(algas.duasamostras$cobertura [algas.duasamostras$turmas == "turma.2"])
+bartlett.test(cobertura ~ turmas, data = algas.duasamostras)
+t.test(cobertura ~ turmas, 
+       data = algas.duasamostras,
+       var.equal = TRUE,
+       conf.level = 0.95)
+t.test(cobertura ~ turmas, 
+       data = algas.duasamostras,
+       var.equal = TRUE,
+       conf.level = 0.99)
+```
+Ambas os conjuntos de dados demonstraram normalidade, pelo teste de Shapiro-Wilks, assim como homocedasticidade das variâncias, pelo teste de Bartlett. O teste-t fornece um *p-value* de 0,04734.
+Ao considerar o nível de confiança de 95% temos o valor no limiar da rejeição da hipótese nula. Se considerarmos o *p-value* como <0,05 podemos refutar a hipótese nula e dizer que a cobertura algal obtida pelas duas turmas é diferente. Contudo ao nível de confiança de 99% podemos corroborar a hipótese nula e dizer que a cobertura algal observada por ambas as turmas são similares, embora a média de cobertura obtida pela primeira turma seja 11% menor.
+
+
+4)
+```{r}
+library(Rmisc)
+resultado <- summarySE(data = algas.duasamostras, 
+                       measurevar = "cobertura", 
+                       groupvars = "turmas")
+grafico <- barplot(formula = cobertura ~ turmas,
+                   data = resultado,
+                   beside = TRUE,
+                   col = c("green", "blue"),
+                   ylim = c(0, 100),
+                   ylab = "Cobertura algal (%)",
+                   legend.text = TRUE)
+arrows(x0 = grafico,
+       y0 = resultado$cobertura + resultado$sd,
+       y1 = resultado$cobertura - resultado$sd,
+       code = 3,
+       angle = 90,
+       length = 0.05)
+```
+
+
+5)
+```{r}
+diferenca <- algas.pareado$observador.1 - algas.pareado$observador.2
+shapiro.test(diferenca)
+t.test(algas.pareado$observador.1,
+       algas.pareado$observador.2,
+       paired = TRUE,
+       conf.level = 0.95)
+t.test(algas.pareado$observador.1,
+       algas.pareado$observador.2,
+       paired = TRUE,
+       conf.level = 0.99)
+```
+A diferença entre os observadores mostrou normalidade para o teste de Shapiro-Wilks e independente do nível de confiança adotado (95% ou 99%) a média da diferença foi proxima a 0, indicando similaridade entre as observações. Corroborando, portanto, a hipótese nula (H0), de que não há diferença entre os observadores.

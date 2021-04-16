@@ -4,6 +4,7 @@ delete_merged_file: true
 language:
   ui:
     chapter_name: "Capítulo "
+    Appendix: 'Apendice '
   label:
     fig: 'Figura '
     tab: 'Tabela '
