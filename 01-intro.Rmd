@@ -33,7 +33,7 @@ O RStudio foi construído especificamente para a linguagem R e é um ambiente de
 * *Integrated R help and documentation* o qual traz consigo, em sua IDE, uma guia destinada a ajuda. Além destas ele traz diversas outras funcionalidades que tornam o seu uso diário mais acessível e facilitado. Mais detalhes sobre acesse https://rstudio.com. 
 
 ```{r RStudio, message = FALSE, echo = FALSE, fig.cap = "Ambiente RStudio.", out.width = '110%'}
-knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/RStudio.png')
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/figures print/RStudio.png')
 ```
 
 
@@ -47,56 +47,56 @@ Para isso veremos as principais guias do RStudio, como elas estão organizadas e
 
 
 ```{r script, message = FALSE, echo = FALSE, fig.cap = "Guia do RStudio referente ao ambiente onde o script será desenvolvido.", out.width = '100%'}
-knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/script.png')
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/figures print/script.png')
 ```
 
 
 2. *Console*: Guia que indica o resultado do código executado na guia referente ao *script*. Nesta guia também pode ser escrito o código, porém ao pressionar ENTER o código é executado e o resultado é indicado na linha imediatamente inferior (Figura \@ref(fig:console));
 
 ```{r console, message = FALSE, echo = FALSE, fig.cap = "Guia do RStudio referente ao ambiente console onde o resultado dos comandos executados irão aparecer.", out.width = '100%'}
-knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/console.png')
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/figures print/console.png')
 ```
 
 
 3. *Environment*: Todo objeto^[Elemento que armazena um valor ou estrutura de dados. Todo objeto apresenta uma classe. Os objetos mais comuns são: vetor (objeto que contêm uma sequência unidimensional de elementos), matriz (Objeto bidimensional onde todos os elementos são da mesma classe), data-frame (Objeto bidimensional onde os elementos pertencentes podem ser de classes diferentes) e lista (é um vetor que agrupa, de maneira unidimensional, diferentes objetos). As classes mais comuns são: inteiro (valores quantitativos sem casa decimal), númerico (valores quantitativos com casa decimal), lógico (valores que indicam 0 ou 1, que representam respectivamente verdadeiro ou falso), fator (valores que indicam categorias) e caracter (valores que indicam texto). Vamos utiliza-los sempre que necessário, no decorrer do livro explicando-o seu significado, porém não iremos abordá-los em detalhes.] ou função criada será indicado nesta guia. (Figura \@ref(fig:environment));
 
 ```{r environment, message = FALSE, echo = FALSE, fig.cap = "Guia do RStudio referente ao ambiente environment, local onde estarão indicados os objetos criados.", out.width = '60%'}
-knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/environment.png')
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/figures print/environment.png')
 ```
 
 
 4. *History*: Guia que indica o histórico dos comandos executados (Figura \@ref(fig:history));
 
 ```{r history, message = FALSE, echo = FALSE, fig.cap = "Guia do RStudio referente ao ambiente history onde estará listado todos os comandos executados.", out.width = '60%'}
-knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/history.png')
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/figures print/history.png')
 ```
 
 
 5. *Files*: Guia que permite a visualização e acesso dos arquivos do computador (Figura \@ref(fig:files)). Sempre defina o ambiente de trabalho^[No próximo capítulo ensinaremos a como definir o ambiente de trabalho] antes de iniciar o seu projeto. As planilhas que serão utilizadas devem estar neste ambiente de trabalho, previamente definido. Embora não seja obrigatório, isso evitará problemas futuros e facilitará o seu trajeto inicial no R. As funções e códigos serão abordados, aqui, seguindo esta ideia.;
 
 ```{r files, message = FALSE, echo = FALSE, fig.cap = "Guia do RStudio referente ao ambiente files onde estará indicados os arquivos do nosso computador.", out.width = '60%'}
-knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/files.png')
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/figures print/files.png')
 ```
 
 
 6. *Packages*: Guia destinada a visualização, instalação e carregamento dos pacotes/bibliotecas do R. Os pacotes consistem em um grupo de funções, que executam uma determinada ação. Inicialmente quando se instala o R alguns pacotes são automaticamente instalados. Contudo para executar algumas funções é necessário instalar um ou mais pacotes que contenham as funções desejadas. A instalação de pacotes pode ser realizada por linha de comando como será visto no próximo capítulo ou clicando na opção *Install* presente no canto superior esquerdo desta guia. De tempos em tempos os pacotes sofrem alterações, realizado pelos seus desenvolvedores, por isso um hábito importante a ser tomado de tempos em tempos é clicar na opção *Update* ao lado da opção *Install* pois ela irá atualizar os pacotes que estão instalados (Figura \@ref(fig:packages));
 
 ```{r packages, message = FALSE, echo = FALSE, fig.cap = "Guia do RStudio referente ao ambiente packages onde estarão listados todos os pacotes disponíveis no nosso computador e por onde poderemos instalar outros.", out.width = '60%'}
-knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/packages.png')
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/figures print/packages.png')
 ```
 
 
 7. *Plot*: Guia destinada a visualização dos gráficos executados. Algumas opções importantes desta guia é a opção *Export* na região central na barra de ferramentas onde é possível salvar o seu plot como imagem em formato \*.jpg, \*.png e \*.tiff, por exemplo, assim como em \*.pdf ou então a opção de copiar a imagem (*Copy to Clipboard...*) para colar em outro ambiente de trabalho. Uma segunda ferramenta importante é a opção do lado direito de *Export* que é *Remove the current plot* indicada por um quadrado branco com um "x" branco de fundo vermelho no canto superior esquerdo o qual remove a figura que está sendo visualizada neste ambiente, ao lado desta opção tem a figura de uma vassoura denominada *Clear all Plots* que deleta todas as figuras presentes neste ambiente. No lado esquerdo de *Export* temos a opção de *Zoom* o qual amplia a imagem mostrada e ao lado esquerdo desta opção temos setas indicando para direita e para esquerda, que permitem navegar por entre os plots criados durante seu trabalho (Figura \@ref(fig:plot));
 
 ```{r plot, message = FALSE, echo = FALSE, fig.cap = "Guia do RStudio referente ao ambiente plot onde estarão os gráficos criados.", out.width = '60%'}
-knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/plot.png')
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/figures print/plot.png')
 ```
 
 
 8. *Help*: Guia destinada a fornecer informações sobre as funções e pacotes do R. Nesta guia há duas opções importantes na sua barra superior uma encontra-se na barra mais superior indicada por uma lupa onde é possível digitar o nome do pacote ou função em que deseja saber mais sobre, na barra abaixo desta no canto esquerdo há um outro espaço escrito *Find in Topic* onde ele irá buscar o termo digitado dentro do ambiente que está sendo mostrado (Figura \@ref(fig:help));
 
 ```{r help, message = FALSE, echo = FALSE, fig.cap = "Guia do RStudio referente ao ambiente help onde terá informações sobre as funções e pacotes do R.", out.width = '60%'}
-knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/help.png')
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/figures print/help.png')
 ```
 
 

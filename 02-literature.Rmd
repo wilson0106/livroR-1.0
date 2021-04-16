@@ -19,7 +19,7 @@ Se no Windows utilizarmos apenas a linha de comando `r colorize("setwd(choose.di
 
 
 ```{r setwd, message = FALSE, echo = FALSE, fig.cap = "Janela que será aberta ao executar o comando: setwd(choose.dir()), no sistema operacional Windows.", out.width = '40%'}
-knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/setwd.png')
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/figures print/setwd.png')
 ```
 
 
@@ -35,7 +35,7 @@ Diversas formas podem ser utilizadas para definir o ambiente de trabalho, aprese
 
 
 ```{r files-guia, message = FALSE, echo = FALSE, fig.cap = "Guia *Files* indicando a opção para definir o local do computadors que será utilizado como ambiente de trabalho", out.width = '50%'}
-knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/files-guia.png')
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/figures print/files-guia.png')
 ```
 
 
@@ -44,11 +44,11 @@ knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística p
 Primeiro construa as planilhas a seguir nos formatos \*.csv (usando vírgula como separador de colunas e ponto como separador decimal) (Figura \@ref(fig:planilha)) e \*.xlsx (Figura \@ref(fig:planilhaxlsx)) em um editor de planilhas, como excel, libreoffice calc ou outros e a salve com o nome de planilha.csv e planilha.xlsx no diretório que definiu previamente. A seguir demonstraremos as diferenças na importação de ambas as planilhas.
 
 ```{r planilha, message = FALSE, echo = FALSE, fig.cap = "Planilha com os dados no formato *.csv que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente", out.width = '40%'}
-knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/planilha.png')
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/figures print/planilha.png')
 ```
 
 ```{r planilhaxlsx, message = FALSE, echo = FALSE, fig.cap = "Planilha com os dados no formato *.xlsx que deve ser construída em algum editor de planilhas e salva na pasta de trabalho definida previamente", out.width = '50%'}
-knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/planilhaxlsx.png')
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/figures print/planilhaxlsx.png')
 ```
 
 
@@ -89,7 +89,7 @@ dados <- read_excel(path = "planilha.xlsx", col_names = TRUE)
 Os comandos `r colorize("read.csv()", "blue")` e `r colorize("read\\_excel()", "blue")` são similares, embora seus argumentos sejam diferentes. O argumento "*path*" é similar ao "*file*", o argumento "*col_names*" é similar ao "*header*". Repare que não temos o argumento "sep", pois em um arquivo excel as variáveis são salvas em colunas. Observe que independente da forma de importação (que é dependente do formato do arquivo \*.csv ou *.xlsx) o resultado final é o mesmo (Figura \@ref(fig:arqenv)).
 
 ```{r arqenv, message = FALSE, echo = FALSE, fig.cap = "Resultado da importação do arquivo observado na guia environment. Há um objeto de nome dados, com 40 observações e 4 variáveis.", out.width = '80%'}
-knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/arqenv.png')
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/figures print/arqenv.png')
 ```
 
 
@@ -98,13 +98,13 @@ knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística p
 Para importar a planilha com os dados via interface do RStudio devemos acessar a guia *Environment* e nesta acessar a opção *Import Dataset* a seguir temos várias opções a qual devemos escolher referente a extensão do arquivo que vamos importar, no nosso caso será a opção *From Excel* (Figura \@ref(fig:import-graf)).
 
 ```{r import-graf, message = FALSE, echo = FALSE, fig.cap = "Tópicos para importação ddos dados pela via grafica.", out.width = '80%'}
-knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/import-graf.png')
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/figures print/import-graf.png')
 ```
 
 Neste momento uma janela irá abrir (Figura \@ref(fig:import-graf-2)) e no canto superior direito haverá o nome *Browse* onde deveremos clicar e escolher o arquivo com o qual iremos trabalhar. Em *Import options* no canto inferior esquerdo haverá algumas opções, na opção *name* deveremos renomear para dados, para coincidir com as vias que fizemos anteriormente. As demais opções podemos deixar em branco. Repare que no canto inferior direito aparecerá um comando relativo ao processo de importação similar ao que fizemos no tópico anterior e, aparecerá também, um comando chamado `r colorize("View()", "blue")` que veremos mais adiante, para desabilita-lo basta desmarcar a caixa ao lado de mesmo nome. Conclua o processo clicando em *import* no canto inferior direito.
 
 ```{r import-graf-2, message = FALSE, echo = FALSE, fig.cap = "Importação dos dados pela via gráfica", out.width = '80%'}
-knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/import-graf-2.png')
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/figures print/import-graf-2.png')
 ```
 
 
@@ -297,7 +297,7 @@ Se já chegamos até esse ponto vamos exercitar um pouco antes de plotar o gráf
 
 
 ```{r abundancia, message = FALSE, echo = FALSE, fig.cap = "Planilha de dados de abundância.", out.width = '40%'}
-knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/abundancia.png')
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/figures print/abundancia.png')
 ```
 
 
@@ -836,7 +836,7 @@ Ao longo dos tópicos abordados neste capítulo demonstramos as etapas mais impo
 Durante nosso percurso neste livro realizaremos mais gráficos aliados as análises estatísticas básicas comumente utilizadas. Não se assuste com a quantidade de etapas, funções, argumentos e nomes, eles irão se repetir tantas e tantas vezes daqui em diante que você não esquecerá. O aprendizado do R é exponencial e ele lhe permitirá entender como nunca o universo da análise de dados adequando-o para seu campo de atuação.
 
 ```{r resumo1, message = FALSE, echo = FALSE, fig.cap = "Resumo dos passos abordados no capítulo: da definição do ambiente de trabalho até a sumarização dos dados.", out.width = '100%'}
-knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/livroR-1.0/figures print/resumo1.png')
+knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R/figures print/resumo1.png')
 ```
 
 
