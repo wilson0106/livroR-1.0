@@ -6,7 +6,6 @@ urlcolor: "blue"
 toc-title: "Índice"
 lof: yes
 lot: yes
-date: "`r Sys.Date()`"
 site: "bookdown::bookdown_site"
 bibliography: [book.bib, packages.bib]
 documentclass: book

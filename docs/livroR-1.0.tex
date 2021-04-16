@@ -149,7 +149,7 @@
 
 \title{Introdução à análise de dados em R: Uma abordagem ambiental}
 \author{Wilson Souza \& Thiago Couto}
-\date{2021-04-16}
+\date{}
 
 \begin{document}
 \maketitle
@@ -2015,7 +2015,7 @@ Imagine que você foi em campo e contabilizou as espécies de cracas que identif
 ##  on 2000 replicates)
 ## 
 ## data:  N.especies
-## X-squared = 4, df = NA, p-value = 0.05597
+## X-squared = 4, df = NA, p-value = 0.05847
 \end{verbatim}
 
 Basta usarmos o argumento ``simulate.p.value'' e indicar ``FALSE'' quando não queremos a simulação de Monte Carlo, ou apenas omitirmos este argumento, ou usar este argumento e indicar ``TRUE'' o qual realiza a simulação de Monte Carlo. Verifique que com a aplicação desta simulação o \emph{p-value} aumenta indicando que torna mais dificil rejeitarmos a hipótese nula. Após aplicarmos a correção na nossa análise podemos afirmar que não há diferença na quantidade de cracas observadas em relação as proporções esperadas, para ambas as espécies de cracas.
@@ -4053,7 +4053,7 @@ De acordo com o resultado obtido \emph{p-value} \textless{} 0,05, temos que o n�
 ## X-squared = 0.039543, df = 1, p-value = 0.8424
 \end{verbatim}
 
-De acordo com o resultado obtido \emph{p-value} \textgreater{} 0,05, não podemos refutar a hipótese nula (H0: As proporções relativas da circulação de carros na praia por período do dia são independentes dos dias da semana avaliados). Portanto dizemos que a proporção de carros que circulam durante o período do dia é similar em ambos os dias da semana a um nível de confiança de 95\%.
+De acordo com o resultado obtido \emph{p-value} \textgreater{} 0,05, não podemos refutar a hipótese nula (H0: As proporções relativas da circulação de carros na praia por período do dia são independentes dos dias da semana avaliados).
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi})}
