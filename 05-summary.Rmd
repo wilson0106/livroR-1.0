@@ -35,7 +35,7 @@ colnames(dados) <- c("Quarta-feira", "Sexta-feira")
 dados
 chisq.test(x = dados)
 ```
-De acordo com o resultado obtido *p-value* > 0,05, não podemos refutar a hipótese nula (H0: As proporções relativas da circulação de carros na praia por período do dia são independentes dos dias da semana avaliados). Portanto dizemos que a proporção de carros que circulam durante o período do dia é similar em ambos os dias da semana a um nível de confiança de 95%.
+De acordo com o resultado obtido *p-value* > 0,05, não podemos refutar a hipótese nula (H0: As proporções relativas da circulação de carros na praia por período do dia são independentes dos dias da semana avaliados).
 
 
 3)
