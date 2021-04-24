@@ -663,7 +663,7 @@ Ao executarmos a função \textcolor{blue}{str()} do arquivo \textbf{dados} pode
 \end{Shaded}
 
 \begin{verbatim}
-## tibble [40 x 4] (S3: tbl_df/tbl/data.frame)
+## tibble[,4] [40 x 4] (S3: tbl_df/tbl/data.frame)
 ##  $ ano        : num [1:40] 2020 2020 2020 2020 2020 2020 2020 2020 2020 2020 ...
 ##  $ local      : chr [1:40] "Ambiente 1" "Ambiente 1" "Ambiente 1" "Ambiente 1" ...
 ##  $ comprimento: num [1:40] 10 11 15 12 17 14 19 16 15 12 ...
@@ -733,7 +733,7 @@ Vamos observar novamente a função \textcolor{blue}{str()} para verificar se an
 \end{Shaded}
 
 \begin{verbatim}
-## tibble [40 x 4] (S3: tbl_df/tbl/data.frame)
+## tibble[,4] [40 x 4] (S3: tbl_df/tbl/data.frame)
 ##  $ ano        : Factor w/ 2 levels "2020","2021": 1 1 1 1 1 1 1 1 1 1 ...
 ##  $ local      : Factor w/ 2 levels "Ambiente 1","Ambiente 2": 1 1 1 1 1 1 1 1 1 1 ...
 ##  $ comprimento: num [1:40] 10 11 15 12 17 14 19 16 15 12 ...
@@ -901,7 +901,7 @@ Vamos apenas conferir se está tudo certo com os dados usando a função \textco
 \end{Shaded}
 
 \begin{verbatim}
-## tibble [12 x 3] (S3: tbl_df/tbl/data.frame)
+## tibble[,3] [12 x 3] (S3: tbl_df/tbl/data.frame)
 ##  $ mes   : num [1:12] 1 2 3 4 5 6 7 8 9 10 ...
 ##  $ N     : num [1:12] 100 70 50 30 35 40 60 90 110 150 ...
 ##  $ desvio: num [1:12] 10 12 11 8 8 14 11 9 12 15 ...
@@ -1718,17 +1718,6 @@ Durante nosso percurso neste livro realizaremos mais gráficos aliados as análi
   O R apresenta em alguns de seus pacotes conjuntos de dados que nos permitem fazer análises. Usando o conjunto de dados chamado \textbf{iris}, o qual pode ser carregado usando a função \textcolor{blue}{data()}. Qual das opções abaixo apresenta o comando para gerar o gráfico apresentado?
 \end{enumerate}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{data}\NormalTok{(iris)}
-\KeywordTok{boxplot}\NormalTok{(Petal.Length }\OperatorTok{~}\StringTok{ }\NormalTok{Species, }\DataTypeTok{data =}\NormalTok{ iris,}
-        \DataTypeTok{col =} \KeywordTok{c}\NormalTok{(}\StringTok{"blue"}\NormalTok{, }\StringTok{"red"}\NormalTok{, }\StringTok{"yellow"}\NormalTok{),}
-        \DataTypeTok{xlab =} \StringTok{"Espécies"}\NormalTok{,}
-        \DataTypeTok{ylab =} \StringTok{"Comprimento da pétala"}\NormalTok{,}
-        \DataTypeTok{main =} \StringTok{"Meu Gráfico"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
 \begin{center}\includegraphics{livroR-1.0_files/figure-latex/unnamed-chunk-37-1} \end{center}
 
 \begin{enumerate}
@@ -2015,7 +2004,7 @@ Imagine que você foi em campo e contabilizou as espécies de cracas que identif
 ##  on 2000 replicates)
 ## 
 ## data:  N.especies
-## X-squared = 4, df = NA, p-value = 0.06747
+## X-squared = 4, df = NA, p-value = 0.07146
 \end{verbatim}
 
 Basta usarmos o argumento ``simulate.p.value'' e indicar ``FALSE'' quando não queremos a simulação de Monte Carlo, ou apenas omitirmos este argumento, ou usar este argumento e indicar ``TRUE'' o qual realiza a simulação de Monte Carlo. Verifique que com a aplicação desta simulação o \emph{p-value} aumenta indicando que torna mais dificil rejeitarmos a hipótese nula. Após aplicarmos a correção na nossa análise podemos afirmar que não há diferença na quantidade de cracas observadas em relação as proporções esperadas, para ambas as espécies de cracas.

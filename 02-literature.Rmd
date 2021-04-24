@@ -868,7 +868,7 @@ knitr::include_graphics('/media/wilson/personaldoc/Livro_R/Série estatística p
 
 
 4) O R apresenta em alguns de seus pacotes conjuntos de dados que nos permitem fazer análises. Usando o conjunto de dados chamado **iris**, o qual pode ser carregado usando a função `r colorize("data()", "blue")`. Qual das opções abaixo apresenta o comando para gerar o gráfico apresentado?
-```{r}
+```{r echo = FALSE}
 data(iris)
 boxplot(Petal.Length ~ Species, data = iris,
         col = c("blue", "red", "yellow"),

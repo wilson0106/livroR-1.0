@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.3.3)  16 APR 2021 20:42
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.3.3)  23 APR 2021 22:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1182,91 +1182,91 @@ l e R/livroR-1.0/figures print/resumo1.png Graphic file (type bmp)
 File: livroR-1.0_files/figure-latex/unnamed-chunk-37-1.pdf Graphic file (type p
 df)
 <use livroR-1.0_files/figure-latex/unnamed-chunk-37-1.pdf>
-[61] [62] [63]
+[61] [62]
 Cap\'{\i }tulo 3.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 1799.
+(Font)              scaled to size 24.88pt on input line 1788.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 20.74pt on input line 1799.
+(Font)              scaled to size 20.74pt on input line 1788.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 1799.
+(Font)              scaled to size 17.28pt on input line 1788.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 24.88228pt on input line 1799.
+(Font)              scaled to size 24.88228pt on input line 1788.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 20.7419pt on input line 1799.
+(Font)              scaled to size 20.7419pt on input line 1788.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 17.28157pt on input line 1799.
+(Font)              scaled to size 17.28157pt on input line 1788.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 24.87733pt on input line 1799.
+(Font)              scaled to size 24.87733pt on input line 1788.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 20.73778pt on input line 1799.
+(Font)              scaled to size 20.73778pt on input line 1788.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 17.27815pt on input line 1799.
+(Font)              scaled to size 17.27815pt on input line 1788.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 1808.
+(Font)              scaled to size 14.4pt on input line 1797.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 14.4013pt on input line 1808.
+(Font)              scaled to size 14.4013pt on input line 1797.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 14.39845pt on input line 1808.
-[64
+(Font)              scaled to size 14.39845pt on input line 1797.
+[63
 
-] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79]
+] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78]
 File: livroR-1.0_files/figure-latex/bar-tab-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-tab-1.pdf>
-[80] [81]
+[79] [80]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
 l e R/livroR-1.0/figures print/resumo2.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
 /livroR-1.0/figures print/resumo2.png>
-[82] [83]
+[81] [82]
 Cap\'{\i }tulo 4.
-[84
+[83
 
-] [85] [86]
+] [84] [85]
 File: livroR-1.0_files/figure-latex/hist-tam-cam-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-tam-cam-1.pdf>
-[87] [88] [89]
+[86] [87] [88]
 File: livroR-1.0_files/figure-latex/estrelas-hist-1.pdf Graphic file (type pdf)
 
 <use livroR-1.0_files/figure-latex/estrelas-hist-1.pdf>
-[90] [91] [92]
+[89] [90] [91]
 File: livroR-1.0_files/figure-latex/craca-hist-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/craca-hist-1.pdf>
-[93] [94] [95]
+[92] [93] [94]
 File: livroR-1.0_files/figure-latex/cracas-dens-95-1.pdf Graphic file (type pdf
 )
 <use livroR-1.0_files/figure-latex/cracas-dens-95-1.pdf>
-[96]
+[95]
 File: livroR-1.0_files/figure-latex/cracas-dens-99-1.pdf Graphic file (type pdf
 )
 <use livroR-1.0_files/figure-latex/cracas-dens-99-1.pdf>
-[97] [98] [99] [100]
+[96] [97] [98] [99]
 File: livroR-1.0_files/figure-latex/hist-ali-A-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-ali-A-1.pdf>
-[101]
+[100]
 File: livroR-1.0_files/figure-latex/hist-ali-B-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-ali-B-1.pdf>
 File: livroR-1.0_files/figure-latex/box-ali-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/box-ali-1.pdf>
-[102] [103] [104] [105] [106]
+[101] [102] [103] [104] [105]
 File: livroR-1.0_files/figure-latex/testetduasdens-1.pdf Graphic file (type pdf
 )
 <use livroR-1.0_files/figure-latex/testetduasdens-1.pdf>
-[107] [108]
+[106] [107]
 File: livroR-1.0_files/figure-latex/hist-temp-0-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-temp-0-1.pdf>
-[109]
+[108]
 File: livroR-1.0_files/figure-latex/hist-temp-20-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/hist-temp-20-1.pdf>
-[110]
+[109]
 File: livroR-1.0_files/figure-latex/box-temp-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/box-temp-1.pdf>
-[111] [112] [113] [114]
+[110] [111] [112] [113]
 File: livroR-1.0_files/figure-latex/testet-duas-temp-dens-1.pdf Graphic file (t
 ype pdf)
 <use livroR-1.0_files/figure-latex/testet-duas-temp-dens-1.pdf>
-[115] [116] [117]
-Overfull \hbox (30.0321pt too wide) in paragraph at lines 3634--3634
+[114] [115] [116]
+Overfull \hbox (30.0321pt too wide) in paragraph at lines 3623--3623
 []\TU/lmtt/m/n/10 ##  $ Dia         : Factor w/ 20 levels "Dia 1","Dia 10",..: 
 1 12 14 15 16 17 18 19 20 2 ...[] 
  []
@@ -1274,43 +1274,43 @@ Overfull \hbox (30.0321pt too wide) in paragraph at lines 3634--3634
 File: livroR-1.0_files/figure-latex/hist-par-obs1-1.pdf Graphic file (type pdf)
 
 <use livroR-1.0_files/figure-latex/hist-par-obs1-1.pdf>
-[118]
+[117]
 File: livroR-1.0_files/figure-latex/hist-par-obs2-1.pdf Graphic file (type pdf)
 
 <use livroR-1.0_files/figure-latex/hist-par-obs2-1.pdf>
-[119]
+[118]
 File: livroR-1.0_files/figure-latex/box-par-ave-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/box-par-ave-1.pdf>
-[120] [121] [122]
+[119] [120] [121]
 File: livroR-1.0_files/figure-latex/testet-par-ave-1.pdf Graphic file (type pdf
 )
 <use livroR-1.0_files/figure-latex/testet-par-ave-1.pdf>
-[123] [124]
+[122] [123]
 File: livroR-1.0_files/figure-latex/bar-dif-ave-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-dif-ave-1.pdf>
-[125]
+[124]
 File: livroR-1.0_files/figure-latex/bar-dif-ave2-1.pdf Graphic file (type pdf)
 <use livroR-1.0_files/figure-latex/bar-dif-ave2-1.pdf>
-[126]
+[125]
 File: /media/wilson/personaldoc/Livro_R/Série estatística passo a passo em exce
 l e R/livroR-1.0/figures print/resumo2.png Graphic file (type bmp)
 </media/wilson/personaldoc/Livro_R/Série estatística passo a passo em excel e R
 /livroR-1.0/figures print/resumo2.png>
-[127] [128] [129]
+[126] [127] [128]
 Ap\^endice A.
-[130
+[129
 
-] [131] [132]
+] [130] [131]
 File: livroR-1.0_files/figure-latex/unnamed-chunk-91-1.pdf Graphic file (type p
 df)
 <use livroR-1.0_files/figure-latex/unnamed-chunk-91-1.pdf>
-[133] [134] [135] [136] [137]
+[132] [133] [134] [135] [136]
 File: livroR-1.0_files/figure-latex/unnamed-chunk-94-1.pdf Graphic file (type p
 df)
 <use livroR-1.0_files/figure-latex/unnamed-chunk-94-1.pdf>
-[138] [139]
+[137] [138]
 No file livroR-1.0.bbl.
-[140] (./livroR-1.0.aux)
+[139] (./livroR-1.0.aux)
 Package rerunfilecheck Info: File `livroR-1.0.out' has not changed.
 (rerunfilecheck)             Checksum: 2CC18CF427BA162C2B66D9C616967E81;5213.
  ) 
@@ -1323,4 +1323,4 @@ Here is how much of TeX's memory you used:
  16 hyphenation exceptions out of 8191
  98i,18n,122p,1224b,492s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on livroR-1.0.pdf (142 pages).
+Output written on livroR-1.0.pdf (141 pages).

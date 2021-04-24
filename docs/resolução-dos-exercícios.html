@@ -229,9 +229,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol style="list-style-type: decimal">
 <li></li>
 </ol>
-<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb251-1" data-line-number="1">observados &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">550</span>, <span class="dv">620</span>)</a>
-<a class="sourceLine" id="cb251-2" data-line-number="2">esperados &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>)</a>
-<a class="sourceLine" id="cb251-3" data-line-number="3"><span class="kw">chisq.test</span>(<span class="dt">x =</span> observados, <span class="dt">p =</span> esperados)</a></code></pre></div>
+<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb250-1" data-line-number="1">observados &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">550</span>, <span class="dv">620</span>)</a>
+<a class="sourceLine" id="cb250-2" data-line-number="2">esperados &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>)</a>
+<a class="sourceLine" id="cb250-3" data-line-number="3"><span class="kw">chisq.test</span>(<span class="dt">x =</span> observados, <span class="dt">p =</span> esperados)</a></code></pre></div>
 <pre><code>## 
 ##  Chi-squared test for given probabilities
 ## 
@@ -241,14 +241,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol start="2" style="list-style-type: decimal">
 <li></li>
 </ol>
-<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb253-1" data-line-number="1">dados &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dt">data =</span> <span class="kw">c</span>(<span class="dv">200</span>, <span class="dv">350</span>, <span class="dv">230</span>, <span class="dv">390</span>), <span class="dt">ncol =</span> <span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb253-2" data-line-number="2"><span class="kw">rownames</span>(dados) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Manhã&quot;</span>, <span class="st">&quot;Tarde&quot;</span>)</a>
-<a class="sourceLine" id="cb253-3" data-line-number="3"><span class="kw">colnames</span>(dados) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Quarta-feira&quot;</span>, <span class="st">&quot;Sexta-feira&quot;</span>)</a>
-<a class="sourceLine" id="cb253-4" data-line-number="4">dados</a></code></pre></div>
+<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb252-1" data-line-number="1">dados &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dt">data =</span> <span class="kw">c</span>(<span class="dv">200</span>, <span class="dv">350</span>, <span class="dv">230</span>, <span class="dv">390</span>), <span class="dt">ncol =</span> <span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb252-2" data-line-number="2"><span class="kw">rownames</span>(dados) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Manhã&quot;</span>, <span class="st">&quot;Tarde&quot;</span>)</a>
+<a class="sourceLine" id="cb252-3" data-line-number="3"><span class="kw">colnames</span>(dados) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Quarta-feira&quot;</span>, <span class="st">&quot;Sexta-feira&quot;</span>)</a>
+<a class="sourceLine" id="cb252-4" data-line-number="4">dados</a></code></pre></div>
 <pre><code>##       Quarta-feira Sexta-feira
 ## Manhã          200         350
 ## Tarde          230         390</code></pre>
-<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb255-1" data-line-number="1"><span class="kw">chisq.test</span>(<span class="dt">x =</span> dados)</a></code></pre></div>
+<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb254-1" data-line-number="1"><span class="kw">chisq.test</span>(<span class="dt">x =</span> dados)</a></code></pre></div>
 <pre><code>## 
 ##  Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
 ## 
@@ -258,8 +258,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol start="3" style="list-style-type: decimal">
 <li></li>
 </ol>
-<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb257-1" data-line-number="1">resultado &lt;-<span class="st"> </span><span class="kw">chisq.test</span>(<span class="dt">x =</span> dados)</a>
-<a class="sourceLine" id="cb257-2" data-line-number="2"><span class="kw">prop.table</span>(dados, <span class="dt">margin =</span> <span class="dv">2</span>)<span class="op">*</span><span class="dv">100</span></a></code></pre></div>
+<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb256-1" data-line-number="1">resultado &lt;-<span class="st"> </span><span class="kw">chisq.test</span>(<span class="dt">x =</span> dados)</a>
+<a class="sourceLine" id="cb256-2" data-line-number="2"><span class="kw">prop.table</span>(dados, <span class="dt">margin =</span> <span class="dv">2</span>)<span class="op">*</span><span class="dv">100</span></a></code></pre></div>
 <pre><code>##       Quarta-feira Sexta-feira
 ## Manhã     46.51163     47.2973
 ## Tarde     53.48837     52.7027</code></pre>
@@ -268,13 +268,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 No exercício 2 o <em>p-value</em> obtido foi de 0,057, o que corrobora a hipótese nula (H0), a um nível de confiança de 95%. Neste caso, como o nível de significância é próximo do limite estabelecido, há o risco de cometer o erro tipo 2.</p></li>
 <li></li>
 </ol>
-<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb259-1" data-line-number="1">tabela &lt;-<span class="st"> </span><span class="kw">prop.table</span>(<span class="dt">x =</span> dados, <span class="dt">margin =</span> <span class="dv">2</span>)<span class="op">*</span><span class="dv">100</span></a>
-<a class="sourceLine" id="cb259-2" data-line-number="2"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">13</span>))</a>
-<a class="sourceLine" id="cb259-3" data-line-number="3"><span class="kw">barplot</span>(tabela, </a>
-<a class="sourceLine" id="cb259-4" data-line-number="4">        <span class="dt">xlab =</span> <span class="st">&quot;Dia da semana&quot;</span>,</a>
-<a class="sourceLine" id="cb259-5" data-line-number="5">        <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;darkblue&quot;</span>), </a>
-<a class="sourceLine" id="cb259-6" data-line-number="6">        <span class="dt">legend.text =</span> <span class="ot">TRUE</span>, </a>
-<a class="sourceLine" id="cb259-7" data-line-number="7">        <span class="dt">args.legend =</span> <span class="kw">list</span>(<span class="dt">x =</span> <span class="st">&quot;right&quot;</span>, <span class="dt">bty =</span> <span class="st">&quot;n&quot;</span>, <span class="dt">inset =</span> <span class="fl">-0.5</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb258-1" data-line-number="1">tabela &lt;-<span class="st"> </span><span class="kw">prop.table</span>(<span class="dt">x =</span> dados, <span class="dt">margin =</span> <span class="dv">2</span>)<span class="op">*</span><span class="dv">100</span></a>
+<a class="sourceLine" id="cb258-2" data-line-number="2"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">13</span>))</a>
+<a class="sourceLine" id="cb258-3" data-line-number="3"><span class="kw">barplot</span>(tabela, </a>
+<a class="sourceLine" id="cb258-4" data-line-number="4">        <span class="dt">xlab =</span> <span class="st">&quot;Dia da semana&quot;</span>,</a>
+<a class="sourceLine" id="cb258-5" data-line-number="5">        <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;darkblue&quot;</span>), </a>
+<a class="sourceLine" id="cb258-6" data-line-number="6">        <span class="dt">legend.text =</span> <span class="ot">TRUE</span>, </a>
+<a class="sourceLine" id="cb258-7" data-line-number="7">        <span class="dt">args.legend =</span> <span class="kw">list</span>(<span class="dt">x =</span> <span class="st">&quot;right&quot;</span>, <span class="dt">bty =</span> <span class="st">&quot;n&quot;</span>, <span class="dt">inset =</span> <span class="fl">-0.5</span>))</a></code></pre></div>
 <p><img src="livroR-1.0_files/figure-html/unnamed-chunk-91-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="capítulo-4" class="section level2">
@@ -282,9 +282,9 @@ No exercício 2 o <em>p-value</em> obtido foi de 0,057, o que corrobora a hipót
 <ol style="list-style-type: decimal">
 <li></li>
 </ol>
-<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb260-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">45</span>)</a>
-<a class="sourceLine" id="cb260-2" data-line-number="2">algas &lt;-<span class="st"> </span>(<span class="kw">rnorm</span>(<span class="dt">n =</span> <span class="dv">20</span>, <span class="dt">sd =</span> <span class="fl">0.1</span>) <span class="op">+</span><span class="st"> </span><span class="kw">runif</span>(<span class="dt">n =</span> <span class="dv">20</span>, <span class="dt">min =</span> <span class="dv">0</span>, <span class="dt">max =</span> <span class="fl">0.8</span>))<span class="op">*</span><span class="dv">100</span></a>
-<a class="sourceLine" id="cb260-3" data-line-number="3"><span class="kw">t.test</span>(<span class="dt">x =</span> algas, <span class="dt">mu =</span> <span class="dv">52</span>, <span class="dt">conf.level =</span> <span class="fl">0.95</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb259-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">45</span>)</a>
+<a class="sourceLine" id="cb259-2" data-line-number="2">algas &lt;-<span class="st"> </span>(<span class="kw">rnorm</span>(<span class="dt">n =</span> <span class="dv">20</span>, <span class="dt">sd =</span> <span class="fl">0.1</span>) <span class="op">+</span><span class="st"> </span><span class="kw">runif</span>(<span class="dt">n =</span> <span class="dv">20</span>, <span class="dt">min =</span> <span class="dv">0</span>, <span class="dt">max =</span> <span class="fl">0.8</span>))<span class="op">*</span><span class="dv">100</span></a>
+<a class="sourceLine" id="cb259-3" data-line-number="3"><span class="kw">t.test</span>(<span class="dt">x =</span> algas, <span class="dt">mu =</span> <span class="dv">52</span>, <span class="dt">conf.level =</span> <span class="fl">0.95</span>)</a></code></pre></div>
 <pre><code>## 
 ##  One Sample t-test
 ## 
@@ -296,7 +296,7 @@ No exercício 2 o <em>p-value</em> obtido foi de 0,057, o que corrobora a hipót
 ## sample estimates:
 ## mean of x 
 ##  40.00623</code></pre>
-<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb262-1" data-line-number="1"><span class="kw">t.test</span>(<span class="dt">x =</span> algas, <span class="dt">mu =</span> <span class="dv">52</span>, <span class="dt">conf.level =</span> <span class="fl">0.99</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb261-1" data-line-number="1"><span class="kw">t.test</span>(<span class="dt">x =</span> algas, <span class="dt">mu =</span> <span class="dv">52</span>, <span class="dt">conf.level =</span> <span class="fl">0.99</span>)</a></code></pre></div>
 <pre><code>## 
 ##  One Sample t-test
 ## 
@@ -314,28 +314,28 @@ No exercício 2 o <em>p-value</em> obtido foi de 0,057, o que corrobora a hipót
 O intervalo de confiança para o nível de 99% encontra-se entre: 26,49 e 53,53. O valor de 52% encontra-se dentro do intervalo de confiança;</p></li>
 <li></li>
 </ol>
-<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb264-1" data-line-number="1"><span class="kw">shapiro.test</span>(algas.duasamostras<span class="op">$</span>cobertura [algas.duasamostras<span class="op">$</span>turmas <span class="op">==</span><span class="st"> &quot;turma.1&quot;</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb263-1" data-line-number="1"><span class="kw">shapiro.test</span>(algas.duasamostras<span class="op">$</span>cobertura [algas.duasamostras<span class="op">$</span>turmas <span class="op">==</span><span class="st"> &quot;turma.1&quot;</span>])</a></code></pre></div>
 <pre><code>## 
 ##  Shapiro-Wilk normality test
 ## 
 ## data:  algas.duasamostras$cobertura[algas.duasamostras$turmas == &quot;turma.1&quot;]
 ## W = 0.91597, p-value = 0.08291</code></pre>
-<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb266-1" data-line-number="1"><span class="kw">shapiro.test</span>(algas.duasamostras<span class="op">$</span>cobertura [algas.duasamostras<span class="op">$</span>turmas <span class="op">==</span><span class="st"> &quot;turma.2&quot;</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb265-1" data-line-number="1"><span class="kw">shapiro.test</span>(algas.duasamostras<span class="op">$</span>cobertura [algas.duasamostras<span class="op">$</span>turmas <span class="op">==</span><span class="st"> &quot;turma.2&quot;</span>])</a></code></pre></div>
 <pre><code>## 
 ##  Shapiro-Wilk normality test
 ## 
 ## data:  algas.duasamostras$cobertura[algas.duasamostras$turmas == &quot;turma.2&quot;]
 ## W = 0.97976, p-value = 0.9309</code></pre>
-<div class="sourceCode" id="cb268"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb268-1" data-line-number="1"><span class="kw">bartlett.test</span>(cobertura <span class="op">~</span><span class="st"> </span>turmas, <span class="dt">data =</span> algas.duasamostras)</a></code></pre></div>
+<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb267-1" data-line-number="1"><span class="kw">bartlett.test</span>(cobertura <span class="op">~</span><span class="st"> </span>turmas, <span class="dt">data =</span> algas.duasamostras)</a></code></pre></div>
 <pre><code>## 
 ##  Bartlett test of homogeneity of variances
 ## 
 ## data:  cobertura by turmas
 ## Bartlett&#39;s K-squared = 2.2754, df = 1, p-value = 0.1314</code></pre>
-<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb270-1" data-line-number="1"><span class="kw">t.test</span>(cobertura <span class="op">~</span><span class="st"> </span>turmas, </a>
-<a class="sourceLine" id="cb270-2" data-line-number="2">       <span class="dt">data =</span> algas.duasamostras,</a>
-<a class="sourceLine" id="cb270-3" data-line-number="3">       <span class="dt">var.equal =</span> <span class="ot">TRUE</span>,</a>
-<a class="sourceLine" id="cb270-4" data-line-number="4">       <span class="dt">conf.level =</span> <span class="fl">0.95</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb269-1" data-line-number="1"><span class="kw">t.test</span>(cobertura <span class="op">~</span><span class="st"> </span>turmas, </a>
+<a class="sourceLine" id="cb269-2" data-line-number="2">       <span class="dt">data =</span> algas.duasamostras,</a>
+<a class="sourceLine" id="cb269-3" data-line-number="3">       <span class="dt">var.equal =</span> <span class="ot">TRUE</span>,</a>
+<a class="sourceLine" id="cb269-4" data-line-number="4">       <span class="dt">conf.level =</span> <span class="fl">0.95</span>)</a></code></pre></div>
 <pre><code>## 
 ##  Two Sample t-test
 ## 
@@ -347,10 +347,10 @@ O intervalo de confiança para o nível de 99% encontra-se entre: 26,49 e 53,53.
 ## sample estimates:
 ## mean in group turma.1 mean in group turma.2 
 ##               51.8420               40.0075</code></pre>
-<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb272-1" data-line-number="1"><span class="kw">t.test</span>(cobertura <span class="op">~</span><span class="st"> </span>turmas, </a>
-<a class="sourceLine" id="cb272-2" data-line-number="2">       <span class="dt">data =</span> algas.duasamostras,</a>
-<a class="sourceLine" id="cb272-3" data-line-number="3">       <span class="dt">var.equal =</span> <span class="ot">TRUE</span>,</a>
-<a class="sourceLine" id="cb272-4" data-line-number="4">       <span class="dt">conf.level =</span> <span class="fl">0.99</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb271-1" data-line-number="1"><span class="kw">t.test</span>(cobertura <span class="op">~</span><span class="st"> </span>turmas, </a>
+<a class="sourceLine" id="cb271-2" data-line-number="2">       <span class="dt">data =</span> algas.duasamostras,</a>
+<a class="sourceLine" id="cb271-3" data-line-number="3">       <span class="dt">var.equal =</span> <span class="ot">TRUE</span>,</a>
+<a class="sourceLine" id="cb271-4" data-line-number="4">       <span class="dt">conf.level =</span> <span class="fl">0.99</span>)</a></code></pre></div>
 <pre><code>## 
 ##  Two Sample t-test
 ## 
@@ -367,38 +367,38 @@ Ao considerar o nível de confiança de 95% temos o valor no limiar da rejeiçã
 <ol start="4" style="list-style-type: decimal">
 <li></li>
 </ol>
-<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb274-1" data-line-number="1"><span class="kw">library</span>(Rmisc)</a>
-<a class="sourceLine" id="cb274-2" data-line-number="2">resultado &lt;-<span class="st"> </span><span class="kw">summarySE</span>(<span class="dt">data =</span> algas.duasamostras, </a>
-<a class="sourceLine" id="cb274-3" data-line-number="3">                       <span class="dt">measurevar =</span> <span class="st">&quot;cobertura&quot;</span>, </a>
-<a class="sourceLine" id="cb274-4" data-line-number="4">                       <span class="dt">groupvars =</span> <span class="st">&quot;turmas&quot;</span>)</a>
-<a class="sourceLine" id="cb274-5" data-line-number="5">grafico &lt;-<span class="st"> </span><span class="kw">barplot</span>(<span class="dt">formula =</span> cobertura <span class="op">~</span><span class="st"> </span>turmas,</a>
-<a class="sourceLine" id="cb274-6" data-line-number="6">                   <span class="dt">data =</span> resultado,</a>
-<a class="sourceLine" id="cb274-7" data-line-number="7">                   <span class="dt">beside =</span> <span class="ot">TRUE</span>,</a>
-<a class="sourceLine" id="cb274-8" data-line-number="8">                   <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>),</a>
-<a class="sourceLine" id="cb274-9" data-line-number="9">                   <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">100</span>),</a>
-<a class="sourceLine" id="cb274-10" data-line-number="10">                   <span class="dt">ylab =</span> <span class="st">&quot;Cobertura algal (%)&quot;</span>,</a>
-<a class="sourceLine" id="cb274-11" data-line-number="11">                   <span class="dt">legend.text =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb274-12" data-line-number="12"><span class="kw">arrows</span>(<span class="dt">x0 =</span> grafico,</a>
-<a class="sourceLine" id="cb274-13" data-line-number="13">       <span class="dt">y0 =</span> resultado<span class="op">$</span>cobertura <span class="op">+</span><span class="st"> </span>resultado<span class="op">$</span>sd,</a>
-<a class="sourceLine" id="cb274-14" data-line-number="14">       <span class="dt">y1 =</span> resultado<span class="op">$</span>cobertura <span class="op">-</span><span class="st"> </span>resultado<span class="op">$</span>sd,</a>
-<a class="sourceLine" id="cb274-15" data-line-number="15">       <span class="dt">code =</span> <span class="dv">3</span>,</a>
-<a class="sourceLine" id="cb274-16" data-line-number="16">       <span class="dt">angle =</span> <span class="dv">90</span>,</a>
-<a class="sourceLine" id="cb274-17" data-line-number="17">       <span class="dt">length =</span> <span class="fl">0.05</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb273"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb273-1" data-line-number="1"><span class="kw">library</span>(Rmisc)</a>
+<a class="sourceLine" id="cb273-2" data-line-number="2">resultado &lt;-<span class="st"> </span><span class="kw">summarySE</span>(<span class="dt">data =</span> algas.duasamostras, </a>
+<a class="sourceLine" id="cb273-3" data-line-number="3">                       <span class="dt">measurevar =</span> <span class="st">&quot;cobertura&quot;</span>, </a>
+<a class="sourceLine" id="cb273-4" data-line-number="4">                       <span class="dt">groupvars =</span> <span class="st">&quot;turmas&quot;</span>)</a>
+<a class="sourceLine" id="cb273-5" data-line-number="5">grafico &lt;-<span class="st"> </span><span class="kw">barplot</span>(<span class="dt">formula =</span> cobertura <span class="op">~</span><span class="st"> </span>turmas,</a>
+<a class="sourceLine" id="cb273-6" data-line-number="6">                   <span class="dt">data =</span> resultado,</a>
+<a class="sourceLine" id="cb273-7" data-line-number="7">                   <span class="dt">beside =</span> <span class="ot">TRUE</span>,</a>
+<a class="sourceLine" id="cb273-8" data-line-number="8">                   <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>),</a>
+<a class="sourceLine" id="cb273-9" data-line-number="9">                   <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">100</span>),</a>
+<a class="sourceLine" id="cb273-10" data-line-number="10">                   <span class="dt">ylab =</span> <span class="st">&quot;Cobertura algal (%)&quot;</span>,</a>
+<a class="sourceLine" id="cb273-11" data-line-number="11">                   <span class="dt">legend.text =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb273-12" data-line-number="12"><span class="kw">arrows</span>(<span class="dt">x0 =</span> grafico,</a>
+<a class="sourceLine" id="cb273-13" data-line-number="13">       <span class="dt">y0 =</span> resultado<span class="op">$</span>cobertura <span class="op">+</span><span class="st"> </span>resultado<span class="op">$</span>sd,</a>
+<a class="sourceLine" id="cb273-14" data-line-number="14">       <span class="dt">y1 =</span> resultado<span class="op">$</span>cobertura <span class="op">-</span><span class="st"> </span>resultado<span class="op">$</span>sd,</a>
+<a class="sourceLine" id="cb273-15" data-line-number="15">       <span class="dt">code =</span> <span class="dv">3</span>,</a>
+<a class="sourceLine" id="cb273-16" data-line-number="16">       <span class="dt">angle =</span> <span class="dv">90</span>,</a>
+<a class="sourceLine" id="cb273-17" data-line-number="17">       <span class="dt">length =</span> <span class="fl">0.05</span>)</a></code></pre></div>
 <p><img src="livroR-1.0_files/figure-html/unnamed-chunk-94-1.png" width="672" style="display: block; margin: auto;" /></p>
 <ol start="5" style="list-style-type: decimal">
 <li></li>
 </ol>
-<div class="sourceCode" id="cb275"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb275-1" data-line-number="1">diferenca &lt;-<span class="st"> </span>algas.pareado<span class="op">$</span>observador<span class="fl">.1</span> <span class="op">-</span><span class="st"> </span>algas.pareado<span class="op">$</span>observador<span class="fl">.2</span></a>
-<a class="sourceLine" id="cb275-2" data-line-number="2"><span class="kw">shapiro.test</span>(diferenca)</a></code></pre></div>
+<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb274-1" data-line-number="1">diferenca &lt;-<span class="st"> </span>algas.pareado<span class="op">$</span>observador<span class="fl">.1</span> <span class="op">-</span><span class="st"> </span>algas.pareado<span class="op">$</span>observador<span class="fl">.2</span></a>
+<a class="sourceLine" id="cb274-2" data-line-number="2"><span class="kw">shapiro.test</span>(diferenca)</a></code></pre></div>
 <pre><code>## 
 ##  Shapiro-Wilk normality test
 ## 
 ## data:  diferenca
 ## W = 0.96839, p-value = 0.7206</code></pre>
-<div class="sourceCode" id="cb277"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb277-1" data-line-number="1"><span class="kw">t.test</span>(algas.pareado<span class="op">$</span>observador<span class="fl">.1</span>,</a>
-<a class="sourceLine" id="cb277-2" data-line-number="2">       algas.pareado<span class="op">$</span>observador<span class="fl">.2</span>,</a>
-<a class="sourceLine" id="cb277-3" data-line-number="3">       <span class="dt">paired =</span> <span class="ot">TRUE</span>,</a>
-<a class="sourceLine" id="cb277-4" data-line-number="4">       <span class="dt">conf.level =</span> <span class="fl">0.95</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb276"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb276-1" data-line-number="1"><span class="kw">t.test</span>(algas.pareado<span class="op">$</span>observador<span class="fl">.1</span>,</a>
+<a class="sourceLine" id="cb276-2" data-line-number="2">       algas.pareado<span class="op">$</span>observador<span class="fl">.2</span>,</a>
+<a class="sourceLine" id="cb276-3" data-line-number="3">       <span class="dt">paired =</span> <span class="ot">TRUE</span>,</a>
+<a class="sourceLine" id="cb276-4" data-line-number="4">       <span class="dt">conf.level =</span> <span class="fl">0.95</span>)</a></code></pre></div>
 <pre><code>## 
 ##  Paired t-test
 ## 
@@ -410,10 +410,10 @@ Ao considerar o nível de confiança de 95% temos o valor no limiar da rejeiçã
 ## sample estimates:
 ## mean of the differences 
 ##                  5.4905</code></pre>
-<div class="sourceCode" id="cb279"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb279-1" data-line-number="1"><span class="kw">t.test</span>(algas.pareado<span class="op">$</span>observador<span class="fl">.1</span>,</a>
-<a class="sourceLine" id="cb279-2" data-line-number="2">       algas.pareado<span class="op">$</span>observador<span class="fl">.2</span>,</a>
-<a class="sourceLine" id="cb279-3" data-line-number="3">       <span class="dt">paired =</span> <span class="ot">TRUE</span>,</a>
-<a class="sourceLine" id="cb279-4" data-line-number="4">       <span class="dt">conf.level =</span> <span class="fl">0.99</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb278"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb278-1" data-line-number="1"><span class="kw">t.test</span>(algas.pareado<span class="op">$</span>observador<span class="fl">.1</span>,</a>
+<a class="sourceLine" id="cb278-2" data-line-number="2">       algas.pareado<span class="op">$</span>observador<span class="fl">.2</span>,</a>
+<a class="sourceLine" id="cb278-3" data-line-number="3">       <span class="dt">paired =</span> <span class="ot">TRUE</span>,</a>
+<a class="sourceLine" id="cb278-4" data-line-number="4">       <span class="dt">conf.level =</span> <span class="fl">0.99</span>)</a></code></pre></div>
 <pre><code>## 
 ##  Paired t-test
 ## 
